@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/whitedot.png" type="Texture" id=1]
+[ext_resource path="res://InventorySlotDisplay.gd" type="Script" id=2]
+
+[node name="InventorySlotDisplay" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 2 )
+
+[node name="ItemTextureRect" type="TextureRect" parent="."]
+margin_left = 432.0
+margin_top = 226.0
+margin_right = 591.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 18, 18 )
+texture = ExtResource( 1 )
