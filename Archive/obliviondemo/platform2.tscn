@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://chsmk5of1v5qb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r84ha"]
+size = Vector2(40, 40)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+scale = Vector2(6.81534, 0.83008)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_r84ha")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 72.0
+color = Color(0.262745, 0.768627, 1, 1)

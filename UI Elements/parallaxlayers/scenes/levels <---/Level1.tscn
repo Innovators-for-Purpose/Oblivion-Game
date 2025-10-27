@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://textures/outer city.png" type="Texture" id=1]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/area_zoom.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 124, 243.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 23, 566.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 808, 23.5 )
+
+[node name="Node" type="Node"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 1 )
+
+[node name="Floor" type="StaticBody2D" parent="."]
+scale = Vector2( 0.75, 0.75 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor"]
+position = Vector2( 189.63, 283.108 )
+scale = Vector2( 1.9008, 2.88537 )
+polygon = PoolVector2Array( -651.636, 97.0038, -591.661, 93.8846, -551.152, 95.9641, -518.534, 99.0832, -474.342, 99.7764, -429.624, 100.816, -385.432, 98.0435, -336.505, 101.509, -284.948, 103.242, -218.134, 100.47, -169.734, 98.7367, -149.742, 95.2709, -93.976, 95.2709, -9.80099, 92.1517, 70.6914, 89.0325, 101.205, 92.1517, 164.862, 92.4983, 213.789, 92.4983, 283.233, 89.7257, 351.1, 89.3791, 386.348, 87.6462, 430.014, 85.2202, 454.214, 85.2202, 454.74, 161.813, -653.214, 162.16, -653.214, 96.6572 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 505, 347 )
+zoom_amt = 0.4
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -61, 198 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 64.5 )
+shape = SubResource( 1 )
+
+[node name="Bounderies" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounderies"]
+position = Vector2( 800, 4.5 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bounderies"]
+position = Vector2( -783, 4.5 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Bounderies"]
+position = Vector2( 10, -548 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]

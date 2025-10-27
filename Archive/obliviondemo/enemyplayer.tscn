@@ -1,0 +1,215 @@
+[gd_scene load_steps=28 format=3 uid="uid://c1repltlmq4qd"]
+
+[ext_resource type="Script" uid="uid://b100h6w4jcdqb" path="res://enemyplayer.gd" id="1_3poyc"]
+[ext_resource type="Texture2D" uid="uid://4cy17a5c24oy" path="res://NightBorne.png" id="1_lgjp2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3poyc"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(0, 78, 83, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgyoe"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(83, 78, 83, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc2mc"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(166, 78, 83, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ifwh"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(249, 78, 83, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8w7r"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(332, 78, 83, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0ne3"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(415, 78, 83, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk4gr"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(0, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w3on"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(81, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g23x"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(162, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb3pb"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(243, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k28n0"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(324, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oou6y"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(405, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31ubi"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(486, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtguy"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(567, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj5r3"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(648, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11s6b"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(729, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8gxo"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(810, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ofgw"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(891, 156, 81, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fm58"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(82, 248, 78, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nggwr"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(160, 248, 78, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpabu"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(238, 248, 78, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exf8h"]
+atlas = ExtResource("1_lgjp2")
+region = Rect2(316, 248, 78, 62)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fk4gr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3poyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgyoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc2mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ifwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8w7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0ne3")
+}],
+"loop": true,
+"name": &"enemy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk4gr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3w3on")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g23x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb3pb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k28n0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oou6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31ubi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtguy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj5r3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11s6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8gxo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ofgw")
+}],
+"loop": true,
+"name": &"killanimation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fm58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nggwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpabu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exf8h")
+}],
+"loop": true,
+"name": &"stunanimation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fm58"]
+size = Vector2(167.631, 177.521)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3poyc"]
+size = Vector2(196.577, 204)
+
+[node name="EnemyPlayer" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 2
+collision_mask = 21
+slide_on_ceiling = false
+script = ExtResource("1_3poyc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(252, 243.923)
+scale = Vector2(5.46988, 5.42657)
+sprite_frames = SubResource("SpriteFrames_fk4gr")
+animation = &"enemy"
+autoplay = "enemy"
+frame_progress = 0.102774
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(262.5, 303)
+scale = Vector2(1.30644, 1.11536)
+shape = SubResource("RectangleShape2D_5fm58")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(262, 304)
+scale = Vector2(1.36334, 0.970096)
+shape = SubResource("RectangleShape2D_3poyc")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

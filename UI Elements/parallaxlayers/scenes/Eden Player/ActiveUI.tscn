@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="ActiveUI" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 46.0
+margin_top = 94.0
+margin_right = 86.0
+margin_bottom = 114.0
+text = "dmg"

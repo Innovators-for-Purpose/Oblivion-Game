@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Trash Audio.mp3-5e72a88a27313b6562ab0f9558bec245.mp3str"
+
+[deps]
+
+source_file="res://Trash/Trash Audio.mp3"
+dest_files=[ "res://.import/Trash Audio.mp3-5e72a88a27313b6562ab0f9558bec245.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

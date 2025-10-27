@@ -1,0 +1,30 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1752675570
+default_env.tres::Environment::-1::1752606624::0::1::::<><><>0<>0<><>::
+::res://json/::1752171145
+itemdata.json::JSON/JSON::-1::1752602917::0::1::::<><><>0<>0<><>::
+::res://scenes/::1752606624
+CanvasLayer.tscn::PackedScene/PackedScene::-1::1752519265::0::1::::<><><>0<>0<><>::res://scenes/GUI.tscn
+GUI.tscn::PackedScene/PackedScene::-1::1752592840::0::1::::<><><>0<>0<><>::res://scenes/Hotbar.tscn<>res://scripts/InvGui.gd
+Hotbar.tscn::PackedScene/PackedScene::-1::1752519265::0::1::::<><><>0<>0<><>::res://scripts/Hotbar.gd<>res://scenes/ItemSlot.tscn
+ItemSlot.tscn::PackedScene/PackedScene::-1::1752519265::0::1::::<><><>0<>0<><>::res://textures/icon.png<>res://scripts/TextureRect.gd<>res://textures/select.png
+Main.tscn::PackedScene::-1::1752606624::0::1::::<><><>0<>0<><>::res://textures/icon.png<>res://scenes/GUI.tscn
+Node2D.tscn::PackedScene/PackedScene::-1::1752083651::0::1::::<><><>0<>0<><>::
+test.tscn::PackedScene/PackedScene::-1::1752168688::0::1::::<><><>0<>0<><>::
+::res://scripts/::1752606793
+global.gd::GDScript/GDScript::7706003447683763792::1752173304::0::1::::<>Node<><>0<>0<><>::
+Heal.gd::GDScript/GDScript::4142662451385372084::1752086703::0::1::::<>TextureButton<><>0<>0<><>::
+Hotbar.gd::GDScript/GDScript::3509145184964756343::1752517929::0::1::::<>SlotContainer<><>0<>0<><>::
+inventory.gd::GDScript::1983495569563412579::1752606793::0::1::::<>Node<><>0<>0<><>::
+InvGui.gd::GDScript/GDScript::3637336106582456678::1752603130::0::1::::<>Control<><>0<>0<><>::
+slot_container.gd::GDScript/GDScript::6363782461692992549::1752247186::0::1::::SlotContainer<>BoxContainer<><>0<>0<><>::
+TextureRect.gd::GDScript::3850542151667023167::1752606369::0::1::::<>TextureButton<><>0<>0<><>::
+::res://textures/::1752605716
+icon.png::CompressedTexture2D/CompressedTexture2D::8644052251732552551::1752083651::1752675571::1::::<><><>0<>0<>57cd13072b493bc1ac6910cdb7826614<>res://.godot/imported/icon.png-f931f6b997c470ed41f337ac62349254.ctex::
+lego-dark-stone-gray-grappling-hook-30192-32-456607-50-2535814590.png::CompressedTexture2D/CompressedTexture2D::3411114581616718749::1752518294::1752675571::1::::<><><>0<>0<>2245aecf863981edffa368d1645955a3<>res://.godot/imported/lego-dark-stone-gray-grappling-hook-30192-32-456607-50-2535814590.png-12884e62a35cf36f7b8efbce5233118b.ctex::
+Magnet Colored Transparent.png::CompressedTexture2D/CompressedTexture2D::9192794268484524764::1752245791::1752675571::1::::<><><>0<>0<>a45f7715d4a62e4b21e48ca1e04370bc<>res://.godot/imported/Magnet Colored Transparent.png-3f207a8795e669cc373f392edcd1f834.ctex::
+pixil-frame-0 1.png::CompressedTexture2D/CompressedTexture2D::6933216563975326096::1752086251::1752675571::1::::<><><>0<>0<>622e2af8fec243504370b3866d500da2<>res://.godot/imported/pixil-frame-0 1.png-aa6089658f3e5eabcd40f95b33bf26c5.ctex::
+pixil-frame-0.png::CompressedTexture2D/CompressedTexture2D::5404337719351911707::1752514989::1752675571::1::::<><><>0<>0<>c0281f037f57ff645a0c314f21e361ce<>res://.godot/imported/pixil-frame-0.png-cbc73171fe2b5937a3d1d952a7691816.ctex::
+select.png::CompressedTexture2D/CompressedTexture2D::8482941971753941765::1752514160::1752675571::1::::<><><>0<>0<>7a75395fb4c844af1fb931b02f5e3fed<>res://.godot/imported/select.png-2c468f7cc7b87f0b697dbe76a0f34e1e.ctex::
+Stun Beam Gun Transparent(originl).png::CompressedTexture2D/CompressedTexture2D::1246766025951190788::1752245629::1752675571::1::::<><><>0<>0<>95f97e9159e85e07b82479ffeca98466<>res://.godot/imported/Stun Beam Gun Transparent(originl).png-b1d9c4a1fe1f5300b3208c5ba99d6355.ctex::
+Stun Beam Gun Transparent.png::CompressedTexture2D/CompressedTexture2D::669246024245149124::1752246064::1752675571::1::::<><><>0<>0<>43aaa3b1a38b9151486a73a73ee6657f<>res://.godot/imported/Stun Beam Gun Transparent.png-50ddbcdc630bd91fe75c4d1c88c41bd3.ctex::

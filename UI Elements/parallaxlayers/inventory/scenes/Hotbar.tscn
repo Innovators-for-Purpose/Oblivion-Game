@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://inventory/scripts/Hotbar.gd" type="Script" id=1]
+[ext_resource path="res://inventory/scenes/ItemSlot.tscn" type="PackedScene" id=4]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 89.0
+margin_right = -89.0
+mouse_filter = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+custom_constants/separation = 196
+alignment = 1
+script = ExtResource( 1 )
+ItemSlot = ExtResource( 4 )

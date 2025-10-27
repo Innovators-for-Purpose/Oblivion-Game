@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BG/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Trash/TrashBag.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+
+[node name="Main Scene" type="Node2D"]
+position = Vector2( -18, -2 )
+
+[node name="BG_Node" type="Node2D" parent="."]
+position = Vector2( -38, 2 )
+scale = Vector2( 1.63845, 1.63346 )
+
+[node name="Background" parent="BG_Node" instance=ExtResource( 2 )]
+position = Vector2( 29, -2 )
+
+[node name="TrashBag" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1165, 758.458 )
+scale = Vector2( 0.170918, 0.146577 )
+
+[node name="TrashBag2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1851.69, 484.803 )
+scale = Vector2( 0.184456, 0.160211 )
+
+[node name="Enemy_Node" type="Node2D" parent="."]
+position = Vector2( 298, -102 )
+scale = Vector2( 1.3946, 1.22115 )
+
+[node name="Enemy" parent="Enemy_Node" instance=ExtResource( 1 )]
+position = Vector2( 357, 635 )
+scale = Vector2( 16.713, 32.8168 )
+
+[node name="Player_Node" type="Node2D" parent="."]
+position = Vector2( 38, 162 )
+scale = Vector2( 0.990875, 0.914 )
+
+[node name="Player" parent="Player_Node" instance=ExtResource( 4 )]
+position = Vector2( -1.00903, -5.47046 )
+scale = Vector2( 1.41696, 1.45812 )

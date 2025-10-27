@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5ij84wlbtgld"]
+
+[ext_resource type="Texture2D" uid="uid://co60sjcwhikc" path="res://pngtree-hand-held-electric-gun-vector-png-image_7035351.png" id="1_abkws"]
+[ext_resource type="Script" uid="uid://cdq0a7felm4iq" path="res://taserweaponscript.gd" id="1_w0bwa"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-4, -3)
+scale = Vector2(0.783643, 0.741324)
+script = ExtResource("1_w0bwa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(23.7457, 22.9319)
+scale = Vector2(0.137476, 0.1274)
+texture = ExtResource("1_abkws")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(38.2827, 10.7915)
