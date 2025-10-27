@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://Inventory.gd" type="Script" id=1]
+[ext_resource path="res://Items/Magnet.tres" type="Resource" id=2]
+[ext_resource path="res://Items/StunGun.tres" type="Resource" id=3]
+[ext_resource path="res://Items/pixil-frame-0 1.png" type="Texture" id=4]
+[ext_resource path="res://Items/Heal.tres" type="Resource" id=5]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+items = [ ExtResource( 4 ) ]
+
+[resource]
+script = ExtResource( 1 )
+items = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 2 ), SubResource( 1 ), ExtResource( 5 ), null, null, null ]
