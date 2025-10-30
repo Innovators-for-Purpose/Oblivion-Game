@@ -1,9 +1,7 @@
 [gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
-[ext_resource path="res://Movement Stuff/AlexStates 2.gd" type="Script" id=2]
-[ext_resource path="res://Movement Stuff/collisionShapes/standShape.tres" type="Shape2D" id=3]
-[ext_resource path="res://Movement Stuff/collisionShapes/crouchShape.tres" type="Shape2D" id=4]
+[ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
 [ext_resource path="res://Movement Stuff/_Fall.png" type="Texture" id=5]
 [ext_resource path="res://Movement Stuff/Cam.gd" type="Script" id=6]
 [ext_resource path="res://Movement Stuff/Chain.tscn" type="PackedScene" id=7]
@@ -257,6 +255,14 @@ animations = [ {
 "speed": 12.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=52]
+radius = 21.13
+height = 37.16
+
+[sub_resource type="CapsuleShape2D" id=53]
+radius = 21.27
+height = 16.0
+
 [sub_resource type="Theme" id=5]
 
 [sub_resource type="Gradient" id=8]
@@ -284,28 +290,30 @@ collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="Anim" type="AnimatedSprite" parent="."]
-position = Vector2( -2, -23 )
+position = Vector2( -3, -23 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
-animation = "run"
-frame = 2
+animation = "idle"
+frame = 9
 playing = true
 flip_h = true
 
 [node name="Tall" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 20 )
-shape = ExtResource( 3 )
+position = Vector2( 1, 18 )
+shape = SubResource( 52 )
 
 [node name="Short" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 28.5 )
-shape = ExtResource( 4 )
+position = Vector2( 1, 28 )
+shape = SubResource( 53 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 limit_left = -32
 limit_top = -32
-limit_right = 1952
+limit_right = 4050
 limit_bottom = 1080
+editor_draw_limits = true
+editor_draw_drag_margin = true
 script = ExtResource( 6 )
 
 [node name="LadderDetect" type="Area2D" parent="."]
