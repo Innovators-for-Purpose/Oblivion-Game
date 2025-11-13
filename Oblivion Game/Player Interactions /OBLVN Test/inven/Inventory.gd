@@ -1,5 +1,5 @@
 extends Resource
-class_name inventorynew 
+class_name inventory 
 
 var drag_data = null
 

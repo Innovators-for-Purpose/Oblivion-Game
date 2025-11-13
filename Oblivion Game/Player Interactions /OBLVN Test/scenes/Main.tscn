@@ -1,7 +1,6 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=3]
 [ext_resource path="res://textures/simple tiles.png" type="Texture" id=4]
 [ext_resource path="res://Movement Stuff/Grappleables.tscn" type="PackedScene" id=5]
@@ -9,7 +8,6 @@
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=7]
 [ext_resource path="res://textures/cool tiles/Ladder3.png" type="Texture" id=8]
 [ext_resource path="res://textures/cool tiles/Ladder1.png" type="Texture" id=9]
-[ext_resource path="res://Node2D.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -161,7 +159,11 @@ points = PoolVector2Array( 24, 32, 0, 32, 0, 16, 24, 16 )
 
 [node name="Main" type="Node2D"]
 
+[node name="Grappleables2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 881, 16 )
+
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 6 )
@@ -183,14 +185,8 @@ collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 852026, 1, 0, 852027, 1, 0, 917562, 0, 0, 917563, 0, 0, 983098, 0, 0, 983099, 0, 0, 1048634, 0, 0, 1048635, 0, 0, 1114170, 0, 0, 1114171, 0, 0, 1179706, 0, 0, 1179707, 0, 0, 1245242, 0, 0, 1245243, 0, 0, 1310778, 0, 0, 1310779, 0, 0, 1376314, 0, 0, 1376315, 0, 0, 1441809, 1, 0, 1441810, 1, 0, 1441819, 1, 0, 1441850, 0, 0, 1441851, 0, 0, 1507345, 0, 0, 1507346, 0, 0, 1507355, 0, 0, 1572881, 0, 0, 1572882, 0, 0, 1572891, 0, 0, 1638417, 0, 0, 1638418, 0, 0, 1638427, 0, 0, 1703953, 0, 0, 1703954, 0, 0, 1703963, 0, 0, 1769489, 0, 0, 1769490, 0, 0, 1769499, 0, 0, 1835025, 0, 0, 1835026, 0, 0, 1835035, 0, 0, 1900561, 0, 0, 1900562, 0, 0, 1900571, 0, 0, 1966097, 0, 0, 1966098, 0, 0, 1966107, 0, 0, 2031633, 0, 0, 2031634, 0, 0, 2031643, 0, 0, 2097169, 0, 0, 2097170, 0, 0, 2097179, 0, 0 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" parent="CanvasLayer" instance=ExtResource( 2 )]
-visible = false
-
 [node name="Player" parent="." instance=ExtResource( 1 )]
 unique_name_in_owner = true
-visible = false
 position = Vector2( 505, 360 )
 
 [node name="AlexStates" parent="." instance=ExtResource( 3 )]
@@ -198,9 +194,3 @@ position = Vector2( 73, 948 )
 
 [node name="Grappleables" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1843, 651 )
-
-[node name="Grappleables2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 881, 16 )
-
-[node name="Node2D" parent="." instance=ExtResource( 10 )]
-position = Vector2( 244, 989 )

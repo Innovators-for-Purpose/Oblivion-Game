@@ -18,9 +18,9 @@ func _ready():
 	items[1] = Global.get_item_by_key("stun_gun")
 	items[2] = Global.get_item_by_key("magnet")
 	items[3] = Global.get_item_by_key("grapple")
-	var item_node = get_node("../res://Magnet.gd")
-	if item_node: 
-		item_node.connect("item_pickup", self, "_on_item_pickup")
+#	var item_node = get_node("../res://Magnet.gd")
+#	if item_node: 
+#		item_node.connect("item_pickup", self, "_on_item_pickup")
 
 func _on_item_pickup(item_data):
 	

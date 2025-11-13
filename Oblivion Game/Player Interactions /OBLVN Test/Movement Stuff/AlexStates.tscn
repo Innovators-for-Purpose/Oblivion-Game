@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://Movement Stuff/Climb.png" type="Texture" id=11]
 [ext_resource path="res://Movement Stuff/_Crouch.png" type="Texture" id=12]
 [ext_resource path="res://Movement Stuff/_Run.png" type="Texture" id=13]
+[ext_resource path="res://scripts/InvGui.gd" type="Script" id=14]
+[ext_resource path="res://inven/InventoryContainor.tscn" type="PackedScene" id=15]
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
@@ -290,7 +292,6 @@ position = Vector2( -2, -23 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
 animation = "run"
-frame = 6
 playing = true
 flip_h = true
 
@@ -352,6 +353,9 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="InventoryContainer" parent="CanvasLayer" instance=ExtResource( 15 )]
+script = ExtResource( 14 )
+
 [node name="Coyote" type="Timer" parent="."]
 process_mode = 0
 wait_time = 0.15
@@ -368,6 +372,8 @@ collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D"]
 shape = SubResource( 52 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [connection signal="body_entered" from="LadderDetect" to="." method="_on_LadderDetect_body_entered"]
 [connection signal="body_exited" from="LadderDetect" to="." method="_on_LadderDetect_body_exited"]

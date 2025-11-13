@@ -240,3 +240,4 @@ func pick_magnet():
 		add_child(ref_magnet)
 		magnet_collide_with.queue_free()
 	pass
+
