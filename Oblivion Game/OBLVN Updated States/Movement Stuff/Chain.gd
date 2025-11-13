@@ -23,7 +23,7 @@ func shoot(dir: Vector2) -> void:
 	flying = true					# Keep track of our current scan
 	tip = self.global_position		# reset the tip position to the player's position
 	
-	print(direction)
+	print('direction = ', direction)
 # release() the chain
 func release() -> void:
 	flying = false	# Not flying anymore	

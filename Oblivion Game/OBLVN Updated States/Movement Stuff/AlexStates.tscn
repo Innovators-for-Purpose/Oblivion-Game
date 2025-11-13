@@ -290,20 +290,20 @@ collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="Anim" type="AnimatedSprite" parent="."]
-position = Vector2( -3, -23 )
+position = Vector2( 0, -23 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
 animation = "idle"
-frame = 9
+frame = 3
 playing = true
 flip_h = true
 
 [node name="Tall" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 18 )
+position = Vector2( 10, 18 )
 shape = SubResource( 52 )
 
 [node name="Short" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 28 )
+position = Vector2( 10, 28 )
 shape = SubResource( 53 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -317,6 +317,7 @@ editor_draw_drag_margin = true
 script = ExtResource( 6 )
 
 [node name="LadderDetect" type="Area2D" parent="."]
+position = Vector2( 10, 0 )
 collision_layer = 0
 collision_mask = 4
 
