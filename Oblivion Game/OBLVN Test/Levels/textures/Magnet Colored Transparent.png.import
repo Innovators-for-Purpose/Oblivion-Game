@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Magnet Colored Transparent.png-3f207a8795e669cc373f392edcd1f834.stex"
+path="res://.import/Magnet Colored Transparent.png-f5be2415d3f62b236cf4b8b72f8eb54d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Magnet Colored Transparent.png"
-dest_files=[ "res://.import/Magnet Colored Transparent.png-3f207a8795e669cc373f392edcd1f834.stex" ]
+source_file="res://Levels/textures/Magnet Colored Transparent.png"
+dest_files=[ "res://.import/Magnet Colored Transparent.png-f5be2415d3f62b236cf4b8b72f8eb54d.stex" ]
 
 [params]
 

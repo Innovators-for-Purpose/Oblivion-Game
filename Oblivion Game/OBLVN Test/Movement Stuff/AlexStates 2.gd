@@ -286,5 +286,3 @@ func _on_Coyote_timeout():
 
 
 
-
-

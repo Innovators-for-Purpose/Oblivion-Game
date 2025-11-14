@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/QDYPaQ-removebg-preview.png-7b326a620d35395b3b5df2b949edb4ad.stex"
+path="res://.import/QDYPaQ-removebg-preview.png-9bad9db7c7562b8f23126bf06596cf14.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/cool tiles/QDYPaQ-removebg-preview.png"
-dest_files=[ "res://.import/QDYPaQ-removebg-preview.png-7b326a620d35395b3b5df2b949edb4ad.stex" ]
+source_file="res://Levels/textures/cool tiles/QDYPaQ-removebg-preview.png"
+dest_files=[ "res://.import/QDYPaQ-removebg-preview.png-9bad9db7c7562b8f23126bf06596cf14.stex" ]
 
 [params]
 

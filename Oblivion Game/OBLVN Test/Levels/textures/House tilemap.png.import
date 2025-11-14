@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/House tilemap.png-1dc603dafa14b783d0263281d9516ccd.stex"
+path="res://.import/House tilemap.png-388e2d00d6d52b19577f6be2dfafe1c8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/House tilemap.png"
-dest_files=[ "res://.import/House tilemap.png-1dc603dafa14b783d0263281d9516ccd.stex" ]
+source_file="res://Levels/textures/House tilemap.png"
+dest_files=[ "res://.import/House tilemap.png-388e2d00d6d52b19577f6be2dfafe1c8.stex" ]
 
 [params]
 

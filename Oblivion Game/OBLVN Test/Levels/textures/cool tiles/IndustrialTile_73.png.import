@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/IndustrialTile_73.png-e4756011afee9400ecc1b79fd6225c27.stex"
+path="res://.import/IndustrialTile_73.png-6d979ee88d141e70921504b9dc327a2c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/cool tiles/IndustrialTile_73.png"
-dest_files=[ "res://.import/IndustrialTile_73.png-e4756011afee9400ecc1b79fd6225c27.stex" ]
+source_file="res://Levels/textures/cool tiles/IndustrialTile_73.png"
+dest_files=[ "res://.import/IndustrialTile_73.png-6d979ee88d141e70921504b9dc327a2c.stex" ]
 
 [params]
 

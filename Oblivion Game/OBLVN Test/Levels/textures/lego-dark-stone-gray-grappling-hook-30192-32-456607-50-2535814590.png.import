@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lego-dark-stone-gray-grappling-hook-30192-32-456607-50-2535814590.png-12884e62a35cf36f7b8efbce5233118b.stex"
+path="res://.import/lego-dark-stone-gray-grappling-hook-30192-32-456607-50-2535814590.png-edb70bd2bb496eb5f78ebd79701f1ce8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/lego-dark-stone-gray-grappling-hook-30192-32-456607-50-2535814590.png"
-dest_files=[ "res://.import/lego-dark-stone-gray-grappling-hook-30192-32-456607-50-2535814590.png-12884e62a35cf36f7b8efbce5233118b.stex" ]
+source_file="res://Levels/textures/lego-dark-stone-gray-grappling-hook-30192-32-456607-50-2535814590.png"
+dest_files=[ "res://.import/lego-dark-stone-gray-grappling-hook-30192-32-456607-50-2535814590.png-edb70bd2bb496eb5f78ebd79701f1ce8.stex" ]
 
 [params]
 
