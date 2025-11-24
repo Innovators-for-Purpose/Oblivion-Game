@@ -45,28 +45,32 @@ func _ready():
 func _on_Area2D_area_entered(area):
 
 	if area.is_in_group("grapple"):
-		can_grapple = true
-		location = get_closest_grappable()
-		print(get_closest_grappable())
-		hook_position = location
+		stop = 1
 	
 
 func _on_Area2D_area_exited(area):
 	if area.is_in_group("grapple"):
+		
+		stop = 2
 		can_grapple = false
 		
 	
 
 func get_closest_grappable():#this should be pretty obvious
+#	var mindist = Vector2.INF
+#	var mindistcall
+#	for i in range(grap.size()):
+#		if self.global_position.distance_to(grap[i]) < self.global_position.distance_to(grap[i]):
+#			return grap[i]
 	if self.global_position.distance_to(grap[0])<self.global_position.distance_to(grap[1]) and self.global_position.distance_to(grap[0])<self.global_position.distance_to(grap[2]):
 		return grap[0]
-		
+
 	if self.global_position.distance_to(grap[1])<self.global_position.distance_to(grap[0]) and self.global_position.distance_to(grap[1])<self.global_position.distance_to(grap[2]):
 		return grap[1]
-		
+
 	if self.global_position.distance_to(grap[2])<self.global_position.distance_to(grap[0]) and self.global_position.distance_to(grap[2])<self.global_position.distance_to(grap[1]):
 		return grap[2]
-		
+#
 	
 	
 
@@ -74,7 +78,7 @@ func get_closest_grappable():#this should be pretty obvious
 func _input(event: InputEvent):#the commented code ether makes grapple mouse controled 
 	#or makes the grapple need to have the grapple hook out
 #	$GrappleLineDetect.set_cast_to(get_tree().call_group("grapple","location"))
-	if (Input.is_action_just_pressed("grapple")):
+	if (Input.is_action_just_pressed("grapple") and can_grapple == true):
 		
 #	and event.pressed
 #	and can_grapple
@@ -108,10 +112,21 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 		return false
 
 func _physics_process(_delta):
-#	print(graple)
+	print(can_grapple)
+	print(stop)
 	if stop == 1:
-		
+		can_grapple = true
+		location = get_closest_grappable()
+		hook_position = location
+	else:
 		stop = 2
+		can_grapple = false
+	if stop == 2 :
+		can_grapple = false
+		$grap_area.monitoring = false
+		$grap_area.monitoring = true
+	
+	
 	match state:
 		States.FLOOR:
 			#State switching
@@ -143,7 +158,7 @@ func _physics_process(_delta):
 				continue
 			else:
 				CoyoteTime.set_wait_time(.15)
-			can_grapple = true
+
 			
 			if Input.is_action_pressed("left"): #FLOOR code
 				anim.flip_h = true

@@ -219,7 +219,7 @@ scale = Vector2( 30, 30 )
 shape = SubResource( 10 )
 
 [node name="Grappleables" type="Node2D" parent="." groups=["grapple"]]
-position = Vector2( 823, 356 )
+position = Vector2( 848, 421 )
 scale = Vector2( 2, 2 )
 
 [node name="Sprite" type="Sprite" parent="Grappleables"]
@@ -242,7 +242,7 @@ collision_mask = 32
 shape = SubResource( 11 )
 
 [node name="Grappleables2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 525, 355 )
+position = Vector2( 524, 335 )
 
 [node name="Grappleables3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 3829, 44 )
