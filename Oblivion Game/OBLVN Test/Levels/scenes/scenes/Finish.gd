@@ -1,5 +1,6 @@
 extends Area2D
 
-func _on_body_enetered(body):
-	if (body.name == "KinematicBody2D"):
-		get_tree().change_scene_to_file("res://Levels/scenes/level0_house.tscn")
+func _on_Finish_body_entered(body):
+	if body.name == "AlexStates":
+		get_tree().change_scene("res://Levels/scenes/Main.tscn")
+		print("Finish")

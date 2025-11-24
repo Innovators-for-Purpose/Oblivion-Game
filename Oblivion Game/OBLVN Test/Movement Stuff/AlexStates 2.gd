@@ -278,11 +278,26 @@ func should_climb_ladder() -> bool:
 func _on_Coyote_timeout():
 	coyote = false
 	CoyoteTime.set_paused(true)
+	
+func _on_Area2D_body_entered(body):
+	if body.name == "AlexStates":
+		get_tree().call_deferred("reload_current_scene")
 
 
+\
+func _on_Finish_body_entered(body):
+	if body.name == "AlexStates":
+		get_tree().change_scene("res://scenes/Main.tscn")
+		
+func _on_Finish1_body_entered(body):
+	if body.name == "AlexStates":
+		get_tree().change_scene("res://Levels/scenes/level0_house.tscn")
+		
 
 
-
-
-
-
+func _on_Necklace_body_entered(body):
+	if body.name == "AlexStates":
+		get_tree().change_scene("res://Levels/scenes/scenes/AssemblyPlantsave.tscn")
+		
+#func jump():
+#	velocity.y = JUMP_VELOCITY

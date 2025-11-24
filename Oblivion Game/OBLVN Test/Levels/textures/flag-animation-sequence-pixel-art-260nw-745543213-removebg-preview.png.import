@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Finish.png-a2b0ab170780cb4e51036f3042c4a116.stex"
+path="res://.import/flag-animation-sequence-pixel-art-260nw-745543213-removebg-preview.png-e685f20a3804639e36bc89c30f7c0a6f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/scenes/scenes/Finish.png"
-dest_files=[ "res://.import/Finish.png-a2b0ab170780cb4e51036f3042c4a116.stex" ]
+source_file="res://Levels/textures/flag-animation-sequence-pixel-art-260nw-745543213-removebg-preview.png"
+dest_files=[ "res://.import/flag-animation-sequence-pixel-art-260nw-745543213-removebg-preview.png-e685f20a3804639e36bc89c30f7c0a6f.stex" ]
 
 [params]
 
