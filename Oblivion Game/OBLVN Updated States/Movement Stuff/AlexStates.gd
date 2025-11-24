@@ -21,8 +21,8 @@ onready var hpBar = $Sizing/hpBar
 onready var LadderDetect = $LadderDetect
 onready var Chain = $Chain
 onready var CoyoteTime = $Coyote
-onready var grap:Array = [$'../Grappleables'.global_position,$'../Grappleables2'.global_position,$'../Grappleables3'.global_position]
-
+#onready var grap:Array = [$'../Grappleables'.global_position,$'../Grappleables2'.global_position,$'../Grappleables3'.global_position]
+var grap = []
 
 var djump := true
 var can_djump := true
@@ -39,8 +39,17 @@ var array_grap = [PoolVector2Array()]
 var pool_array = array_grap[0]
 var player = self.global_position
 var stop = 1
+
+
 func _ready():
 	CoyoteTime.set_wait_time(.5)
+	
+	for child in get_parent().get_children():
+		if child.name.begins_with("Grappleable"):
+			child.add_to_group("grapple")
+	
+	grap = get_tree().get_nodes_in_group("grapple")
+	
 	
 func _on_Area2D_area_entered(area):
 
@@ -62,14 +71,26 @@ func get_closest_grappable():#this should be pretty obvious
 #	for i in range(grap.size()):
 #		if self.global_position.distance_to(grap[i]) < self.global_position.distance_to(grap[i]):
 #			return grap[i]
-	if self.global_position.distance_to(grap[0])<self.global_position.distance_to(grap[1]) and self.global_position.distance_to(grap[0])<self.global_position.distance_to(grap[2]):
-		return grap[0]
+#	if self.global_position.distance_to(grap[0])<self.global_position.distance_to(grap[1]) and self.global_position.distance_to(grap[0])<self.global_position.distance_to(grap[2]):
+#		return grap[0]
+#
+#	if self.global_position.distance_to(grap[1])<self.global_position.distance_to(grap[0]) and self.global_position.distance_to(grap[1])<self.global_position.distance_to(grap[2]):
+#		return grap[1]
+#
+#	if self.global_position.distance_to(grap[2])<self.global_position.distance_to(grap[0]) and self.global_position.distance_to(grap[2])<self.global_position.distance_to(grap[1]):
+#		return grap[2]
+	var closest = null
+	var closest_dist = INF
+	
+	for g in grap:
+		var dist = self.global_position.distance_to(g.global_position)
+		
+		if dist < closest_dist:
+			closest_dist = dist
+			closest = g
+			
+	return closest
 
-	if self.global_position.distance_to(grap[1])<self.global_position.distance_to(grap[0]) and self.global_position.distance_to(grap[1])<self.global_position.distance_to(grap[2]):
-		return grap[1]
-
-	if self.global_position.distance_to(grap[2])<self.global_position.distance_to(grap[0]) and self.global_position.distance_to(grap[2])<self.global_position.distance_to(grap[1]):
-		return grap[2]
 #
 	
 	
@@ -116,7 +137,7 @@ func _physics_process(_delta):
 	print(stop)
 	if stop == 1:
 		can_grapple = true
-		location = get_closest_grappable()
+		location = get_closest_grappable().global_position
 		hook_position = location
 	else:
 		stop = 2
