@@ -154,9 +154,11 @@ func _physics_process(_delta):
 		$grap_area.monitoring = false
 		$grap_area.monitoring = true
 	for g in get_tree().get_nodes_in_group('grapple'):
-		g.visable = true
+		if g.has_method("enable_cross"):
+			g.enable_cross(false)
+#		g.visable = true
 	var closest = get_closest_grappable()
-	if closest:
+	if closest and closest.has_method("enable_cross"):
 		closest.enable_cross(true)
 	
 	match state:
