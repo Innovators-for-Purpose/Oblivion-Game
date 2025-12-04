@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/Assembly Plant.webp" type="Texture" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://Levels/scenes/scenes/Area2D.gd" type="Script" id=16]
 [ext_resource path="res://Levels/textures/Better SNow.png" type="Texture" id=17]
 [ext_resource path="res://Levels/scenes/scenes/Enemy.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Levels/scenes/scenes/Bee Enemee.tscn" type="PackedScene" id=19]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -620,10 +621,10 @@ expand = true
 stretch_mode = 1
 
 [node name="Pipes" type="TextureRect" parent="."]
-margin_left = -2.0
-margin_top = -482.0
-margin_right = 1519.0
-margin_bottom = 421.0
+margin_left = 19.981
+margin_top = -483.0
+margin_right = 1540.98
+margin_bottom = 420.0
 texture = ExtResource( 11 )
 expand = true
 stretch_mode = 1
@@ -680,6 +681,7 @@ draw_order = 1
 texture = ExtResource( 10 )
 emission_shape = 1
 emission_sphere_radius = 1.0
+scale_amount = 0.0
 
 [node name="CPUParticles2D20" type="CPUParticles2D" parent="Snowflakes"]
 position = Vector2( 3526, -903 )
@@ -1160,56 +1162,62 @@ position = Vector2( 619.412, 231 )
 position = Vector2( 779.26, -69 )
 
 [node name="Enemy5" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 1227.83, 25 )
+position = Vector2( 1495.58, 60 )
 
 [node name="Enemy6" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 65.9374, 131 )
+position = Vector2( 143.863, 186 )
 
 [node name="Enemy7" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 455.567, -79 )
+position = Vector2( 467.556, 8 )
 
 [node name="Enemy8" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( -199.81, 179 )
+position = Vector2( -208.802, 331 )
 
 [node name="Enemy9" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 947.1, -62 )
+position = Vector2( 106.898, 331 )
 
 [node name="Enemy10" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 1125.93, -204 )
+position = Vector2( 1102.95, -166 )
 
 [node name="Enemy11" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 1389.68, 87 )
+position = Vector2( 1417.65, 331 )
 
 [node name="Enemy12" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 1452.62, -84 )
+position = Vector2( 1570.51, -103 )
 mass = 64.3969
 
 [node name="Enemy13" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 2496.63, -528 )
+position = Vector2( 2523.6, -490 )
 
 [node name="Enemy14" parent="Enemies" instance=ExtResource( 18 )]
 position = Vector2( 2359.76, -272 )
 
 [node name="Enemy15" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 1980.12, -443 )
+position = Vector2( 2015.09, -414 )
 
 [node name="Enemy16" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 2911.23, -195 )
+position = Vector2( 2944.2, -168 )
 
 [node name="Enemy17" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 3145.01, -514 )
+position = Vector2( 3179.98, -502 )
 
 [node name="Enemy18" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 2919.23, -426 )
+position = Vector2( 3241.92, -260 )
 
 [node name="Enemy19" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 1857.24, -343 )
+position = Vector2( 1760.33, -402 )
 
 [node name="Enemy20" parent="Enemies" instance=ExtResource( 18 )]
 position = Vector2( 1980.12, -139 )
 
 [node name="Enemy21" parent="Enemies" instance=ExtResource( 18 )]
-position = Vector2( 1566.51, 190 )
+position = Vector2( 2654.48, -238 )
+
+[node name="Bee" parent="Enemies" instance=ExtResource( 19 )]
+position = Vector2( 3251.91, 118 )
+
+[node name="Bee2" parent="Enemies" instance=ExtResource( 19 )]
+position = Vector2( 814.227, 286 )
 
 [connection signal="body_entered" from="Finish" to="AlexStates" method="_on_Finish_body_entered"]
 [connection signal="body_entered" from="Respawn Areas/Fall" to="AlexStates" method="_on_Area2D_body_entered"]

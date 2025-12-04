@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates 2.gd" type="Script" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://Movement Stuff/_CrouchWalk.png" type="Texture" id=10]
 [ext_resource path="res://Movement Stuff/Climb.png" type="Texture" id=11]
 [ext_resource path="res://Movement Stuff/_Crouch.png" type="Texture" id=12]
-[ext_resource path="res://Movement Stuff/_Run.png" type="Texture" id=13]
 [ext_resource path="res://Levels/textures/Life Icon.png" type="Texture" id=14]
 
 [sub_resource type="AtlasTexture" id=36]
@@ -170,56 +169,6 @@ flags = 4
 atlas = ExtResource( 9 )
 region = Rect2( 240, 0, 120, 80 )
 
-[sub_resource type="AtlasTexture" id=42]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 120, 80 )
-
-[sub_resource type="AtlasTexture" id=43]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 120, 0, 120, 80 )
-
-[sub_resource type="AtlasTexture" id=44]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 240, 0, 120, 80 )
-
-[sub_resource type="AtlasTexture" id=45]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 360, 0, 120, 80 )
-
-[sub_resource type="AtlasTexture" id=46]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 480, 0, 120, 80 )
-
-[sub_resource type="AtlasTexture" id=47]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 600, 0, 120, 80 )
-
-[sub_resource type="AtlasTexture" id=48]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 720, 0, 120, 80 )
-
-[sub_resource type="AtlasTexture" id=49]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 840, 0, 120, 80 )
-
-[sub_resource type="AtlasTexture" id=50]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 960, 0, 120, 80 )
-
-[sub_resource type="AtlasTexture" id=51]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 1080, 0, 120, 80 )
-
 [sub_resource type="SpriteFrames" id=35]
 animations = [ {
 "frames": [ SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
@@ -252,10 +201,10 @@ animations = [ {
 "name": "jump",
 "speed": 12.0
 }, {
-"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ) ],
+"frames": [  ],
 "loop": true,
 "name": "run",
-"speed": 12.0
+"speed": 9.0
 } ]
 
 [sub_resource type="Theme" id=5]
@@ -285,11 +234,10 @@ collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="Anim" type="AnimatedSprite" parent="."]
-position = Vector2( -2, -23 )
-scale = Vector2( 2, 2 )
+position = Vector2( -6, -15 )
+scale = Vector2( 1.30595, 1.79006 )
 frames = SubResource( 35 )
-animation = "run"
-frame = 2
+animation = "jump"
 playing = true
 flip_h = true
 
@@ -342,7 +290,9 @@ margin_top = 5.0
 margin_right = 205.0
 margin_bottom = 35.0
 theme = SubResource( 4 )
-percent_visible = false
+min_value = 100.0
+max_value = 0.0
+value = 100.0
 __meta__ = {
 "_edit_lock_": true
 }

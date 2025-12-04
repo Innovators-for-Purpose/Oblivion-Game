@@ -83,6 +83,7 @@ extents = Vector2( 23.5, 18.5 )
 extents = Vector2( 14.375, 7 )
 
 [node name="Enemy" type="RigidBody2D"]
+mode = 1
 mass = 0.23
 can_sleep = false
 script = ExtResource( 2 )
@@ -92,7 +93,6 @@ position = Vector2( 34.5, 63.5 )
 scale = Vector2( 0.659091, 0.911504 )
 frames = SubResource( 5 )
 animation = "idle"
-frame = 3
 playing = true
 flip_h = true
 
