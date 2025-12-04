@@ -242,11 +242,9 @@ collision_mask = 32
 shape = SubResource( 11 )
 
 [node name="Grappleables2" parent="." instance=ExtResource( 5 )]
-visible = false
 position = Vector2( 524, 335 )
 
 [node name="Grappleables3" parent="." instance=ExtResource( 5 )]
-visible = false
 position = Vector2( 3829, 44 )
 
 [node name="Node2D" type="Node2D" parent="."]

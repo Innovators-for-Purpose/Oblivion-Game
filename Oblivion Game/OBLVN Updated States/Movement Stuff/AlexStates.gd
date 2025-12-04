@@ -55,43 +55,45 @@ func _on_Area2D_area_entered(area):
 
 	if area.is_in_group("grapple"):
 		stop = 1
-	
 
+#	var target = null
+#	if area.has_method("enable_cross"):
+#		target = area
+#	elif area.get_parent() and area.get_parent().has_method("enable_cross"):
+#		target = area.get_parent() 
+#	elif area.get_parent() and area.get_parent().has_method("enable_cross") and area.get_parent().get_parent().has_method("enable_cross"):
+#			target = area.get_parent().get_parent()
 func _on_Area2D_area_exited(area):
 	if area.is_in_group("grapple"):
 		
 		stop = 2
 		can_grapple = false
 		
-	
+#	var target = null
+#	if area.has_method("enable_cross"):
+#		target = area
+#	elif area.get_parent() and area.get_parent().has_method("enable_cross"):
+#		target = area.get_parent() 
+#	elif area.get_parent() and area.get_parent().has_method("enable_cross") and area.get_parent().get_parent().has_method("enable_cross"):
+#			target = area.get_parent().get_parent()
+#	if target:
+#		target.call("enable_cross", false)
 
 func get_closest_grappable():#this should be pretty obvious
-#	var mindist = Vector2.INF
-#	var mindistcall
-#	for i in range(grap.size()):
-#		if self.global_position.distance_to(grap[i]) < self.global_position.distance_to(grap[i]):
-#			return grap[i]
-#	if self.global_position.distance_to(grap[0])<self.global_position.distance_to(grap[1]) and self.global_position.distance_to(grap[0])<self.global_position.distance_to(grap[2]):
-#		return grap[0]
-#
-#	if self.global_position.distance_to(grap[1])<self.global_position.distance_to(grap[0]) and self.global_position.distance_to(grap[1])<self.global_position.distance_to(grap[2]):
-#		return grap[1]
-#
-#	if self.global_position.distance_to(grap[2])<self.global_position.distance_to(grap[0]) and self.global_position.distance_to(grap[2])<self.global_position.distance_to(grap[1]):
-#		return grap[2]
 	var closest = null
 	var closest_dist = INF
 	
-	for g in grap:
+#	for g in grap:
+	for g in get_tree().get_nodes_in_group('grapple'):
 		var dist = self.global_position.distance_to(g.global_position)
 		
 		if dist < closest_dist:
 			closest_dist = dist
 			closest = g
 			
+		
 	return closest
-
-#
+#	closest.get_child('grappleCross').visable = true
 	
 	
 
@@ -104,7 +106,7 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 #	and event.pressed
 #	and can_grapple
 #	and not $GrappleLineDetect.is_colliding()
-#	and Inventory.selected == 3):
+#	and Inventory.selected == 3): add this for grapple pick up
 		mouse = get_global_mouse_position()
 #		for grappleable in get_tree().get_nodes_in_group("grapple"):
 #			var dist = global_position.distance_to(grappleable.global_position)
@@ -117,6 +119,7 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 #if hook_position.x + GRAPPLE_RADIUS >= mouse.x and hook_position.x - GRAPPLE_RADIUS <= mouse.x and hook_position.y + GRAPPLE_RADIUS >= mouse.y and hook_position.y - GRAPPLE_RADIUS <= mouse.y:
 #			print ('yay')
 		
+	
 		
 		
 		$Chain.shoot(location - self.global_position)
@@ -135,18 +138,26 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 func _physics_process(_delta):
 	print(can_grapple)
 	print(stop)
+	
+	#$CanvasLayer/grappleCross.position = location - self.global_position / $Camera2D.global_position
 	if stop == 1:
 		can_grapple = true
 		location = get_closest_grappable().global_position
 		hook_position = location
+		
 	else:
 		stop = 2
 		can_grapple = false
+#		$CanvasLayer/grappleCross.visible = false
 	if stop == 2 :
 		can_grapple = false
 		$grap_area.monitoring = false
 		$grap_area.monitoring = true
-	
+	for g in get_tree().get_nodes_in_group('grapple'):
+		g.visable = true
+	var closest = get_closest_grappable()
+	if closest:
+		closest.enable_cross(true)
 	
 	match state:
 		States.FLOOR:
@@ -231,7 +242,6 @@ func _physics_process(_delta):
 			elif $Chain.hooked:
 				state = States.GRAPPLE
 				continue
-			can_grapple = true
 			$Tall.disabled = false
 			$Short.disabled = true
 			
