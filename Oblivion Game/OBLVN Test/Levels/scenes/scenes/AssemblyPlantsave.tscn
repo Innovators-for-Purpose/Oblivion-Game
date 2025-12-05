@@ -1219,5 +1219,7 @@ position = Vector2( 3251.91, 118 )
 [node name="Bee2" parent="Enemies" instance=ExtResource( 19 )]
 position = Vector2( 814.227, 286 )
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="body_entered" from="Finish" to="AlexStates" method="_on_Finish_body_entered"]
 [connection signal="body_entered" from="Respawn Areas/Fall" to="AlexStates" method="_on_Area2D_body_entered"]

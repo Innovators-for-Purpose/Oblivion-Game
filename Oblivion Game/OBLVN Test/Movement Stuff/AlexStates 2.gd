@@ -295,9 +295,9 @@ func _on_Finish1_body_entered(body):
 		
 
 
-func _on_Necklace_body_entered(body):
-	if body.name == "AlexStates":
-		get_tree().change_scene("res://Levels/scenes/scenes/AssemblyPlantsave.tscn")
-		
+#func _on_Necklace_body_entered(body):
+#	if body.name == "AlexStates":
+#		get_tree().change_scene("res://Levels/scenes/scenes/AssemblyPlantsave.tscn")
+#
 #func jump():
 #	velocity.y = JUMP_VELOCITY

@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates 2.gd" type="Script" id=2]
@@ -12,7 +12,10 @@
 [ext_resource path="res://Movement Stuff/_CrouchWalk.png" type="Texture" id=10]
 [ext_resource path="res://Movement Stuff/Climb.png" type="Texture" id=11]
 [ext_resource path="res://Movement Stuff/_Crouch.png" type="Texture" id=12]
+[ext_resource path="res://Untitled40_20251125180159.png" type="Texture" id=13]
 [ext_resource path="res://Levels/textures/Life Icon.png" type="Texture" id=14]
+[ext_resource path="res://Levels/scenes/scenes/Untitled40_20251125180154.png" type="Texture" id=15]
+[ext_resource path="res://Untitled40_20251125180204.png" type="Texture" id=16]
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
@@ -169,6 +172,21 @@ flags = 4
 atlas = ExtResource( 9 )
 region = Rect2( 240, 0, 120, 80 )
 
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 70, 60 )
+
+[sub_resource type="AtlasTexture" id=43]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 70, 60 )
+
+[sub_resource type="AtlasTexture" id=44]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 70, 60 )
+
 [sub_resource type="SpriteFrames" id=35]
 animations = [ {
 "frames": [ SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
@@ -201,7 +219,7 @@ animations = [ {
 "name": "jump",
 "speed": 12.0
 }, {
-"frames": [  ],
+"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
 "loop": true,
 "name": "run",
 "speed": 9.0
@@ -238,6 +256,7 @@ position = Vector2( -6, -15 )
 scale = Vector2( 1.30595, 1.79006 )
 frames = SubResource( 35 )
 animation = "jump"
+frame = 2
 playing = true
 flip_h = true
 
