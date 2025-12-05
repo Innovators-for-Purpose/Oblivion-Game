@@ -1,10 +1,20 @@
 extends GridContainer
 
 var inventory = preload("res://inven/Inventory.tres")
+onready var slot1 = $InventorySlotDisplay
+onready var slot2 = $InventorySlotDisplay2
+onready var slot3 = $InventorySlotDisplay3
+onready var slot4 = $InventorySlotDisplay4
+onready var slot5 = $InventorySlotDisplay5
+onready var slot6 = $InventorySlotDisplay6
+onready var slot7 = $InventorySlotDisplay7
+onready var slot8 = $InventorySlotDisplay8
+onready var slot9 = $InventorySlotDisplay9
+
 
 func _ready():
 	inventory.connect("items_changed", self, "_on_items_changed")
-#	update_inventory_display()
+	update_inventory_display()
 	pass
 	
 func update_inventory_display():

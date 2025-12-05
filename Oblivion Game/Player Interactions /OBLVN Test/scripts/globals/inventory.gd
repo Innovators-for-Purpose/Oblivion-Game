@@ -95,23 +95,4 @@ func change_item(index, item: Dictionary, parent: Node):
 	parent.add_child(itemsprite)
 	prev_item = itemsprite
 
-func remove_item(index):
-	var previous_item = items[index].duplicate()
-	items[index].clear()
-	emit_signal("items_changed", [index])
-	return previous_item
 
-func broadcast_signal(indexes):
-	emit_signal("items_changed", indexes)
-	for index in indexes:
-		if index == selected:
-			emit_signal("selected_changed")
-
-func set_selected(new_selected):
-	var last_selected = selected
-	selected = new_selected
-	broadcast_signal([selected, last_selected])
-#	print(get_selected())
-
-func get_selected():
-	return items[selected]
