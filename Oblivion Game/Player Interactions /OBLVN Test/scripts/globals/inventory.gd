@@ -1,8 +1,7 @@
 extends Node
 
 # Declare member variables here. Examples:
-signal items_changed(indexes)
-signal selected_changed()
+
 
 var cols = 4
 var rows = 1
