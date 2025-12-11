@@ -1,174 +1,172 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=62 format=2]
 
-[ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
-[ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
-[ext_resource path="res://Movement Stuff/collisionShapes/standShape.tres" type="Shape2D" id=3]
-[ext_resource path="res://Movement Stuff/collisionShapes/crouchShape.tres" type="Shape2D" id=4]
-[ext_resource path="res://Movement Stuff/_Fall.png" type="Texture" id=5]
-[ext_resource path="res://Movement Stuff/Cam.gd" type="Script" id=6]
-[ext_resource path="res://Movement Stuff/Chain.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Movement Stuff/_Idle.png" type="Texture" id=8]
-[ext_resource path="res://Movement Stuff/_Jump.png" type="Texture" id=9]
-[ext_resource path="res://Movement Stuff/_CrouchWalk.png" type="Texture" id=10]
-[ext_resource path="res://Movement Stuff/Climb.png" type="Texture" id=11]
-[ext_resource path="res://Movement Stuff/_Crouch.png" type="Texture" id=12]
-[ext_resource path="res://Movement Stuff/_Run.png" type="Texture" id=13]
-[ext_resource path="res://scripts/InvGui.gd" type="Script" id=14]
-[ext_resource path="res://inven/InventoryContainer.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Levels/scenes/Movement Stuff/_Jump.png" type="Texture" id=1]
+[ext_resource path="res://Levels/scenes/Movement Stuff/_CrouchWalk.png" type="Texture" id=2]
+[ext_resource path="res://Levels/scenes/Movement Stuff/_Fall.png" type="Texture" id=3]
+[ext_resource path="res://Levels/scenes/Movement Stuff/Climb.png" type="Texture" id=4]
+[ext_resource path="res://Levels/scenes/Movement Stuff/Cam.gd" type="Script" id=5]
+[ext_resource path="res://Levels/scenes/Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=6]
+[ext_resource path="res://Levels/scenes/Movement Stuff/AlexStates 2.gd" type="Script" id=7]
+[ext_resource path="res://Levels/scenes/Movement Stuff/_Crouch.png" type="Texture" id=8]
+[ext_resource path="res://Levels/scenes/Movement Stuff/_Idle.png" type="Texture" id=9]
+[ext_resource path="res://Levels/scenes/Movement Stuff/collisionShapes/standShape.tres" type="Shape2D" id=10]
+[ext_resource path="res://Levels/scenes/Movement Stuff/Chain.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Levels/scenes/Movement Stuff/collisionShapes/crouchShape.tres" type="Shape2D" id=12]
+[ext_resource path="res://Levels/scenes/Movement Stuff/_Run.png" type="Texture" id=13]
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
-atlas = ExtResource( 11 )
+atlas = ExtResource( 4 )
 region = Rect2( 42, 0, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=37]
 flags = 4
-atlas = ExtResource( 11 )
+atlas = ExtResource( 4 )
 region = Rect2( 168, 0, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=38]
 flags = 4
-atlas = ExtResource( 11 )
+atlas = ExtResource( 4 )
 region = Rect2( 42, 64, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=39]
 flags = 4
-atlas = ExtResource( 11 )
+atlas = ExtResource( 4 )
 region = Rect2( 168, 64, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=40]
 flags = 4
-atlas = ExtResource( 11 )
+atlas = ExtResource( 4 )
 region = Rect2( 42, 128, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=41]
 flags = 4
-atlas = ExtResource( 11 )
+atlas = ExtResource( 4 )
 region = Rect2( 168, 128, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 120, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 240, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 360, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 480, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 600, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 720, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 840, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 3 )
 region = Rect2( 120, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 3 )
 region = Rect2( 240, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
-atlas = ExtResource( 8 )
+atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
-atlas = ExtResource( 8 )
+atlas = ExtResource( 9 )
 region = Rect2( 120, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
-atlas = ExtResource( 8 )
+atlas = ExtResource( 9 )
 region = Rect2( 240, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
-atlas = ExtResource( 8 )
+atlas = ExtResource( 9 )
 region = Rect2( 360, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
-atlas = ExtResource( 8 )
+atlas = ExtResource( 9 )
 region = Rect2( 480, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
-atlas = ExtResource( 8 )
+atlas = ExtResource( 9 )
 region = Rect2( 600, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
-atlas = ExtResource( 8 )
+atlas = ExtResource( 9 )
 region = Rect2( 720, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
-atlas = ExtResource( 8 )
+atlas = ExtResource( 9 )
 region = Rect2( 840, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
-atlas = ExtResource( 8 )
+atlas = ExtResource( 9 )
 region = Rect2( 960, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
-atlas = ExtResource( 8 )
+atlas = ExtResource( 9 )
 region = Rect2( 1080, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 1 )
 region = Rect2( 120, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 1 )
 region = Rect2( 240, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=42]
@@ -281,36 +279,31 @@ bg_color = Color( 1, 0, 0, 1 )
 ProgressBar/styles/bg = SubResource( 7 )
 ProgressBar/styles/fg = SubResource( 3 )
 
-[sub_resource type="RectangleShape2D" id=52]
-
 [node name="AlexStates" type="KinematicBody2D"]
+position = Vector2( 513, 298 )
 collision_mask = 2
-script = ExtResource( 2 )
+script = ExtResource( 7 )
 
 [node name="Anim" type="AnimatedSprite" parent="."]
 position = Vector2( -2, -23 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
 animation = "run"
-frame = 2
+frame = 8
 playing = true
 flip_h = true
 
 [node name="Tall" type="CollisionShape2D" parent="."]
 position = Vector2( 1, 20 )
-shape = ExtResource( 3 )
+shape = ExtResource( 10 )
 
 [node name="Short" type="CollisionShape2D" parent="."]
 position = Vector2( 1, 28.5 )
-shape = ExtResource( 4 )
+shape = ExtResource( 12 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-current = true
-limit_left = -32
-limit_top = -32
-limit_right = 1952
-limit_bottom = 1080
-script = ExtResource( 6 )
+smoothing_enabled = true
+script = ExtResource( 5 )
 
 [node name="LadderDetect" type="Area2D" parent="."]
 collision_layer = 0
@@ -318,9 +311,9 @@ collision_mask = 4
 
 [node name="Coll" type="CollisionShape2D" parent="LadderDetect"]
 position = Vector2( 0, 20 )
-shape = ExtResource( 1 )
+shape = ExtResource( 6 )
 
-[node name="Chain" parent="." instance=ExtResource( 7 )]
+[node name="Chain" parent="." instance=ExtResource( 11 )]
 visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -354,9 +347,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="InventoryContainer" parent="CanvasLayer" instance=ExtResource( 15 )]
-script = ExtResource( 14 )
-
 [node name="Coyote" type="Timer" parent="."]
 process_mode = 0
 wait_time = 0.15
@@ -366,15 +356,6 @@ one_shot = true
 enabled = true
 cast_to = Vector2( 0, 0 )
 collision_mask = 10
-
-[node name="Sprite" type="Sprite" parent="."]
-
-[node name="Area2D" type="Area2D" parent="Sprite"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D"]
-shape = SubResource( 52 )
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [connection signal="body_entered" from="LadderDetect" to="." method="_on_LadderDetect_body_entered"]
 [connection signal="body_exited" from="LadderDetect" to="." method="_on_LadderDetect_body_exited"]

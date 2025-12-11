@@ -29,73 +29,9 @@ var coyote := false
 var velocity = Vector2()
 var chain_velocity := Vector2()
 var mouse
-var magnet_collide_with = null
-
-var inventory = preload("res://inven/Inventory.tres")   # your Resource
-var prev_item = null
-var selected_slot = 0
-
 
 func _ready():
 	CoyoteTime.set_wait_time(.5)
-	
-	var inv_display = $InventoryDisplay   # or $UI/InventoryDisplay if it's nested in a UI node
-	if inv_display:
-		inv_display.connect("selected_changed", self, "_on_selected_changed")
-	else:
-		printerr("InventoryDisplay node not found under Player")
-	
-func _on_selected_changed(slot_index):
-	selected_slot = slot_index
-	var item = inventory.items[slot_index]
-	if item:
-		equip_item(slot_index, item)
-
-
-func equip_item(index, item):
-	var item_key = item.get("key", "")
-
-	# Unequip if already equipped
-	if prev_item and prev_item.name == item_key and index == selected_slot:
-		prev_item.queue_free()
-		prev_item = null
-		return
-
-	# Heal (instant use, no visible sprite)
-	if item_key == "heal":
-		var temp = Sprite.new()
-		temp.set_script(load("res://scripts/item_scripts/" + item.script))
-		add_child(temp)
-		temp.queue_free()
-		return
-
-	# Magnet special case
-	if item_key == "magnet":
-		if prev_item:
-			prev_item.queue_free()
-		var holder = Sprite.new()
-		holder.name = item_key
-		holder.add_child(load("res://scripts/item_scripts/magnet.gd").instance())
-		add_child(holder)
-		prev_item = holder
-		return
-
-	# General items with icon
-	if item.empty() or not item.has("icon"):
-		return
-
-	if prev_item:
-		prev_item.queue_free()
-
-	var item_sprite = Sprite.new()
-	item_sprite.name = item_key
-	item_sprite.texture = load("res://textures/" + item.icon)
-	item_sprite.set_script(load("res://scripts/item_scripts/" + item.script))
-	item_sprite.position = Vector2(90, 0)   # adjust if needed
-
-	add_child(item_sprite)
-	prev_item = item_sprite
-
 
 func _input(event: InputEvent):
 	$GrappleLineDetect.set_cast_to(get_local_mouse_position())
@@ -116,8 +52,6 @@ func _input(event: InputEvent):
 		return false
 
 func _physics_process(_delta):
-	if Input.is_action_just_pressed("ui_pick"):
-		pick_magnet()
 	match state:
 		States.FLOOR:
 			#State switching
@@ -295,13 +229,3 @@ func _on_MouseDetect_area_entered(area):
 	hook_position = area.global_position
 func _on_MouseDetect_area_exited(_area):
 	can_grapple = false
-
-func pick_magnet():
-	if not has_node("Node2D") and magnet_collide_with:
-		var ref_magnet = magnet_collide_with.get_child(2)
-		#ref_magnet.get_node("AlexStates").flip_h = sprite_flip
-		magnet_collide_with.remove_child(ref_magnet)
-		add_child(ref_magnet)
-		magnet_collide_with.queue_free()
-	pass
-

@@ -11,6 +11,8 @@ const JUMP_STRENGTH = -900
 const CHAIN_PULL = 600
 const CLIMB_STRENGTH = -350
 const GRAPPLE_RADIUS = 60
+const MAX = 45
+const MIN = 0
 
 onready var anim = $Anim
 onready var crouchbox = $Short
@@ -19,6 +21,8 @@ onready var hpBar = $Sizing/hpBar
 onready var LadderDetect = $LadderDetect
 onready var Chain = $Chain
 onready var CoyoteTime = $Coyote
+
+
 
 var djump := true
 var can_djump := true
@@ -29,95 +33,78 @@ var coyote := false
 var velocity = Vector2()
 var chain_velocity := Vector2()
 var mouse
-var magnet_collide_with = null
-
-var inventory = preload("res://inven/Inventory.tres")   # your Resource
-var prev_item = null
-var selected_slot = 0
+var graple = 0
+var location = Vector2(0,0)
 
 
 func _ready():
 	CoyoteTime.set_wait_time(.5)
 	
-	var inv_display = $InventoryDisplay   # or $UI/InventoryDisplay if it's nested in a UI node
-	if inv_display:
-		inv_display.connect("selected_changed", self, "_on_selected_changed")
-	else:
-		printerr("InventoryDisplay node not found under Player")
+func _on_Area2D_area_entered(area):
+
+	if area.is_in_group("grapple"):
+		can_grapple = true
+		location = get_closest_grappable()
+		
 	
-func _on_selected_changed(slot_index):
-	selected_slot = slot_index
-	var item = inventory.items[slot_index]
-	if item:
-		equip_item(slot_index, item)
+
+func _on_Area2D_area_exited(area):
+	if area.is_in_group("grapple"):
+		can_grapple = false
+		location = Vector2(0,0)
+	
+
+func get_closest_grappable():#this should be pretty obvious
+	var closest: Vector2 = Vector2(0,0)
+	var min_dis:= INF
+	for grappleable in get_tree().get_nodes_in_group("grapple"):
+		var dist = global_position.distance_to(grappleable.global_position)
+		if dist < min_dis:
+			min_dis = dist
+			closest = grappleable.global_position 
+	return closest
+	
+	
 
 
-func equip_item(index, item):
-	var item_key = item.get("key", "")
-
-	# Unequip if already equipped
-	if prev_item and prev_item.name == item_key and index == selected_slot:
-		prev_item.queue_free()
-		prev_item = null
-		return
-
-	# Heal (instant use, no visible sprite)
-	if item_key == "heal":
-		var temp = Sprite.new()
-		temp.set_script(load("res://scripts/item_scripts/" + item.script))
-		add_child(temp)
-		temp.queue_free()
-		return
-
-	# Magnet special case
-	if item_key == "magnet":
-		if prev_item:
-			prev_item.queue_free()
-		var holder = Sprite.new()
-		holder.name = item_key
-		holder.add_child(load("res://scripts/item_scripts/magnet.gd").instance())
-		add_child(holder)
-		prev_item = holder
-		return
-
-	# General items with icon
-	if item.empty() or not item.has("icon"):
-		return
-
-	if prev_item:
-		prev_item.queue_free()
-
-	var item_sprite = Sprite.new()
-	item_sprite.name = item_key
-	item_sprite.texture = load("res://textures/" + item.icon)
-	item_sprite.set_script(load("res://scripts/item_scripts/" + item.script))
-	item_sprite.position = Vector2(90, 0)   # adjust if needed
-
-	add_child(item_sprite)
-	prev_item = item_sprite
-
-
-func _input(event: InputEvent):
-	$GrappleLineDetect.set_cast_to(get_local_mouse_position())
-	if (event is InputEventMouseButton
-	and event.pressed
-	and can_grapple
-	and not $GrappleLineDetect.is_colliding()
-	and Inventory.selected == 3):
+func _input(event: InputEvent):#the commented code ether makes grapple mouse controled 
+	#or makes the grapple need to have the grapple hook out
+#	$GrappleLineDetect.set_cast_to(get_tree().call_group("grapple","location"))
+	if (Input.is_action_just_pressed("grapple") and location > Vector2(0,0)):
+		
+#	and event.pressed
+#	and can_grapple
+#	and not $GrappleLineDetect.is_colliding()
+#	and Inventory.selected == 3):
 		mouse = get_global_mouse_position()
-#		if hook_position.x + GRAPPLE_RADIUS >= mouse.x and hook_position.x - GRAPPLE_RADIUS <= mouse.x and hook_position.y + GRAPPLE_RADIUS >= mouse.y and hook_position.y - GRAPPLE_RADIUS <= mouse.y:
+#		for grappleable in get_tree().get_nodes_in_group("grapple"):
+#			var dist = global_position.distance_to(grappleable.global_position)
+#			if dist < MIN or dist > MAX:
+#				$Chain.release()
+#				print("release()")
+#				return
+#			else:
+#				$Chain.shoot(location - self.global_position)
+#if hook_position.x + GRAPPLE_RADIUS >= mouse.x and hook_position.x - GRAPPLE_RADIUS <= mouse.x and hook_position.y + GRAPPLE_RADIUS >= mouse.y and hook_position.y - GRAPPLE_RADIUS <= mouse.y:
 #			print ('yay')
-		$Chain.shoot(mouse - self.position)
+		
+		
+		
+		$Chain.shoot(location - self.global_position)
+		print("location = ",location)
 		print ("hook position = ", hook_position)
 		print ("mouse position = ", mouse)
 		return true
+#	elif not get_tree().get_nodes_in_group("grapple") and CollisionShape2D:
+#		$Chain.release()
+		
 	else:
 		$Chain.release()
 		return false
 
 func _physics_process(_delta):
-	if Input.is_action_just_pressed("ui_pick"):
-		pick_magnet()
+#	print(graple)
+	
 	match state:
 		States.FLOOR:
 			#State switching
@@ -244,6 +231,7 @@ func _physics_process(_delta):
 			chain_velocity = $Chain.tip.normalized() * CHAIN_PULL
 #			velocity = velocity.move_toward(hook_position, 2)
 #			move_and_slide(velocity)
+			
 			self.position = lerp(self.position, $Chain.tip, .2)
 			
 #			move_and_slide(chain_velocity)
@@ -290,18 +278,13 @@ func should_climb_ladder() -> bool:
 func _on_Coyote_timeout():
 	coyote = false
 	CoyoteTime.set_paused(true)
-func _on_MouseDetect_area_entered(area):
-	can_grapple = true
-	hook_position = area.global_position
-func _on_MouseDetect_area_exited(_area):
-	can_grapple = false
 
-func pick_magnet():
-	if not has_node("Node2D") and magnet_collide_with:
-		var ref_magnet = magnet_collide_with.get_child(2)
-		#ref_magnet.get_node("AlexStates").flip_h = sprite_flip
-		magnet_collide_with.remove_child(ref_magnet)
-		add_child(ref_magnet)
-		magnet_collide_with.queue_free()
-	pass
 
+
+
+func _on_Area2D_body_entered(body):
+	get_tree().reload_current_scene()
+
+
+func _on_Area2D2_body_entered(body):
+	get_tree().reload_current_scene()
