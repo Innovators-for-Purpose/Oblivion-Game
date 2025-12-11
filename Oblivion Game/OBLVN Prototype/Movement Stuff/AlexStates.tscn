@@ -285,7 +285,7 @@ bg_color = Color( 1, 0, 0, 1 )
 ProgressBar/styles/bg = SubResource( 7 )
 ProgressBar/styles/fg = SubResource( 3 )
 
-[node name="AlexStates" type="KinematicBody2D"]
+[node name="AlexStates" type="KinematicBody2D" groups=["player"]]
 collision_mask = 2
 script = ExtResource( 2 )
 
@@ -294,6 +294,7 @@ position = Vector2( 0, -23 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
 animation = "idle"
+frame = 7
 playing = true
 flip_h = true
 
@@ -307,8 +308,8 @@ shape = SubResource( 53 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-limit_left = -32
-limit_top = -32
+limit_left = -1000
+limit_top = -1000
 limit_right = 4050
 limit_bottom = 1080
 editor_draw_limits = true

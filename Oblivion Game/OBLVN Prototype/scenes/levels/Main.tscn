@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=7]
 [ext_resource path="res://textures/cool tiles/Ladder3.png" type="Texture" id=8]
 [ext_resource path="res://textures/cool tiles/Ladder1.png" type="Texture" id=9]
+[ext_resource path="res://scenes/Finish.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -215,3 +216,14 @@ position = Vector2( 1843, 651 )
 
 [node name="Grappleables2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 881, 16 )
+
+[node name="Grappleables3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1244, 540 )
+
+[node name="Grappleables4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1524, 556 )
+
+[node name="Node2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( 223, 187 )
+
+[connection signal="body_entered" from="Node2D" to="AlexStates" method="_on_Node2D_body_entered"]

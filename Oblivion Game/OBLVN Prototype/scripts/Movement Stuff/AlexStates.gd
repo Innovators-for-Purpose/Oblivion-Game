@@ -11,8 +11,6 @@ const JUMP_STRENGTH = -900
 const CHAIN_PULL = 600
 const CLIMB_STRENGTH = -350
 const GRAPPLE_RADIUS = 60
-const MAX = 45
-const MIN = 0
 
 onready var anim = $Anim
 onready var crouchbox = $Short
@@ -21,8 +19,6 @@ onready var hpBar = $Sizing/hpBar
 onready var LadderDetect = $LadderDetect
 onready var Chain = $Chain
 onready var CoyoteTime = $Coyote
-#onready var grap:Array = [$'../Grappleables'.global_position,$'../Grappleables2'.global_position,$'../Grappleables3'.global_position]
-var grap = []
 
 var djump := true
 var can_djump := true
@@ -33,135 +29,29 @@ var coyote := false
 var velocity = Vector2()
 var chain_velocity := Vector2()
 var mouse
-var graple = 0
-var location = Vector2(0,0)
-var array_grap = [PoolVector2Array()]
-var pool_array = array_grap[0]
-var player = self.global_position
-var stop = 1
-
 
 func _ready():
 	CoyoteTime.set_wait_time(.5)
-	
-	for child in get_parent().get_children():
-		if child.name.begins_with("Grappleable"):
-			child.add_to_group("grapple")
-	
-	grap = get_tree().get_nodes_in_group("grapple")
-	
-	
-func _on_Area2D_area_entered(area):
 
-	if area.is_in_group("grapple"):
-		stop = 1
-
-#	var target = null
-#	if area.has_method("enable_cross"):
-#		target = area
-#	elif area.get_parent() and area.get_parent().has_method("enable_cross"):
-#		target = area.get_parent() 
-#	elif area.get_parent() and area.get_parent().has_method("enable_cross") and area.get_parent().get_parent().has_method("enable_cross"):
-#			target = area.get_parent().get_parent()
-func _on_Area2D_area_exited(area):
-	if area.is_in_group("grapple"):
-		
-		stop = 2
-		can_grapple = false
-		
-#	var target = null
-#	if area.has_method("enable_cross"):
-#		target = area
-#	elif area.get_parent() and area.get_parent().has_method("enable_cross"):
-#		target = area.get_parent() 
-#	elif area.get_parent() and area.get_parent().has_method("enable_cross") and area.get_parent().get_parent().has_method("enable_cross"):
-#			target = area.get_parent().get_parent()
-#	if target:
-#		target.call("enable_cross", false)
-
-func get_closest_grappable():#this should be pretty obvious
-	var closest = null
-	var closest_dist = INF
-	
-#	for g in grap:
-	for g in get_tree().get_nodes_in_group('grapple'):
-		var dist = self.global_position.distance_to(g.global_position)
-		
-		if dist < closest_dist:
-			closest_dist = dist
-			closest = g
-			
-		
-	return closest
-#	closest.get_child('grappleCross').visable = true
-	
-	
-
-
-func _input(event: InputEvent):#the commented code ether makes grapple mouse controled 
-	#or makes the grapple need to have the grapple hook out
-#	$GrappleLineDetect.set_cast_to(get_tree().call_group("grapple","location"))
-	if (Input.is_action_just_pressed("grapple") and can_grapple == true):
-		
-#	and event.pressed
-#	and can_grapple
-#	and not $GrappleLineDetect.is_colliding()
-#	and Inventory.selected == 3): add this for grapple pick up
+func _input(event: InputEvent):
+	$GrappleLineDetect.set_cast_to(get_local_mouse_position())
+	if (event is InputEventMouseButton
+	and event.pressed
+	and can_grapple
+	and not $GrappleLineDetect.is_colliding()
+	and Inventory.selected == 3):
 		mouse = get_global_mouse_position()
-#		for grappleable in get_tree().get_nodes_in_group("grapple"):
-#			var dist = global_position.distance_to(grappleable.global_position)
-#			if dist < MIN or dist > MAX:
-#				$Chain.release()
-#				print("release()")
-#				return
-#			else:
-#				$Chain.shoot(location - self.global_position)
-#if hook_position.x + GRAPPLE_RADIUS >= mouse.x and hook_position.x - GRAPPLE_RADIUS <= mouse.x and hook_position.y + GRAPPLE_RADIUS >= mouse.y and hook_position.y - GRAPPLE_RADIUS <= mouse.y:
+#		if hook_position.x + GRAPPLE_RADIUS >= mouse.x and hook_position.x - GRAPPLE_RADIUS <= mouse.x and hook_position.y + GRAPPLE_RADIUS >= mouse.y and hook_position.y - GRAPPLE_RADIUS <= mouse.y:
 #			print ('yay')
-		
-	
-		
-		
-		$Chain.shoot(location - self.global_position)
-		
-#		print("location = ",location)
+		$Chain.shoot(mouse - self.position)
 		print ("hook position = ", hook_position)
-#		print ("mouse position = ", mouse)
+		print ("mouse position = ", mouse)
 		return true
-#	elif not get_tree().get_nodes_in_group("grapple") and CollisionShape2D:
-#		$Chain.release()
-		
 	else:
 		$Chain.release()
 		return false
 
 func _physics_process(_delta):
-	print(can_grapple)
-	print(stop)
-	
-	#$CanvasLayer/grappleCross.position = location - self.global_position / $Camera2D.global_position
-	if stop == 1:
-		can_grapple = true
-		var closest = get_closest_grappable()
-		if closest:
-			location = closest.global_position
-			hook_position = location
-		else:
-			can_grapple = false
-			stop = 2
-#		$CanvasLayer/grappleCross.visible = false
-	if stop == 2 :
-		can_grapple = false
-		$grap_area.monitoring = false
-		$grap_area.monitoring = true
-	for g in get_tree().get_nodes_in_group('grapple'):
-		if g.has_method("enable_cross"):
-			g.enable_cross(false)
-#		g.visable = true
-	var closest = get_closest_grappable()
-	if closest and closest.has_method("enable_cross"):
-		closest.enable_cross(true)
-	
 	match state:
 		States.FLOOR:
 			#State switching
@@ -193,13 +83,10 @@ func _physics_process(_delta):
 				continue
 			else:
 				CoyoteTime.set_wait_time(.15)
-
+			can_grapple = true
 			
 			if Input.is_action_pressed("left"): #FLOOR code
 				anim.flip_h = true
-				standbox.position.x = 10
-				crouchbox.position.x = 10
-				LadderDetect.position.x = 10
 				if Input.is_action_pressed("run"):
 					velocity.x = -RUN_SPEED
 					anim.play("run")
@@ -211,9 +98,6 @@ func _physics_process(_delta):
 					anim.play("run")
 			elif Input.is_action_pressed("right"):
 				anim.flip_h = false
-				standbox.position.x = -10
-				crouchbox.position.x = -10
-				LadderDetect.position.x = -10
 				if Input.is_action_pressed("run"):
 					velocity.x = RUN_SPEED
 					anim.play("run")
@@ -245,6 +129,7 @@ func _physics_process(_delta):
 			elif $Chain.hooked:
 				state = States.GRAPPLE
 				continue
+			can_grapple = true
 			$Tall.disabled = false
 			$Short.disabled = true
 			
@@ -293,7 +178,6 @@ func _physics_process(_delta):
 			chain_velocity = $Chain.tip.normalized() * CHAIN_PULL
 #			velocity = velocity.move_toward(hook_position, 2)
 #			move_and_slide(velocity)
-			
 			self.position = lerp(self.position, $Chain.tip, .2)
 			
 #			move_and_slide(chain_velocity)
@@ -340,22 +224,8 @@ func should_climb_ladder() -> bool:
 func _on_Coyote_timeout():
 	coyote = false
 	CoyoteTime.set_paused(true)
-
-func _on_Area2D_body_entered(body):
-	get_tree().reload_current_scene()
-
-
-func _on_Area2D2_body_entered(body):
-	get_tree().reload_current_scene()
-
-
-
-
-
-
-
-
-
-
-func _on_Node2D_body_entered(body):
-	pass # Replace with function body.
+func _on_MouseDetect_area_entered(area):
+	can_grapple = true
+	hook_position = area.global_position
+func _on_MouseDetect_area_exited(_area):
+	can_grapple = false

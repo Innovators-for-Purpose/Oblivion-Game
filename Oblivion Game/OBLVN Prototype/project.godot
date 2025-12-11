@@ -28,6 +28,7 @@ config/icon="res://textures/icon.png"
 
 Global="*res://scripts/globals/global.gd"
 Inventory="*res://scripts/globals/inventory.gd"
+LevelManager="*res://scripts/levelmanager.gd"
 
 [display]
 
