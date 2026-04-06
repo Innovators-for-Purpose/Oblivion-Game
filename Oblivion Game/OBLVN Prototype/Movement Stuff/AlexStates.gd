@@ -23,7 +23,6 @@ onready var Chain = $Chain
 onready var CoyoteTime = $Coyote
 #onready var grap:Array = [$'../Grappleables'.global_position,$'../Grappleables2'.global_position,$'../Grappleables3'.global_position]
 var grap = []
-
 var djump := true
 var can_djump := true
 var on_ladder := false
@@ -136,8 +135,8 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 		return false
 
 func _physics_process(_delta):
-	print(can_grapple)
-	print(stop)
+	#print(can_grapple)
+	#print(stop)
 	
 	#$CanvasLayer/grappleCross.position = location - self.global_position / $Camera2D.global_position
 	if stop == 1:

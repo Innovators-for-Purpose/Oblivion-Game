@@ -39,6 +39,7 @@ window/stretch/aspect="keep_width"
 
 textures=false
 groups=true
+load=false
 
 [gui]
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Magnet.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Movement Stuff/_Fall.png" type="Texture" id=5]
 [ext_resource path="res://Movement Stuff/Cam.gd" type="Script" id=6]
 [ext_resource path="res://Movement Stuff/Chain.tscn" type="PackedScene" id=7]
@@ -294,9 +295,16 @@ position = Vector2( 0, -23 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
 animation = "idle"
-frame = 7
+frame = 3
 playing = true
 flip_h = true
+
+[node name="Magnet" parent="." instance=ExtResource( 4 )]
+position = Vector2( -10, 20 )
+rotation = -1.5708
+
+[node name="Sprite" parent="Magnet" index="0"]
+position = Vector2( 1, 1 )
 
 [node name="Tall" type="CollisionShape2D" parent="."]
 position = Vector2( 10, 18 )
@@ -372,3 +380,5 @@ collision_mask = 10
 [connection signal="body_entered" from="LadderDetect" to="." method="_on_LadderDetect_body_entered"]
 [connection signal="body_exited" from="LadderDetect" to="." method="_on_LadderDetect_body_exited"]
 [connection signal="timeout" from="Coyote" to="." method="_on_Coyote_timeout"]
+
+[editable path="Magnet"]
