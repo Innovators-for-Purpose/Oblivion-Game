@@ -1,9 +1,13 @@
 extends Node
 
 var levels = [
-	"res://scenes/levels/level0_house.tscn",
-	"res://scenes/levels/AssemblyPlantsave.tscn",
-	"res://scenes/levels/Main.tscn",
+	"res://scenes/Main(GrappleTest).tscn",
+	"res://scenes/levels/Main(Finished).tscn",
+	"res://scenes/levels/(Finished) level0_house.tscn",
+	"res://scenes/levels/Outer City.tscn",
+	"res://scenes/levels/(Finished)AssemblyPlantsave.tscn",
+	"res://scenes/levels/Sewers.tscn",
+	"res://Level 7.tscn","res://Demo End Screen.tscn",
 ]
 
 var current_level_index = 0

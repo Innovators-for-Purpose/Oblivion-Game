@@ -1,0 +1,77 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://textures/Left leg forward.png" type="Texture" id=1]
+[ext_resource path="res://textures/Left leg up.png" type="Texture" id=2]
+[ext_resource path="res://textures/Right leg forward.png" type="Texture" id=3]
+[ext_resource path="res://textures/Right leg up.png" type="Texture" id=4]
+[ext_resource path="res://scenes/levels/Guard.gd" type="Script" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.7
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 16.5, 53.5625 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 15, 4 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 8.5, 67 )
+
+[node name="Guard" type="KinematicBody2D"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="."]
+position = Vector2( -504.12, -461.597 )
+rotation = 3.14159
+scale = Vector2( 0.118693, 0.128768 )
+frames = SubResource( 5 )
+frame = 1
+playing = true
+flip_h = true
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -509, -459.562 )
+shape = SubResource( 6 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 0.00115967, -0.00128174 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -508.001, -511.999 )
+shape = SubResource( 7 )
+
+[node name="Direction Detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction Detection"]
+position = Vector2( -563, -466 )
+shape = SubResource( 8 )
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Direction Detection" to="." method="_on_Direction_Detection_body_entered"]

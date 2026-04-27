@@ -15,7 +15,7 @@
 [ext_resource path="res://scenes/levels/textures/Finish.png" type="Texture" id=13]
 [ext_resource path="res://scenes/levels/textures/Snow.jpg" type="Texture" id=14]
 [ext_resource path="res://scenes/levels/textures/Snow Tile MAp.png" type="Texture" id=15]
-[ext_resource path="res://scenes/levels/scenes/scenes/Area2D.gd" type="Script" id=16]
+[ext_resource path="res://scenes/levels/scenes/scenes/scripts/Area2D.gd" type="Script" id=16]
 [ext_resource path="res://scenes/levels/textures/Better SNow.png" type="Texture" id=17]
 [ext_resource path="res://scenes/levels/scenes/scenes/Enemy.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/levels/scenes/scenes/Bee Enemee.tscn" type="PackedScene" id=19]

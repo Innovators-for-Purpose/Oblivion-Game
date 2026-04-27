@@ -1,0 +1,779 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://scenes/levels/textures/Second floor railings layer (on top).png" type="Texture" id=1]
+[ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Movement Stuff/Grappleables.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/levels/textures/Railings first platform layer (on top).png" type="Texture" id=4]
+[ext_resource path="res://scenes/levels/Guard.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/levels/textures/cool tiles/Ladder3.png" type="Texture" id=6]
+[ext_resource path="res://scenes/levels/textures/cool tiles/Ladder1.png" type="Texture" id=7]
+[ext_resource path="res://scenes/levels/textures/cool tiles/Ladder2.png" type="Texture" id=8]
+[ext_resource path="res://scenes/levels/textures/cool tiles/modern-city-skyline-on-white-background-vector.jpg" type="Texture" id=9]
+[ext_resource path="res://scripts/Area2D.gd" type="Script" id=10]
+[ext_resource path="res://scenes/levels/scenes/scenes/textures/cool tiles/IndustrialTile_73.png" type="Texture" id=11]
+[ext_resource path="res://scenes/levels/textures/Sewer Pipes Tilemap.png" type="Texture" id=12]
+[ext_resource path="res://Background outer city.png" type="Texture" id=13]
+[ext_resource path="res://scenes/levels/Mask Manager.gd" type="Script" id=14]
+[ext_resource path="res://scenes/Finish.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Ramp.tscn" type="PackedScene" id=16]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 1280, 64, 0, 64, 0, 0, 1280, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "Second floor railings layer (on top).png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 1280, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Railings first platform layer (on top).png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 160, 32, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Railings first platform layer (on top).png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 160, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "IndustrialTile_73.png 3"
+3/texture = ExtResource( 11 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 21 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Sewer Pipes Tilemap.png 4"
+4/texture = ExtResource( 12 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 32, 224, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 22 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 22 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "Sewer Pipes Tilemap.png 5"
+5/texture = ExtResource( 12 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 64, 224, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 23 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "Sewer Pipes Tilemap.png 6"
+6/texture = ExtResource( 12 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 96, 224, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 24 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 24 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "Sewer Pipes Tilemap.png 7"
+7/texture = ExtResource( 12 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 128, 224, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 25 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "Sewer Pipes Tilemap.png 8"
+8/texture = ExtResource( 12 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 32, 256, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 26 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 26 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+9/name = "Sewer Pipes Tilemap.png 9"
+9/texture = ExtResource( 12 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 32, 288, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape = SubResource( 27 )
+9/shape_one_way = false
+9/shape_one_way_margin = 1.0
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 27 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+9/z_index = 0
+10/name = "Sewer Pipes Tilemap.png 10"
+10/texture = ExtResource( 12 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 32, 320, 32, 32 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 12 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+11/name = "Sewer Pipes Tilemap.png 11"
+11/texture = ExtResource( 12 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 64, 256, 32, 32 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Sewer Pipes Tilemap.png 12"
+12/texture = ExtResource( 12 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 96, 256, 32, 32 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape = SubResource( 13 )
+12/shape_one_way = false
+12/shape_one_way_margin = 1.0
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+12/z_index = 0
+13/name = "Sewer Pipes Tilemap.png 13"
+13/texture = ExtResource( 12 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 128, 256, 32, 32 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape = SubResource( 14 )
+13/shape_one_way = false
+13/shape_one_way_margin = 1.0
+13/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+13/z_index = 0
+14/name = "Sewer Pipes Tilemap.png 14"
+14/texture = ExtResource( 12 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 128, 288, 32, 32 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape = SubResource( 15 )
+14/shape_one_way = false
+14/shape_one_way_margin = 1.0
+14/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+14/z_index = 0
+15/name = "Sewer Pipes Tilemap.png 15"
+15/texture = ExtResource( 12 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 64, 288, 32, 32 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape = SubResource( 16 )
+15/shape_one_way = false
+15/shape_one_way_margin = 1.0
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+15/z_index = 0
+16/name = "Sewer Pipes Tilemap.png 16"
+16/texture = ExtResource( 12 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 96, 288, 32, 32 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "Sewer Pipes Tilemap.png 17"
+17/texture = ExtResource( 12 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 64, 320, 32, 32 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape = SubResource( 17 )
+17/shape_one_way = false
+17/shape_one_way_margin = 1.0
+17/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+17/z_index = 0
+18/name = "Sewer Pipes Tilemap.png 18"
+18/texture = ExtResource( 12 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 96, 320, 32, 32 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape = SubResource( 18 )
+18/shape_one_way = false
+18/shape_one_way_margin = 1.0
+18/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+18/z_index = 0
+19/name = "Sewer Pipes Tilemap.png 19"
+19/texture = ExtResource( 12 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 64, 352, 32, 32 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape = SubResource( 19 )
+19/shape_one_way = false
+19/shape_one_way_margin = 1.0
+19/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+19/z_index = 0
+20/name = "Sewer Pipes Tilemap.png 20"
+20/texture = ExtResource( 12 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 96, 352, 32, 32 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape = SubResource( 20 )
+20/shape_one_way = false
+20/shape_one_way_margin = 1.0
+20/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+20/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=8]
+0/name = "Ladder1.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 5 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Ladder2.png 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 6 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Ladder3.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 7 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 9472.5, 80.25 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 75.5, 4 )
+
+[sub_resource type="SegmentShape2D" id=9]
+a = Vector2( 265.636, -15.4332 )
+b = Vector2( -32.9914, 2.5722 )
+
+[sub_resource type="SegmentShape2D" id=10]
+b = Vector2( 1019, 1 )
+
+[node name="Outer City" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = -269.0
+margin_top = -1057.0
+margin_right = 4776.0
+margin_bottom = 1064.0
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 3605.0
+margin_top = 536.0
+margin_right = 3712.0
+margin_bottom = 576.0
+
+[node name="Label" type="Label" parent="Panel2"]
+anchor_bottom = 0.008
+margin_left = -136.0
+margin_top = -115.0
+margin_right = 244.0
+margin_bottom = 153.68
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Use Grapple
+(Space)"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -1617.0
+margin_top = -1771.0
+margin_right = 5578.0
+margin_bottom = 639.0
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+visible = false
+margin_left = 9476.0
+margin_top = -890.0
+margin_right = 20755.0
+margin_bottom = 962.0
+rect_rotation = -180.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+margin_left = 7396.0
+margin_top = -1290.0
+margin_right = 11265.0
+margin_bottom = 566.0
+rect_scale = Vector2( -0.999998, 1 )
+texture = ExtResource( 9 )
+expand = true
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+visible = false
+margin_top = -1290.0
+margin_right = 3869.0
+margin_bottom = 566.0
+rect_scale = Vector2( -0.999998, 1 )
+texture = ExtResource( 9 )
+expand = true
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+margin_left = -1532.0
+margin_top = 21494.0
+margin_right = 12874.0
+margin_bottom = 41108.0
+rect_rotation = 180.0
+rect_scale = Vector2( -0.999998, 1 )
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 2790.0
+margin_top = 390.0
+margin_right = 2897.0
+margin_bottom = 430.0
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = -136.0
+margin_top = -114.0
+margin_right = 244.0
+margin_bottom = 155.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Double Jump"
+align = 1
+valign = 1
+
+[node name="Outer City Tilemap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -3866400, 11, 0, -3866398, 13, 0, -3866396, 13, 0, -3866394, 13, 0, -3866392, 13, 0, -3866390, 13, 0, -3866388, 3, 0, -3866386, 3, 0, -3866384, 3, 0, -3866382, 3, 0, -3735328, 15, 0, -3735326, 13, 0, -3735324, 13, 0, -3735322, 13, 0, -3735320, 13, 0, -3735318, 13, 0, -3735316, 13, 0, -3735314, 13, 0, -3735312, 13, 0, -3735310, 3, 0, -3604238, 3, 0, -3473166, 3, 0, -3342094, 3, 0, -3211022, 3, 0, -3079950, 3, 0, -2948878, 3, 0, -2817806, 3, 0, -2686734, 3, 0, -2555662, 3, 0, -2424590, 3, 0, -2293518, 3, 0, -2162446, 3, 0, -2031374, 3, 0, -1900302, 3, 0, -1769230, 3, 0, -1638158, 3, 0, -1507106, 11, 0, -1507104, 13, 0, -1507102, 13, 0, -1507100, 13, 0, -1507098, 13, 0, -1507096, 13, 0, -1507094, 13, 0, -1507092, 13, 0, -1507090, 13, 0, -1507088, 13, 0, -1507086, 3, 0, -1376034, 15, 0, -1376032, 13, 0, -1376030, 13, 0, -1376028, 13, 0, -1376026, 13, 0, -1376024, 13, 0, -1376022, 13, 0, -1376020, 13, 0, -1376018, 13, 0, -1376016, 13, 0, -1376014, 3, 0, -1244942, 3, 0, -1113870, 3, 0, -982798, 3, 0, -851746, 11, 0, -851744, 13, 0, -851742, 13, 0, -851740, 13, 0, -851738, 13, 0, -851736, 13, 0, -851734, 13, 0, -851732, 13, 0, -851730, 13, 0, -851728, 13, 0, -851726, 3, 0, -720674, 14, 0, -720654, 3, 0, -589602, 14, 0, -589582, 3, 0, -458530, 14, 0, -458510, 3, 0, -327458, 14, 0, -327438, 3, 0, -327436, 3, 0, -327434, 3, 0, -327432, 3, 0, -327430, 3, 0, -196604, 0, 0, -196524, 0, 0, -196444, 0, 0, -196356, 3, 0, -65282, 3, 0, 65562, 14, 0, 65564, 14, 0, 65566, 14, 0, 65592, 3, 0, 65642, 3, 0, 65722, 3, 0, 65792, 3, 0, 65794, 3, 0, 65796, 3, 0, 65798, 3, 0, 65800, 3, 0, 65802, 3, 0, 65804, 3, 0, 196634, 14, 0, 196636, 14, 0, 196638, 14, 0, 196664, 3, 0, 196714, 3, 0, 196794, 3, 0, 196878, 3, 0, 327706, 14, 0, 327708, 14, 0, 327710, 14, 0, 327736, 3, 0, 327786, 3, 0, 327866, 3, 0, 327952, 3, 0, 458778, 14, 0, 458780, 14, 0, 458782, 14, 0, 458808, 3, 0, 458858, 3, 0, 458860, 3, 0, 458938, 3, 0, 459026, 3, 0, 589850, 14, 0, 589852, 14, 0, 589854, 19, 0, 589856, 13, 0, 589858, 13, 0, 589860, 12, 0, 589880, 3, 0, 589934, 3, 0, 590010, 3, 0, 590100, 3, 0, 720922, 19, 0, 720924, 4, 0, 720926, 18, 0, 720932, 15, 0, 720934, 12, 0, 720952, 3, 0, 721008, 3, 0, 721010, 13, 0, 721012, 13, 0, 721014, 3, 0, 721082, 3, 0, 721174, 3, 0, 851994, 15, 0, 851996, 20, 0, 851998, 16, 0, 852006, 3, 0, 852013, 3, 0, 852024, 3, 0, 852154, 3, 0, 852248, 3, 0, 983085, 14, 0, 983096, 3, 0, 983226, 3, 0, 983228, 3, 0, 983230, 3, 0, 983232, 3, 0, 983234, 3, 0, 983236, 3, 0, 983238, 3, 0, 983240, 3, 0, 983242, 3, 0, 983244, 3, 0, 983246, 3, 0, 983320, 3, 0, 1114157, 14, 0, 1114298, 3, 0, 1114318, 3, 0, 1114366, 3, 0, 1114368, 3, 0, 1114370, 3, 0, 1114372, 3, 0, 1114374, 3, 0, 1114376, 3, 0, 1114392, 3, 0, 1245229, 14, 0, 1245368, 11, 0, 1245370, 3, 0, 1245372, 12, 0, 1245390, 3, 0, 1245436, 3, 0, 1245438, 3, 0, 1245450, 3, 0, 1245464, 3, 0, 1376368, 3, 0, 1376370, 13, 0, 1376372, 13, 0, 1376374, 3, 0, 1376440, 15, 0, 1376442, 20, 0, 1376444, 16, 0, 1376462, 3, 0, 1376506, 3, 0, 1376508, 3, 0, 1376522, 3, 0, 1376536, 3, 0, 1507438, 3, 0, 1507534, 3, 0, 1507594, 3, 0, 1507608, 3, 0, 1638506, 3, 0, 1638508, 3, 0, 1638606, 3, 0, 1638666, 3, 0, 1638680, 3, 0, 1769578, 3, 0, 1769678, 3, 0, 1769738, 3, 0, 1769752, 3, 0, 1835206, 3, 0, 1900650, 3, 0, 1900750, 3, 0, 1900752, 3, 0, 1900754, 3, 0, 1900756, 3, 0, 1900758, 3, 0, 1900760, 3, 0, 1900810, 3, 0, 1900824, 3, 0, 1966278, 3, 0, 2031722, 3, 0, 2031832, 3, 0, 2031882, 3, 0, 2031896, 3, 0, 2097338, 3, 0, 2097340, 3, 0, 2097342, 3, 0, 2097344, 3, 0, 2097346, 3, 0, 2097348, 3, 0, 2097350, 3, 0, 2162794, 3, 0, 2162904, 3, 0, 2162954, 3, 0, 2162968, 3, 0, 2228410, 3, 0, 2294026, 3, 0, 2294040, 3, 0, 2359482, 3, 0, 2425098, 3, 0, 2425112, 3, 0, 2490554, 3, 0, 2556170, 3, 0, 2556184, 3, 0, 2621626, 3, 0, 2687242, 3, 0, 2687256, 3, 0, 2752698, 3, 0, 2818314, 3, 0, 2818328, 3, 0, 2883770, 3, 0, 2949386, 3, 0, 2949400, 3, 0, 3014842, 3, 0, 3014872, 3, 0, 3080458, 3, 0, 3080472, 3, 0, 3211530, 3, 0, 3211544, 3, 0, 3342602, 3, 0, 3342616, 3, 0 )
+
+[node name="Grappleables" parent="Outer City Tilemap" instance=ExtResource( 3 )]
+position = Vector2( 4039, 187 )
+
+[node name="Guard" parent="Outer City Tilemap" instance=ExtResource( 5 )]
+position = Vector2( 4101, 0 )
+
+[node name="Guard2" parent="Outer City Tilemap" instance=ExtResource( 5 )]
+position = Vector2( 3687, 319 )
+
+[node name="Finish" parent="Outer City Tilemap" instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 4391, 575 )
+
+[node name="Finish2" parent="Outer City Tilemap" instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 4325, 575 )
+
+[node name="Finish3" parent="Outer City Tilemap" instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 4446, 575 )
+
+[node name="Ladders" type="TileMap" parent="."]
+tile_set = SubResource( 8 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 4
+collision_mask = 4
+format = 1
+tile_data = PoolIntArray( -589824, 2, 0, -589822, 2, 0, -458752, 1, 0, -458750, 1, 0, -393216, 1, 0, -393214, 1, 0, -327680, 1, 0, -327678, 1, 0, -262144, 1, 0, -262142, 1, 0, -196608, 1, 0, -196606, 1, 0, -131072, 1, 0, -131070, 1, 0, -65536, 1, 0, -65534, 1, 0, 0, 1, 0, 2, 1, 0, 65536, 1, 0, 65538, 1, 0, 131072, 1, 0, 131074, 1, 0, 196608, 1, 0, 196610, 1, 0, 262144, 1, 0, 262146, 1, 0, 327680, 1, 0, 327682, 1, 0, 393216, 1, 0, 393218, 1, 0 )
+
+[node name="AlexStates" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2542, -125 )
+
+[node name="Grappleables" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2491, -331 )
+
+[node name="Guard" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2149, 347 )
+
+[node name="DeathPits" type="Area2D" parent="."]
+position = Vector2( -19, 25 )
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathPits"]
+position = Vector2( 1510.5, 938.75 )
+shape = SubResource( 11 )
+
+[node name="Ramps" type="Node2D" parent="."]
+
+[node name="Ramp" parent="Ramps" instance=ExtResource( 16 )]
+
+[node name="Ramp2" type="StaticBody2D" parent="Ramps"]
+position = Vector2( 1206, 217 )
+
+[node name="Sprite" type="Sprite" parent="Ramps/Ramp2"]
+position = Vector2( 682, 253 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ramps/Ramp2"]
+position = Vector2( 77.5, 125 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ramps/Ramp2"]
+position = Vector2( 175.985, 146.985 )
+rotation = 0.785397
+scale = Vector2( 0.942408, -1.09963 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ramps/Ramp2"]
+position = Vector2( 175.985, 146.985 )
+rotation = 0.785397
+scale = Vector2( 0.942408, -1.09963 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ramps/Ramp2"]
+position = Vector2( 342, 336 )
+shape = SubResource( 10 )
+
+[node name="Ramp3" type="StaticBody2D" parent="Ramps"]
+position = Vector2( 2413, 432 )
+
+[node name="Sprite" type="Sprite" parent="Ramps/Ramp3"]
+position = Vector2( 682, 253 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ramps/Ramp3"]
+position = Vector2( 77.5, 125 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ramps/Ramp3"]
+position = Vector2( 175.985, 146.985 )
+rotation = 0.785397
+scale = Vector2( 0.942408, -1.09963 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ramps/Ramp3"]
+position = Vector2( 175.985, 146.985 )
+rotation = 0.785397
+scale = Vector2( 0.942408, -1.09963 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ramps/Ramp3"]
+position = Vector2( 342, 336 )
+shape = SubResource( 10 )
+
+[node name="MaskManager" type="Node2D" parent="."]
+script = ExtResource( 14 )
+
+[connection signal="body_entered" from="DeathPits" to="DeathPits" method="_on_DeathPits_body_entered"]

@@ -1,7 +1,9 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
+[ext_resource path="res://scenes/levels/Crouching.wav" type="AudioStream" id=3]
+[ext_resource path="res://scenes/levels/Crawling (1).wav" type="AudioStream" id=4]
 [ext_resource path="res://Movement Stuff/_Fall.png" type="Texture" id=5]
 [ext_resource path="res://Movement Stuff/Cam.gd" type="Script" id=6]
 [ext_resource path="res://Movement Stuff/Chain.tscn" type="PackedScene" id=7]
@@ -294,7 +296,7 @@ position = Vector2( 0, -23 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
 animation = "idle"
-frame = 7
+frame = 8
 playing = true
 flip_h = true
 
@@ -309,9 +311,10 @@ shape = SubResource( 53 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 limit_left = -1000
-limit_top = -1000
-limit_right = 4050
+limit_top = -1500
+limit_right = 5575
 limit_bottom = 1080
+smoothing_speed = 6.7
 editor_draw_limits = true
 editor_draw_drag_margin = true
 script = ExtResource( 6 )
@@ -368,6 +371,17 @@ one_shot = true
 enabled = true
 cast_to = Vector2( 0, 0 )
 collision_mask = 10
+
+[node name="Real Alex" type="Node2D" parent="."]
+
+[node name="Crouching" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Crawling" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 1.238
+autoplay = true
 
 [connection signal="body_entered" from="LadderDetect" to="." method="_on_LadderDetect_body_entered"]
 [connection signal="body_exited" from="LadderDetect" to="." method="_on_LadderDetect_body_exited"]
