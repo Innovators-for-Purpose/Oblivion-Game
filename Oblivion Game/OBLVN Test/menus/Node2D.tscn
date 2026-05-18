@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://menus/Background outer city (2).png" type="Texture" id=3]
+[ext_resource path="res://menus/mainmenuscript.gd" type="Script" id=4]
+
+[node name="Levelselectmenu" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 727.984, 490.953 )
+scale = Vector2( 0.954183, 1.14453 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+margin_left = 123.0
+margin_top = 217.0
+margin_right = 316.0
+margin_bottom = 349.0
+text = "level 1"
+expand_icon = true
+
+[node name="Button2" type="Button" parent="."]
+unique_name_in_owner = true
+margin_left = 436.0
+margin_top = 213.0
+margin_right = 626.0
+margin_bottom = 344.0
+text = "Level 2"
+
+[node name="Button3" type="Button" parent="."]
+unique_name_in_owner = true
+margin_left = 776.0
+margin_top = 214.0
+margin_right = 962.0
+margin_bottom = 340.0
+text = "Level 3"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 216.0
+margin_top = 226.0
+margin_right = 315.0
+margin_bottom = 240.0
+rect_rotation = 0.648161
+rect_scale = Vector2( 2.43039, 2.03991 )
+rect_pivot_offset = Vector2( 72, 59 )
+text = "Assembly plant"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 533.0
+margin_top = 232.0
+margin_right = 650.0
+margin_bottom = 266.0
+rect_rotation = -0.0787187
+rect_scale = Vector2( 2.87509, 2.23937 )
+rect_pivot_offset = Vector2( 72, 59 )
+text = "Level0 House"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 912.0
+margin_top = 230.0
+margin_right = 1029.0
+margin_bottom = 264.0
+rect_rotation = -0.0787187
+rect_scale = Vector2( 2.87509, 2.23937 )
+rect_pivot_offset = Vector2( 72, 59 )
+text = "Main level"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]

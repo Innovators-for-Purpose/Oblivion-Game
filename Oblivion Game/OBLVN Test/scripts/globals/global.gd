@@ -3,9 +3,12 @@ extends Node
 var items
 
 func _ready():
-	items = read_from_JSON("res://json/itemdata.json")
-	for key in items.keys():
-		items[key]["key"] = key
+#	items = read_from_JSON("res://inventory/json/itemdata.json")
+#	for key in items.keys():
+#		items[key]["key"] = key
+#		print(key)
+	pass
+
 
 func read_from_JSON(path):
 	var file = File.new() # <--- In Godot 4, replace 'File' with 'Fileaccess

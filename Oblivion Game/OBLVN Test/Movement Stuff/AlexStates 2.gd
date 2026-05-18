@@ -36,17 +36,22 @@ var mouse
 var graple = 0
 var location = Vector2(0,0)
 
-
+var body = "player"
 func _ready():
 	CoyoteTime.set_wait_time(.5)
 	
 func _on_Area2D_area_entered(area):
-
+	if body.is_in_group ("player"):
+		get_tree().change_scene ("res://Node2D.tscn")
+	
+	
+	
 	if area.is_in_group("grapple"):
 		can_grapple = true
 		location = get_closest_grappable()
 		
-	
+#	if on_Area2D_body_entered(body):
+#		get_tree().change_scene("res://Node2D.tscn")
 
 func _on_Area2D_area_exited(area):
 	if area.is_in_group("grapple"):
@@ -288,3 +293,15 @@ func _on_Coyote_timeout():
 
 
 
+
+
+
+
+func _on_Area2D_body_entered(body):
+		if body.is_in_group ("player"):
+			get_tree().change_scene ("res://Node2D.tscn")
+
+
+func _on_Area2D3_body_entered(body):
+		if body.is_in_group ("player"):
+			get_tree().change_scene ("res://gameover.tscn")

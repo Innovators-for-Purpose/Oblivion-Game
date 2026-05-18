@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/simple tiles.png-911635d34e32b7e40625a112fb323fe5.stex"
+path="res://.import/simple tiles.png-f83f0285fa6e7ad515b9a0b4cb6bbfc6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/simple tiles.png"
-dest_files=[ "res://.import/simple tiles.png-911635d34e32b7e40625a112fb323fe5.stex" ]
+source_file="res://Levels/textures/simple tiles.png"
+dest_files=[ "res://.import/simple tiles.png-f83f0285fa6e7ad515b9a0b4cb6bbfc6.stex" ]
 
 [params]
 

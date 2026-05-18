@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates 2.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Movement Stuff/Climb.png" type="Texture" id=11]
 [ext_resource path="res://Movement Stuff/_Crouch.png" type="Texture" id=12]
 [ext_resource path="res://Movement Stuff/_Run.png" type="Texture" id=13]
+[ext_resource path="res://menus/Pause menu.tscn" type="PackedScene" id=14]
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
@@ -284,11 +285,11 @@ collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="Anim" type="AnimatedSprite" parent="."]
-position = Vector2( -2, -23 )
+position = Vector2( -3, -25 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
 animation = "run"
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 
@@ -359,6 +360,14 @@ one_shot = true
 enabled = true
 cast_to = Vector2( 0, 0 )
 collision_mask = 10
+
+[node name="Pause menu" parent="." instance=ExtResource( 14 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -254.0
+margin_top = -166.0
+margin_right = -254.0
+margin_bottom = -166.0
 
 [connection signal="body_entered" from="LadderDetect" to="." method="_on_LadderDetect_body_entered"]
 [connection signal="body_exited" from="LadderDetect" to="." method="_on_LadderDetect_body_exited"]
