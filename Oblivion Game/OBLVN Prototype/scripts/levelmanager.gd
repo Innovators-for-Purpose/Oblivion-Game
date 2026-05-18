@@ -1,6 +1,7 @@
 extends Node
 
 var levels = [
+	"res://menus/Node2D.tscn",
 	"res://scenes/Main(GrappleTest).tscn",
 	"res://scenes/levels/Main(Finished).tscn",
 	"res://scenes/levels/(Finished) level0_house.tscn",
