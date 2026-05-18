@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://scripts/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://textures/simple tiles.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://download.jpeg" type="Texture" id=28]
 [ext_resource path="res://New Piskel (12).png" type="Texture" id=29]
 [ext_resource path="res://New Piskel (13).png" type="Texture" id=30]
+[ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=31]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tileset_16x16_interior_preview2_0.png 0"
@@ -850,6 +851,10 @@ b = Vector2( -15, 131 )
 
 [node name="Main" type="Node2D"]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 31 )]
+
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
 margin_left = -67.0
@@ -939,7 +944,7 @@ position = Vector2( 1701, 71 )
 position = Vector2( 708, 523 )
 scale = Vector2( 1.086, 1.042 )
 frames = SubResource( 37 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]

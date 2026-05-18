@@ -178,6 +178,10 @@ points = PoolVector2Array( 24, 32, 0, 32, 0, 16, 24, 16 )
 [node name="Main" type="Node2D"]
 position = Vector2( 1, 17 )
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer2" instance=ExtResource( 9 )]
+
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 1920.0
 margin_bottom = 1080.0

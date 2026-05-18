@@ -340,22 +340,3 @@ func should_climb_ladder() -> bool:
 func _on_Coyote_timeout():
 	coyote = false
 	CoyoteTime.set_paused(true)
-
-func _on_Area2D_body_entered(body):
-	get_tree().reload_current_scene()
-
-
-func _on_Area2D2_body_entered(body):
-	get_tree().reload_current_scene()
-
-
-
-
-
-
-
-
-
-
-func _on_Node2D_body_entered(body):
-	pass # Replace with function body.
