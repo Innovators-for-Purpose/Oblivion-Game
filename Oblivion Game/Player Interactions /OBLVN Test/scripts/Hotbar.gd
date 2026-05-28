@@ -1,5 +1,5 @@
 extends SlotContainer
-
+#file in use 
 func _ready():
 	display_item_slots(Inventory.cols, 1)
 

@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="invhud" type="ColorRect"]
+anchor_right = 1.0
+margin_bottom = 157.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 155.0

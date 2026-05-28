@@ -1,8 +1,8 @@
 extends BoxContainer
-
+# File in use
 class_name SlotContainer
 
-export (PackedScene) var ItemSlot
+export (PackedScene) var InventoryContainer
 
 var slots
 
@@ -10,7 +10,7 @@ func display_item_slots(cols, rows):
 #	columns = cols
 	slots = cols * rows
 	for index in range(slots):
-		var item_slot = ItemSlot.instance()
+		var item_slot = InventoryContainer.instance()
 		add_child(item_slot)
 		item_slot.display_item(Inventory.items[index])
 # warning-ignore:return_value_discarded

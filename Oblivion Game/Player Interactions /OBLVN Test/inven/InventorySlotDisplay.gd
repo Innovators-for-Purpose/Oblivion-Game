@@ -1,17 +1,18 @@
 extends CenterContainer
 
-var inventory = preload("res://inven/Inventory.tres")
+var inventory = preload("res://inven//Inventory.tres")
 
-onready var itemTextureRect = $ItemTextureRect 
-#onready var itemAmountLabel = $ItemTextureRect/ItemAmountLabel
+onready var itemTextureRect = $ItemTextureRect
+onready var itemAmountLabel = $ItemTextureRect/ItemAmountLabel
 
+#func display_item(item):
+#	if item is Item:
+#		itemTextureRect.texture = item.texture
+#		itemAmountLabel.text = str(item.amount)
+#	else:
+#		itemTextureRect.texture = load("res://Items/EmptyInventorySlot.png")
+#		itemAmountLabel.text = ""
 
-func display_item(item):
-	if item is Item:
-		itemTextureRect.texture = item.texture
-	else:
-		itemTextureRect.texture = load("res://inven/Items/whitedot.png")
-	
 func get_drag_data(_position):
 	var item_index = get_index()
 	var item = inventory.remove_item(item_index)

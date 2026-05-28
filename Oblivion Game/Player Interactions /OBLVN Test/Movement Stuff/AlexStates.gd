@@ -1,5 +1,5 @@
 extends KinematicBody2D
-
+#file in use 
 enum States {FLOOR = 1, AIR, GRAPPLE, LADDER}
 var state = States.FLOOR
 
@@ -15,7 +15,7 @@ const GRAPPLE_RADIUS = 60
 onready var anim = $Anim
 onready var crouchbox = $Short
 onready var standbox = $Tall
-onready var hpBar = $Sizing/hpBar
+#onready var hpBar = $Sizing/hpBar
 onready var LadderDetect = $LadderDetect
 onready var Chain = $Chain
 onready var CoyoteTime = $Coyote
@@ -178,11 +178,11 @@ func _physics_process(_delta):
 					velocity.y = 0
 				continue
 			chain_velocity = $Chain.tip.normalized() * CHAIN_PULL
-#			velocity = velocity.move_toward(hook_position, 2)
-#			move_and_slide(velocity)
+			velocity = velocity.move_toward(hook_position, 2)
+			move_and_slide(velocity)
 			self.position = lerp(self.position, $Chain.tip, .2)
 			
-#			move_and_slide(chain_velocity)
+			move_and_slide(chain_velocity)
 			if $Chain/Links.region_rect.size.y < 10:
 				$Chain.release()
 		States.LADDER:
