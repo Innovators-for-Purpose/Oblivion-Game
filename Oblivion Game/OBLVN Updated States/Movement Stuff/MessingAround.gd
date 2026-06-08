@@ -60,7 +60,7 @@ func get_closest_grappable():#this should be pretty obvious
 
 func _input(event: InputEvent):#the commented code ether makes grapple mouse controled 
 	#or makes the grapple need to have the grapple hook out
-	$GrappleLineDetect.set_cast_to(get_tree().call_group("grapple","location"))
+#	$GrappleLineDetect.set_cast_to(get_tree().call_group("grapple","location"))
 	if (Input.is_action_just_pressed("grapple") and location > Vector2(0,0) and event.pressed and can_grapple and not $GrappleLineDetect.is_colliding() and Inventory.selected == 3):
 		mouse = get_global_mouse_position()
 		for grappleable in get_tree().get_nodes_in_group("grapple"):
