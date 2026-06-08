@@ -1,7 +1,7 @@
 [gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
-[ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
+[ext_resource path="res://Movement Stuff/MessingAround.gd" type="Script" id=2]
 [ext_resource path="res://Movement Stuff/_Fall.png" type="Texture" id=5]
 [ext_resource path="res://Movement Stuff/Cam.gd" type="Script" id=6]
 [ext_resource path="res://Movement Stuff/Chain.tscn" type="PackedScene" id=7]
@@ -285,7 +285,7 @@ bg_color = Color( 1, 0, 0, 1 )
 ProgressBar/styles/bg = SubResource( 7 )
 ProgressBar/styles/fg = SubResource( 3 )
 
-[node name="AlexStates" type="KinematicBody2D"]
+[node name="MessingAround" type="KinematicBody2D"]
 collision_mask = 2
 script = ExtResource( 2 )
 

@@ -31,13 +31,12 @@ var coyote := false
 var velocity = Vector2()
 var chain_velocity := Vector2()
 var mouse
-var grapple = 0
+#var graple = 0
 var location = Vector2(0,0)
-
 
 func _ready():
 	CoyoteTime.set_wait_time(.5)
-	
+
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("grapple"):
 		can_grapple = true
@@ -48,7 +47,6 @@ func _on_Area2D_area_exited(area):
 		can_grapple = false
 		location = Vector2(0,0)
 
-
 func get_closest_grappable():#this should be pretty obvious
 	var closest: Vector2 = Vector2(0,0)
 	var min_dis:= INF
@@ -58,51 +56,38 @@ func get_closest_grappable():#this should be pretty obvious
 			min_dis = dist
 			closest = grappleable.global_position 
 	return closest
-	
-	
 
 
 func _input(event: InputEvent):#the commented code ether makes grapple mouse controled 
 	#or makes the grapple need to have the grapple hook out
-#	$GrappleLineDetect.set_cast_to(get_tree().call_group("grapple","location"))
-	if (Input.is_action_just_pressed("grapple") and location > Vector2(0,0)):
-		
-#	and event.pressed
-#	and can_grapple
-#	and not $GrappleLineDetect.is_colliding()
-#	and Inventory.selected == 3):
+	$GrappleLineDetect.set_cast_to(get_tree().call_group("grapple","location"))
+	if (Input.is_action_just_pressed("grapple") and location > Vector2(0,0) and event.pressed and can_grapple and not $GrappleLineDetect.is_colliding() and Inventory.selected == 3):
 		mouse = get_global_mouse_position()
-#		for grappleable in get_tree().get_nodes_in_group("grapple"):
-#			var dist = global_position.distance_to(grappleable.global_position)
-#			if dist < MIN or dist > MAX:
-#				$Chain.release()
-#				print("release()")
-#				return
-#			else:
-#				$Chain.shoot(location - self.global_position)
-#if hook_position.x + GRAPPLE_RADIUS >= mouse.x and hook_position.x - GRAPPLE_RADIUS <= mouse.x and hook_position.y + GRAPPLE_RADIUS >= mouse.y and hook_position.y - GRAPPLE_RADIUS <= mouse.y:
+		for grappleable in get_tree().get_nodes_in_group("grapple"):
+			var dist = global_position.distance_to(grappleable.global_position)
+			if dist < MIN or dist > MAX:
+				$Chain.release()
+				print("release()")
+				return
+			else:
+				$Chain.shoot(location - self.global_position)
+#		if hook_position.x + GRAPPLE_RADIUS >= mouse.x and hook_position.x - GRAPPLE_RADIUS <= mouse.x and hook_position.y + GRAPPLE_RADIUS >= mouse.y and hook_position.y - GRAPPLE_RADIUS <= mouse.y:
 #			print ('yay')
-		
-		
-		
+
 		$Chain.shoot(location - self.global_position)
 		print("location = ",location)
 		print ("hook position = ", hook_position)
 		print ("mouse position = ", mouse)
 		return true
-#	elif not get_tree().get_nodes_in_group("grapple") and CollisionShape2D:
-#		$Chain.release()
-		
+	elif not get_tree().get_nodes_in_group("grapple") and CollisionShape2D:
+		$Chain.release()
 	else:
 		$Chain.release()
 		return false
 
 func _physics_process(_delta):
-#	print(graple)
-	
 	match state:
 		States.FLOOR:
-			#State switching
 			can_djump = true
 			if should_climb_ladder():
 				state = States.LADDER
@@ -180,8 +165,8 @@ func _physics_process(_delta):
 			can_grapple = true
 			$Tall.disabled = false
 			$Short.disabled = true
-			
-			#jump cutting
+
+			#jump height
 			if Input.is_action_just_released("jump") and velocity.y < -100:
 				velocity.y *= .5
 			
@@ -224,8 +209,8 @@ func _physics_process(_delta):
 					velocity.y = 0
 				continue
 			chain_velocity = $Chain.tip.normalized() * CHAIN_PULL
-#			velocity = velocity.move_toward(hook_position, 2)
-#			move_and_slide(velocity)
+			velocity = velocity.move_toward(hook_position, 2)
+			move_and_slide(velocity)
 			
 			self.position = lerp(self.position, $Chain.tip, .2)
 			
@@ -273,13 +258,3 @@ func should_climb_ladder() -> bool:
 func _on_Coyote_timeout():
 	coyote = false
 	CoyoteTime.set_paused(true)
-
-
-
-
-
-
-
-
-
-
