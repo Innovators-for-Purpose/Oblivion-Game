@@ -678,6 +678,7 @@ motion_scale = Vector2( 2, 1 )
 motion_mirroring = Vector2( 1400, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground5/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.486275 )
 position = Vector2( 58.8663, -117 )
 rotation = 6.28318
 scale = Vector2( -0.798352, 1.18662 )
@@ -692,6 +693,7 @@ motion_scale = Vector2( 2, 1 )
 motion_mirroring = Vector2( 1400, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground5/ParallaxBackground7/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.486275 )
 position = Vector2( 68.2196, 784.855 )
 rotation = 3.14159
 scale = Vector2( 0.778979, 1.18662 )
@@ -1866,7 +1868,7 @@ position = Vector2( -205, 14 )
 rotation = -3.14159
 scale = Vector2( 0.105375, 0.126 )
 frames = SubResource( 29 )
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 

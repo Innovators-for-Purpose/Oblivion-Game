@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="OBLVN Updated States"
-run/main_scene="res://scenes/Main(GrappleTest).tscn"
+run/main_scene="res://menus/Options menu.tscn"
 config/icon="res://textures/icon.png"
 
 [autoload]
@@ -29,6 +29,8 @@ config/icon="res://textures/icon.png"
 Global="*res://scripts/globals/global.gd"
 Inventory="*res://scripts/globals/inventory.gd"
 Levelmanager="*res://scripts/levelmanager.gd"
+Transitionscreen="*res://transitionscreen.gd"
+LevelTransition="*res://LevelTransition.tscn"
 
 [display]
 

@@ -970,6 +970,7 @@ stretch_mode = 1
 [node name="pipes" type="Node2D" parent="."]
 
 [node name="Pipes" type="Sprite" parent="pipes"]
+modulate = Color( 1, 1, 1, 0.486275 )
 position = Vector2( -48.9535, 73 )
 texture = ExtResource( 12 )
 
@@ -1083,6 +1084,7 @@ tile_data = PoolIntArray( -1572791, 3, 0, -1507255, 3, 0, -1441719, 3, 0, -13761
 
 [node name="AlexStates" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1138.77, 251.894 )
+scale = Vector2( 1.00019, 0.997599 )
 
 [node name="Camera2" parent="." instance=ExtResource( 18 )]
 position = Vector2( 2341.78, -782 )
@@ -1183,7 +1185,7 @@ position = Vector2( 54.9478, -413 )
 position = Vector2( 5384.88, -497 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform"]
@@ -1196,7 +1198,6 @@ shape = SubResource( 34 )
 position = Vector2( 4903.34, -496 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform2"]
@@ -1295,7 +1296,7 @@ position = Vector2( -20.9648, 27.314 )
 scale = Vector2( 0.141056, 0.143667 )
 frames = SubResource( 42 )
 animation = "Flying"
-frame = 1
+frame = 3
 playing = true
 flip_h = true
 flip_v = true
@@ -1361,7 +1362,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 79.9243, 39 )
 scale = Vector2( 0.314403, 0.335907 )
 frames = SubResource( 57 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Platform"]
@@ -1406,7 +1407,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 19.981, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel"]
@@ -1421,7 +1421,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 337.679, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel2"]
