@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/End Screen - Credits by Gianluca.mp3-0ffa865c0033ca5404ac70db0558ca8d.mp3str"
+
+[deps]
+
+source_file="res://scenes/End Screen - Credits by Gianluca.mp3"
+dest_files=[ "res://.import/End Screen - Credits by Gianluca.mp3-0ffa865c0033ca5404ac70db0558ca8d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
