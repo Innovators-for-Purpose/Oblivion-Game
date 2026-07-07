@@ -4,6 +4,7 @@ enum States {FLOOR = 1, AIR, GRAPPLE, LADDER, DAMAGE}
 var state = States.FLOOR
 
 var hit = false
+var dp
 
 const GRAVITY = 50
 const WALK_SPEED = 250
@@ -61,6 +62,10 @@ func _on_Area2D_area_entered(area):
 		stop = 1
 	if "Spike" in area.get_parent().name:
 		state = States.DAMAGE
+		dp = 10
+	if "BOBM" in area.get_parent().name:
+		state = States.DAMAGE
+		dp = 100000000000000
 #	var target = null
 #	if area.has_method("enable_cross"):
 #		target = area
@@ -336,7 +341,7 @@ func _physics_process(_delta):
 			if hpBar.value == 0:
 				get_tree().change_scene("res://scenes/GAMEOVER.tscn")
 			if !hit:
-				HEALTH -= 10
+				HEALTH -= dp
 				velocity.y = -1000
 				state = States.AIR
 			hit = true
