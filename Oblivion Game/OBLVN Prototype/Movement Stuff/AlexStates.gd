@@ -1,7 +1,9 @@
 extends KinematicBody2D
 
-enum States {FLOOR = 1, AIR, GRAPPLE, LADDER}
+enum States {FLOOR = 1, AIR, GRAPPLE, LADDER, DAMAGE}
 var state = States.FLOOR
+
+var hit = false
 
 const GRAVITY = 50
 const WALK_SPEED = 250
@@ -13,11 +15,12 @@ const CLIMB_STRENGTH = -350
 const GRAPPLE_RADIUS = 60
 const MAX = 45
 const MIN = 0
+export var HEALTH = 100
 
 onready var anim = $Anim
 onready var crouchbox = $Short
 onready var standbox = $Tall
-onready var hpBar = $Sizing/hpBar
+onready var hpBar = $CanvasLayer/Sizing/hpBar
 onready var LadderDetect = $LadderDetect
 onready var Chain = $Chain
 onready var CoyoteTime = $Coyote
@@ -50,12 +53,14 @@ func _ready():
 	
 	grap = get_tree().get_nodes_in_group("grapple")
 	
+	hpBar.value = HEALTH
 	
 func _on_Area2D_area_entered(area):
 
 	if area.is_in_group("grapple"):
 		stop = 1
-
+	if "Spike" in area.get_parent().name:
+		state = States.DAMAGE
 #	var target = null
 #	if area.has_method("enable_cross"):
 #		target = area
@@ -68,7 +73,8 @@ func _on_Area2D_area_exited(area):
 		
 		stop = 2
 		can_grapple = false
-		
+	if "Spike" in area.name:
+		state = States.FLOOR
 #	var target = null
 #	if area.has_method("enable_cross"):
 #		target = area
@@ -325,8 +331,24 @@ func _physics_process(_delta):
 				velocity.x = CROUCH_SPEED
 			else:
 				velocity.x = lerp(velocity.x,0,0.3)
-			
 			velocity = move_and_slide(velocity, Vector2.UP)
+		States.DAMAGE:
+			if hpBar.value == 0:
+				get_tree().change_scene("res://scenes/GAMEOVER.tscn")
+			if !hit:
+				HEALTH -= 10
+				velocity.y = -1000
+				state = States.AIR
+			hit = true
+			var timer = get_tree().create_timer(0.5)
+			timer.connect("timeout", self, "_on_timeout")
+			
+			# yield(get_tree().create_timer(0.5), "timeout")
+			hpBar.value = HEALTH
+
+func _on_timeout():
+	print("hit the timeout!")
+	hit = false
 
 func _on_LadderDetect_body_entered(_body):
 	on_ladder = true

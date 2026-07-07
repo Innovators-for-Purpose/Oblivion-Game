@@ -201,15 +201,19 @@ position = Vector2( 1590, 1040 )
 
 [node name="Spikes2" parent="." instance=ExtResource( 15 )]
 position = Vector2( 3167, 411 )
+script = null
 
 [node name="Spikes3" parent="." instance=ExtResource( 15 )]
 position = Vector2( 2467, 283 )
+script = null
 
 [node name="Spikes4" parent="." instance=ExtResource( 15 )]
 position = Vector2( 2419, 283 )
+script = null
 
 [node name="Spikes5" parent="." instance=ExtResource( 15 )]
 position = Vector2( 2514, 283 )
+script = null
 
 [node name="Level" type="TileMap" parent="." groups=["terrian"]]
 tile_set = SubResource( 2 )
