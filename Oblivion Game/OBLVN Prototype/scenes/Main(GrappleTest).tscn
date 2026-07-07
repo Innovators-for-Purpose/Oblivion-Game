@@ -302,8 +302,10 @@ position = Vector2( 1981.5, 1600 )
 shape = SubResource( 12 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 2033, 363 )
 stream = ExtResource( 14 )
 autoplay = true
+max_distance = 10000.0
 
 [connection signal="area_entered" from="AlexStates/grap_area" to="AlexStates" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="AlexStates/grap_area" to="AlexStates" method="_on_Area2D_area_exited"]

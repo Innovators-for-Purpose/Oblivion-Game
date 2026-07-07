@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://scenes/levels/textures/OBLIVION Sewers.png" type="Texture" id=1]
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Spikes2.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Camera.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/levels/2-11. Tidal Tempest (Bad Future).mp3" type="AudioStream" id=24]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1868,7 +1869,7 @@ position = Vector2( -205, 14 )
 rotation = -3.14159
 scale = Vector2( 0.105375, 0.126 )
 frames = SubResource( 29 )
-frame = 1
+frame = 3
 playing = true
 flip_h = true
 
@@ -1883,6 +1884,8 @@ position = Vector2( -205, 50 )
 shape = SubResource( 35 )
 
 [node name="Spikes" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( -1189, -7 )
 script = ExtResource( 19 )
 
 [node name="Sprite" type="Sprite" parent="Spikes"]
@@ -1940,6 +1943,12 @@ position = Vector2( 2858, -381 )
 
 [node name="Camera" parent="Camera/Camera/Camera" instance=ExtResource( 22 )]
 position = Vector2( 497, -777 )
+
+[node name="Level Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 24 )
+pitch_scale = 0.99
+autoplay = true
+max_distance = 10000.0
 
 [connection signal="body_entered" from="Fall" to="Fall" method="_on_Fall_body_entered"]
 [connection signal="body_entered" from="Moving Enemies/StaticBody2D/Area2D" to="Moving Enemies/StaticBody2D" method="_on_Area2D_body_entered"]

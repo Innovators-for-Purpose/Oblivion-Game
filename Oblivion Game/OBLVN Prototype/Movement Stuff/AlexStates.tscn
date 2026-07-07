@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
@@ -14,7 +14,6 @@
 [ext_resource path="res://Movement Stuff/_Crouch.png" type="Texture" id=12]
 [ext_resource path="res://Movement Stuff/_Run.png" type="Texture" id=13]
 [ext_resource path="res://menus/Pause menu.tscn" type="PackedScene" id=14]
-[ext_resource path="res://menus/Pause menu.gd" type="Script" id=15]
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
@@ -298,7 +297,7 @@ position = Vector2( 0, -23 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
 animation = "idle"
-frame = 1
+frame = 5
 playing = true
 flip_h = true
 
@@ -364,6 +363,12 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Pause menu" parent="CanvasLayer/Sizing" instance=ExtResource( 14 )]
+margin_left = -20.0
+margin_top = -27.0
+margin_right = -20.0
+margin_bottom = -21.0
+
 [node name="Coyote" type="Timer" parent="."]
 process_mode = 0
 wait_time = 0.15
@@ -384,9 +389,6 @@ autoplay = true
 stream = ExtResource( 4 )
 volume_db = 1.238
 autoplay = true
-
-[node name="Pause menu" parent="." instance=ExtResource( 14 )]
-script = ExtResource( 15 )
 
 [connection signal="body_entered" from="LadderDetect" to="." method="_on_LadderDetect_body_entered"]
 [connection signal="body_exited" from="LadderDetect" to="." method="_on_LadderDetect_body_exited"]

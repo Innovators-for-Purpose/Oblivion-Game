@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://menus/mainmenuscript.gd" type="Script" id=1]
 [ext_resource path="res://menus/Background outer city (2).png" type="Texture" id=2]
 [ext_resource path="res://menus/ParallaxBackground.gd" type="Script" id=3]
 [ext_resource path="res://menus/New Piskel (49).png" type="Texture" id=4]
+[ext_resource path="res://menus/1.02 Main Menu.mp3" type="AudioStream" id=5]
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
@@ -80,6 +81,7 @@ texture = ExtResource( 2 )
 position = Vector2( 445, 192 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
+frame = 3
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -87,6 +89,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 780, 195 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
+frame = 3
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -94,7 +97,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1114, 195 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 8
+frame = 2
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -102,15 +105,15 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 448, 450 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 8
+frame = 2
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
 [node name="Button Glow5" type="AnimatedSprite" parent="Glowing Buttons"]
-position = Vector2( 779, 453 )
+position = Vector2( 780, 450 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 7
+frame = 1
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -118,7 +121,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1122, 459 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 7
+frame = 1
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -174,10 +177,10 @@ custom_colors/font_color = Color( 0.752941, 0.631373, 1, 1 )
 text = "Outer City"
 
 [node name="Button5" type="Button" parent="Buttons"]
-margin_left = 415.0
-margin_top = 373.0
-margin_right = 601.0
-margin_bottom = 499.0
+margin_left = 416.0
+margin_top = 369.0
+margin_right = 602.0
+margin_bottom = 495.0
 custom_colors/font_color_disabled = Color( 0.72549, 0.0823529, 0.0823529, 1 )
 custom_colors/font_color_focus = Color( 0.760784, 0, 1, 1 )
 custom_colors/font_color = Color( 0.14902, 1, 0, 1 )
@@ -197,9 +200,33 @@ custom_colors/font_color_hover = Color( 0.333333, 0.0901961, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 1, 0.145098, 1 )
 text = "Laser Room"
 
+[node name="Button7" type="Button" parent="Buttons"]
+margin_left = 276.0
+margin_top = 547.0
+margin_right = 409.0
+margin_bottom = 584.0
+custom_colors/font_color_focus = Color( 0.227451, 0, 0, 1 )
+text = "Main(Grapple Test)"
+
+[node name="Button8" type="Button" parent="Buttons"]
+margin_left = 614.0
+margin_top = 547.0
+margin_right = 747.0
+margin_bottom = 584.0
+custom_colors/font_color_focus = Color( 0.227451, 0, 0, 1 )
+text = "Main"
+
+[node name="Background Music" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 509, 298 )
+stream = ExtResource( 5 )
+autoplay = true
+max_distance = 3000.0
+
 [connection signal="pressed" from="Buttons/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Buttons/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Buttons/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Buttons/Button4" to="." method="_on_Button4_pressed"]
 [connection signal="pressed" from="Buttons/Button5" to="." method="_on_Button5_pressed"]
 [connection signal="pressed" from="Buttons/Button6" to="." method="_on_Button6_pressed"]
+[connection signal="pressed" from="Buttons/Button7" to="." method="_on_Button7_pressed"]
+[connection signal="pressed" from="Buttons/Button8" to="." method="_on_Button8_pressed"]

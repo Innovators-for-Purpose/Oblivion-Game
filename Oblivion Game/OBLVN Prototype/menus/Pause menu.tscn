@@ -59,7 +59,7 @@ alignment = 1
 margin_top = 61.0
 margin_right = 445.0
 margin_bottom = 81.0
-text = "restart level"
+text = "Restart"
 
 [node name="resume" type="Button" parent="PanelContainer/VBoxContainer"]
 margin_top = 85.0
@@ -72,7 +72,7 @@ icon = SubResource( 1 )
 margin_top = 109.0
 margin_right = 445.0
 margin_bottom = 129.0
-text = "Main menu"
+text = "Level Select"
 icon_align = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/VBoxContainer"]

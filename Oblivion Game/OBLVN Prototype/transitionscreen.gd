@@ -29,12 +29,12 @@
 #	elif anim_name == "fade back to white":
 #		color_rect.visible = false
 extends CanvasLayer
+onready var AnimationPlayer = $AnimationPlayer
 
 func change_scene(target: String) -> void:
 	$AnimationPlayer.play('fade back to white')
 	yield($AnimationPlayer,'fade to black')
-# warning-ignore:return_value_discarded
-	get_tree().change_scene(target)
+	get_tree().change_scene("res://scenes/levels/(Finished)AssemblyPlantsave.tscn")
 	$AnimationPlayer.play_backwards('fade back to white')
 
 #extends CanvasLayer

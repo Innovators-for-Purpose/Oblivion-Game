@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/1-22. Wacky Workbench.mp3-2221722647a4dc416035dbf00fae0005.mp3str"
+
+[deps]
+
+source_file="res://1-22. Wacky Workbench.mp3"
+dest_files=[ "res://.import/1-22. Wacky Workbench.mp3-2221722647a4dc416035dbf00fae0005.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

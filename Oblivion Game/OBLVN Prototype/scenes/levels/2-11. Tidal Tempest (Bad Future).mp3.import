@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2-11. Tidal Tempest (Bad Future).mp3-c938f01f46cb18081e9c5a8468593498.mp3str"
+
+[deps]
+
+source_file="res://scenes/levels/2-11. Tidal Tempest (Bad Future).mp3"
+dest_files=[ "res://.import/2-11. Tidal Tempest (Bad Future).mp3-c938f01f46cb18081e9c5a8468593498.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

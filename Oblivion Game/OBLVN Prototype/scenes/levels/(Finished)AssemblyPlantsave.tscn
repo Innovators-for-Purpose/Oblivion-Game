@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=2]
+[gd_scene load_steps=147 format=2]
 
 [ext_resource path="res://textures/cool tiles/Ladder2.png" type="Texture" id=1]
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -46,6 +46,12 @@
 [ext_resource path="res://New Piskel (21).png" type="Texture" id=44]
 [ext_resource path="res://scenes/levels/Stingerkill.gd" type="Script" id=45]
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=46]
+[ext_resource path="res://menus/Game Over Sound_mixdown.wav" type="AudioStream" id=47]
+[ext_resource path="res://menus/New Piskel (49).png" type="Texture" id=48]
+[ext_resource path="res://Bee Boss Fight (2).wav" type="AudioStream" id=49]
+[ext_resource path="res://scenes/levels/roblox-death-sound_1.mp3" type="AudioStream" id=50]
+[ext_resource path="res://Short Yellow Spring.tscn" type="PackedScene" id=51]
+[ext_resource path="res://SCD_FM_09.wav" type="AudioStream" id=52]
 
 [sub_resource type="AtlasTexture" id=100]
 flags = 4
@@ -112,6 +118,59 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=112]
 extents = Vector2( 13.9867, 66.25 )
+
+[sub_resource type="AtlasTexture" id=114]
+flags = 4
+atlas = ExtResource( 48 )
+region = Rect2( 0, 0, 2000, 2000 )
+
+[sub_resource type="AtlasTexture" id=115]
+flags = 4
+atlas = ExtResource( 48 )
+region = Rect2( 2000, 0, 2000, 2000 )
+
+[sub_resource type="AtlasTexture" id=116]
+flags = 4
+atlas = ExtResource( 48 )
+region = Rect2( 4000, 0, 2000, 2000 )
+
+[sub_resource type="AtlasTexture" id=117]
+flags = 4
+atlas = ExtResource( 48 )
+region = Rect2( 0, 2000, 2000, 2000 )
+
+[sub_resource type="AtlasTexture" id=118]
+flags = 4
+atlas = ExtResource( 48 )
+region = Rect2( 2000, 2000, 2000, 2000 )
+
+[sub_resource type="AtlasTexture" id=119]
+flags = 4
+atlas = ExtResource( 48 )
+region = Rect2( 4000, 2000, 2000, 2000 )
+
+[sub_resource type="AtlasTexture" id=120]
+flags = 4
+atlas = ExtResource( 48 )
+region = Rect2( 0, 4000, 2000, 2000 )
+
+[sub_resource type="AtlasTexture" id=121]
+flags = 4
+atlas = ExtResource( 48 )
+region = Rect2( 2000, 4000, 2000, 2000 )
+
+[sub_resource type="AtlasTexture" id=122]
+flags = 4
+atlas = ExtResource( 48 )
+region = Rect2( 4000, 4000, 2000, 2000 )
+
+[sub_resource type="SpriteFrames" id=123]
+animations = [ {
+"frames": [ SubResource( 114 ), SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ), SubResource( 121 ), SubResource( 122 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1066,6 +1125,13 @@ position = Vector2( 1257.81, 389 )
 scale = Vector2( 0.184063, 0.18375 )
 texture = ExtResource( 38 )
 
+[node name="Panel Light" type="AnimatedSprite" parent="."]
+position = Vector2( 779.209, 211.752 )
+scale = Vector2( 0.131428, 0.110116 )
+frames = SubResource( 123 )
+frame = 3
+playing = true
+
 [node name="Assembly Plant" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
@@ -1080,7 +1146,7 @@ cell_size = Vector2( 32, 32 )
 collision_layer = 4
 collision_mask = 4
 format = 1
-tile_data = PoolIntArray( -1572791, 3, 0, -1507255, 3, 0, -1441719, 3, 0, -1376183, 3, 0, -1310647, 3, 0, -1245111, 3, 0, -1179575, 3, 0, -1114039, 3, 0, -1048503, 3, 0, -982967, 3, 0, -917431, 3, 0, -917398, 2, 0, -917397, 2, 0, -851895, 3, 0, -851862, 1, 0, -851861, 1, 0, -720909, 2, 0, -720908, 2, 0, -786326, 1, 0, -786325, 1, 0, -655373, 1, 0, -655372, 1, 0, -720837, 2, 0, -720836, 2, 0, -720790, 1, 0, -720789, 1, 0, -589837, 1, 0, -589836, 1, 0, -655301, 1, 0, -655300, 1, 0, -655267, 2, 0, -655254, 1, 0, -655253, 1, 0, -524301, 1, 0, -524300, 1, 0, -589765, 1, 0, -589764, 1, 0, -589731, 3, 0, -589718, 1, 0, -589717, 1, 0, -458765, 1, 0, -458764, 1, 0, -524250, 2, 0, -524229, 1, 0, -524228, 1, 0, -524195, 3, 0, -524182, 3, 0, -524181, 1, 0, -393229, 1, 0, -393228, 1, 0, -458714, 1, 0, -458693, 1, 0, -458692, 1, 0, -458688, 2, 0, -458659, 3, 0, -458646, 1, 0, -458645, 1, 0, -327693, 1, 0, -327692, 1, 0, -393178, 1, 0, -393157, 1, 0, -393156, 1, 0, -393152, 1, 0, -393123, 3, 0, -262157, 1, 0, -262156, 1, 0, -327642, 1, 0, -327621, 1, 0, -327620, 1, 0, -327616, 1, 0, -327587, 3, 0, -196621, 1, 0, -262106, 1, 0, -262085, 1, 0, -262084, 1, 0, -262080, 1, 0, -131085, 1073741826, 0, -196549, 1, 0, -196548, 1, 0, -196544, 1, 0, -131013, 1, 0, -131012, 1, 0, -131008, 1, 0, -65477, 3, 0, -65476, 3, 0, -65472, 1, 0, 59, 3, 0, 60, 3, 0, 64, 1, 0, 131049, 2, 0, 65595, 3, 0, 65596, 3, 0, 65600, 3, 0, 196585, 1073741825, 0, 131082, 2, 0, 131131, 3, 0, 131132, 3, 0, 131136, 3, 0, 262121, 1073741825, 0, 196618, 1, 0, 196667, 3, 0, 196668, 3, 0, 196672, 3, 0, 327657, 1073741825, 0, 262154, 1, 0, 262203, 3, 0, 262204, 3, 0, 262208, 3, 0, 393193, 1073741825, 0, 327690, 1, 0, 327744, 3, 0, 458729, 1073741825, 0, 393226, 1, 0, 393280, 3, 0, 524265, 1, 0, 458762, 1, 0, 458816, 3, 0, 589801, 1, 0, 524352, 3, 0, 589888, 3, 0, 655424, 3, 0 )
+tile_data = PoolIntArray( -1572791, 3, 0, -1507255, 3, 0, -1441719, 3, 0, -1376183, 3, 0, -1310647, 3, 0, -1245111, 3, 0, -1179575, 3, 0, -1114039, 3, 0, -1048503, 3, 0, -982967, 3, 0, -982934, 2, 0, -982933, 2, 0, -917431, 3, 0, -917398, 1, 0, -917397, 1, 0, -851895, 3, 0, -851862, 1, 0, -851861, 1, 0, -720909, 2, 0, -720908, 2, 0, -786326, 1, 0, -786325, 1, 0, -655373, 1, 0, -655372, 1, 0, -720837, 2, 0, -720836, 2, 0, -720790, 1, 0, -720789, 1, 0, -589837, 1, 0, -589836, 1, 0, -655301, 1, 0, -655300, 1, 0, -655267, 2, 0, -655254, 1, 0, -655253, 1, 0, -524301, 1, 0, -524300, 1, 0, -589765, 1, 0, -589764, 1, 0, -589731, 3, 0, -589718, 1, 0, -589717, 1, 0, -458765, 1, 0, -458764, 1, 0, -524250, 2, 0, -524229, 1, 0, -524228, 1, 0, -524195, 3, 0, -524182, 3, 0, -524181, 1, 0, -393229, 1, 0, -393228, 1, 0, -458714, 1, 0, -458693, 1, 0, -458692, 1, 0, -458688, 2, 0, -458659, 3, 0, -458646, 1, 0, -458645, 1, 0, -327693, 1, 0, -327692, 1, 0, -393178, 1, 0, -393157, 1, 0, -393156, 1, 0, -393152, 1, 0, -393123, 3, 0, -262157, 1, 0, -262156, 1, 0, -327642, 1, 0, -327621, 1, 0, -327620, 1, 0, -327616, 1, 0, -327587, 3, 0, -196621, 1, 0, -262106, 1, 0, -262085, 1, 0, -262084, 1, 0, -262080, 1, 0, -131085, 1073741826, 0, -196549, 1, 0, -196548, 1, 0, -196544, 1, 0, -131013, 1, 0, -131012, 1, 0, -131008, 1, 0, -65477, 3, 0, -65476, 3, 0, -65472, 1, 0, 59, 3, 0, 60, 3, 0, 64, 1, 0, 131049, 2, 0, 65595, 3, 0, 65596, 3, 0, 65600, 3, 0, 196585, 1073741825, 0, 131082, 2, 0, 131131, 3, 0, 131132, 3, 0, 131136, 3, 0, 262121, 1073741825, 0, 196618, 1, 0, 196667, 3, 0, 196668, 3, 0, 196672, 3, 0, 327657, 1073741825, 0, 262154, 1, 0, 262203, 3, 0, 262204, 3, 0, 262208, 3, 0, 393193, 1073741825, 0, 327690, 1, 0, 327744, 3, 0, 458729, 1073741825, 0, 393226, 1, 0, 393280, 3, 0, 524265, 1, 0, 458762, 1, 0, 458816, 3, 0, 589801, 1, 0, 524352, 3, 0, 589888, 3, 0, 655424, 3, 0 )
 
 [node name="AlexStates" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1138.77, 251.894 )
@@ -1155,10 +1221,16 @@ script = ExtResource( 4 )
 position = Vector2( 2842.8, 720 )
 shape = SubResource( 22 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Respawn Areas/Fall"]
+stream = ExtResource( 47 )
+volume_db = 17.0
+max_distance = 10000.0
+
+[node name="Level Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 19 )
 volume_db = 0.014
 autoplay = true
+max_distance = 100000.0
 
 [node name="Finish" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5673.61, -468 )
@@ -1185,7 +1257,6 @@ position = Vector2( 54.9478, -413 )
 position = Vector2( 5384.88, -497 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform"]
@@ -1198,7 +1269,7 @@ shape = SubResource( 34 )
 position = Vector2( 4903.34, -496 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 2
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform2"]
@@ -1280,6 +1351,15 @@ position = Vector2( -2302.57, -463.646 )
 [node name="Red Spring4" parent="Springs" instance=ExtResource( 33 )]
 position = Vector2( -1815.82, -463.646 )
 
+[node name="bee boss music" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 5095.91, -614.18 )
+stream = ExtResource( 49 )
+volume_db = 7.0
+
+[node name="Bee death sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 50 )
+volume_db = 20.0
+
 [node name="Boss Arena detection" type="Area2D" parent="."]
 position = Vector2( -0.00292691, 0.0106812 )
 
@@ -1297,7 +1377,7 @@ position = Vector2( -20.9648, 27.314 )
 scale = Vector2( 0.141056, 0.143667 )
 frames = SubResource( 42 )
 animation = "Flying"
-frame = 3
+frame = 5
 playing = true
 flip_h = true
 flip_v = true
@@ -1363,6 +1443,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 79.9243, 39 )
 scale = Vector2( 0.314403, 0.335907 )
 frames = SubResource( 57 )
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Platform"]
@@ -1397,6 +1478,13 @@ shape = SubResource( 67 )
 position = Vector2( -198.188, -343.25 )
 shape = SubResource( 99 )
 
+[node name="Switch Sfx" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2( 1, 1 )
+stream = ExtResource( 52 )
+volume_db = 5.0
+pitch_scale = 0.9
+max_distance = 10000.0
+
 [node name="Moving Barrels" type="Node2D" parent="."]
 
 [node name="MovingBarrel" type="StaticBody2D" parent="Moving Barrels"]
@@ -1407,7 +1495,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 19.981, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel"]
@@ -1422,7 +1509,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 337.679, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel2"]
@@ -1501,10 +1587,14 @@ frames = SubResource( 91 )
 position = Vector2( -197.563, -350 )
 shape = SubResource( 92 )
 
+[node name="Short Yellow Spring" parent="." instance=ExtResource( 51 )]
+position = Vector2( -260.404, -200.713 )
+
 [connection signal="animation_finished" from="Gate/AnimatedSprite" to="Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="animation_finished" from="Boss Gate/Anim5" to="Boss Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="animation_finished" from="AnimatedSprite" to="Boss Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="Respawn Areas/Fall" to="Respawn Areas/Fall" method="_on_Fall_body_entered"]
+[connection signal="body_entered" from="Boss Arena detection" to="BEE BOSS" method="_on_Boss_Arena_detection_body_entered"]
 [connection signal="body_entered" from="Boss Arena detection" to="Stinger" method="_on_Boss_Arena_detection_body_entered"]
 [connection signal="body_entered" from="BEE BOSS/Hitbox" to="Boss Gate" method="_on_Hitbox_body_entered"]
 [connection signal="body_entered" from="BEE BOSS/Hitbox" to="BEE BOSS" method="_on_Hitbox_body_entered"]

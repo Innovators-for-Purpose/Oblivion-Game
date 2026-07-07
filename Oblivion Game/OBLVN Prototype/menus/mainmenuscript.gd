@@ -21,3 +21,11 @@ func _on_Button5_pressed():
 
 func _on_Button6_pressed():
 	get_tree().change_scene("res://Level 7.tscn")
+
+
+func _on_Button7_pressed():
+	get_tree().change_scene("res://scenes/Main(GrappleTest).tscn")
+
+
+func _on_Button8_pressed():
+	get_tree().change_scene("res://scenes/levels/Main(Finished).tscn")

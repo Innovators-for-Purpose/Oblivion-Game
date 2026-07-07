@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/levels/Yellow Spring.gd" type="Script" id=1]
 [ext_resource path="res://New Piskel (19).png" type="Texture" id=2]
+[ext_resource path="res://sonic-spring.mp3" type="AudioStream" id=3]
 
 [sub_resource type="AtlasTexture" id=93]
 flags = 4
@@ -45,6 +46,12 @@ frames = SubResource( 97 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1775.19, -324.125 )
 shape = SubResource( 98 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = 5.0
+pitch_scale = 1.09
+max_distance = 10000.0
 
 [connection signal="body_entered" from="." to="." method="_on_Yellow_Spring_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Yellow_Spring_body_exited"]
