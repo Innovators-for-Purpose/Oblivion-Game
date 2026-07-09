@@ -15,6 +15,7 @@ func _physics_process(delta):
 	position += velocity * delta
 
 
+# warning-ignore:unused_argument
 func _on_Boss_Arena_detection_body_entered(body):
 	if target:
 		var direction = (target.position - position).normalized()
@@ -28,4 +29,5 @@ func _on_Boss_Arena_detection_body_entered(body):
 
 func _on_StingerKill_body_entered(body):
 	if (body.name == "AlexStates"):
+# warning-ignore:return_value_discarded
 		get_tree().reload_current_scene()

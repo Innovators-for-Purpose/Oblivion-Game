@@ -22,6 +22,7 @@ func load_next_level():
 	current_level_index += 1
 	if current_level_index >= levels.size():
 		current_level_index = 0  # or end-game scene
+# warning-ignore:return_value_discarded
 	get_tree().change_scene(levels[current_level_index])
 	
 

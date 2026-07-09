@@ -41,7 +41,7 @@ var graple = 0
 var location = Vector2(0,0)
 var array_grap = [PoolVector2Array()]
 var pool_array = array_grap[0]
-var player = self.global_position
+#var player = self.global_position
 var stop = 1
 
 
@@ -60,12 +60,18 @@ func _on_Area2D_area_entered(area):
 
 	if area.is_in_group("grapple"):
 		stop = 1
+
 	if "Spike" in area.get_parent().name:
 		state = States.DAMAGE
 		dp = 10
 	if "BOBM" in area.get_parent().name:
 		state = States.DAMAGE
 		dp = 100000000000000
+	if "AttackPlayer" in area.name:
+		state = States.DAMAGE
+		dp = 30
+	if "Heal" in area.get_parent().name:
+		HEALTH += 20
 #	var target = null
 #	if area.has_method("enable_cross"):
 #		target = area
@@ -109,6 +115,7 @@ func get_closest_grappable():#this should be pretty obvious
 	
 
 
+# warning-ignore:unused_argument
 func _input(event: InputEvent):#the commented code ether makes grapple mouse controled 
 	#or makes the grapple need to have the grapple hook out
 #	$GrappleLineDetect.set_cast_to(get_tree().call_group("grapple","location"))
@@ -147,8 +154,8 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 		return false
 
 func _physics_process(_delta):
-	print(can_grapple)
-	print(stop)
+#	print(can_grapple)
+#	print(stop)
 	
 	#$CanvasLayer/grappleCross.position = location - self.global_position / $Camera2D.global_position
 	if stop == 1:
@@ -244,6 +251,7 @@ func _physics_process(_delta):
 				if Input.is_action_just_released("crouch"):
 					$Tall.disabled = false
 					$Short.disabled = true
+# warning-ignore:return_value_discarded
 			move_and_slide(velocity, Vector2.UP)
 		States.AIR:
 			#State switching
@@ -292,6 +300,7 @@ func _physics_process(_delta):
 				can_djump = false
 				velocity.y = JUMP_STRENGTH
 			velocity.x *= .85
+# warning-ignore:return_value_discarded
 			move_and_slide(velocity, Vector2.UP)
 		States.GRAPPLE:
 			if not $Chain.hooked:
@@ -338,18 +347,21 @@ func _physics_process(_delta):
 				velocity.x = lerp(velocity.x,0,0.3)
 			velocity = move_and_slide(velocity, Vector2.UP)
 		States.DAMAGE:
-			if hpBar.value == 0:
-				get_tree().change_scene("res://scenes/GAMEOVER.tscn")
 			if !hit:
 				HEALTH -= dp
 				velocity.y = -1000
 				state = States.AIR
-			hit = true
-			var timer = get_tree().create_timer(0.5)
-			timer.connect("timeout", self, "_on_timeout")
+				hit = true
+				var timer = get_tree().create_timer(2)
+				timer.connect("timeout", self, "_on_timeout")
+			else: 
+				state = States.FLOOR
 			
-			# yield(get_tree().create_timer(0.5), "timeout")
-			hpBar.value = HEALTH
+	if HEALTH <= 0:
+# warning-ignore:return_value_discarded
+		get_tree().change_scene("res://scenes/GAMEOVER.tscn")
+	hpBar.value = HEALTH
+
 
 func _on_timeout():
 	print("hit the timeout!")

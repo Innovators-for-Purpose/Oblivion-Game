@@ -1,0 +1,1653 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://Movement Stuff/Grappleables.tscn" type="PackedScene" id=1]
+[ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
+[ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=3]
+[ext_resource path="res://textures/download2.jpeg" type="Texture" id=4]
+[ext_resource path="res://scripts/Area2D2.gd" type="Script" id=5]
+[ext_resource path="res://scenes/levels/LazerSpriteAnim.png" type="Texture" id=6]
+[ext_resource path="res://scenes/Finish.tscn" type="PackedScene" id=7]
+[ext_resource path="res://textures/cool tiles/Ladder1.png" type="Texture" id=8]
+[ext_resource path="res://textures/cool tiles/Ladder3.png" type="Texture" id=9]
+[ext_resource path="res://textures/cool tiles/Ladder2.png" type="Texture" id=10]
+[ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://textures/HackPanel.png" type="Texture" id=12]
+[ext_resource path="res://scripts/HackPanel.gd" type="Script" id=13]
+[ext_resource path="res://scenes/Spikes2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://textures/New Piskel (5).png" type="Texture" id=15]
+[ext_resource path="res://scripts/StaticBody2D.gd" type="Script" id=16]
+[ext_resource path="res://scripts/PathFollow2D.gd" type="Script" id=17]
+[ext_resource path="res://music/Level 4 (loop after intro) (1).wav" type="AudioStream" id=18]
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 1000, 2000 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 0, 2000, 1000, 2000 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 29, 26.5 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "IndustrialTile_73.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 32, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "IndustrialTile_73.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 3 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=19]
+0/name = "Ladder1.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 16 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Ladder2.png 1"
+1/texture = ExtResource( 10 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 17 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Ladder3.png 2"
+2/texture = ExtResource( 9 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 18 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 384, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 192, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 192, 192, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 384, 192, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 384, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 192, 384, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 384, 384, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 576, 192, 192 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 60.0264, 7.76771 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 4.875, 50.3087 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 41, 23 )
+
+[sub_resource type="Curve2D" id=26]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1209, -574, 0, 0, 0, 0, 1340, -573, 0, 0, 0, 0, 1210, -572, 0, 0, 0, 0, 1209, -574 )
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 11 )]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -5038.0
+margin_top = -2999.0
+margin_right = 7119.0
+margin_bottom = 4250.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Spikes2" parent="TextureRect" instance=ExtResource( 14 )]
+position = Vector2( 7405, 2897 )
+
+[node name="Spikes2" parent="TextureRect/Spikes2" instance=ExtResource( 14 )]
+position = Vector2( 262, 0 )
+
+[node name="HackPanel" type="Area2D" parent="."]
+position = Vector2( 2294, -961 )
+script = ExtResource( 13 )
+
+[node name="Anim" type="AnimatedSprite" parent="HackPanel"]
+position = Vector2( 370, 446 )
+scale = Vector2( 0.204125, 0.198 )
+frames = SubResource( 22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HackPanel"]
+position = Vector2( 415, 444 )
+shape = SubResource( 23 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 119.0
+margin_top = 400.0
+margin_right = 282.0
+margin_bottom = 479.0
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = -1071.0
+margin_top = -804.0
+margin_right = 1235.0
+margin_bottom = 881.0
+text = "Avoid Lasers...
+Good Luck"
+align = 1
+valign = 1
+clip_text = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 4
+format = 1
+tile_data = PoolIntArray( -2818012, 1, 0, -2818010, 1, 0, -2818008, 1, 0, -2818006, 1, 0, -2818004, 1, 0, -2818002, 1, 0, -2818000, 1, 0, -2817998, 1, 0, -2817996, 1, 0, -2817994, 1, 0, -2817992, 1, 0, -2817990, 1, 0, -2817988, 1, 0, -2817986, 1, 0, -2817984, 1, 0, -2817982, 1, 0, -2817980, 1, 0, -2817978, 1, 0, -2817976, 1, 0, -2817974, 1, 0, -2817972, 1, 0, -2817970, 1, 0, -2817968, 1, 0, -2817966, 1, 0, -2817964, 1, 0, -2817962, 1, 0, -2817960, 1, 0, -2817958, 1, 0, -2817956, 1, 0, -2817954, 1, 0, -2817952, 1, 0, -2817950, 1, 0, -2817948, 1, 0, -2817946, 1, 0, -2817944, 1, 0, -2817942, 1, 0, -2817940, 1, 0, -2817938, 1, 0, -2817936, 1, 0, -2817934, 1, 0, -2817932, 1, 0, -2817930, 1, 0, -2817928, 1, 0, -2817926, 1, 0, -2817924, 1, 0, -2817922, 1, 0, -2817920, 1, 0, -2817918, 1, 0, -2817916, 1, 0, -2817914, 1, 0, -2817912, 1, 0, -2817910, 1, 0, -2817908, 1, 0, -2817906, 1, 0, -2817904, 1, 0, -2817902, 1, 0, -2817900, 1, 0, -2817898, 1, 0, -2817896, 1, 0, -2817894, 1, 0, -2817892, 1, 0, -2817890, 1, 0, -2817888, 1, 0, -2817886, 1, 0, -2817884, 1, 0, -2817882, 1, 0, -2817880, 1, 0, -2817878, 1, 0, -2817876, 1, 0, -2817874, 1, 0, -2817872, 1, 0, -2686942, 1, 0, -2686872, 1, 0, -2686808, 1, 0, -2686806, 1, 0, -2686804, 1, 0, -2686802, 1, 0, -2686800, 1, 0, -2555872, 1, 0, -2555800, 1, 0, -2555734, 1, 0, -2555732, 1, 0, -2555730, 1, 0, -2555728, 1, 0, -2424802, 1, 0, -2424728, 1, 0, -2424660, 1, 0, -2424658, 1, 0, -2424656, 1, 0, -2293730, 1, 0, -2293586, 1, 0, -2293584, 1, 0, -2228110, 1, 0, -2228108, 1, 0, -2228106, 1, 0, -2228104, 1, 0, -2228102, 1, 0, -2228100, 1, 0, -2228098, 1, 0, -2228086, 1, 0, -2228084, 1, 0, -2228082, 1, 0, -2228080, 1, 0, -2228078, 1, 0, -2228076, 1, 0, -2228074, 1, 0, -2228067, 1, 0, -2228061, 1, 0, -2162658, 1, 0, -2162646, 1, 0, -2162644, 1, 0, -2162512, 1, 0, -2031586, 1, 0, -2031574, 1, 0, -2031440, 1, 0, -1966080, 1, 0, -1966078, 1, 0, -1966076, 1, 0, -1966074, 1, 0, -1966072, 1, 0, -1966070, 1, 0, -1966068, 1, 0, -1966066, 1, 0, -1966064, 1, 0, -1966062, 1, 0, -1966060, 1, 0, -1966058, 1, 0, -1966056, 1, 0, -1966054, 1, 0, -1966052, 1, 0, -1966029, 1, 0, -1966027, 1, 0, -1966025, 1, 0, -1966023, 1, 0, -1966021, 1, 0, -1966019, 1, 0, -1966017, 1, 0, -1966015, 1, 0, -1966013, 1, 0, -1966011, 1, 0, -1966009, 1, 0, -1966007, 1, 0, -1966005, 1, 0, -1966003, 1, 0, -1966001, 1, 0, -1965999, 1, 0, -1965997, 1, 0, -1965995, 1, 0, -1965993, 1, 0, -1965991, 1, 0, -1965989, 1, 0, -1965987, 1, 0, -1965985, 1, 0, -1965984, 1, 0, -1965982, 1, 0, -1965980, 1, 0, -1965978, 1, 0, -1965976, 1, 0, -1965974, 1, 0, -1965972, 1, 0, -1900502, 1, 0, -1900448, 1, 0, -1900368, 1, 0, -1835008, 1, 0, -1834984, 1, 0, -1834957, 1, 0, -1834943, 1, 0, -1769448, 1, 0, -1769430, 1, 0, -1769376, 1, 0, -1769296, 1, 0, -1703936, 1, 0, -1703885, 1, 0, -1703871, 1, 0, -1638376, 1, 0, -1638362, 1, 0, -1638360, 1, 0, -1638358, 1, 0, -1638304, 1, 0, -1638224, 1, 0, -1572864, 1, 0, -1572813, 1, 0, -1572799, 1, 0, -1572734, 1, 0, -1572732, 1, 0, -1572730, 1, 0, -1572722, 1, 0, -1572720, 1, 0, -1572718, 1, 0, -1572716, 1, 0, -1572714, 1, 0, -1572712, 1, 0, -1572710, 1, 0, -1572708, 1, 0, -1572706, 1, 0, -1572704, 1, 0, -1572702, 1, 0, -1572700, 1, 0, -1572698, 1, 0, -1572696, 1, 0, -1572694, 1, 0, -1572692, 1, 0, -1572690, 1, 0, -1572688, 1, 0, -1507304, 1, 0, -1507286, 1, 0, -1507232, 1, 0, -1507218, 1, 0, -1507216, 1, 0, -1507214, 1, 0, -1507212, 1, 0, -1507210, 1, 0, -1507208, 1, 0, -1441792, 1, 0, -1441727, 1, 0, -1441650, 1, 0, -1441616, 1, 0, -1376232, 1, 0, -1376214, 1, 0, -1376160, 1, 0, -1310720, 1, 0, -1310661, 1, 0, -1310659, 1, 0, -1310657, 1, 0, -1310655, 1, 0, -1310578, 1, 0, -1310544, 1, 0, -1245160, 1, 0, -1245142, 1, 0, -1245088, 1, 0, -1179648, 1, 0, -1179508, 1, 0, -1179506, 1, 0, -1179472, 1, 0, -1114098, 1, 0, -1114088, 1, 0, -1114086, 1, 0, -1114070, 1, 0, -1114016, 1, 0, -1048576, 1, 0, -1048434, 1, 0, -1048400, 1, 0, -983026, 1, 0, -983016, 1, 0, -982998, 1, 0, -982954, 1, 0, -982952, 1, 0, -982950, 1, 0, -982948, 1, 0, -982946, 1, 0, -982944, 1, 0, -917504, 1, 0, -917372, 1, 0, -917362, 1, 0, -917328, 1, 0, -851954, 1, 0, -851952, 1, 0, -851950, 1, 0, -851948, 1, 0, -851946, 1, 0, -851944, 1, 0, -851926, 1, 0, -851924, 1, 0, -851922, 1, 0, -851920, 1, 0, -851918, 1, 0, -851916, 1, 0, -851882, 1, 0, -851872, 1, 0, -786432, 1, 0, -786367, 1, 0, -786300, 1, 0, -786290, 1, 0, -786256, 1, 0, -720844, 1, 0, -720810, 1, 0, -720800, 1, 0, -720798, 1, 0, -720796, 1, 0, -720794, 1, 0, -655360, 1, 0, -655295, 1, 0, -655228, 1, 0, -655226, 1, 0, -655224, 1, 0, -655218, 1, 0, -655206, 1, 0, -655204, 1, 0, -655202, 1, 0, -655200, 1, 0, -655198, 1, 0, -655196, 1, 0, -655194, 1, 0, -655184, 1, 0, -589772, 1, 0, -589728, 1, 0, -524288, 1, 0, -524286, 1, 0, -524223, 1, 0, -524182, 1, 0, -524180, 1, 0, -524156, 1, 0, -524146, 1, 0, -524128, 1, 0, -524112, 1, 0, -458656, 1, 0, -393216, 1, 0, -393151, 1, 0, -393084, 1, 0, -393074, 1, 0, -393056, 1, 0, -393040, 1, 0, -327584, 1, 0, -327568, 1, 0, -327566, 1, 0, -262144, 1, 0, -262132, 1, 0, -262130, 1, 0, -262128, 1, 0, -262114, 1, 0, -262079, 1, 0, -262012, 1, 0, -262002, 1, 0, -261984, 1, 0, -261968, 1, 0, -196530, 1, 0, -196512, 1, 0, -131072, 1, 0, -131060, 1, 0, -131044, 1, 0, -131042, 1, 0, -131007, 1, 0, -131005, 1, 0, -130940, 1, 0, -130932, 1, 0, -130930, 1, 0, -130928, 1, 0, -130926, 1, 0, -130924, 1, 0, -130922, 1, 0, -130920, 1, 0, -130918, 1, 0, -130916, 1, 0, -130914, 1, 0, -130912, 1, 0, -130896, 1, 0, -65458, 1, 0, -65440, 1, 0, 0, 1, 0, 12, 1, 0, 22, 1, 0, 122, 1, 0, 124, 1, 0, 126, 1, 0, 128, 1, 0, 130, 1, 0, 132, 1, 0, 176, 1, 0, 65614, 1, 0, 65632, 1, 0, 131072, 1, 0, 131094, 1, 0, 131192, 1, 0, 131204, 1, 0, 131248, 1, 0, 196686, 1, 0, 196704, 1, 0, 262144, 1, 0, 262166, 1, 0, 262256, 1, 0, 262258, 1, 0, 262260, 1, 0, 262262, 1, 0, 262276, 1, 0, 262320, 1, 0, 327752, 1, 0, 327754, 1, 0, 327756, 1, 0, 327758, 1, 0, 393216, 1, 0, 393218, 1, 0, 393220, 1, 0, 393238, 1, 0, 393259, 1, 0, 393261, 1, 0, 393263, 1, 0, 393265, 1, 0, 393267, 1, 0, 393269, 1, 0, 393326, 1, 0, 393348, 1, 0, 393350, 1, 0, 393352, 1, 0, 393392, 1, 0, 524288, 1, 0, 524310, 1, 0, 524331, 1, 0, 524333, 1, 0, 524335, 1, 0, 524337, 1, 0, 524339, 1, 0, 524341, 1, 0, 524420, 1, 0, 524464, 1, 0, 655360, 1, 0, 655382, 1, 0, 655403, 1, 0, 655405, 1, 0, 655407, 1, 0, 655409, 1, 0, 655411, 1, 0, 655413, 1, 0, 655492, 1, 0, 655536, 1, 0, 786432, 1, 0, 786447, 1, 0, 786448, 1, 0, 786450, 1, 0, 786452, 1, 0, 786454, 1, 0, 786475, 1, 0, 786477, 1, 0, 786479, 1, 0, 786481, 1, 0, 786483, 1, 0, 786485, 1, 0, 786564, 1, 0, 786608, 1, 0, 917504, 1, 0, 917526, 1, 0, 917580, 1, 0, 917582, 1, 0, 917584, 1, 0, 917586, 1, 0, 917588, 1, 0, 917590, 1, 0, 917592, 1, 0, 917594, 1, 0, 917596, 1, 0, 917598, 1, 0, 917610, 1, 0, 917612, 1, 0, 917614, 1, 0, 917616, 1, 0, 917618, 1, 0, 917620, 1, 0, 917622, 1, 0, 917624, 1, 0, 917626, 1, 0, 917628, 1, 0, 917630, 1, 0, 917632, 1, 0, 917634, 1, 0, 917636, 1, 0, 917638, 1, 0, 917640, 1, 0, 917642, 1, 0, 917644, 1, 0, 917646, 1, 0, 917648, 1, 0, 917650, 1, 0, 917652, 1, 0, 917654, 1, 0, 917656, 1, 0, 917658, 1, 0, 917660, 1, 0, 917662, 1, 0, 917664, 1, 0, 917666, 1, 0, 917668, 1, 0, 917670, 1, 0, 917672, 1, 0, 917674, 1, 0, 917676, 1, 0, 917678, 1, 0, 917680, 1, 0, 1048576, 1, 0, 1048584, 1, 0, 1048598, 1, 0, 1048600, 1, 0, 1048602, 1, 0, 1048604, 1, 0, 1048680, 1, 0, 1179648, 1, 0, 1179656, 1, 0, 1179670, 1, 0, 1179750, 1, 0, 1245254, 1, 0, 1310720, 1, 0, 1310728, 1, 0, 1310820, 1, 0, 1441792, 1, 0, 1441794, 1, 0, 1441796, 1, 0, 1441798, 1, 0, 1441800, 1, 0, 1441802, 1, 0, 1441804, 1, 0, 1441806, 1, 0, 1441808, 1, 0, 1441810, 1, 0, 1441828, 1, 0, 1441830, 1, 0, 1441890, 1, 0, 1572864, 1, 0, 1572902, 1, 0, 1572940, 1, 0, 1572942, 1, 0, 1572944, 1, 0, 1572946, 1, 0, 1572960, 1, 0, 1703936, 1, 0, 1703974, 1, 0, 1703976, 1, 0, 1703978, 1, 0, 1703980, 1, 0, 1703982, 1, 0, 1703984, 1, 0, 1704018, 1, 0, 1704020, 1, 0, 1704022, 1, 0, 1704032, 1, 0, 1835008, 1, 0, 1835038, 1, 0, 1835056, 1, 0, 1835076, 1, 0, 1835094, 1, 0, 1835104, 1, 0, 1966080, 1, 0, 1966110, 1, 0, 1966128, 1, 0, 1966148, 1, 0, 1966166, 1, 0, 1966176, 1, 0, 2097152, 1, 0, 2097174, 1, 0, 2097176, 1, 0, 2097178, 1, 0, 2097180, 1, 0, 2097182, 1, 0, 2097200, 1, 0, 2097212, 1, 0, 2097220, 1, 0, 2097248, 1, 0, 2228224, 1, 0, 2228246, 1, 0, 2228272, 1, 0, 2228284, 1, 0, 2228292, 1, 0, 2228320, 1, 0, 2359296, 1, 0, 2359318, 1, 0, 2359344, 1, 0, 2359356, 1, 0, 2359364, 1, 0, 2359392, 1, 0, 2490368, 1, 0, 2490370, 1, 0, 2490372, 1, 0, 2490374, 1, 0, 2490376, 1, 0, 2490378, 1, 0, 2490380, 1, 0, 2490382, 1, 0, 2490384, 1, 0, 2490386, 1, 0, 2490388, 1, 0, 2490390, 1, 0, 2490392, 1, 0, 2490394, 1, 0, 2490396, 1, 0, 2490398, 1, 0, 2490400, 1, 0, 2490402, 1, 0, 2490404, 1, 0, 2490406, 1, 0, 2490408, 1, 0, 2490410, 1, 0, 2490412, 1, 0, 2490414, 1, 0, 2490416, 1, 0, 2490418, 1, 0, 2490420, 1, 0, 2490422, 1, 0, 2490424, 1, 0, 2490426, 1, 0, 2490428, 1, 0, 2490430, 1, 0, 2490432, 1, 0, 2490434, 1, 0, 2490436, 1, 0, 2490438, 1, 0, 2490440, 1, 0, 2490442, 1, 0, 2490444, 1, 0, 2490446, 1, 0, 2490448, 1, 0, 2490450, 1, 0, 2490452, 1, 0, 2490454, 1, 0, 2490456, 1, 0, 2490458, 1, 0, 2490460, 1, 0, 2490462, 1, 0, 2490464, 1, 0 )
+
+[node name="Ladders" type="TileMap" parent="."]
+tile_set = SubResource( 19 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 4
+collision_mask = 4
+format = 1
+tile_data = PoolIntArray( -2162648, 1, 0, -2097112, 1, 0, -2031576, 1, 0, -1966040, 1, 0, -1966031, 1, 0, -1900504, 1, 0, -1900495, 1, 0, -1834968, 1, 0, -1834959, 1, 0, -1769432, 1, 0, -1769423, 1, 0, -1703887, 1, 0, -1638351, 1, 0, -1572815, 1, 0, -851914, 0, 0, -786378, 0, 0, -720842, 0, 0, -720722, 2, 0, -655306, 0, 0, -589770, 0, 0, -589650, 1, 0, -524114, 1, 0, -458578, 1, 0, -393042, 1, 0, -327506, 1, 0, -261970, 1, 0, -196434, 1, 0, -130898, 1, 0, -65362, 1, 0, 174, 1, 0, 65710, 1, 0, 131246, 1, 0, 196782, 1, 0, 262185, 2, 0, 262199, 2, 0, 262318, 1, 0, 393257, 1, 0, 393271, 1, 0, 393390, 1, 0, 458793, 1, 0, 458807, 1, 0, 524329, 1, 0, 524343, 1, 0, 589865, 1, 0, 589879, 1, 0, 655401, 1, 0, 655415, 1, 0, 720937, 1, 0, 720951, 1, 0, 786473, 1, 0, 786487, 1, 0, 852009, 1, 0, 852023, 1, 0 )
+
+[node name="AlexStates" parent="." instance=ExtResource( 3 )]
+position = Vector2( 128, 531 )
+
+[node name="Lazers" type="Node2D" parent="."]
+
+[node name="Lazer" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer"]
+position = Vector2( 584.5, 494 )
+scale = Vector2( 1.10938, 1 )
+frames = SubResource( 14 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer"]
+position = Vector2( 575, 467 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer5" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim_5" type="AnimatedSprite" parent="Lazers/Lazer5"]
+position = Vector2( 74, -35 )
+rotation = -1.57079
+scale = Vector2( 1.10938, 1 )
+frames = SubResource( 14 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer5"]
+position = Vector2( 47, -36 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer5"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer8" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer8"]
+position = Vector2( 341, -298 )
+rotation = -0.785397
+scale = Vector2( 1.10938, 1 )
+frames = SubResource( 14 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer8"]
+position = Vector2( 319, -316 )
+rotation = -0.785397
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer8"]
+wait_time = 4.0
+autostart = true
+
+[node name="Lazer9" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer9"]
+position = Vector2( 353, -246 )
+rotation = -0.785397
+scale = Vector2( 1.10938, 1 )
+frames = SubResource( 14 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer9"]
+position = Vector2( 332, -260 )
+rotation = -0.785397
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer9"]
+wait_time = 4.0
+autostart = true
+
+[node name="Lazer7" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer7"]
+position = Vector2( 280, 9 )
+rotation = -3.14159
+scale = Vector2( 1.10938, 1 )
+frames = SubResource( 14 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer7"]
+position = Vector2( 285, 38 )
+rotation = -3.14159
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer7"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer10" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer10"]
+position = Vector2( 434, 71 )
+rotation = -4.71238
+scale = Vector2( 1.10938, 1 )
+frames = SubResource( 14 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer10"]
+position = Vector2( 461, 60 )
+rotation = -4.71238
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer10"]
+wait_time = 4.0
+autostart = true
+
+[node name="Lazer11" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer11"]
+position = Vector2( 434, 189 )
+rotation = -4.71238
+scale = Vector2( 1.10938, 1 )
+frames = SubResource( 14 )
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer11"]
+position = Vector2( 461, 184 )
+rotation = -4.71238
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer11"]
+wait_time = 4.0
+autostart = true
+
+[node name="Lazer6" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer6"]
+position = Vector2( 74, 25 )
+rotation = -1.57079
+scale = Vector2( 1.10938, 1 )
+frames = SubResource( 14 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer6"]
+position = Vector2( 47, 32 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer6"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer4" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer4"]
+position = Vector2( 296, 283 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer4"]
+position = Vector2( 269, 285 )
+rotation = 1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer4"]
+wait_time = 7.0
+autostart = true
+
+[node name="Lazer2" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer2"]
+position = Vector2( 223, 320 )
+frames = SubResource( 14 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer2"]
+position = Vector2( 222.974, 294 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer2"]
+wait_time = 6.0
+autostart = true
+
+[node name="Lazer3" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer3"]
+position = Vector2( 302, 320 )
+frames = SubResource( 14 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer3"]
+position = Vector2( 296, 294 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer3"]
+wait_time = 6.0
+autostart = true
+
+[node name="Lazer19" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim_19" type="AnimatedSprite" parent="Lazers/Lazer19"]
+position = Vector2( 709, 494 )
+frames = SubResource( 14 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer19"]
+position = Vector2( 702, 467 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer19"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer42" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer42"]
+position = Vector2( 1046, 563 )
+frames = SubResource( 14 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer42"]
+position = Vector2( 1044, 539 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer42"]
+wait_time = 4.0
+autostart = true
+
+[node name="Lazer43" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer43"]
+position = Vector2( 863, 564 )
+frames = SubResource( 14 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer43"]
+position = Vector2( 862, 539 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer43"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer44" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer44"]
+position = Vector2( 905, 564 )
+frames = SubResource( 14 )
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer44"]
+position = Vector2( 896, 539 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer44"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer20" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer20"]
+position = Vector2( 1318, 496 )
+frames = SubResource( 14 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer20"]
+position = Vector2( 1313, 467 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer20"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer21" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer21"]
+position = Vector2( 1195.5, 496 )
+scale = Vector2( 1.16146, 1 )
+frames = SubResource( 14 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer21"]
+position = Vector2( 1195, 470 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer21"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer22" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer22"]
+position = Vector2( 1477, 447 )
+frames = SubResource( 14 )
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer22"]
+position = Vector2( 1476, 416 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer22"]
+wait_time = 8.0
+autostart = true
+
+[node name="Lazer23" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer23"]
+position = Vector2( 1400, 351 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer23"]
+position = Vector2( 1373, 351 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer23"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer24" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer24"]
+position = Vector2( 1400, 311 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer24"]
+position = Vector2( 1371, 317 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer24"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer25" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer25"]
+position = Vector2( 1476, -153 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer25"]
+position = Vector2( 1448, -147 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer25"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer33" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer33"]
+position = Vector2( 905, -434 )
+rotation = -3.14159
+frames = SubResource( 14 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer33"]
+position = Vector2( 908, -408 )
+rotation = -3.14159
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer33"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer36" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer36"]
+position = Vector2( 918, -619 )
+rotation = -2.09439
+frames = SubResource( 14 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer36"]
+position = Vector2( 896, -600 )
+rotation = -2.09439
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer36"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer37" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer37"]
+position = Vector2( 957, -552 )
+rotation = -2.09439
+frames = SubResource( 14 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer37"]
+position = Vector2( 935, -535 )
+rotation = -2.09439
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer37"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer38" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer38"]
+position = Vector2( 1003, -619 )
+rotation = -2.09439
+frames = SubResource( 14 )
+frame = 9
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer38"]
+position = Vector2( 982, -604 )
+rotation = -2.09439
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer38"]
+wait_time = 4.0
+autostart = true
+
+[node name="Lazer39" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer39"]
+position = Vector2( 1045, -545 )
+rotation = -2.09439
+frames = SubResource( 14 )
+frame = 9
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer39"]
+position = Vector2( 1022, -531 )
+rotation = -2.09439
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer39"]
+wait_time = 4.0
+autostart = true
+
+[node name="Lazer40" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer40"]
+position = Vector2( 1098, -622 )
+rotation = -2.09439
+frames = SubResource( 14 )
+frame = 8
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer40"]
+position = Vector2( 1077, -607 )
+rotation = -2.09439
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer40"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer41" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer41"]
+position = Vector2( 1143, -544 )
+rotation = -2.09439
+frames = SubResource( 14 )
+frame = 8
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer41"]
+position = Vector2( 1119, -534 )
+rotation = -2.09439
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer41"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer45" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer45"]
+position = Vector2( 1434, -525 )
+rotation = -1.0472
+frames = SubResource( 14 )
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer45"]
+position = Vector2( 1414, -543 )
+rotation = -1.0472
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer45"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer46" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer46"]
+position = Vector2( 1480, -605 )
+rotation = -1.0472
+frames = SubResource( 14 )
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer46"]
+position = Vector2( 1453, -614 )
+rotation = -1.0472
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer46"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer47" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer47"]
+position = Vector2( 1524, -592 )
+rotation = -1.0472
+frames = SubResource( 14 )
+frame = 6
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer47"]
+position = Vector2( 1500, -602 )
+rotation = -1.0472
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer47"]
+wait_time = 4.0
+autostart = true
+
+[node name="Lazer49" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer49"]
+position = Vector2( 1578, -591 )
+rotation = -1.0472
+frames = SubResource( 14 )
+frame = 6
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer49"]
+position = Vector2( 1554, -602 )
+rotation = -1.0472
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer49"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer50" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer50"]
+position = Vector2( 1540, -523 )
+rotation = -1.0472
+frames = SubResource( 14 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer50"]
+position = Vector2( 1518, -539 )
+rotation = -1.0472
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer50"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer48" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer48"]
+position = Vector2( 1483, -520 )
+rotation = -1.0472
+frames = SubResource( 14 )
+frame = 6
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer48"]
+position = Vector2( 1460, -534 )
+rotation = -1.0472
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer48"]
+wait_time = 4.0
+autostart = true
+
+[node name="Lazer35" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer35"]
+position = Vector2( 758, -434 )
+rotation = -3.14159
+frames = SubResource( 14 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer35"]
+position = Vector2( 764, -407 )
+rotation = -3.14159
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer35"]
+wait_time = 12.0
+autostart = true
+
+[node name="Lazer34" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer34"]
+position = Vector2( 977, -434 )
+rotation = -3.14159
+frames = SubResource( 14 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer34"]
+position = Vector2( 982, -409 )
+rotation = -3.14159
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer34"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer29" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer29"]
+position = Vector2( 1533, -156 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer29"]
+position = Vector2( 1506, -151 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer29"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer30" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer30"]
+position = Vector2( 1533, -41 )
+rotation = -1.57079
+frames = SubResource( 14 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer30"]
+position = Vector2( 1506, -68 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer30"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer31" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer31"]
+position = Vector2( 1533, 53 )
+rotation = -1.57079
+frames = SubResource( 14 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer31"]
+position = Vector2( 1506, 60 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer31"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer32" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer32"]
+position = Vector2( 1533, 160 )
+rotation = -1.57079
+frames = SubResource( 14 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer32"]
+position = Vector2( 1506, 160 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer32"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer26" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer26"]
+position = Vector2( 1476, -48 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer26"]
+position = Vector2( 1449, -46 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer26"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer27" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer27"]
+position = Vector2( 1476, 49 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer27"]
+position = Vector2( 1450, 60 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer27"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer28" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer28"]
+position = Vector2( 1476, 158 )
+rotation = -1.57079
+frames = SubResource( 14 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer28"]
+position = Vector2( 1448, 158 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer28"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer51" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer51"]
+position = Vector2( 1476, 158 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 9
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer51"]
+position = Vector2( 1448, 158 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer51"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer52" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer52"]
+position = Vector2( 1845, 159 )
+rotation = -2.09439
+frames = SubResource( 14 )
+frame = 8
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer52"]
+position = Vector2( 1822, 174 )
+rotation = -2.09439
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer52"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer53" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer53"]
+position = Vector2( 1924, 156 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 8
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer53"]
+position = Vector2( 1897, 160 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer53"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer56" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer56"]
+position = Vector2( 2153, -291 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer56"]
+position = Vector2( 2125, -292 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer56"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer63" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer63"]
+position = Vector2( 2650, -453 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer63"]
+position = Vector2( 2619, -449 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer63"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer67" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer67"]
+position = Vector2( 2499, -66 )
+rotation = -0.785397
+frames = SubResource( 14 )
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer67"]
+position = Vector2( 2480, -84 )
+rotation = -0.785397
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer67"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer68" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer68"]
+position = Vector2( 2535, -63 )
+rotation = -0.785397
+frames = SubResource( 14 )
+frame = 6
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer68"]
+position = Vector2( 2513, -80 )
+rotation = -0.785397
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer68"]
+wait_time = 3.0
+autostart = true
+
+[node name="Lazer64" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer64"]
+position = Vector2( 2555, -452 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 6
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer64"]
+position = Vector2( 2529, -449 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer64"]
+wait_time = 6.0
+autostart = true
+
+[node name="Lazer65" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer65"]
+position = Vector2( 2555, -601 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer65"]
+position = Vector2( 2528, -598 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer65"]
+wait_time = 4.0
+autostart = true
+
+[node name="Lazer66" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer66"]
+position = Vector2( 2650, -601 )
+rotation = -1.57079
+frames = SubResource( 14 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer66"]
+position = Vector2( 2623, -599 )
+rotation = -1.57079
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer66"]
+wait_time = 6.0
+autostart = true
+
+[node name="Lazer57" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer57"]
+position = Vector2( 2267, 84 )
+rotation = -3.14159
+frames = SubResource( 14 )
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer57"]
+position = Vector2( 2270, 111 )
+rotation = -3.14159
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer57"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer58" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer58"]
+position = Vector2( 2381, 84 )
+rotation = -3.14159
+frames = SubResource( 14 )
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer58"]
+position = Vector2( 2384, 111 )
+rotation = -3.14159
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer58"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer59" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer59"]
+position = Vector2( 2488, 84 )
+rotation = -3.14159
+frames = SubResource( 14 )
+frame = 6
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer59"]
+position = Vector2( 2491, 111 )
+rotation = -3.14159
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer59"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer60" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer60"]
+position = Vector2( 2597, 84 )
+rotation = -3.14159
+frames = SubResource( 14 )
+frame = 6
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer60"]
+position = Vector2( 2601, 111 )
+rotation = -3.14159
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer60"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer61" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer61"]
+position = Vector2( 2677, 84 )
+rotation = -3.14159
+frames = SubResource( 14 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer61"]
+position = Vector2( 2677, 110 )
+rotation = -3.14159
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer61"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer62" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer62"]
+position = Vector2( 2717, 84 )
+rotation = -3.14159
+frames = SubResource( 14 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer62"]
+position = Vector2( 2718, 111 )
+rotation = -3.14159
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer62"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer54" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer54"]
+position = Vector2( 2014, 84.0001 )
+rotation = -2.35619
+frames = SubResource( 14 )
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer54"]
+position = Vector2( 2069, 172 )
+rotation = -2.35619
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer54"]
+wait_time = 5.0
+autostart = true
+
+[node name="Lazer55" type="Area2D" parent="Lazers"]
+script = ExtResource( 5 )
+
+[node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer55"]
+position = Vector2( 2087, 155 )
+rotation = -2.35619
+frames = SubResource( 14 )
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer55"]
+position = Vector2( 1995, 106 )
+rotation = -2.35619
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="Lazers/Lazer55"]
+wait_time = 5.0
+autostart = true
+
+[node name="Grappleables2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 123792, 58969 )
+scale = Vector2( 4, 4 )
+
+[node name="Finish" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2769, 188 )
+rotation = -6.28318
+
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="Spikes2" parent="Spikes" instance=ExtResource( 14 )]
+position = Vector2( 822, 90 )
+
+[node name="Spikes3" parent="Spikes" instance=ExtResource( 14 )]
+position = Vector2( 135, 26 )
+
+[node name="Spikes4" parent="Spikes" instance=ExtResource( 14 )]
+position = Vector2( 1496, -567 )
+
+[node name="Spikes5" parent="Spikes" instance=ExtResource( 14 )]
+position = Vector2( 1784, -454 )
+
+[node name="Spikes6" parent="Spikes" instance=ExtResource( 14 )]
+position = Vector2( 2804, -711 )
+
+[node name="Spikes7" parent="Spikes" instance=ExtResource( 14 )]
+position = Vector2( 7403, 2122 )
+
+[node name="Spikes8" parent="Spikes" instance=ExtResource( 14 )]
+position = Vector2( 7069, 2121 )
+
+[node name="Spikes9" parent="Spikes" instance=ExtResource( 14 )]
+position = Vector2( 1994, -870 )
+
+[node name="Spikes10" parent="Spikes" instance=ExtResource( 14 )]
+position = Vector2( 2379, -870 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 1206.91, -572.537 )
+scale = Vector2( 0.998271, 0.997451 )
+script = ExtResource( 16 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 50, -15 )
+scale = Vector2( 0.29075, 0.31775 )
+texture = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0.203003, -24.5228 )
+shape = SubResource( 24 )
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+shape = SubResource( 25 )
+
+[node name="Path2D" type="Path2D" parent="."]
+scale = Vector2( 0.998271, 0.997451 )
+curve = SubResource( 26 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 1209, -574 )
+rotate = false
+script = ExtResource( 17 )
+speed = 1
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D"]
+remote_path = NodePath("../../../StaticBody2D")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 18 )
+volume_db = 0.667
+autoplay = true
+
+[connection signal="body_entered" from="HackPanel" to="HackPanel" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="HackPanel" to="HackPanel" method="_on_HackPanel_body_entered"]
+[connection signal="body_entered" from="Lazers/Lazer" to="Lazers/Lazer" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer/Timer" to="Lazers/Lazer" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer5" to="Lazers/Lazer5" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer5/Timer" to="Lazers/Lazer5" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer8" to="Lazers/Lazer8" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer8/Timer" to="Lazers/Lazer8" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer9" to="Lazers/Lazer9" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer9/Timer" to="Lazers/Lazer9" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer7" to="Lazers/Lazer7" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer7/Timer" to="Lazers/Lazer7" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer10" to="Lazers/Lazer10" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer10/Timer" to="Lazers/Lazer10" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer11" to="Lazers/Lazer11" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer11/Timer" to="Lazers/Lazer11" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer6" to="Lazers/Lazer6" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer6/Timer" to="Lazers/Lazer6" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer4" to="Lazers/Lazer4" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer4/Timer" to="Lazers/Lazer4" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer2" to="Lazers/Lazer2" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer2/Timer" to="Lazers/Lazer2" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer3" to="Lazers/Lazer3" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer3/Timer" to="Lazers/Lazer3" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer19" to="Lazers/Lazer19" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer19/Timer" to="Lazers/Lazer19" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer42" to="Lazers/Lazer42" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer42/Timer" to="Lazers/Lazer42" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer43" to="Lazers/Lazer43" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer43/Timer" to="Lazers/Lazer43" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer44" to="Lazers/Lazer44" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer44/Timer" to="Lazers/Lazer44" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer20" to="Lazers/Lazer20" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer20/Timer" to="Lazers/Lazer20" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer21" to="Lazers/Lazer21" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer21/Timer" to="Lazers/Lazer21" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer22" to="Lazers/Lazer22" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer22/Timer" to="Lazers/Lazer22" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer23" to="Lazers/Lazer23" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer23/Timer" to="Lazers/Lazer23" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer24" to="Lazers/Lazer24" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer24/Timer" to="Lazers/Lazer24" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer25" to="Lazers/Lazer25" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer25/Timer" to="Lazers/Lazer25" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer33" to="Lazers/Lazer33" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer33/Timer" to="Lazers/Lazer33" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer36" to="Lazers/Lazer36" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer36/Timer" to="Lazers/Lazer36" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer37" to="Lazers/Lazer37" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer37/Timer" to="Lazers/Lazer37" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer38" to="Lazers/Lazer38" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer38/Timer" to="Lazers/Lazer38" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer39" to="Lazers/Lazer39" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer39/Timer" to="Lazers/Lazer39" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer40" to="Lazers/Lazer40" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer40/Timer" to="Lazers/Lazer40" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer41" to="Lazers/Lazer41" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer41/Timer" to="Lazers/Lazer41" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer45" to="Lazers/Lazer45" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer45/Timer" to="Lazers/Lazer45" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer46" to="Lazers/Lazer46" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer46/Timer" to="Lazers/Lazer46" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer47" to="Lazers/Lazer47" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer47/Timer" to="Lazers/Lazer47" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer49" to="Lazers/Lazer49" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer49/Timer" to="Lazers/Lazer49" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer50" to="Lazers/Lazer50" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer50/Timer" to="Lazers/Lazer50" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer48" to="Lazers/Lazer48" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer48/Timer" to="Lazers/Lazer48" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer35" to="Lazers/Lazer35" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer35/Timer" to="Lazers/Lazer35" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer34" to="Lazers/Lazer34" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer34/Timer" to="Lazers/Lazer34" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer29" to="Lazers/Lazer29" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer29/Timer" to="Lazers/Lazer29" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer30" to="Lazers/Lazer30" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer30/Timer" to="Lazers/Lazer30" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer31" to="Lazers/Lazer31" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer31/Timer" to="Lazers/Lazer31" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer32" to="Lazers/Lazer32" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer32/Timer" to="Lazers/Lazer32" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer26" to="Lazers/Lazer26" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer26/Timer" to="Lazers/Lazer26" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer27" to="Lazers/Lazer27" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer27/Timer" to="Lazers/Lazer27" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer28" to="Lazers/Lazer28" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer28/Timer" to="Lazers/Lazer28" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer51" to="Lazers/Lazer51" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer51/Timer" to="Lazers/Lazer51" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer52" to="Lazers/Lazer52" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer52/Timer" to="Lazers/Lazer52" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer53" to="Lazers/Lazer53" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer53/Timer" to="Lazers/Lazer53" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer56" to="Lazers/Lazer56" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer56/Timer" to="Lazers/Lazer56" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer63" to="Lazers/Lazer63" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer63/Timer" to="Lazers/Lazer63" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer67" to="Lazers/Lazer67" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer67/Timer" to="Lazers/Lazer67" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer68" to="Lazers/Lazer68" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer68/Timer" to="Lazers/Lazer68" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer64" to="Lazers/Lazer64" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer64/Timer" to="Lazers/Lazer64" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer65" to="Lazers/Lazer65" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer65/Timer" to="Lazers/Lazer65" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer66" to="Lazers/Lazer66" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer66/Timer" to="Lazers/Lazer66" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer57" to="Lazers/Lazer57" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer57/Timer" to="Lazers/Lazer57" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer58" to="Lazers/Lazer58" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer58/Timer" to="Lazers/Lazer58" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer59" to="Lazers/Lazer59" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer59/Timer" to="Lazers/Lazer59" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer60" to="Lazers/Lazer60" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer60/Timer" to="Lazers/Lazer60" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer61" to="Lazers/Lazer61" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer61/Timer" to="Lazers/Lazer61" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer62" to="Lazers/Lazer62" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer62/Timer" to="Lazers/Lazer62" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer54" to="Lazers/Lazer54" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer54/Timer" to="Lazers/Lazer54" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Lazers/Lazer55" to="Lazers/Lazer55" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Lazers/Lazer55/Timer" to="Lazers/Lazer55" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D" method="_on_Area2D_body_entered"]

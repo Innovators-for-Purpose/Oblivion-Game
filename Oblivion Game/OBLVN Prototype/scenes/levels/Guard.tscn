@@ -47,30 +47,24 @@ extents = Vector2( 8.5, 67 )
 script = ExtResource( 5 )
 
 [node name="Anim" type="AnimatedSprite" parent="."]
-position = Vector2( -504.12, -461.597 )
 rotation = 3.14159
 scale = Vector2( 0.118693, 0.128768 )
 frames = SubResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -509, -459.562 )
 shape = SubResource( 6 )
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 0.00115967, -0.00128174 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -508.001, -511.999 )
 shape = SubResource( 7 )
 
 [node name="Direction Detection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction Detection"]
-position = Vector2( -563, -466 )
 shape = SubResource( 8 )
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

@@ -12,10 +12,10 @@
 [ext_resource path="res://scripts/Area2D.gd" type="Script" id=10]
 [ext_resource path="res://scenes/levels/scenes/scenes/textures/cool tiles/IndustrialTile_73.png" type="Texture" id=11]
 [ext_resource path="res://scenes/levels/textures/Sewer Pipes Tilemap.png" type="Texture" id=12]
-[ext_resource path="res://Background outer city.png" type="Texture" id=13]
+[ext_resource path="res://textures/Background outer city.png" type="Texture" id=13]
 [ext_resource path="res://scenes/levels/Mask Manager.gd" type="Script" id=14]
 [ext_resource path="res://scenes/Finish.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Ramp.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/Ramp.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/levels/scenes/scenes/scenes/GUI.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
