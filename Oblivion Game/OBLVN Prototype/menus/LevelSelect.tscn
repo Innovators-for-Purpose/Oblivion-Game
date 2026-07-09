@@ -139,7 +139,7 @@ custom_colors/font_color_focus = Color( 0.0784314, 0.862745, 0.607843, 1 )
 custom_colors/font_color = Color( 1, 0.960784, 0, 1 )
 custom_colors/font_color_hover = Color( 0.941176, 1, 0.65098, 1 )
 custom_colors/font_color_pressed = Color( 0.784314, 0.192157, 0.192157, 1 )
-text = "Assmebly Plant"
+text = "Assembly Plant"
 
 [node name="Button2" type="Button" parent="Buttons"]
 unique_name_in_owner = true
