@@ -11,6 +11,7 @@ func _process(delta):
 	position += transform.x * speed * delta
 
 
-func _on_Area2D_body_entered(_body):
-									# <--- Insert Stun Code
+func _on_Area2D_body_entered(body):
+	if "Guard" in body.name:
+		print("GOTEM")
 	queue_free()

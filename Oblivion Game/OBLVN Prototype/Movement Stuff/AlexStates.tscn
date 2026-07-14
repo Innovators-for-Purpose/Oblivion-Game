@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Movement Stuff/_Crouch.png" type="Texture" id=12]
 [ext_resource path="res://Movement Stuff/_Run.png" type="Texture" id=13]
 [ext_resource path="res://menus/Pause menu.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/levels/scenes/scenes/scenes/InventoryGUI.tscn" type="PackedScene" id=15]
 
 [sub_resource type="CapsuleShape2D" id=52]
 radius = 21.13
@@ -264,7 +265,7 @@ position = Vector2( 0, -23 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
 animation = "idle"
-frame = 5
+frame = 4
 playing = true
 flip_h = true
 
@@ -326,7 +327,6 @@ margin_right = 205.0
 margin_bottom = 35.0
 theme = SubResource( 4 )
 value = 100.0
-percent_visible = false
 
 [node name="Pause menu" parent="CanvasLayer/Sizing" instance=ExtResource( 14 )]
 visible = false
@@ -355,6 +355,8 @@ autoplay = true
 stream = ExtResource( 4 )
 volume_db = 1.238
 autoplay = true
+
+[node name="Inventory" parent="." instance=ExtResource( 15 )]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]

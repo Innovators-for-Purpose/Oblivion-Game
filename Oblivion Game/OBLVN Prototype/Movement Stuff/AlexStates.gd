@@ -56,6 +56,7 @@ func _ready():
 	
 	hpBar.value = HEALTH
 	
+	
 func _on_Area2D_area_entered(area):
 
 	if area.is_in_group("grapple"):
@@ -72,6 +73,9 @@ func _on_Area2D_area_entered(area):
 		dp = 30
 	if "Heal" in area.get_parent().name:
 		HEALTH += 20
+	if "stinger" in area.get_parent().name:
+		state = States.DAMAGE
+		dp = 30
 #	var target = null
 #	if area.has_method("enable_cross"):
 #		target = area
@@ -364,7 +368,7 @@ func _physics_process(_delta):
 
 
 func _on_timeout():
-	print("hit the timeout!")
+#	print("hit the timeout!")
 	hit = false
 
 func _on_LadderDetect_body_entered(_body):

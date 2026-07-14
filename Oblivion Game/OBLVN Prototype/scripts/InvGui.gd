@@ -7,7 +7,7 @@ onready var clrrect = $ColorRect
 export var menu_size = 0.15
 export var lerp_speed = 0.2
 
-onready var player = get_node("../../AlexStates")
+onready var player = get_parent().get_parent()
 
 var _popped_up = false
 var up_anchor = Vector2(1-menu_size,1)

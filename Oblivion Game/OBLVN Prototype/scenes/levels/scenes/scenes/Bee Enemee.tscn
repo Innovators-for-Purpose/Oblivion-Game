@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://Movement Stuff/Y3LLW-B33_FRAME2.png" type="Texture" id=1]
+[ext_resource path="res://textures/BOSS_BEE_FRM2.png" type="Texture" id=1]
 [ext_resource path="res://Movement Stuff/Y3LLW-B33_FRAME9.png" type="Texture" id=2]
 [ext_resource path="res://Movement Stuff/Y3LLW-B33_FRAME6.png" type="Texture" id=3]
 [ext_resource path="res://Movement Stuff/Y3LLW-B33_FRAME10.png" type="Texture" id=4]
@@ -9,7 +9,7 @@
 [ext_resource path="res://Movement Stuff/Y3LLW-B33_FRAME4.png" type="Texture" id=7]
 [ext_resource path="res://Movement Stuff/Y3LLW-B33_FRAME7.png" type="Texture" id=8]
 [ext_resource path="res://Movement Stuff/Y3LLW-B33_FRAME8.png" type="Texture" id=9]
-[ext_resource path="res://Levels/scenes/scenes/Bee Enemee.gd" type="Script" id=10]
+[ext_resource path="res://scenes/levels/scenes/scenes/scripts/Bee Enemee.gd" type="Script" id=10]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4

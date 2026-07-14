@@ -11,7 +11,7 @@ func _ready():
 	$AttackTime.one_shot = true
 
 func _process(_delta):
-	if $Anim.animation == "ATTACK":
+	if $Anim.animation == "STUNNED":
 		return
 	move_character()
 	detect_turn_around()
@@ -53,3 +53,12 @@ func _on_AttackTime_timeout():
 	end_of_hit()
 	start_walk()
 	$AttackVisual.visible = false
+
+
+
+
+
+
+func _on_Hurtbox_area_entered(area):
+	if area.is_in_group("stun_zap"):
+		$Anim.play("STUNNED")

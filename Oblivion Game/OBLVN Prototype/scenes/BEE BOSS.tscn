@@ -1,0 +1,102 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scenes/levels/Stingerkill.gd" type="Script" id=1]
+[ext_resource path="res://scenes/levels/Hitbox.gd" type="Script" id=2]
+[ext_resource path="res://textures/BOSS_BEE_FRM3.png" type="Texture" id=3]
+[ext_resource path="res://textures/BOSS_BEE_FRM2.png" type="Texture" id=4]
+[ext_resource path="res://textures/BOSS_BEE_FRM4.png" type="Texture" id=5]
+[ext_resource path="res://textures/BEE_BOSS_FRM1.png" type="Texture" id=6]
+[ext_resource path="res://scenes/levels/BEE BOSS.gd" type="Script" id=7]
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 2100, 1500 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 2100, 1500 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 2100, 1500 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 2100, 1500 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 2100, 1500 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 2100, 1500 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 2100, 1500 )
+
+[sub_resource type="SpriteFrames" id=42]
+animations = [ {
+"frames": [ SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
+"loop": true,
+"name": "Flying",
+"speed": 13.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=43]
+radius = 23.9771
+height = 72.0391
+
+[sub_resource type="RectangleShape2D" id=45]
+extents = Vector2( 20.0936, 11.5249 )
+
+[sub_resource type="RectangleShape2D" id=113]
+extents = Vector2( 8.01258, 5.01777 )
+
+[node name="BEE BOSS" type="StaticBody2D"]
+visible = false
+position = Vector2( 5105.74, -753.674 )
+rotation = -3.13233
+script = ExtResource( 7 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( -20.9648, 27.314 )
+scale = Vector2( 0.141056, 0.143667 )
+frames = SubResource( 42 )
+animation = "Flying"
+frame = 5
+playing = true
+flip_h = true
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 4.82435, -0.0434561 )
+shape = SubResource( 43 )
+
+[node name="Hitbox" type="Area2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2( 6.30908, 52.1302 )
+shape = SubResource( 45 )
+
+[node name="Stingerkill" type="Area2D" parent="."]
+position = Vector2( 5098.54, -800.934 )
+rotation = 3.13233
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stingerkill"]
+position = Vector2( 5057.85, -707.512 )
+shape = SubResource( 113 )
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
+[connection signal="body_entered" from="Hitbox" to="Hitbox" method="_on_Hitbox_body_entered"]
+[connection signal="body_entered" from="Stingerkill" to="Stingerkill" method="_on_Stingerkill_body_entered"]

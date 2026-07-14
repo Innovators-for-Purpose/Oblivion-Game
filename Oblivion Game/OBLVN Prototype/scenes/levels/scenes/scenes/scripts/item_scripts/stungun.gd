@@ -15,6 +15,7 @@ func _ready():
 
 func _physics_process(_delta):
 	look_at(get_global_mouse_position())
+	position = Vector2(get_parent().x, get_parent().y)
 	if ammo < 1:
 		Inventory.remove_item(gun_item)
 		queue_free()
@@ -31,4 +32,4 @@ func fire():
 	var instance = bllt.instance()
 	instance.position = global_position
 	instance.transform = global_transform
-	get_parent().get_parent().add_child(instance)
+	get_parent().get_parent().get_parent().add_child(instance)
