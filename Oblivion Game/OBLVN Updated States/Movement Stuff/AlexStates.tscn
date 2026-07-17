@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
@@ -13,207 +13,166 @@
 [ext_resource path="res://Movement Stuff/_Run.png" type="Texture" id=13]
 
 [sub_resource type="AtlasTexture" id=36]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 42, 0, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=37]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 168, 0, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=38]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 42, 64, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=39]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 168, 64, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=40]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 42, 128, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=41]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 168, 128, 42, 64 )
 
 [sub_resource type="AtlasTexture" id=9]
-flags = 4
 atlas = ExtResource( 12 )
 region = Rect2( 0, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=10]
-flags = 4
 atlas = ExtResource( 10 )
 region = Rect2( 0, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=11]
-flags = 4
 atlas = ExtResource( 10 )
 region = Rect2( 120, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=12]
-flags = 4
 atlas = ExtResource( 10 )
 region = Rect2( 240, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=13]
-flags = 4
 atlas = ExtResource( 10 )
 region = Rect2( 360, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=14]
-flags = 4
 atlas = ExtResource( 10 )
 region = Rect2( 480, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=15]
-flags = 4
 atlas = ExtResource( 10 )
 region = Rect2( 600, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=16]
-flags = 4
 atlas = ExtResource( 10 )
 region = Rect2( 720, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=17]
-flags = 4
 atlas = ExtResource( 10 )
 region = Rect2( 840, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=18]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=19]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 120, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=20]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 240, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=21]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=22]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 120, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=23]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 240, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=24]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 360, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=25]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 480, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=26]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 600, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=27]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 720, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=28]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 840, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=29]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 960, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=30]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 1080, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=31]
-flags = 4
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=32]
-flags = 4
 atlas = ExtResource( 9 )
 region = Rect2( 120, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=33]
-flags = 4
 atlas = ExtResource( 9 )
 region = Rect2( 240, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=42]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 0, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=43]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 120, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=44]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 240, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=45]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 360, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=46]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 480, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=47]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 600, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=48]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 720, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=49]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 840, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=50]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 960, 0, 120, 80 )
 
 [sub_resource type="AtlasTexture" id=51]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 1080, 0, 120, 80 )
 
@@ -285,6 +244,8 @@ bg_color = Color( 1, 0, 0, 1 )
 ProgressBar/styles/bg = SubResource( 7 )
 ProgressBar/styles/fg = SubResource( 3 )
 
+[sub_resource type="CircleShape2D" id=54]
+
 [node name="AlexStates" type="KinematicBody2D"]
 collision_mask = 2
 script = ExtResource( 2 )
@@ -293,9 +254,8 @@ script = ExtResource( 2 )
 position = Vector2( 0, -23 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
-animation = "idle"
-playing = true
-flip_h = true
+animation = "crouch walk"
+offset = Vector2( 1.36422e-12, 1.36422e-12 )
 
 [node name="Tall" type="CollisionShape2D" parent="."]
 position = Vector2( 10, 18 )
@@ -315,6 +275,10 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 script = ExtResource( 6 )
 
+[node name="T1" type="Tween" parent="Camera2D"]
+
+[node name="T2" type="Tween" parent="Camera2D"]
+
 [node name="LadderDetect" type="Area2D" parent="."]
 position = Vector2( 10, 0 )
 collision_layer = 0
@@ -328,8 +292,10 @@ shape = ExtResource( 1 )
 visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="Sizing" type="Control" parent="CanvasLayer"]
+show_behind_parent = true
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 60.0
@@ -368,6 +334,19 @@ enabled = true
 cast_to = Vector2( 0, 0 )
 collision_mask = 10
 
+[node name="grap_area" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+input_pickable = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grap_area"]
+position = Vector2( 5, 13 )
+scale = Vector2( 30, 30 )
+shape = SubResource( 54 )
+
 [connection signal="body_entered" from="LadderDetect" to="." method="_on_LadderDetect_body_entered"]
 [connection signal="body_exited" from="LadderDetect" to="." method="_on_LadderDetect_body_exited"]
 [connection signal="timeout" from="Coyote" to="." method="_on_Coyote_timeout"]
+[connection signal="area_entered" from="grap_area" to="." method="_on_grap_area_area_entered"]
+[connection signal="area_exited" from="grap_area" to="." method="_on_grap_area_area_exited"]

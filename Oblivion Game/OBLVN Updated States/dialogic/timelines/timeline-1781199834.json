@@ -1,0 +1,159 @@
+{
+	"events": [
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 0,
+			"file": "res://Dialogue Assets/monume-cyberpunk-547930.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1781200011.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Alex, can I ask you something?"
+		},
+		{
+			"character": "character-1781199784.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, sure dude. What's up?"
+		},
+		{
+			"character": "character-1781200011.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Which one of us are your best friend ever?"
+		},
+		{
+			"character": "character-1781199990.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That's a dumb question. Obviously he doesn't play favorites."
+		},
+		{
+			"character": "character-1781200011.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Did I ask you?"
+		},
+		{
+			"character": "character-1781199990.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He doesn't! You're acting weird."
+		},
+		{
+			"character": "character-1781200011.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Okay then; I want to hear him say it. Which one of us is your favorite?"
+		},
+		{
+			"choice": "Tim, you're my goat!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1781199990.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What the hell, Alex!?"
+		},
+		{
+			"character": "character-1781199784.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sorry, but it's true. Tim is definitely my favorite."
+		},
+		{
+			"character": "character-1781200011.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hell yeah!"
+		},
+		{
+			"emit_signal": "EndDialogue",
+			"event_id": "dialogic_040"
+		},
+		{
+			"choice": "Tim, you're lowkey third-wheeling my friendship with Jen.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1781200011.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Whu-"
+		},
+		{
+			"character": "character-1781199990.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I know I said that favoritism stuff was bad before but I have suddenly changed my mind.\nSucks to suck, Tim!"
+		},
+		{
+			"character": "character-1781199784.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, dude. Sorry."
+		},
+		{
+			"emit_signal": "EndDialogue",
+			"event_id": "dialogic_040"
+		},
+		{
+			"choice": "I would never pick between you two!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1781199990.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "See? I knew it!"
+		},
+		{
+			"character": "character-1781200011.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You're so boring, dude."
+		},
+		{
+			"character": "character-1781199784.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don't know why you want me to pick so bad.\nStop being such a pick-me boy!"
+		},
+		{
+			"character": "character-1781200011.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Shut up!"
+		},
+		{
+			"emit_signal": "EndDialogue",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1781199834.json",
+		"name": "Test"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1781199784.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Short dialogue 1!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1784222380.json",
+		"name": "short dialogue 1"
+	}
+}

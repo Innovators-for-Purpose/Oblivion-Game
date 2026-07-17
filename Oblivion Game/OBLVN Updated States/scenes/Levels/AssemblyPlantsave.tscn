@@ -501,7 +501,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 3/z_index = 0
 
 [sub_resource type="AtlasTexture" id=34]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 0, 0, 150, 229 )
 

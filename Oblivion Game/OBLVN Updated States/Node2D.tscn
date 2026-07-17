@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.224771, 0.40367, 0.550459, 0.715596 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 0.351562, 0, 1, 0.472527, 1, 0.629121, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture2D" id=2]
+gradient = SubResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 544, 330 )
+scale = Vector2( 18, 11.3125 )
+texture = SubResource( 2 )
+
+[node name="Dialog" parent="." instance=ExtResource( 1 )]
+margin_left = 553.0
+margin_top = 294.0
+margin_right = 553.0
+margin_bottom = 294.0
+timeline = "timeline-1781199834.json"
+reset_saves = false

@@ -11,37 +11,30 @@ radius = 9.0
 radius = 9.0
 
 [sub_resource type="AtlasTexture" id=54]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 101, 101 )
 
 [sub_resource type="AtlasTexture" id=55]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 101, 0, 101, 101 )
 
 [sub_resource type="AtlasTexture" id=56]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 202, 0, 101, 101 )
 
 [sub_resource type="AtlasTexture" id=57]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 404, 0, 101, 101 )
 
 [sub_resource type="AtlasTexture" id=58]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 505, 0, 101, 101 )
 
 [sub_resource type="AtlasTexture" id=59]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 606, 0, 101, 101 )
 
 [sub_resource type="AtlasTexture" id=60]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 707, 0, 101, 101 )
 
@@ -82,7 +75,6 @@ shape = SubResource( 2 )
 visible = false
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 61 )
-frame = 5
 playing = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

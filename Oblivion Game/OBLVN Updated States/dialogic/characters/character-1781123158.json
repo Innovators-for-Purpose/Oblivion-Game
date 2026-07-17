@@ -1,0 +1,21 @@
+{
+	"color": "#ffff99e1",
+	"description": "A person.",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1781123158.json",
+	"mirror_portraits": false,
+	"name": "Sayori",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -260,
+	"offset_y": -380,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Dialogue Assets/unnamed.png"
+		}
+	],
+	"scale": 50,
+	"theme": ""
+}

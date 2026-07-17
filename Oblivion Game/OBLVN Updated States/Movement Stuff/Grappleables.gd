@@ -5,13 +5,10 @@ extends Node2D
 
 func _ready():
 	$grappleCross.hide()
-	
 #	for child in get_parent().get_children():
 #		if child.name.begins_with("Grappleable"):
 #			child.add_to_group("grapple")
-#
 #	grap = get_tree().get_nodes_in_group("grapple")
-#
 #	if position == get_closest_grappable():
 #		$grappleCross.visible = true
 

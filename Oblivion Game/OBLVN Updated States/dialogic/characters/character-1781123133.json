@@ -1,0 +1,21 @@
+{
+	"color": "#fff7a563",
+	"description": "A guy\n",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1781123133.json",
+	"mirror_portraits": false,
+	"name": "Kamui",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -260,
+	"offset_y": -380,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Dialogue Assets/1000017067.png"
+		}
+	],
+	"scale": 20,
+	"theme": ""
+}

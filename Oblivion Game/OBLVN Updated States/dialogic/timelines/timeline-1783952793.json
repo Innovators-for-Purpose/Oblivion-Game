@@ -1,0 +1,71 @@
+{
+	"events": [
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Dialogue Assets/next click sound.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1781199784.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So what am I supposed to do here?"
+		},
+		{
+			"character": "character-1781200011.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You need to train up with the grappling hook, so we built this place for you to learn.\nThere's a lot of similar obstacles to what you'll face out in the field."
+		},
+		{
+			"character": "character-1781199990.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "AKA: the dev's playground for the mechanic, lol."
+		},
+		{
+			"character": "character-1781199784.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What's a dev?"
+		},
+		{
+			"character": "character-1781199990.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Don't worry about it. Just get to practicing!\nClick with the [color=red]E key[/color] or the [color=red]V key[/color] close to a [color=red]hook[/color] to grapple to it!"
+		},
+		{
+			"character": "character-1781200011.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What do you mean, \"click\" and \"key\"? It's a gun, not a keyboard."
+		},
+		{
+			"character": "character-1781199990.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Whaaat? I said PULL the TRIGGER while aiming at a hook.\nYou're talking crazy, Tim."
+		},
+		{
+			"character": "character-1781200011.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Whatever, Jen."
+		},
+		{
+			"character": "character-1781199784.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...I'm just going to go now."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1783952793.json",
+		"name": "1"
+	}
+}

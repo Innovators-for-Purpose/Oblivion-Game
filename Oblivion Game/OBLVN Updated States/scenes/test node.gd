@@ -4,7 +4,7 @@ var array_grap = [PoolVector2Array()]
 var pool_array = array_grap[0]
 #var pool_array2 = array[1]
 
-func _process(delta):
+func _process(_delta):
 	if stop == 2 :
 		pool_array.append($'../Grappleables'.position)
 		pool_array.append($'../Grappleables2'.position)

@@ -1,6 +1,7 @@
 extends Node
 
 var items
+var alexpos
 
 func _ready():
 	items = read_from_JSON("res://json/itemdata.json")
@@ -20,3 +21,6 @@ func read_from_JSON(path):
 func get_item_by_key(key):
 	if items and items.has(key):
 		return items[key].duplicate(true)
+
+#func _process(_delta):
+#	alexpos = get_node("AlexStates").get_position()

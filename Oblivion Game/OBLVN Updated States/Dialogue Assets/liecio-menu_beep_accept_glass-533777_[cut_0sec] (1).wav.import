@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/liecio-menu_beep_accept_glass-533777_[cut_0sec] (1).wav-00ad7f838a089e4ad858a92be430109d.sample"
+
+[deps]
+
+source_file="res://Dialogue Assets/liecio-menu_beep_accept_glass-533777_[cut_0sec] (1).wav"
+dest_files=[ "res://.import/liecio-menu_beep_accept_glass-533777_[cut_0sec] (1).wav-00ad7f838a089e4ad858a92be430109d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/dialogic/Example Assets/History/HistoryButton-theme.tres" type="Theme" id=1]
+[ext_resource path="res://Dialogue Assets/History Return Button.png" type="Texture" id=2]
+
+[node name="HistoryButton" type="Button"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = -62.9999
+margin_right = 1462.0
+margin_bottom = 577.0
+theme = ExtResource( 1 )
+disabled = true
+text = "Help"
+icon = ExtResource( 2 )
