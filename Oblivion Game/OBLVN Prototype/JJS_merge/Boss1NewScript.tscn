@@ -105,6 +105,7 @@ polygon = PoolVector2Array( -37, -63, -32, -59, -36, -53, -42, -57 )
 material = ExtResource( 10 )
 scale = Vector2( 0.139286, 0.163667 )
 frames = SubResource( 10 )
+frame = 3
 playing = true
 
 [node name="forcefield" type="AnimatedSprite" parent="."]
@@ -112,6 +113,7 @@ modulate = Color( 1, 1, 1, 0.545098 )
 material = ExtResource( 12 )
 scale = Vector2( 0.139286, 0.163667 )
 frames = SubResource( 10 )
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

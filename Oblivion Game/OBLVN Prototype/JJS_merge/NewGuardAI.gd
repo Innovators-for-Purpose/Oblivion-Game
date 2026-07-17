@@ -30,7 +30,9 @@ func detect_turn_around():
 		
 
 func hit():
+	$alertIcon.hide()
 	$AttackPlayer/CollisionShape2D2.set_deferred("disabled",!$AttackPlayer/CollisionShape2D2.disabled)
+	$AttackVisual.visible = true
 	$AttackTime.start()
 
 func end_of_hit():
@@ -44,9 +46,12 @@ func start_walk():
 # warning-ignore:unused_argument
 func _on_PlayerDetector_body_entered(body):
 	if !stun:
-		hit()
+		$Alert.play()
+		$alertIcon.show()
 		$Anim.play("STUNNED")
-		$AttackVisual.visible = true
+		yield($Alert,"finished")
+		hit()
+
 	
 
 
@@ -67,9 +72,9 @@ func _on_Hurtbox_area_entered(area):
 		$Anim.play("STUNNED")
 		$ShaderAnimate.play("stunned")
 		$shockSound.play()
-		$AttackPlayer/CollisionShape2D2.set_deferred("disabled",true)
+#		$AttackPlayer/CollisionShape2D2.set_deferred("disabled",true)
 		yield(timer,"timeout")
 		stun = !stun
-		$AttackPlayer/CollisionShape2D2.set_deferred("disabled",false)
+#		$AttackPlayer/CollisionShape2D2.set_deferred("disabled",false)
 		$ShaderAnimate.play("RESET")
 		$Anim.play("Walk")

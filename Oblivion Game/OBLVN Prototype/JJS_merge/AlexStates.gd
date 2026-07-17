@@ -364,7 +364,7 @@ func _physics_process(_delta):
 			
 	if HEALTH <= 0:
 # warning-ignore:return_value_discarded
-		get_tree().change_scene("res://scenes/GAMEOVER.tscn")
+		get_tree().change_scene("res://JJS_merge/GAMEOVER.tscn")
 	hpBar.value = HEALTH
 	if hit:
 		$AnimationPlayer.play("invincible")
