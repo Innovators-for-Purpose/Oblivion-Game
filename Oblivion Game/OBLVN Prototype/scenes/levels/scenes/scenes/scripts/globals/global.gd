@@ -1,7 +1,7 @@
 extends Node
 
 var items
-
+var current_checkpoint_pos = null
 func _ready():
 	items = read_from_JSON("res://json/itemdata.json")
 	for key in items.keys():
@@ -20,3 +20,7 @@ func read_from_JSON(path):
 func get_item_by_key(key):
 	if items and items.has(key):
 		return items[key].duplicate(true)
+		
+func reset_checkpoint():
+	current_checkpoint_pos = null
+	

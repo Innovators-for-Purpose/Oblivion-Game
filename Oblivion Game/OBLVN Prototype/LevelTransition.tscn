@@ -59,10 +59,11 @@ modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-color = Color( 0.15625, 0.00991015, 0.00991015, 1 )
+color = Color( 0.0313726, 0.0588235, 0.0352941, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="transitionscreen"]
 autoplay = "fade back to white"
+method_call_mode = 1
 anims/RESET = SubResource( 2 )
 "anims/fade back to white" = SubResource( 3 )
 "anims/fade to black" = SubResource( 1 )

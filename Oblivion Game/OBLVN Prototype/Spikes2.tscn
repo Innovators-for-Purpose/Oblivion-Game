@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/levels/Spikes.gd" type="Script" id=1]
-[ext_resource path="res://scenes/levels/New Piskel (4).png" type="Texture" id=2]
+[ext_resource path="res://Sprites (Temporary)/New Piskel (4).png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=37]
 extents = Vector2( 20.5, 5 )

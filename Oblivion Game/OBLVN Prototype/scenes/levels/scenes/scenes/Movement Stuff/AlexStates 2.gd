@@ -91,9 +91,9 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 		
 		
 		$Chain.shoot(location - self.global_position)
-		print("location = ",location)
-		print ("hook position = ", hook_position)
-		print ("mouse position = ", mouse)
+#		print("location = ",location)
+#		print ("hook position = ", hook_position)
+#		print ("mouse position = ", mouse)
 		return true
 #	elif not get_tree().get_nodes_in_group("grapple") and CollisionShape2D:
 #		$Chain.release()

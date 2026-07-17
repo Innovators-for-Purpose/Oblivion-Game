@@ -1,31 +1,26 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://ShortRedSpring.gd" type="Script" id=1]
-[ext_resource path="res://menus/New Piskel (55).png" type="Texture" id=2]
-[ext_resource path="res://sonic-spring.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Sprites (Temporary)/New Piskel (55).png" type="Texture" id=2]
+[ext_resource path="res://Music and SFX/sonic-spring.mp3" type="AudioStream" id=3]
 
 [sub_resource type="AtlasTexture" id=74]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 2040, 2040 )
 
 [sub_resource type="AtlasTexture" id=75]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 2040, 0, 2040, 2040 )
 
 [sub_resource type="AtlasTexture" id=76]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 2040, 2040, 2040 )
 
 [sub_resource type="AtlasTexture" id=77]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 2040, 2040, 2040, 2040 )
 
 [sub_resource type="AtlasTexture" id=78]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 4080, 2040, 2040 )
 
@@ -52,11 +47,10 @@ frames = SubResource( 79 )
 position = Vector2( 5259.5, -919 )
 shape = SubResource( 80 )
 
-[node name="sfx" type="AudioStreamPlayer2D" parent="."]
+[node name="sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = 7.0
 pitch_scale = 0.95
-max_distance = 10000.0
 
 [connection signal="body_entered" from="." to="." method="_on_ShortRedSpring_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_ShortRedSpring_body_exited"]

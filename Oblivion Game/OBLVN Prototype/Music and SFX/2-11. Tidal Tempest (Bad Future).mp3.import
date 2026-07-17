@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2-11. Tidal Tempest (Bad Future).mp3-2657184f6ac1d8593d9c4d08697e3b8b.mp3str"
+
+[deps]
+
+source_file="res://Music and SFX/2-11. Tidal Tempest (Bad Future).mp3"
+dest_files=[ "res://.import/2-11. Tidal Tempest (Bad Future).mp3-2657184f6ac1d8593d9c4d08697e3b8b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

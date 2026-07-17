@@ -1,58 +1,63 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://New Piskel (63).png" type="Texture" id=1]
+[ext_resource path="res://New Assets (Summer 2026)/LaunchOpen0010.png" type="Texture" id=1]
 [ext_resource path="res://Checkpoint Statue.gd" type="Script" id=2]
-[ext_resource path="res://New Piskel (62).png" type="Texture" id=3]
-[ext_resource path="res://SCD_FM_30.wav" type="AudioStream" id=4]
+[ext_resource path="res://New Assets (Summer 2026)/LaunchOpen0009.png" type="Texture" id=3]
+[ext_resource path="res://Music and SFX/SCD_FM_30.wav" type="AudioStream" id=4]
+[ext_resource path="res://New Assets (Summer 2026)/LaunchOpen0008.png" type="Texture" id=7]
+[ext_resource path="res://New Assets (Summer 2026)/LaunchOpen0007.png" type="Texture" id=8]
+[ext_resource path="res://New Assets (Summer 2026)/LaunchV1-Still Frame.png" type="Texture" id=10]
+[ext_resource path="res://New Assets (Summer 2026)/LaunchOpen0006.png" type="Texture" id=11]
+[ext_resource path="res://New Assets (Summer 2026)/LaunchOpen0005.png" type="Texture" id=13]
+[ext_resource path="res://New Assets (Summer 2026)/LaunchOpen0018.png" type="Texture" id=14]
+[ext_resource path="res://New Assets (Summer 2026)/LaunchOpen0013.png" type="Texture" id=15]
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="AtlasTexture" id=17]
-flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 2040, 2040 )
+region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="AtlasTexture" id=18]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 2040, 0, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=19]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 4080, 0, 2040, 2040 )
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 2040, 2040, 2040 )
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 2040, 2040, 2040, 2040 )
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 1000, 1000 )
 
-[sub_resource type="AtlasTexture" id=22]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 4080, 2040, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=23]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 4080, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=24]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 2040, 2040 )
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
-"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 20 ), SubResource( 21 ) ],
 "loop": true,
 "name": "Activated",
-"speed": 12.0
+"speed": 10.0
 }, {
-"frames": [ SubResource( 24 ) ],
+"frames": [ SubResource( 19 ) ],
 "loop": true,
 "name": "Not Activated",
 "speed": 5.0
@@ -66,18 +71,41 @@ position = Vector2( -1, -1 )
 script = ExtResource( 2 )
 
 [node name="anim" type="AnimatedSprite" parent="."]
-position = Vector2( 0, 28 )
-scale = Vector2( 0.152328, 0.147304 )
+position = Vector2( 1.82822, 37.062 )
+scale = Vector2( 0.0823436, 0.0981241 )
 frames = SubResource( 8 )
 animation = "Activated"
-frame = 2
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.5, 28 )
 shape = SubResource( 1 )
 
-[node name="sfx" type="AudioStreamPlayer2D" parent="."]
+[node name="sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+self_modulate = Color( 1, 1, 1, 0.529412 )
+position = Vector2( 2, 69 )
+amount = 20
+lifetime = 2.0
+randomness = 1.0
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 1 )
+spread = 180.0
+gravity = Vector2( 0, -100 )
+initial_velocity = 30.0
+initial_velocity_random = 1.0
+angular_velocity = -11.54
+angular_velocity_random = 0.11
+orbit_velocity_random = 1.0
+scale_amount = 3.0
+scale_amount_random = 1.0
+color = Color( 0.839216, 0.819608, 0.666667, 1 )
+hue_variation = 0.66
+hue_variation_random = 0.6
+anim_speed = 2.54
+
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="hide" from="CPUParticles2D" to="." method="_on_CPUParticles2D_hide"]

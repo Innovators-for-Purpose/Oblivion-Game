@@ -1,44 +1,95 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=99 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
-[ext_resource path="res://scenes/levels/Crouching.wav" type="AudioStream" id=3]
-[ext_resource path="res://scenes/levels/Crawling (1).wav" type="AudioStream" id=4]
-[ext_resource path="res://Movement Stuff/_Fall.png" type="Texture" id=5]
+[ext_resource path="res://Music and SFX/Crouching.wav" type="AudioStream" id=3]
+[ext_resource path="res://Music and SFX/Crawling (1).wav" type="AudioStream" id=4]
+[ext_resource path="res://Sprites (Temporary)/_Fall.png" type="Texture" id=5]
 [ext_resource path="res://Movement Stuff/Cam.gd" type="Script" id=6]
 [ext_resource path="res://Movement Stuff/Chain.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Movement Stuff/_Idle.png" type="Texture" id=8]
-[ext_resource path="res://Movement Stuff/_Jump.png" type="Texture" id=9]
-[ext_resource path="res://Movement Stuff/_CrouchWalk.png" type="Texture" id=10]
+[ext_resource path="res://Sprites (Temporary)/_Idle.png" type="Texture" id=8]
+[ext_resource path="res://Sprites (Temporary)/_Jump.png" type="Texture" id=9]
+[ext_resource path="res://Sprites (Temporary)/_CrouchWalk.png" type="Texture" id=10]
 [ext_resource path="res://Movement Stuff/Climb.png" type="Texture" id=11]
-[ext_resource path="res://Movement Stuff/_Crouch.png" type="Texture" id=12]
-[ext_resource path="res://Movement Stuff/_Run.png" type="Texture" id=13]
+[ext_resource path="res://Sprites (Temporary)/_Crouch.png" type="Texture" id=12]
+[ext_resource path="res://Sprites (Temporary)/_Run.png" type="Texture" id=13]
 [ext_resource path="res://menus/Pause menu.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scripts/Movement Stuff/spritesheet.png" type="Texture" id=15]
+[ext_resource path="res://New Assets (Summer 2026)/Run 10003.png" type="Texture" id=15]
+[ext_resource path="res://New Assets (Summer 2026)/Climb-pose-F3.png" type="Texture" id=16]
+[ext_resource path="res://New Assets (Summer 2026)/Climb-pose-F2.png" type="Texture" id=17]
+[ext_resource path="res://New Assets (Summer 2026)/Climb-pose-F1-Neutral.png" type="Texture" id=18]
+[ext_resource path="res://New Assets (Summer 2026)/Alex-Crouch-Frame-2.png" type="Texture" id=19]
+[ext_resource path="res://New Assets (Summer 2026)/Alex-Crouch-Frame-1.png" type="Texture" id=20]
+[ext_resource path="res://New Assets (Summer 2026)/Jump-Ascend Frame-2.png" type="Texture" id=21]
+[ext_resource path="res://New Assets (Summer 2026)/Jump-Descend Frame-1.png" type="Texture" id=22]
+[ext_resource path="res://New Assets (Summer 2026)/Idol.png" type="Texture" id=23]
+[ext_resource path="res://New Assets (Summer 2026)/Untitled_Artwork 35.png" type="Texture" id=24]
+[ext_resource path="res://New Assets (Summer 2026)/Run 10002.png" type="Texture" id=25]
+[ext_resource path="res://New Assets (Summer 2026)/Run 10001.png" type="Texture" id=26]
+[ext_resource path="res://New Assets (Summer 2026)/Run 10000.png" type="Texture" id=27]
 
-[sub_resource type="AtlasTexture" id=66]
-atlas = ExtResource( 15 )
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 18 )
 region = Rect2( 0, 0, 3000, 3000 )
 
-[sub_resource type="AtlasTexture" id=67]
-atlas = ExtResource( 15 )
-region = Rect2( 3000, 0, 3000, 3000 )
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 3000, 3000 )
 
-[sub_resource type="AtlasTexture" id=68]
-atlas = ExtResource( 15 )
-region = Rect2( 6000, 0, 3000, 3000 )
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 18 )
+region = Rect2( 0, 0, 3000, 3000 )
 
-[sub_resource type="AtlasTexture" id=69]
-atlas = ExtResource( 15 )
-region = Rect2( 9000, 0, 3000, 3000 )
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 3000, 3000 )
 
-[sub_resource type="AtlasTexture" id=70]
-atlas = ExtResource( 15 )
-region = Rect2( 0, 3000, 3000, 3000 )
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 20 )
+region = Rect2( 0, 0, 3000, 3000 )
 
-[sub_resource type="AtlasTexture" id=71]
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 20 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=85]
+flags = 4
+atlas = ExtResource( 22 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 23 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=83]
+flags = 4
+atlas = ExtResource( 24 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=86]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 27 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 25 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=90]
 atlas = ExtResource( 15 )
-region = Rect2( 3000, 3000, 3000, 3000 )
+region = Rect2( 0, 0, 3000, 3000 )
 
 [sub_resource type="AtlasTexture" id=54]
 atlas = ExtResource( 11 )
@@ -230,10 +281,40 @@ region = Rect2( 1080, 0, 120, 80 )
 
 [sub_resource type="SpriteFrames" id=35]
 animations = [ {
-"frames": [ SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ) ],
+"frames": [ SubResource( 74 ), SubResource( 75 ), SubResource( 84 ), SubResource( 76 ) ],
+"loop": true,
+"name": "Final Climb",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 82 ) ],
+"loop": true,
+"name": "Final Crouch",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 77 ), SubResource( 78 ) ],
+"loop": true,
+"name": "Final Crouch Walk",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 85 ) ],
+"loop": true,
+"name": "Final Fall",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 81 ), SubResource( 83 ) ],
+"loop": true,
+"name": "Final Idle",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 86 ) ],
+"loop": true,
+"name": "Final Jump",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ) ],
 "loop": true,
 "name": "Final Run",
-"speed": 10.0
+"speed": 8.0
 }, {
 "frames": [ SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ) ],
 "loop": true,
@@ -276,13 +357,11 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=52]
-radius = 21.13
-height = 37.16
+[sub_resource type="RectangleShape2D" id=72]
+extents = Vector2( 21, 37.5 )
 
-[sub_resource type="CapsuleShape2D" id=53]
-radius = 21.27
-height = 16.0
+[sub_resource type="RectangleShape2D" id=73]
+extents = Vector2( 21, 26.5 )
 
 [sub_resource type="Theme" id=5]
 
@@ -311,21 +390,19 @@ collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="Anim" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -23 )
-scale = Vector2( 2, 2 )
+position = Vector2( 11, 19 )
+scale = Vector2( 0.045, 0.0468333 )
 frames = SubResource( 35 )
-animation = "idle"
-frame = 7
+animation = "Final Run"
 playing = true
-flip_h = true
 
 [node name="Tall" type="CollisionShape2D" parent="."]
-position = Vector2( 10, 18 )
-shape = SubResource( 52 )
+position = Vector2( 11, 19.5 )
+shape = SubResource( 72 )
 
 [node name="Short" type="CollisionShape2D" parent="."]
-position = Vector2( 10, 28 )
-shape = SubResource( 53 )
+position = Vector2( 11, 30.5 )
+shape = SubResource( 73 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true

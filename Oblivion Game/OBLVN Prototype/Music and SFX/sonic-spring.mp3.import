@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sonic-spring.mp3-613d1ac29d6c94f1de4c5f8d533729b1.mp3str"
+
+[deps]
+
+source_file="res://Music and SFX/sonic-spring.mp3"
+dest_files=[ "res://.import/sonic-spring.mp3-613d1ac29d6c94f1de4c5f8d533729b1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

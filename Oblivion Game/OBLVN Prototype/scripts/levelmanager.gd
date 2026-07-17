@@ -8,11 +8,11 @@ var levels = [
 	"res://scenes/levels/Outer City.tscn",
 	"res://scenes/levels/(Finished)AssemblyPlantsave.tscn",
 	"res://scenes/levels/Sewers.tscn",
+	"res://SewerBase.tscn",
 	"res://Facility.tscn",
 	"res://Level 7.tscn",
 	"res://Demo End Screen.tscn",
 ]
-
 var current_level_index = 0
 
 func get_current_level():

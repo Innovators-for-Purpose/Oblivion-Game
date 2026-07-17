@@ -125,7 +125,7 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 		$Chain.shoot(location - self.global_position)
 		
 #		print("location = ",location)
-		print ("hook position = ", hook_position)
+#		print ("hook position = ", hook_position)
 #		print ("mouse position = ", mouse)
 		return true
 #	elif not get_tree().get_nodes_in_group("grapple") and CollisionShape2D:
@@ -136,8 +136,8 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 		return false
 
 func _physics_process(_delta):
-	print(can_grapple)
-	print(stop)
+#	print(can_grapple)
+#	print(stop)
 	
 	#$CanvasLayer/grappleCross.position = location - self.global_position / $Camera2D.global_position
 	if stop == 1:
@@ -173,7 +173,7 @@ func _physics_process(_delta):
 				continue
 			elif Input.is_action_just_pressed("jump"):
 				velocity.y = JUMP_STRENGTH
-				anim.play("jump")
+				anim.play("Final Jump")
 				state = States.AIR
 				$Tall.disabled = false
 				$Short.disabled = true
@@ -197,37 +197,37 @@ func _physics_process(_delta):
 			
 			if Input.is_action_pressed("left"): #FLOOR code
 				anim.flip_h = true
-				standbox.position.x = 10
-				crouchbox.position.x = 10
-				LadderDetect.position.x = 10
+#				standbox.position.x = 10
+#				crouchbox.position.x = 10
+#				LadderDetect.position.x = 10
 				if Input.is_action_pressed("run"):
 					velocity.x = -RUN_SPEED
-					anim.play("run")
+					anim.play("Final Run")
 				elif Input.is_action_pressed("crouch") and is_on_floor():
 					velocity.x = -CROUCH_SPEED
-					anim.play("crouch walk")
+					anim.play("Final Crouch Walk")
 				else:
 					velocity.x = -WALK_SPEED
-					anim.play("run")
+					anim.play("Final Run")
 			elif Input.is_action_pressed("right"):
 				anim.flip_h = false
-				standbox.position.x = -10
-				crouchbox.position.x = -10
-				LadderDetect.position.x = -10
+#				standbox.position.x = -10
+#				crouchbox.position.x = -10
+#				LadderDetect.position.x = -10
 				if Input.is_action_pressed("run"):
 					velocity.x = RUN_SPEED
-					anim.play("run")
+					anim.play("Final Run")
 				elif Input.is_action_pressed("crouch") and is_on_floor():
 					velocity.x = CROUCH_SPEED
-					anim.play("crouch walk")
+					anim.play("Final Crouch Walk")
 				else:
 					velocity.x = WALK_SPEED
-					anim.play("run")
+					anim.play("Final Run")
 			else:
 				velocity.x = 0
-				anim.play("idle")
+				anim.play("Final Idle")
 				if Input.is_action_pressed("crouch"):
-					anim.play("crouch")
+					anim.play("Final Crouch")
 					$Tall.disabled = true
 					$Short.disabled = false
 				if Input.is_action_just_released("crouch"):
@@ -256,9 +256,9 @@ func _physics_process(_delta):
 			if is_on_ceiling():
 				velocity.y = GRAVITY
 			if velocity.y > 0:
-				anim.play("fall")
+				anim.play("Final Fall")
 			if velocity.y < 0:
-				anim.play("jump")
+				anim.play("Final Jump")
 			if Input.is_action_pressed("left"):
 				anim.flip_h = true
 				if Input.is_action_pressed("run"):
@@ -309,7 +309,7 @@ func _physics_process(_delta):
 			can_grapple = false
 			
 			if Input.is_action_pressed("jump") or Input.is_action_pressed("crouch") or Input.is_action_pressed("left") or Input.is_action_pressed("right"):
-				anim.play("climb")
+				anim.play("Final Climb")
 			else:
 				anim.stop()
 			
