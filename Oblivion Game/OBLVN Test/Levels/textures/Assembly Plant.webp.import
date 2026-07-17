@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Assembly Plant.webp-7a909f7a66a294ef65ecb6b1b8daf6ad.stex"
+path="res://.import/Assembly Plant.webp-2a4399268e109a0b92e829a0580dcb61.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Assembly Plant.webp"
-dest_files=[ "res://.import/Assembly Plant.webp-7a909f7a66a294ef65ecb6b1b8daf6ad.stex" ]
+source_file="res://Levels/textures/Assembly Plant.webp"
+dest_files=[ "res://.import/Assembly Plant.webp-2a4399268e109a0b92e829a0580dcb61.stex" ]
 
 [params]
 

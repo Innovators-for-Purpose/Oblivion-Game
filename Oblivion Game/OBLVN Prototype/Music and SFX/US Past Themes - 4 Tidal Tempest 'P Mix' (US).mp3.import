@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/US Past Themes - 4 Tidal Tempest 'P Mix' (US).mp3-5225b0231a4c8c1c8b4a622c6471e05f.mp3str"
+
+[deps]
+
+source_file="res://Music and SFX/US Past Themes - 4 Tidal Tempest 'P Mix' (US).mp3"
+dest_files=[ "res://.import/US Past Themes - 4 Tidal Tempest 'P Mix' (US).mp3-5225b0231a4c8c1c8b4a622c6471e05f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

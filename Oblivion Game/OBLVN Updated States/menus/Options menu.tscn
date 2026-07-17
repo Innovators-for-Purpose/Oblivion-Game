@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Options menu.gd" type="Script" id=1]
+[ext_resource path="res://textures/Screenshot 2025-08-05 at 9.38.53 AM.png" type="Texture" id=2]
+
+[sub_resource type="Theme" id=1]
+
+[node name="Options menu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Screenshot2025-08-05At93853 Am" type="Sprite" parent="."]
+position = Vector2( 526.5, 316.5 )
+scale = Vector2( 0.462395, 0.520633 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 451.0
+margin_top = 516.0
+margin_right = 616.0
+margin_bottom = 551.0
+theme = SubResource( 1 )
+text = "Start"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

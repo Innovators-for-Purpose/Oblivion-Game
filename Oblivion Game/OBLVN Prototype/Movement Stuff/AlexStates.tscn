@@ -1,0 +1,490 @@
+[gd_scene load_steps=99 format=2]
+
+[ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
+[ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
+[ext_resource path="res://Music and SFX/Crouching.wav" type="AudioStream" id=3]
+[ext_resource path="res://Music and SFX/Crawling (1).wav" type="AudioStream" id=4]
+[ext_resource path="res://Sprites (Temporary)/_Fall.png" type="Texture" id=5]
+[ext_resource path="res://Movement Stuff/Cam.gd" type="Script" id=6]
+[ext_resource path="res://Movement Stuff/Chain.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites (Temporary)/_Idle.png" type="Texture" id=8]
+[ext_resource path="res://Sprites (Temporary)/_Jump.png" type="Texture" id=9]
+[ext_resource path="res://Sprites (Temporary)/_CrouchWalk.png" type="Texture" id=10]
+[ext_resource path="res://Movement Stuff/Climb.png" type="Texture" id=11]
+[ext_resource path="res://Sprites (Temporary)/_Crouch.png" type="Texture" id=12]
+[ext_resource path="res://Sprites (Temporary)/_Run.png" type="Texture" id=13]
+[ext_resource path="res://menus/Pause menu.tscn" type="PackedScene" id=14]
+[ext_resource path="res://New Assets (Summer 2026)/Run 10003.png" type="Texture" id=15]
+[ext_resource path="res://New Assets (Summer 2026)/Climb-pose-F3.png" type="Texture" id=16]
+[ext_resource path="res://New Assets (Summer 2026)/Climb-pose-F2.png" type="Texture" id=17]
+[ext_resource path="res://New Assets (Summer 2026)/Climb-pose-F1-Neutral.png" type="Texture" id=18]
+[ext_resource path="res://New Assets (Summer 2026)/Alex-Crouch-Frame-2.png" type="Texture" id=19]
+[ext_resource path="res://New Assets (Summer 2026)/Alex-Crouch-Frame-1.png" type="Texture" id=20]
+[ext_resource path="res://New Assets (Summer 2026)/Jump-Ascend Frame-2.png" type="Texture" id=21]
+[ext_resource path="res://New Assets (Summer 2026)/Jump-Descend Frame-1.png" type="Texture" id=22]
+[ext_resource path="res://New Assets (Summer 2026)/Idol.png" type="Texture" id=23]
+[ext_resource path="res://New Assets (Summer 2026)/Untitled_Artwork 35.png" type="Texture" id=24]
+[ext_resource path="res://New Assets (Summer 2026)/Run 10002.png" type="Texture" id=25]
+[ext_resource path="res://New Assets (Summer 2026)/Run 10001.png" type="Texture" id=26]
+[ext_resource path="res://New Assets (Summer 2026)/Run 10000.png" type="Texture" id=27]
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 18 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 18 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 20 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 20 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=85]
+flags = 4
+atlas = ExtResource( 22 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 23 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=83]
+flags = 4
+atlas = ExtResource( 24 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=86]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 27 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 25 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=90]
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 3000, 3000 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 11 )
+region = Rect2( 128, 0, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 64, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 11 )
+region = Rect2( 128, 64, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 128, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 11 )
+region = Rect2( 128, 128, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 11 )
+region = Rect2( 128, 0, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 64, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 11 )
+region = Rect2( 128, 64, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 128, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 11 )
+region = Rect2( 128, 128, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 10 )
+region = Rect2( 120, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 10 )
+region = Rect2( 240, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 10 )
+region = Rect2( 360, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 10 )
+region = Rect2( 480, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 10 )
+region = Rect2( 600, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 10 )
+region = Rect2( 720, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 10 )
+region = Rect2( 840, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 5 )
+region = Rect2( 120, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 5 )
+region = Rect2( 240, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 8 )
+region = Rect2( 120, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 8 )
+region = Rect2( 240, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 8 )
+region = Rect2( 360, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 8 )
+region = Rect2( 480, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 8 )
+region = Rect2( 600, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 8 )
+region = Rect2( 720, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 8 )
+region = Rect2( 840, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 8 )
+region = Rect2( 960, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 8 )
+region = Rect2( 1080, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 9 )
+region = Rect2( 120, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 9 )
+region = Rect2( 240, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 13 )
+region = Rect2( 120, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 13 )
+region = Rect2( 240, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 13 )
+region = Rect2( 360, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 13 )
+region = Rect2( 480, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 13 )
+region = Rect2( 600, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 13 )
+region = Rect2( 720, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 13 )
+region = Rect2( 840, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 13 )
+region = Rect2( 960, 0, 120, 80 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 13 )
+region = Rect2( 1080, 0, 120, 80 )
+
+[sub_resource type="SpriteFrames" id=35]
+animations = [ {
+"frames": [ SubResource( 74 ), SubResource( 75 ), SubResource( 84 ), SubResource( 76 ) ],
+"loop": true,
+"name": "Final Climb",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 82 ) ],
+"loop": true,
+"name": "Final Crouch",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 77 ), SubResource( 78 ) ],
+"loop": true,
+"name": "Final Crouch Walk",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 85 ) ],
+"loop": true,
+"name": "Final Fall",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 81 ), SubResource( 83 ) ],
+"loop": true,
+"name": "Final Idle",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 86 ) ],
+"loop": true,
+"name": "Final Jump",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ) ],
+"loop": true,
+"name": "Final Run",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ) ],
+"loop": true,
+"name": "climb",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ) ],
+"loop": true,
+"name": "climb 2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 9 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "crouch walk",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "fall",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
+"loop": true,
+"name": "idle",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"loop": true,
+"name": "jump",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ) ],
+"loop": true,
+"name": "run",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=72]
+extents = Vector2( 21, 37.5 )
+
+[sub_resource type="RectangleShape2D" id=73]
+extents = Vector2( 21, 26.5 )
+
+[sub_resource type="Theme" id=5]
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0.162879, 1 )
+colors = PoolColorArray( 1, 0, 0, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture2D" id=6]
+gradient = SubResource( 8 )
+width = 210
+height = 40
+use_hdr = true
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="Theme" id=4]
+ProgressBar/styles/bg = SubResource( 7 )
+ProgressBar/styles/fg = SubResource( 3 )
+
+[node name="AlexStates" type="KinematicBody2D" groups=["player"]]
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="Anim" type="AnimatedSprite" parent="."]
+position = Vector2( 11, 19 )
+scale = Vector2( 0.045, 0.0468333 )
+frames = SubResource( 35 )
+animation = "Final Run"
+playing = true
+
+[node name="Tall" type="CollisionShape2D" parent="."]
+position = Vector2( 11, 19.5 )
+shape = SubResource( 72 )
+
+[node name="Short" type="CollisionShape2D" parent="."]
+position = Vector2( 11, 30.5 )
+shape = SubResource( 73 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = -1000
+limit_top = -1500
+limit_right = 5575
+limit_bottom = 1080
+smoothing_speed = 6.7
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource( 6 )
+
+[node name="LadderDetect" type="Area2D" parent="."]
+position = Vector2( 10, 0 )
+collision_layer = 0
+collision_mask = 4
+
+[node name="Coll" type="CollisionShape2D" parent="LadderDetect"]
+position = Vector2( 0, 20 )
+shape = ExtResource( 1 )
+
+[node name="Chain" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sizing" type="Control" parent="CanvasLayer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 60.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Sizing"]
+margin_right = 210.0
+margin_bottom = 64.0
+theme = SubResource( 5 )
+texture = SubResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="hpBar" type="ProgressBar" parent="CanvasLayer/Sizing"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 205.0
+margin_bottom = 35.0
+theme = SubResource( 4 )
+percent_visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pause menu" parent="CanvasLayer/Sizing" instance=ExtResource( 14 )]
+margin_left = -20.0
+margin_top = -27.0
+margin_right = -20.0
+margin_bottom = -21.0
+
+[node name="Coyote" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.15
+one_shot = true
+
+[node name="GrappleLineDetect" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 0 )
+collision_mask = 10
+
+[node name="Real Alex" type="Node2D" parent="."]
+
+[node name="Crouching" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Crawling" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 1.238
+autoplay = true
+
+[connection signal="body_entered" from="LadderDetect" to="." method="_on_LadderDetect_body_entered"]
+[connection signal="body_exited" from="LadderDetect" to="." method="_on_LadderDetect_body_exited"]
+[connection signal="timeout" from="Coyote" to="." method="_on_Coyote_timeout"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pixil-frame-0 1.png-aa6089658f3e5eabcd40f95b33bf26c5.stex"
+path="res://.import/pixil-frame-0 1.png-875e0fa3eef72a9fa9d80cb40a39d25e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/pixil-frame-0 1.png"
-dest_files=[ "res://.import/pixil-frame-0 1.png-aa6089658f3e5eabcd40f95b33bf26c5.stex" ]
+source_file="res://Levels/textures/pixil-frame-0 1.png"
+dest_files=[ "res://.import/pixil-frame-0 1.png-875e0fa3eef72a9fa9d80cb40a39d25e.stex" ]
 
 [params]
 

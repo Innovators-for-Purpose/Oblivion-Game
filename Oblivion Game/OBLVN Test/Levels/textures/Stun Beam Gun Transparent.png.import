@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stun Beam Gun Transparent.png-50ddbcdc630bd91fe75c4d1c88c41bd3.stex"
+path="res://.import/Stun Beam Gun Transparent.png-b4fb68e250254770ff4db451c3d0e436.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Stun Beam Gun Transparent.png"
-dest_files=[ "res://.import/Stun Beam Gun Transparent.png-50ddbcdc630bd91fe75c4d1c88c41bd3.stex" ]
+source_file="res://Levels/textures/Stun Beam Gun Transparent.png"
+dest_files=[ "res://.import/Stun Beam Gun Transparent.png-b4fb68e250254770ff4db451c3d0e436.stex" ]
 
 [params]
 
