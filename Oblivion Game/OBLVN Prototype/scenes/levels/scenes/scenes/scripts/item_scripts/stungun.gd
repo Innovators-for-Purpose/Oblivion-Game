@@ -30,6 +30,6 @@ func _input(event):
 func fire():
 	var bllt = preload("res://scenes/projectiles/zapzap.tscn")
 	var instance = bllt.instance()
-	instance.position = global_position
+	instance.global_position = global_position
 	instance.transform = global_transform
 	get_parent().get_parent().get_parent().add_child(instance)

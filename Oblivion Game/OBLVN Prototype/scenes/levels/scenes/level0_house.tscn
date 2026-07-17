@@ -6,7 +6,7 @@
 [ext_resource path="res://textures/cool tiles/close-and-open-door-in-pixel-art-style-vector-removebg-preview.png" type="Texture" id=4]
 [ext_resource path="res://textures/cool tiles/house.png" type="Texture" id=5]
 [ext_resource path="res://textures/Fireplace.png" type="Texture" id=6]
-[ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=7]
+[ext_resource path="res://JJS_merge/AlexStates.tscn" type="PackedScene" id=7]
 [ext_resource path="res://textures/Couch.png" type="Texture" id=8]
 [ext_resource path="res://textures/pixel-art-bookshelf-for-game-assets-and-development-vector-removebg-preview.png" type="Texture" id=9]
 [ext_resource path="res://textures/Necklace.png" type="Texture" id=10]

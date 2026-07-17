@@ -50,6 +50,7 @@ script = ExtResource( 5 )
 rotation = 3.14159
 scale = Vector2( 0.118693, 0.128768 )
 frames = SubResource( 5 )
+frame = 3
 playing = true
 flip_h = true
 flip_v = true

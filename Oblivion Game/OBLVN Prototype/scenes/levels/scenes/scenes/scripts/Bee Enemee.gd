@@ -2,20 +2,17 @@ extends KinematicBody2D
 
 
 signal boss_dead
-onready var stinger = preload("res://scenes/projectiles/Stinger.tscn")
+export var stinger = preload("res://JJS_merge/Stinger.tscn")
 var invincible = false
 onready var target = get_parent().get_node("AlexStates")
 var FIRE = false
 var HEALTH = 6
 var hold
-var grunts = ["res://music/Speech Boss Big Argg.wav","res://music/Speech Boss Small Argg.wav"]
-
-
-func on_begin(_body):
-	$Destory.play()
+var grunts = ["res://JJS_merge/sfk/Speech Boss Big Argg.wav","res://JJS_merge/sfk/Speech Boss Small Argg.wav"]
 
 func _ready():
 # warning-ignore:return_value_discarded
+	$Destory.play()
 	connect("boss_dead",get_parent().get_node("Boss Gate"), "_on_boss_dead")
 
 #	$AnimationPlayer.play("RESET")
@@ -32,17 +29,15 @@ func _ready():
 func fire_sting():
 	if FIRE:
 		var instance = stinger.instance()
-		instance.init(self.scale.x)
+#		instance.init(self.scale.x)
 		get_parent().add_child(instance)
-		instance.position = global_position
-		
+		instance.global_position = $holder.global_position
 		FIRE = false
 		$Cooldown.start()
 
 
 func _on_Target_Range_body_entered(body):
 	if "AlexStates" in body.name:
-
 		$Cooldown.start()
 
 
@@ -50,7 +45,7 @@ func _on_Target_Range_body_entered(body):
 func _on_HurtMe_body_entered(body):
 	if "AlexStates" in body.name:
 		if !invincible:
-			body.velocity.y = -1000
+			body.velocity.y = -1200
 			HEALTH -= 1
 			$AnimationPlayer.play("HURT")
 			$hurtSound.play()
@@ -62,14 +57,15 @@ func _on_HurtMe_body_entered(body):
 			var tween = create_tween()
 			tween.set_trans(Tween.TRANS_CUBIC)
 			tween.set_ease(Tween.EASE_OUT)
+			get_parent().get_node("Bee Boss Path/PathFollow2D/RemoteTransform2D").update_position = false
+			$TargetRange.monitoring = false
+			$Cooldown.stop()
+			$forcefield.hide()
 			invincible = true
 			$AnimationPlayer.play("Dying")
-			tween.tween_property($Sprite,"modulate:r", 255, 1)
-			tween.tween_interval(3)
+			tween.tween_property($Sprite.material,"shader_param/flash_value",1.0, 2)
 			yield(tween,"finished")
 			emit_signal("boss_dead")
-			FIRE = false
-			$"Target Range".monitoring = false
 			$Sprite.hide()
 			$BOOM.emitting = true
 			$Die.play()
@@ -83,10 +79,18 @@ func _on_Die_finished():
 	queue_free()
 
 func _physics_process(_delta):
+	var tween = get_tree().create_tween()
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.set_ease(Tween.EASE_OUT)
 	if invincible:
+		$forcefield.show()
+		tween.tween_property($forcefield,"modulate:a", 50.0, 0.5)
 		$HurtMe.monitoring = false
 	else:
+		$forcefield.hide()
+		tween.tween_property($forcefield,"modulate:a", 0.0, 0.5)
 		$HurtMe.monitoring = true
+
 	
 	if target:
 		if target.position.x >= self.position.x:

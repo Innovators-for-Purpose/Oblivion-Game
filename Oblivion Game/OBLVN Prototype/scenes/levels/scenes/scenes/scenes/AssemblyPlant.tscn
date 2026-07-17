@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=2]
 
-[ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=1]
+[ext_resource path="res://JJS_merge/AlexStates.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/Assembly Plant.webp" type="Texture" id=2]
 [ext_resource path="res://textures/cool tiles/Assembly plant.webp" type="Texture" id=3]
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=5]

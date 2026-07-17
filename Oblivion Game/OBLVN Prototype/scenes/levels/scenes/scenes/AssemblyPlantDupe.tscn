@@ -12,7 +12,7 @@
 [ext_resource path="res://Levels/textures/Warning.png" type="Texture" id=11]
 [ext_resource path="res://textures/cool tiles/Ladder1.png" type="Texture" id=12]
 [ext_resource path="res://textures/cool tiles/Ladder2.png" type="Texture" id=13]
-[ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=14]
+[ext_resource path="res://JJS_merge/AlexStates.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )

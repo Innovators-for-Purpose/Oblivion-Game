@@ -5,7 +5,7 @@
 [ext_resource path="res://textures/cool tiles/Ladder3.png" type="Texture" id=3]
 [ext_resource path="res://scenes/levels/scenes/scenes/scripts/Area2D.gd" type="Script" id=4]
 [ext_resource path="res://textures/cool tiles/Ladder1.png" type="Texture" id=5]
-[ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=6]
+[ext_resource path="res://JJS_merge/AlexStates.tscn" type="PackedScene" id=6]
 [ext_resource path="res://textures/Assembly Plant.webp" type="Texture" id=7]
 [ext_resource path="res://scenes/levels/textures/Assembly plant BG layer.png" type="Texture" id=8]
 [ext_resource path="res://scenes/levels/textures/Warning.png" type="Texture" id=9]
@@ -21,7 +21,7 @@
 [ext_resource path="res://scenes/levels/Song (1).mp3" type="AudioStream" id=19]
 [ext_resource path="res://scenes/levels/New Piskel (15).png" type="Texture" id=20]
 [ext_resource path="res://scenes/levels/textures/New Piskel (16).png" type="Texture" id=21]
-[ext_resource path="res://scenes/levels/Boss Arena detection.gd" type="Script" id=22]
+[ext_resource path="res://JJS_merge/Boss Arena detection.gd" type="Script" id=22]
 [ext_resource path="res://scenes/levels/PathFollow4D.gd" type="Script" id=26]
 [ext_resource path="res://scenes/levels/PathFollow5D.gd" type="Script" id=30]
 [ext_resource path="res://scenes/levels/textures/New Piskel (17).png" type="Texture" id=31]
@@ -32,14 +32,14 @@
 [ext_resource path="res://scenes/levels/Squished.gd" type="Script" id=36]
 [ext_resource path="res://scenes/levels/textures/unnamed (3).png" type="Texture" id=37]
 [ext_resource path="res://scenes/levels/Start Icon Sprite.png" type="Texture" id=38]
-[ext_resource path="res://scenes/levels/Boss Gate.gd" type="Script" id=39]
+[ext_resource path="res://JJS_merge/Boss Gate.gd" type="Script" id=39]
 [ext_resource path="res://scenes/levels/Switch.gd" type="Script" id=40]
 [ext_resource path="res://scenes/levels/textures/unnamed (4).png" type="Texture" id=41]
 [ext_resource path="res://scenes/levels/Gate.gd" type="Script" id=42]
 [ext_resource path="res://textures/New Piskel (21).png" type="Texture" id=44]
-[ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=46]
-[ext_resource path="res://scenes/BOBM.tscn" type="PackedScene" id=47]
-[ext_resource path="res://scenes/levels/scenes/scenes/Boss1NewScript.tscn" type="PackedScene" id=48]
+[ext_resource path="res://JJS_merge/GUI.tscn" type="PackedScene" id=46]
+[ext_resource path="res://JJS_merge/BOBM.tscn" type="PackedScene" id=47]
+[ext_resource path="res://JJS_merge/Boss1NewScript.tscn" type="PackedScene" id=48]
 
 [sub_resource type="AtlasTexture" id=100]
 flags = 4
@@ -1020,7 +1020,8 @@ format = 1
 tile_data = PoolIntArray( -1572791, 3, 0, -1507255, 3, 0, -1441719, 3, 0, -1376183, 3, 0, -1310647, 3, 0, -1245111, 3, 0, -1179575, 3, 0, -1114039, 3, 0, -1048503, 3, 0, -982967, 3, 0, -917431, 3, 0, -917398, 2, 0, -917397, 2, 0, -851895, 3, 0, -851862, 1, 0, -851861, 1, 0, -720909, 2, 0, -720908, 2, 0, -786326, 1, 0, -786325, 1, 0, -655373, 1, 0, -655372, 1, 0, -720837, 2, 0, -720836, 2, 0, -720790, 1, 0, -720789, 1, 0, -589837, 1, 0, -589836, 1, 0, -655301, 1, 0, -655300, 1, 0, -655267, 2, 0, -655254, 1, 0, -655253, 1, 0, -524301, 1, 0, -524300, 1, 0, -589765, 1, 0, -589764, 1, 0, -589731, 3, 0, -589718, 1, 0, -589717, 1, 0, -458765, 1, 0, -458764, 1, 0, -524250, 2, 0, -524229, 1, 0, -524228, 1, 0, -524195, 3, 0, -524182, 3, 0, -524181, 1, 0, -393229, 1, 0, -393228, 1, 0, -458714, 1, 0, -458693, 1, 0, -458692, 1, 0, -458688, 2, 0, -458659, 3, 0, -458646, 1, 0, -458645, 1, 0, -327693, 1, 0, -327692, 1, 0, -393178, 1, 0, -393157, 1, 0, -393156, 1, 0, -393152, 1, 0, -393123, 3, 0, -262157, 1, 0, -262156, 1, 0, -327642, 1, 0, -327621, 1, 0, -327620, 1, 0, -327616, 1, 0, -327587, 3, 0, -196621, 1, 0, -262106, 1, 0, -262085, 1, 0, -262084, 1, 0, -262080, 1, 0, -131085, 1073741826, 0, -196549, 1, 0, -196548, 1, 0, -196544, 1, 0, -131013, 1, 0, -131012, 1, 0, -131008, 1, 0, -65477, 3, 0, -65476, 3, 0, -65472, 1, 0, 59, 3, 0, 60, 3, 0, 64, 1, 0, 131049, 2, 0, 65595, 3, 0, 65596, 3, 0, 65600, 3, 0, 196585, 1073741825, 0, 131082, 2, 0, 131131, 3, 0, 131132, 3, 0, 131136, 3, 0, 262121, 1073741825, 0, 196618, 1, 0, 196667, 3, 0, 196668, 3, 0, 196672, 3, 0, 327657, 1073741825, 0, 262154, 1, 0, 262203, 3, 0, 262204, 3, 0, 262208, 3, 0, 393193, 1073741825, 0, 327690, 1, 0, 327744, 3, 0, 458729, 1073741825, 0, 393226, 1, 0, 393280, 3, 0, 524265, 1, 0, 458762, 1, 0, 458816, 3, 0, 589801, 1, 0, 524352, 3, 0, 589888, 3, 0, 655424, 3, 0 )
 
 [node name="AlexStates" parent="." instance=ExtResource( 6 )]
-position = Vector2( 4688.28, -543.931 )
+position = Vector2( 4703.3, -498.771 )
+z_index = 1
 
 [node name="Camera2" parent="." instance=ExtResource( 18 )]
 position = Vector2( 2341.78, -782 )
@@ -1121,7 +1122,7 @@ position = Vector2( 54.9478, -413 )
 position = Vector2( 5384.88, -497 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform"]
@@ -1134,7 +1135,6 @@ shape = SubResource( 34 )
 position = Vector2( 4903.34, -496 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform2"]
@@ -1218,6 +1218,7 @@ position = Vector2( -1815.82, -463.646 )
 
 [node name="Boss Arena detection" type="Area2D" parent="."]
 position = Vector2( -0.00292691, 0.0106812 )
+monitoring = false
 script = ExtResource( 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Arena detection"]
@@ -1290,7 +1291,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 19.981, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel"]
@@ -1305,7 +1306,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 337.679, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel2"]
@@ -1389,14 +1390,19 @@ position = Vector2( -550.855, -92.3278 )
 
 [node name="BOSS1" parent="." instance=ExtResource( 48 )]
 position = Vector2( 5105.75, -753.626 )
+collision_mask = 0
 
 [node name="Sprite" parent="BOSS1" index="1"]
-frame = 1
+frame = 0
+
+[node name="forcefield" parent="BOSS1" index="2"]
+frame = 0
 
 [connection signal="animation_finished" from="Gate/AnimatedSprite" to="Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="animation_finished" from="Boss Gate/Anim5" to="Boss Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="animation_finished" from="AnimatedSprite" to="Boss Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="Respawn Areas/Fall" to="Respawn Areas/Fall" method="_on_Fall_body_entered"]
+[connection signal="body_entered" from="Boss Arena detection" to="Boss Arena detection" method="_on_Boss_Arena_detection_body_entered"]
 [connection signal="body_entered" from="Moving Barrels/squished/Squished" to="Moving Barrels/squished/Squished" method="_on_Squished_body_entered"]
 [connection signal="body_entered" from="Moving Barrels/squished/Squished3" to="Moving Barrels/squished/Squished3" method="_on_Squished_body_entered"]
 [connection signal="body_entered" from="Moving Barrels/squished/Squished4" to="Moving Barrels/squished/Squished4" method="_on_Squished_body_entered"]

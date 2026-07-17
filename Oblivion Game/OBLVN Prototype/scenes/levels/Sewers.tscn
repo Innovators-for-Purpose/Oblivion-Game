@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/levels/textures/OBLIVION Sewers.png" type="Texture" id=1]
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
-[ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=3]
+[ext_resource path="res://JJS_merge/AlexStates.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Movement Stuff/Grappleables.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Finish.tscn" type="PackedScene" id=5]
 [ext_resource path="res://textures/cool tiles/Ladder1.png" type="Texture" id=6]
@@ -22,7 +22,7 @@
 [ext_resource path="res://scenes/levels/New Piskel (3).png" type="Texture" id=20]
 [ext_resource path="res://scenes/Spikes2.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=22]
-[ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=23]
+[ext_resource path="res://JJS_merge/GUI.tscn" type="PackedScene" id=23]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )

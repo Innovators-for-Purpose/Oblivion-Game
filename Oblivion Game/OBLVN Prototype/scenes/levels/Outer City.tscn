@@ -1,7 +1,7 @@
 [gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://scenes/levels/textures/Second floor railings layer (on top).png" type="Texture" id=1]
-[ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=2]
+[ext_resource path="res://JJS_merge/AlexStates.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Movement Stuff/Grappleables.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/levels/textures/Railings first platform layer (on top).png" type="Texture" id=4]
 [ext_resource path="res://scenes/levels/Guard.tscn" type="PackedScene" id=5]
