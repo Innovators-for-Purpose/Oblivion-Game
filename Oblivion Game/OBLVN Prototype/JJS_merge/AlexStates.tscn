@@ -1,20 +1,20 @@
 [gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://Movement Stuff/Cam.gd" type="Script" id=1]
-[ext_resource path="res://scenes/levels/Crouching.wav" type="AudioStream" id=2]
-[ext_resource path="res://scenes/levels/Crawling (1).wav" type="AudioStream" id=3]
-[ext_resource path="res://Movement Stuff/_Idle.png" type="Texture" id=4]
-[ext_resource path="res://Movement Stuff/_Run.png" type="Texture" id=5]
-[ext_resource path="res://Movement Stuff/_Jump.png" type="Texture" id=6]
+[ext_resource path="res://Music and SFX/Crouching.wav" type="AudioStream" id=2]
+[ext_resource path="res://Music and SFX/Crawling (1).wav" type="AudioStream" id=3]
+[ext_resource path="res://scenes/levels/scenes/scenes/Movement Stuff/_Idle.png" type="Texture" id=4]
+[ext_resource path="res://scenes/levels/scenes/scenes/Movement Stuff/_Run.png" type="Texture" id=5]
+[ext_resource path="res://scenes/levels/scenes/scenes/Movement Stuff/_Jump.png" type="Texture" id=6]
 [ext_resource path="res://Movement Stuff/Climb.png" type="Texture" id=7]
-[ext_resource path="res://Movement Stuff/_CrouchWalk.png" type="Texture" id=8]
-[ext_resource path="res://Movement Stuff/_Fall.png" type="Texture" id=9]
-[ext_resource path="res://Movement Stuff/_Crouch.png" type="Texture" id=10]
+[ext_resource path="res://scenes/levels/scenes/scenes/Movement Stuff/_CrouchWalk.png" type="Texture" id=8]
+[ext_resource path="res://scenes/levels/scenes/scenes/Movement Stuff/_Fall.png" type="Texture" id=9]
+[ext_resource path="res://scenes/levels/scenes/scenes/Movement Stuff/_Crouch.png" type="Texture" id=10]
 [ext_resource path="res://Movement Stuff/Chain.tscn" type="PackedScene" id=11]
 [ext_resource path="res://menus/Pause menu.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/levels/scenes/scenes/scenes/InventoryGUI.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=14]
-[ext_resource path="res://JJS_merge/AlexStates.gd" type="Script" id=15]
+[ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=15]
 
 [sub_resource type="CapsuleShape2D" id=52]
 radius = 21.13
@@ -259,15 +259,15 @@ width = 210
 height = 40
 use_hdr = true
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=61]
 bg_color = Color( 1, 0, 0, 0 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=62]
 bg_color = Color( 1, 0, 0, 1 )
 
 [sub_resource type="Theme" id=4]
-ProgressBar/styles/bg = SubResource( 7 )
-ProgressBar/styles/fg = SubResource( 3 )
+ProgressBar/styles/bg = SubResource( 61 )
+ProgressBar/styles/fg = SubResource( 62 )
 
 [sub_resource type="Animation" id=54]
 resource_name = "HIT"
@@ -348,7 +348,7 @@ position = Vector2( 0, -23 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
 animation = "idle"
-frame = 8
+frame = 5
 playing = true
 flip_h = true
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=160 format=2]
+[gd_scene load_steps=141 format=2]
 
 [ext_resource path="res://textures/cool tiles/Ladder2.png" type="Texture" id=1]
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -21,14 +21,9 @@
 [ext_resource path="res://Music and SFX/Song (1).mp3" type="AudioStream" id=19]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (15).png" type="Texture" id=20]
 [ext_resource path="res://scenes/levels/textures/New Piskel (16).png" type="Texture" id=21]
-[ext_resource path="res://New Assets (Summer 2026)/BOSS_BEE_FRM2.png" type="Texture" id=22]
-[ext_resource path="res://New Assets (Summer 2026)/BOSS_BEE_FRM3.png" type="Texture" id=23]
-[ext_resource path="res://New Assets (Summer 2026)/BOSS_BEE_FRM4.png" type="Texture" id=24]
-[ext_resource path="res://New Assets (Summer 2026)/BEE_BOSS_FRM1.png" type="Texture" id=25]
+[ext_resource path="res://scenes/Boss1NewScript.tscn" type="PackedScene" id=22]
+[ext_resource path="res://JJS_merge/Stinger.tscn" type="PackedScene" id=23]
 [ext_resource path="res://scenes/levels/PathFollow4D.gd" type="Script" id=26]
-[ext_resource path="res://scenes/levels/Hitbox.gd" type="Script" id=27]
-[ext_resource path="res://scenes/levels/STINGER_PROJECTILE.png" type="Texture" id=28]
-[ext_resource path="res://scenes/levels/Stinger.gd" type="Script" id=29]
 [ext_resource path="res://scenes/levels/PathFollow5D.gd" type="Script" id=30]
 [ext_resource path="res://scenes/levels/textures/New Piskel (17).png" type="Texture" id=31]
 [ext_resource path="res://Yellow Spring.tscn" type="PackedScene" id=32]
@@ -42,9 +37,7 @@
 [ext_resource path="res://scenes/levels/Switch.gd" type="Script" id=40]
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0000.png" type="Texture" id=41]
 [ext_resource path="res://scenes/levels/Gate.gd" type="Script" id=42]
-[ext_resource path="res://scenes/levels/BEE BOSS.gd" type="Script" id=43]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (21).png" type="Texture" id=44]
-[ext_resource path="res://scenes/levels/Stingerkill.gd" type="Script" id=45]
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=46]
 [ext_resource path="res://Music and SFX/Game Over Sound_mixdown.wav" type="AudioStream" id=47]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (49).png" type="Texture" id=48]
@@ -762,59 +755,10 @@ extents = Vector2( 69.8598, 22.5 )
 [sub_resource type="RectangleShape2D" id=47]
 extents = Vector2( 459.064, 255 )
 
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 25 )
-region = Rect2( 0, 0, 2100, 1500 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 22 )
-region = Rect2( 0, 0, 2100, 1500 )
-
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 23 )
-region = Rect2( 0, 0, 2100, 1500 )
-
-[sub_resource type="AtlasTexture" id=38]
-atlas = ExtResource( 24 )
-region = Rect2( 0, 0, 2100, 1500 )
-
-[sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 23 )
-region = Rect2( 0, 0, 2100, 1500 )
-
-[sub_resource type="AtlasTexture" id=40]
-atlas = ExtResource( 22 )
-region = Rect2( 0, 0, 2100, 1500 )
-
-[sub_resource type="AtlasTexture" id=41]
-atlas = ExtResource( 25 )
-region = Rect2( 0, 0, 2100, 1500 )
-
-[sub_resource type="SpriteFrames" id=42]
-animations = [ {
-"frames": [ SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
-"loop": true,
-"name": "Flying",
-"speed": 13.0
-} ]
-
-[sub_resource type="CapsuleShape2D" id=43]
-radius = 23.9771
-height = 72.0391
-
-[sub_resource type="RectangleShape2D" id=45]
-extents = Vector2( 20.0936, 11.5249 )
-
-[sub_resource type="RectangleShape2D" id=113]
-extents = Vector2( 8.01258, 5.01777 )
-
 [sub_resource type="Curve2D" id=44]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 5105.92, -753.676, 0, 0, 0, 0, 4891.59, -751.668, 0, 0, 0, 0, 4942.67, -887.149, 0, 0, 0, 0, 5251.15, -887.149, 0, 0, 0, 0, 5254.15, -657.334, 0, 0, 0, 0, 5100.92, -656.33, 0, 0, 0, 0, 5100.92, -866.075, 0, 0, 0, 0, 5102.92, -656.33, 0, 0, 0, 0, 5102.92, -864.067, 0, 0, 0, 0, 5107.93, -753.676 )
 }
-
-[sub_resource type="RectangleShape2D" id=46]
-extents = Vector2( 10144.4, 10978.6 )
 
 [sub_resource type="AtlasTexture" id=58]
 atlas = ExtResource( 21 )
@@ -1180,7 +1124,7 @@ texture = ExtResource( 38 )
 position = Vector2( 779.209, 211.752 )
 scale = Vector2( 0.131428, 0.110116 )
 frames = SubResource( 123 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="Checkpoint2" parent="." instance=ExtResource( 53 )]
@@ -1206,7 +1150,7 @@ format = 1
 tile_data = PoolIntArray( -1572791, 3, 0, -1507255, 3, 0, -1441719, 3, 0, -1376183, 3, 0, -1310647, 3, 0, -1245111, 3, 0, -1179575, 3, 0, -1114039, 3, 0, -1048503, 3, 0, -982967, 3, 0, -982934, 2, 0, -982933, 2, 0, -917431, 3, 0, -917398, 1, 0, -917397, 1, 0, -851895, 3, 0, -851862, 1, 0, -851861, 1, 0, -720909, 2, 0, -720908, 2, 0, -786326, 1, 0, -786325, 1, 0, -655373, 1, 0, -655372, 1, 0, -720837, 2, 0, -720836, 2, 0, -720790, 1, 0, -720789, 1, 0, -589837, 1, 0, -589836, 1, 0, -655301, 1, 0, -655300, 1, 0, -655267, 2, 0, -655254, 1, 0, -655253, 1, 0, -524301, 1, 0, -524300, 1, 0, -589765, 1, 0, -589764, 1, 0, -589731, 3, 0, -589718, 1, 0, -589717, 1, 0, -458765, 1, 0, -458764, 1, 0, -524250, 2, 0, -524229, 1, 0, -524228, 1, 0, -524195, 3, 0, -524182, 3, 0, -524181, 1, 0, -393229, 1, 0, -393228, 1, 0, -458714, 1, 0, -458693, 1, 0, -458692, 1, 0, -458688, 2, 0, -458659, 3, 0, -458646, 1, 0, -458645, 1, 0, -327693, 1, 0, -327692, 1, 0, -393178, 1, 0, -393157, 1, 0, -393156, 1, 0, -393152, 1, 0, -393123, 3, 0, -262157, 1, 0, -262156, 1, 0, -327642, 1, 0, -327621, 1, 0, -327620, 1, 0, -327616, 1, 0, -327587, 3, 0, -196621, 1, 0, -262106, 1, 0, -262085, 1, 0, -262084, 1, 0, -262080, 1, 0, -131085, 1073741826, 0, -196549, 1, 0, -196548, 1, 0, -196544, 1, 0, -131013, 1, 0, -131012, 1, 0, -131008, 1, 0, -65477, 3, 0, -65476, 3, 0, -65472, 1, 0, 59, 3, 0, 60, 3, 0, 64, 1, 0, 131049, 2, 0, 65595, 3, 0, 65596, 3, 0, 65600, 3, 0, 196585, 1073741825, 0, 131082, 2, 0, 131131, 3, 0, 131132, 3, 0, 131136, 3, 0, 262121, 1073741825, 0, 196618, 1, 0, 196667, 3, 0, 196668, 3, 0, 196672, 3, 0, 327657, 1073741825, 0, 262154, 1, 0, 262203, 3, 0, 262204, 3, 0, 262208, 3, 0, 393193, 1073741825, 0, 327690, 1, 0, 327744, 3, 0, 458729, 1073741825, 0, 393226, 1, 0, 393280, 3, 0, 524265, 1, 0, 458762, 1, 0, 458816, 3, 0, 589801, 1, 0, 524352, 3, 0, 589888, 3, 0, 655424, 3, 0 )
 
 [node name="AlexStates" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1138.77, 251.894 )
+position = Vector2( 4708.31, -498.771 )
 scale = Vector2( 1.00019, 0.997599 )
 
 [node name="Camera2" parent="." instance=ExtResource( 18 )]
@@ -1286,7 +1230,6 @@ max_distance = 10000.0
 [node name="Level Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 19 )
 volume_db = 0.014
-autoplay = true
 
 [node name="Finish" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5673.61, -468 )
@@ -1317,7 +1260,7 @@ position = Vector2( -60.2344, 28.4009 )
 rotation = 1.58291
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform"]
@@ -1334,7 +1277,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 35.0527, -61.2186 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 1
+frame = 3
 playing = true
 flip_v = true
 
@@ -1432,72 +1375,18 @@ position = Vector2( -0.00292691, 0.0106812 )
 position = Vector2( 5103.92, -695.48 )
 shape = SubResource( 47 )
 
-[node name="BEE BOSS" type="StaticBody2D" parent="."]
-position = Vector2( 5105.74, -753.674 )
-rotation = -3.13233
-script = ExtResource( 43 )
-
-[node name="Sprite" type="AnimatedSprite" parent="BEE BOSS"]
-position = Vector2( -20.9648, 27.314 )
-scale = Vector2( 0.141056, 0.143667 )
-frames = SubResource( 42 )
-animation = "Flying"
-frame = 4
-playing = true
-flip_h = true
-flip_v = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BEE BOSS"]
-position = Vector2( 4.82435, -0.0434561 )
-shape = SubResource( 43 )
-
-[node name="Hitbox" type="Area2D" parent="BEE BOSS"]
-script = ExtResource( 27 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BEE BOSS/Hitbox"]
-position = Vector2( 6.30908, 52.1302 )
-shape = SubResource( 45 )
-
-[node name="Stingerkill" type="Area2D" parent="BEE BOSS"]
-position = Vector2( 5098.54, -800.934 )
-rotation = 3.13233
-script = ExtResource( 45 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BEE BOSS/Stingerkill"]
-position = Vector2( 5057.85, -707.512 )
-shape = SubResource( 113 )
-
 [node name="Bee Boss Path" type="Path2D" parent="."]
 curve = SubResource( 44 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Bee Boss Path"]
 position = Vector2( 5105.74, -753.674 )
-rotation = -3.13233
 offset = 0.32
 rotate = false
 script = ExtResource( 26 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bee Boss Path/PathFollow2D"]
-remote_path = NodePath("../../../BEE BOSS")
-
-[node name="Stinger" type="Area2D" parent="."]
-position = Vector2( 5199.88, -746.002 )
-rotation = -3.13233
-script = ExtResource( 29 )
-
-[node name="StingerProjectile" type="Sprite" parent="Stinger"]
-position = Vector2( -750.688, -116.719 )
-scale = Vector2( 0.0156439, 0.0202601 )
-texture = ExtResource( 28 )
-flip_h = true
-flip_v = true
-
-[node name="StingerKill" type="Area2D" parent="Stinger"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stinger/StingerKill"]
-position = Vector2( -903.428, -344.159 )
-scale = Vector2( 0.0156439, 0.0202601 )
-shape = SubResource( 46 )
+remote_path = NodePath("../../../BOSS")
+update_scale = false
 
 [node name="Moving Platform" type="KinematicBody2D" parent="."]
 physics_interpolation_mode = 2
@@ -1508,7 +1397,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 79.9243, 39 )
 scale = Vector2( 0.314403, 0.335907 )
 frames = SubResource( 57 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Platform"]
@@ -1559,7 +1448,7 @@ script = ExtResource( 58 )
 position = Vector2( 19.981, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel"]
@@ -1579,7 +1468,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 337.679, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel2"]
@@ -1687,17 +1576,15 @@ remote_path = NodePath("../../../Boss Platform")
 
 [node name="Node2D" parent="." instance=ExtResource( 57 )]
 
+[node name="BOSS" parent="." instance=ExtResource( 22 )]
+position = Vector2( 5105.74, -753.674 )
+scale = Vector2( 0.998448, 0.99645 )
+stinger = ExtResource( 23 )
+
 [connection signal="animation_finished" from="Gate/AnimatedSprite" to="Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="animation_finished" from="Boss Gate/Anim5" to="Boss Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="animation_finished" from="AnimatedSprite" to="Boss Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="Respawn Areas/Fall" to="Respawn Areas/Fall" method="_on_Fall_body_entered"]
-[connection signal="body_entered" from="Boss Arena detection" to="BEE BOSS" method="_on_Boss_Arena_detection_body_entered"]
-[connection signal="body_entered" from="Boss Arena detection" to="Stinger" method="_on_Boss_Arena_detection_body_entered"]
-[connection signal="body_entered" from="BEE BOSS/Hitbox" to="Boss Gate" method="_on_Hitbox_body_entered"]
-[connection signal="body_entered" from="BEE BOSS/Hitbox" to="BEE BOSS" method="_on_Hitbox_body_entered"]
-[connection signal="body_entered" from="BEE BOSS/Hitbox" to="BEE BOSS/Hitbox" method="_on_Hitbox_body_entered"]
-[connection signal="body_entered" from="BEE BOSS/Stingerkill" to="BEE BOSS/Stingerkill" method="_on_Stingerkill_body_entered"]
-[connection signal="body_entered" from="Stinger/StingerKill" to="Stinger" method="_on_StingerKill_body_entered"]
 [connection signal="body_entered" from="Moving Barrels/squished/Squished" to="Moving Barrels/squished/Squished" method="_on_Squished_body_entered"]
 [connection signal="body_entered" from="Moving Barrels/squished/Squished3" to="Moving Barrels/squished/Squished3" method="_on_Squished_body_entered"]
 [connection signal="body_entered" from="Moving Barrels/squished/Squished4" to="Moving Barrels/squished/Squished4" method="_on_Squished_body_entered"]
