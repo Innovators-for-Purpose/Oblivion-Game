@@ -1,0 +1,53 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=20]
+code = "shader_type canvas_item;
+
+uniform int lineas = 255;             
+uniform float velocidad = 2.0;      
+uniform float ondulacion = 0.19;     
+uniform float frecuencia = 5.0;   
+uniform vec4 color_a : hint_color = vec4(0.1, 0.5, 0.8, 1.0);
+uniform vec4 color_b : hint_color = vec4(0.1, 0.1, 0.2, 1.0);
+
+void fragment() {
+	
+	
+	
+	
+	
+	vec4 colour = texture(TEXTURE, UV);
+    
+    
+    COLOR = colour;
+	
+    vec2 uv = UV;
+    
+    float id_linea = floor(uv.y * float(lineas));
+    
+    float sentido = (mod(id_linea, 2.0) == 0.0) ? 1.0 : -1.0;
+    
+    float desfase_gusano = sin(uv.y * frecuencia + TIME * velocidad) * ondulacion;
+    
+    float movimiento_h = (TIME * velocidad * 0.2) * sentido;
+    uv.x += movimiento_h + (desfase_gusano * sentido);
+    
+    float patron = step(0.5, fract(uv.x * 2.0));
+    
+    vec3 color_final = mix(color_a.rgb, color_b.rgb, patron);
+    
+    float borde = sin(fract(uv.y * float(lineas)) * 3.14);
+    color_final *= smoothstep(0.0, 0.1, borde); 
+    
+    COLOR = vec4(color_final, 1.0);
+	COLOR.a *= texture(TEXTURE, UV).a;
+}"
+
+[resource]
+shader = SubResource( 20 )
+shader_param/lineas = 255
+shader_param/velocidad = 2.548
+shader_param/ondulacion = -0.889
+shader_param/frecuencia = 5.917
+shader_param/color_a = Color( 0, 0.568627, 0.0156863, 1 )
+shader_param/color_b = Color( 0.0980392, 0.2, 0.0901961, 1 )
