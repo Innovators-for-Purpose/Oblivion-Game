@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=7]
 [ext_resource path="res://textures/cool tiles/Ladder3.png" type="Texture" id=8]
 [ext_resource path="res://textures/cool tiles/Ladder1.png" type="Texture" id=9]
+[ext_resource path="res://NPCs.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Cutscene Trigger.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -218,6 +220,13 @@ position = Vector2( 498, 347 )
 
 [node name="Grappleables3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 3829, 44 )
+
+[node name="NPCs" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1039, 525 )
+scale = Vector2( 2.5, 2.5 )
+
+[node name="Cutscene Trigger" parent="." instance=ExtResource( 11 )]
+position = Vector2( 807, 315 )
 
 [connection signal="area_entered" from="AlexStates/grap_area" to="AlexStates" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="AlexStates/grap_area" to="Grappleables" method="_on_grap_area_area_entered"]

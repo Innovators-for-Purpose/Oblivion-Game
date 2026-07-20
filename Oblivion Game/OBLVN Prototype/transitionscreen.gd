@@ -29,7 +29,7 @@
 #	elif anim_name == "fade back to white":
 #		color_rect.visible = false
 extends CanvasLayer
-onready var AnimationPlayer = $AnimationPlayer
+onready var Anima = $AnimationPlayer
 
 func change_scene(target: String) -> void:
 	$AnimationPlayer.play('fade back to white')
