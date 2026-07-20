@@ -415,6 +415,10 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 script = ExtResource( 6 )
 
+[node name="T1" type="Tween" parent="Camera2D"]
+
+[node name="T2" type="Tween" parent="Camera2D"]
+
 [node name="LadderDetect" type="Area2D" parent="."]
 position = Vector2( 10, 0 )
 collision_layer = 0

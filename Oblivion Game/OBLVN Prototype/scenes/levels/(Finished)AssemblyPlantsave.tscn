@@ -1,4 +1,4 @@
-[gd_scene load_steps=160 format=2]
+[gd_scene load_steps=161 format=2]
 
 [ext_resource path="res://textures/cool tiles/Ladder2.png" type="Texture" id=1]
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -66,6 +66,7 @@
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0004.png" type="Texture" id=64]
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0006.png" type="Texture" id=65]
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0003.png" type="Texture" id=66]
+[ext_resource path="res://NPCs.tscn" type="PackedScene" id=67]
 
 [sub_resource type="AtlasTexture" id=126]
 atlas = ExtResource( 41 )
@@ -1180,7 +1181,6 @@ texture = ExtResource( 38 )
 position = Vector2( 779.209, 211.752 )
 scale = Vector2( 0.131428, 0.110116 )
 frames = SubResource( 123 )
-frame = 5
 playing = true
 
 [node name="Checkpoint2" parent="." instance=ExtResource( 53 )]
@@ -1317,7 +1317,6 @@ position = Vector2( -60.2344, 28.4009 )
 rotation = 1.58291
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform"]
@@ -1334,7 +1333,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 35.0527, -61.2186 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 1
 playing = true
 flip_v = true
 
@@ -1442,7 +1440,6 @@ position = Vector2( -20.9648, 27.314 )
 scale = Vector2( 0.141056, 0.143667 )
 frames = SubResource( 42 )
 animation = "Flying"
-frame = 4
 playing = true
 flip_h = true
 flip_v = true
@@ -1508,7 +1505,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 79.9243, 39 )
 scale = Vector2( 0.314403, 0.335907 )
 frames = SubResource( 57 )
-frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Platform"]
@@ -1559,7 +1555,6 @@ script = ExtResource( 58 )
 position = Vector2( 19.981, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel"]
@@ -1579,7 +1574,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 337.679, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel2"]
@@ -1686,6 +1680,10 @@ script = ExtResource( 56 )
 remote_path = NodePath("../../../Boss Platform")
 
 [node name="Node2D" parent="." instance=ExtResource( 57 )]
+
+[node name="NPCs" parent="." instance=ExtResource( 67 )]
+position = Vector2( 950.475, 329.169 )
+scale = Vector2( 2.6, 2.6 )
 
 [connection signal="animation_finished" from="Gate/AnimatedSprite" to="Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="animation_finished" from="Boss Gate/Anim5" to="Boss Gate" method="_on_AnimatedSprite_animation_finished"]

@@ -8,8 +8,8 @@ var active = false
 var happened = false
 var entered = false
 var exited = false
-onready var alex = get_node("/root/Main/AlexStates")
-onready var cam = get_node("/root/Main/AlexStates/Camera2D")
+onready var alex = get_node("/root/level/AlexStates")
+onready var cam = get_node("/root/level/AlexStates/Camera2D")
 onready var t1 = get_node("../AlexStates/Camera2D/T1") #Zoom in
 onready var t2 = get_node("../AlexStates/Camera2D/T2")
 
@@ -47,16 +47,21 @@ func _input(event):
 				add_child(dialogue)
 				
 				
-			var anim = get_node("/root/Main/AlexStates/Anim")
-			anim.play("idle")
+			var anim = get_node("/root/level/AlexStates/Anim")
+			anim.play("Final Idle")
 			face_Alex()
 	pass
 
 func face_Alex():
-	if alex.position.x > $Avery.global_position.x:
+	print("Alex pos x = " + String(alex.position.x))
+	print("Avery pos x = " + String($Avery.global_position.x))
+	print("Theo pos x = " + String($Theo.global_position.x))
+	if alex.position.x < $Avery.global_position.x:
+		print("huh")
 		$Avery.set_flip_h(true)
 	if alex.position.x < $Theo.global_position.x:
 		$Theo.set_flip_h(true)
+		print("TURN ALREADY!!!")
 
 func unpause(EndDialogue):
 	if EndDialogue:

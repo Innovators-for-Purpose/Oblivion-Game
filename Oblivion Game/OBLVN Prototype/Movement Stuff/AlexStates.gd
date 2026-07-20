@@ -119,11 +119,7 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 #if hook_position.x + GRAPPLE_RADIUS >= mouse.x and hook_position.x - GRAPPLE_RADIUS <= mouse.x and hook_position.y + GRAPPLE_RADIUS >= mouse.y and hook_position.y - GRAPPLE_RADIUS <= mouse.y:
 #			print ('yay')
 		
-	
-		
-		
 		$Chain.shoot(location - self.global_position)
-		
 #		print("location = ",location)
 #		print ("hook position = ", hook_position)
 #		print ("mouse position = ", mouse)
@@ -136,10 +132,6 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 		return false
 
 func _physics_process(_delta):
-#	print(can_grapple)
-#	print(stop)
-	
-	#$CanvasLayer/grappleCross.position = location - self.global_position / $Camera2D.global_position
 	if stop == 1:
 		can_grapple = true
 		var closest = get_closest_grappable()
