@@ -1,0 +1,50 @@
+{
+    "stun_gun": {
+        "name": "Stun Gun",
+        "type": "one_use",
+        "icon": "Stun Beam Gun Transparent.png",
+        "script":"stungun.gd"
+    },
+    "grapple":{
+        "name": "Grapple",
+        "type": "powerup",
+        "icon": "lego-dark-stone-gray-grappling-hook-30192-32-456607-50-2535814590.png",
+        "script": ""
+    },
+    "heal": {
+        "name": "Heal",
+        "type": "one_use",
+        "icon": "pixil-frame-0.png",
+        "script": "Heal.gd"
+    },
+    "hacking_device": {
+        "name": "Hacking Device",
+        "type": "tool",
+        "icon": "",
+        "script": ".gd"
+    },
+    "flame_thrower": {
+        "name": "FlameThrower",
+        "type": "weapon",
+        "icon": "",
+        "script": ".gd"
+    },
+    "shock_darts": {
+        "name": "Shock Darts",
+        "type": "weapon",
+        "icon": "",
+        "script": ".gd"
+    },
+    "signalscram": {
+        "name": "SIGNAL_SCRAMBLR",
+        "type": "special",
+        "icon": "",
+        "script": ".gd"
+    },
+    "gas_bomb": {
+        "name": "Gas Bomb",
+        "type": "weapon",
+        "icon": "",
+        "script": ".gd"
+    }
+}
