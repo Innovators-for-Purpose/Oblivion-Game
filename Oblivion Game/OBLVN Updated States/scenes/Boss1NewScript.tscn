@@ -1,0 +1,192 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://textures/BEE_BOSS_FRM1.png" type="Texture" id=1]
+[ext_resource path="res://textures/BOSS_BEE_FRM2.png" type="Texture" id=2]
+[ext_resource path="res://textures/BOSS_BEE_FRM3.png" type="Texture" id=3]
+[ext_resource path="res://textures/BOSS_BEE_FRM4.png" type="Texture" id=4]
+[ext_resource path="res://scenes/levels/scenes/scenes/scripts/Bee Enemee.gd" type="Script" id=5]
+[ext_resource path="res://sfk/Speech Boss Destroy.wav" type="AudioStream" id=6]
+[ext_resource path="res://sfk/Boss Death.wav" type="AudioStream" id=7]
+[ext_resource path="res://animations/bossHURT.tres" type="Animation" id=8]
+[ext_resource path="res://sfk/impact.wav" type="AudioStream" id=9]
+[ext_resource path="res://tres/Flash.tres" type="Material" id=10]
+[ext_resource path="res://textures/forcefield.png" type="Texture" id=11]
+[ext_resource path="res://tres/forcefield.tres" type="Material" id=12]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 26.5, 67 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 20, 6.5 )
+
+[sub_resource type="CircleShape2D" id=13]
+radius = 394.005
+
+[sub_resource type="Gradient" id=19]
+interpolation_mode = 2
+offsets = PoolRealArray( 0, 0.431193, 1 )
+colors = PoolColorArray( 0.608343, 0.995117, 0, 1, 1, 0.662109, 0, 1, 1, 1, 1, 0.235294 )
+
+[sub_resource type="Animation" id=18]
+resource_name = "Dying"
+length = 0.6
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Sprite:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.139286, -0.25, 0, 0.25, 0, 0.139286, -0.25, 0, 0.25, 0, 0.139286, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Sprite:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.144916, -0.25, 0, 0.2, 0.516714, 0.102667, -0.25, 0, 0.3, 0.661142, 0.0767828, -0.25, 0, 0.3, 0.971614 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.139286, 0.163667 ) ]
+}
+
+[node name="BOSS" type="KinematicBody2D"]
+collision_layer = 8
+script = ExtResource( 5 )
+
+[node name="holder" type="Position2D" parent="."]
+position = Vector2( -72, 84 )
+
+[node name="Polygon2D" type="Polygon2D" parent="holder"]
+visible = false
+position = Vector2( 38, 58 )
+z_index = 1
+color = Color( 1, 0, 0.960784, 1 )
+polygon = PoolVector2Array( -37, -63, -32, -59, -36, -53, -42, -57 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 10 )
+scale = Vector2( 0.139286, 0.163667 )
+frames = SubResource( 10 )
+frame = 3
+playing = true
+
+[node name="forcefield" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.545098 )
+material = ExtResource( 12 )
+scale = Vector2( 0.139286, 0.163667 )
+frames = SubResource( 10 )
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -14, 36 )
+shape = SubResource( 11 )
+
+[node name="HurtMe" type="Area2D" parent="."]
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtMe"]
+modulate = Color( 0.00784314, 0, 1, 1 )
+position = Vector2( -27, -39 )
+shape = SubResource( 12 )
+
+[node name="TargetRange" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetRange"]
+modulate = Color( 0.219608, 1, 0, 0.223529 )
+position = Vector2( -16, 16 )
+shape = SubResource( 13 )
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="Invincible" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="Destory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Die" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="BOOM" type="CPUParticles2D" parent="."]
+position = Vector2( -11, 21 )
+emitting = false
+amount = 200
+one_shot = true
+speed_scale = 1.15
+explosiveness = 0.55
+randomness = 0.33
+spread = 180.0
+initial_velocity = 178.08
+angular_velocity = 197.26
+scale_amount = 14.7
+scale_amount_random = 1.0
+color_ramp = SubResource( 19 )
+hue_variation = 0.11
+hue_variation_random = 0.56
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Dying = SubResource( 18 )
+anims/HURT = ExtResource( 8 )
+anims/RESET = SubResource( 17 )
+
+[node name="hurtSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="arrg" type="AudioStreamPlayer" parent="."]
+
+[node name="forcefield2" type="Polygon2D" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.219608 )
+material = ExtResource( 12 )
+position = Vector2( -5, -6 )
+texture = ExtResource( 11 )
+polygon = PoolVector2Array( -68, -48, -37, -71, 19, -70, 46, -53, 71, 27, 56, 90, 24, 124, -46, 123, -77, 91, -84, 27 )
+uv = PoolVector2Array( -68, -48, -38, -62, 22, -63, 46, -53, 71, 27, 56, 90, 24, 124, -53, 125, -77, 91, -84, 27 )
+
+[connection signal="body_entered" from="HurtMe" to="." method="_on_HurtMe_body_entered"]
+[connection signal="body_entered" from="TargetRange" to="." method="_on_Target_Range_body_entered"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_Cooldown_timeout"]
+[connection signal="timeout" from="Invincible" to="." method="_on_Invincible_timeout"]
+[connection signal="finished" from="Die" to="." method="_on_Die_finished"]
