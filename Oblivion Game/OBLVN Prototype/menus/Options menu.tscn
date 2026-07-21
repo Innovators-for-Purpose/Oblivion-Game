@@ -1,10 +1,9 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://menus/Options menu.gd" type="Script" id=1]
 [ext_resource path="res://menus/oblivion-title.png" type="Texture" id=2]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (49).png" type="Texture" id=3]
 [ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Sprites (Temporary)/avry.png" type="Texture" id=5]
 
 [sub_resource type="Theme" id=1]
 
@@ -80,58 +79,6 @@ animations = [ {
 "speed": 11.0
 } ]
 
-[sub_resource type="AtlasTexture" id=29]
-atlas = ExtResource( 5 )
-region = Rect2( 5, 0, 73, 105 )
-
-[sub_resource type="AtlasTexture" id=30]
-atlas = ExtResource( 5 )
-region = Rect2( 73, 5, 66, 102 )
-
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 5 )
-region = Rect2( 137, 5, 66, 102 )
-
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 5 )
-region = Rect2( 198, 5, 67, 102 )
-
-[sub_resource type="AtlasTexture" id=33]
-atlas = ExtResource( 5 )
-region = Rect2( 262, 5, 67, 102 )
-
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 5 )
-region = Rect2( 324, 5, 68, 102 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 5 )
-region = Rect2( 6, 107, 73, 102 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 5 )
-region = Rect2( 76, 107, 66, 102 )
-
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 5 )
-region = Rect2( 140, 105, 66, 105 )
-
-[sub_resource type="AtlasTexture" id=38]
-atlas = ExtResource( 5 )
-region = Rect2( 204, 105, 67, 105 )
-
-[sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 5 )
-region = Rect2( 330, 105, 67, 105 )
-
-[sub_resource type="SpriteFrames" id=28]
-animations = [ {
-"frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
-"loop": true,
-"name": "default",
-"speed": 20.0
-} ]
-
 [node name="Start Game" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -166,7 +113,7 @@ visible = false
 position = Vector2( 557.5, 534.5 )
 scale = Vector2( 0.1825, 0.1075 )
 frames = SubResource( 11 )
-frame = 2
+frame = 1
 playing = true
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
