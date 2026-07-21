@@ -1,4 +1,4 @@
-[gd_scene load_steps=141 format=2]
+[gd_scene load_steps=154 format=2]
 
 [ext_resource path="res://textures/cool tiles/Ladder2.png" type="Texture" id=1]
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -760,37 +760,16 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 5105.92, -753.676, 0, 0, 0, 0, 4891.59, -751.668, 0, 0, 0, 0, 4942.67, -887.149, 0, 0, 0, 0, 5251.15, -887.149, 0, 0, 0, 0, 5254.15, -657.334, 0, 0, 0, 0, 5100.92, -656.33, 0, 0, 0, 0, 5100.92, -866.075, 0, 0, 0, 0, 5102.92, -656.33, 0, 0, 0, 0, 5102.92, -864.067, 0, 0, 0, 0, 5107.93, -753.676 )
 }
 
-[sub_resource type="AtlasTexture" id=58]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 2040, 2040 )
+[sub_resource type="RectangleShape2D" id=46]
+extents = Vector2( 10144.4, 10978.6 )
 
-[sub_resource type="AtlasTexture" id=59]
+[sub_resource type="AtlasTexture" id=134]
 atlas = ExtResource( 21 )
-region = Rect2( 2040, 0, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=60]
-atlas = ExtResource( 21 )
-region = Rect2( 4080, 0, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=61]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 2040, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=62]
-atlas = ExtResource( 21 )
-region = Rect2( 2040, 2040, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=63]
-atlas = ExtResource( 21 )
-region = Rect2( 4080, 2040, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=64]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 4080, 2040, 2040 )
+region = Rect2( 0, 0, 3000, 3000 )
 
 [sub_resource type="SpriteFrames" id=57]
 animations = [ {
-"frames": [ SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ) ],
+"frames": [ SubResource( 134 ) ],
 "loop": true,
 "name": "default",
 "speed": 10.0
@@ -1124,7 +1103,6 @@ texture = ExtResource( 38 )
 position = Vector2( 779.209, 211.752 )
 scale = Vector2( 0.131428, 0.110116 )
 frames = SubResource( 123 )
-frame = 5
 playing = true
 
 [node name="Checkpoint2" parent="." instance=ExtResource( 53 )]
@@ -1260,7 +1238,6 @@ position = Vector2( -60.2344, 28.4009 )
 rotation = 1.58291
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform"]
@@ -1277,7 +1254,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 35.0527, -61.2186 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 4
+frame = 5
 playing = true
 flip_v = true
 
@@ -1362,7 +1339,7 @@ position = Vector2( -1815.82, -463.646 )
 
 [node name="bee boss music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 49 )
-volume_db = 7.0
+volume_db = 5.0
 
 [node name="Bee death sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 50 )
@@ -1394,10 +1371,9 @@ position = Vector2( 3546.63, -426 )
 scale = Vector2( 1, 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Moving Platform"]
-position = Vector2( 79.9243, 39 )
-scale = Vector2( 0.314403, 0.335907 )
+position = Vector2( 22.9062, -6.48693 )
+scale = Vector2( 0.0519052, 0.0501457 )
 frames = SubResource( 57 )
-frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Platform"]
@@ -1448,7 +1424,6 @@ script = ExtResource( 58 )
 position = Vector2( 19.981, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel"]
@@ -1468,7 +1443,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 337.679, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel2"]

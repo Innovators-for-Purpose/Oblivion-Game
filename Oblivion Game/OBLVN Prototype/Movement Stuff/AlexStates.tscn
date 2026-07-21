@@ -50,11 +50,11 @@ region = Rect2( 0, 0, 3000, 3000 )
 atlas = ExtResource( 20 )
 region = Rect2( 0, 0, 3000, 3000 )
 
-[sub_resource type="AtlasTexture" id=77]
+[sub_resource type="AtlasTexture" id=91]
 atlas = ExtResource( 20 )
 region = Rect2( 0, 0, 3000, 3000 )
 
-[sub_resource type="AtlasTexture" id=78]
+[sub_resource type="AtlasTexture" id=92]
 atlas = ExtResource( 19 )
 region = Rect2( 0, 0, 3000, 3000 )
 
@@ -293,7 +293,7 @@ animations = [ {
 "name": "Final Crouch",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 77 ), SubResource( 78 ) ],
+"frames": [ SubResource( 91 ), SubResource( 92 ) ],
 "loop": true,
 "name": "Final Crouch Walk",
 "speed": 5.0
@@ -459,7 +459,7 @@ material = ExtResource( 29 )
 position = Vector2( 11, 19 )
 scale = Vector2( 0.045, 0.0468333 )
 frames = SubResource( 35 )
-animation = "Final Run"
+animation = "Final Crouch Walk"
 frame = 1
 playing = true
 

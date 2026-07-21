@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=2]
+[gd_scene load_steps=110 format=2]
 
 [ext_resource path="res://scenes/levels/textures/cool tiles/Ladder1.png" type="Texture" id=1]
 [ext_resource path="res://scenes/levels/textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -16,7 +16,7 @@
 [ext_resource path="res://Sprites (Temporary)/New Piskel (27).png" type="Texture" id=14]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (31).png" type="Texture" id=15]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (32).png" type="Texture" id=16]
-[ext_resource path="res://scenes/levels/textures/New Piskel (16).png" type="Texture" id=17]
+[ext_resource path="res://New Assets (Summer 2026)/Factory Platform-Caution tape (1).png" type="Texture" id=17]
 [ext_resource path="res://Spikes2.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (34).png" type="Texture" id=19]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (35).png" type="Texture" id=20]
@@ -146,12 +146,10 @@ animations = [ {
 extents = Vector2( 55.375, 15.3752 )
 
 [sub_resource type="AtlasTexture" id=23]
-flags = 4
 atlas = ExtResource( 20 )
 region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="AtlasTexture" id=24]
-flags = 4
 atlas = ExtResource( 20 )
 region = Rect2( 0, 1000, 1000, 1000 )
 
@@ -428,48 +426,24 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 767, 20.25 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=82]
 atlas = ExtResource( 17 )
-region = Rect2( 0, 0, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 17 )
-region = Rect2( 2040, 0, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 17 )
-region = Rect2( 4080, 0, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 17 )
-region = Rect2( 0, 2040, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 17 )
-region = Rect2( 2040, 2040, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 17 )
-region = Rect2( 4080, 2040, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 17 )
-region = Rect2( 0, 4080, 2040, 2040 )
+region = Rect2( 0, 0, 3000, 3000 )
 
 [sub_resource type="SpriteFrames" id=20]
 animations = [ {
-"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"frames": [ SubResource( 82 ) ],
 "loop": true,
 "name": "default",
 "speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 46.25, 13.75 )
+extents = Vector2( 46.125, 13.6875 )
 
 [sub_resource type="Curve2D" id=26]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -312, -1025, 0, 0, 0, 0, -221, -1024, 0, 0, 0, 0, -396, -1026, 0, 0, 0, 0, -312, -1025 )
+"points": PoolVector2Array( 0, 0, 0, 0, -221, -1024, 0, 0, 0, 0, -378, -1024, 0, 0, 0, 0, -221, -1024 )
 }
 
 [sub_resource type="RectangleShape2D" id=72]
@@ -800,7 +774,7 @@ playing = true
 position = Vector2( 645, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="background effects"]
@@ -809,7 +783,6 @@ playing = true
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D40" type="StaticBody2D" parent="background effects"]
@@ -820,7 +793,6 @@ rotation = -1.57079
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D41" type="StaticBody2D" parent="background effects"]
@@ -831,7 +803,7 @@ rotation = -1.57079
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D37" type="StaticBody2D" parent="background effects"]
@@ -841,7 +813,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D38" type="StaticBody2D" parent="background effects"]
@@ -852,6 +824,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D39" type="StaticBody2D" parent="background effects"]
@@ -862,6 +835,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D22" type="StaticBody2D" parent="background effects"]
@@ -870,7 +844,6 @@ playing = true
 position = Vector2( 2029, -1363 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D23" type="StaticBody2D" parent="background effects"]
@@ -879,7 +852,7 @@ playing = true
 position = Vector2( 1898, -1364 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D24" type="StaticBody2D" parent="background effects"]
@@ -888,6 +861,7 @@ playing = true
 position = Vector2( 1757, -1363 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="background effects"]
@@ -898,7 +872,7 @@ rotation = -1.57079
 position = Vector2( 975.422, 579.364 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="background effects"]
@@ -909,6 +883,7 @@ rotation = -1.57079
 position = Vector2( 974.031, 784.798 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D19" type="StaticBody2D" parent="background effects"]
@@ -919,7 +894,6 @@ rotation = -1.57079
 position = Vector2( 940.019, 710.948 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D20" type="StaticBody2D" parent="background effects"]
@@ -930,7 +904,7 @@ rotation = -3.14159
 position = Vector2( -582.996, 932.002 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D21" type="StaticBody2D" parent="background effects"]
@@ -941,7 +915,7 @@ rotation = -3.14159
 position = Vector2( -674.996, 931.004 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="background effects"]
@@ -950,7 +924,6 @@ playing = true
 position = Vector2( -328, -1103 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="background effects"]
@@ -959,7 +932,7 @@ playing = true
 position = Vector2( -222, -1103 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="background effects"]
@@ -969,7 +942,6 @@ position = Vector2( -369, -633 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="Gate" type="StaticBody2D" parent="."]
@@ -1193,10 +1165,9 @@ shape = SubResource( 12 )
 [node name="Platform" type="StaticBody2D" parent="Platforms"]
 
 [node name="Sprite" type="AnimatedSprite" parent="Platforms/Platform"]
-position = Vector2( 134, -830 )
-scale = Vector2( 0.286152, 0.26777 )
+position = Vector2( 83, -867.5 )
+scale = Vector2( 0.052, 0.0456667 )
 frames = SubResource( 20 )
-frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform"]
@@ -1206,36 +1177,34 @@ shape = SubResource( 21 )
 [node name="Platform2" type="StaticBody2D" parent="Platforms"]
 
 [node name="Sprite" type="AnimatedSprite" parent="Platforms/Platform2"]
-position = Vector2( -82, -908 )
-scale = Vector2( 0.286152, 0.26777 )
+position = Vector2( -133, -946 )
+scale = Vector2( 0.0513012, 0.0439023 )
 frames = SubResource( 20 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform2"]
-position = Vector2( -133, -940 )
+position = Vector2( -133, -939.312 )
 shape = SubResource( 21 )
 
 [node name="Platform3" type="RigidBody2D" parent="Platforms"]
-position = Vector2( -312, -1025 )
+position = Vector2( -221, -1024 )
 mode = 3
 
 [node name="Sprite" type="AnimatedSprite" parent="Platforms/Platform3"]
-position = Vector2( 51, 29 )
-scale = Vector2( 0.286152, 0.26777 )
+position = Vector2( -0.500006, -6.99999 )
+scale = Vector2( 0.0523333, 0.0426667 )
 frames = SubResource( 20 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform3"]
-position = Vector2( 0, -1 )
+position = Vector2( -0.125, -0.625 )
 shape = SubResource( 21 )
 
 [node name="Path2D" type="Path2D" parent="Platforms"]
 curve = SubResource( 26 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Platforms/Path2D"]
-position = Vector2( -312, -1025 )
+position = Vector2( -221, -1024 )
 rotate = false
 script = ExtResource( 22 )
 
@@ -1366,6 +1335,7 @@ script = ExtResource( 32 )
 position = Vector2( 759, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres2"]
@@ -1379,6 +1349,7 @@ script = ExtResource( 32 )
 position = Vector2( 1211, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres3"]
@@ -1392,6 +1363,7 @@ script = ExtResource( 32 )
 position = Vector2( 1387, -1205 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres4"]
@@ -1405,7 +1377,6 @@ script = ExtResource( 32 )
 position = Vector2( 1853, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres5"]
@@ -1464,7 +1435,7 @@ shape = SubResource( 70 )
 script = ExtResource( 37 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deathtrap5"]
-position = Vector2( 2748, 165 )
+position = Vector2( 2320, 165 )
 shape = SubResource( 70 )
 
 [node name="SwitchSFX" type="AudioStreamPlayer2D" parent="."]
