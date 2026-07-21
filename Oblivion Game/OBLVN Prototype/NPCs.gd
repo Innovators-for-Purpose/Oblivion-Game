@@ -41,7 +41,7 @@ func _input(event):
 				dialogue.connect("timeline_end", self, "unpause")
 				add_child(dialogue)
 			else:
-				var dialogue = Dialogic.start("short dialogue 1")
+				var dialogue = Dialogic.start("timeline-test.json")
 				dialogue.pause_mode = Node.PAUSE_MODE_PROCESS
 				dialogue.connect("timeline_end", self, "unpause")
 				add_child(dialogue)
