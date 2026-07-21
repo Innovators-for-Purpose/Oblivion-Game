@@ -1124,7 +1124,7 @@ texture = ExtResource( 38 )
 position = Vector2( 779.209, 211.752 )
 scale = Vector2( 0.131428, 0.110116 )
 frames = SubResource( 123 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="Checkpoint2" parent="." instance=ExtResource( 53 )]
@@ -1260,7 +1260,7 @@ position = Vector2( -60.2344, 28.4009 )
 rotation = 1.58291
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform"]
@@ -1277,7 +1277,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 35.0527, -61.2186 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 3
+frame = 4
 playing = true
 flip_v = true
 
@@ -1579,6 +1579,7 @@ remote_path = NodePath("../../../Boss Platform")
 [node name="BOSS" parent="." instance=ExtResource( 22 )]
 position = Vector2( 5105.74, -753.674 )
 scale = Vector2( 0.998448, 0.99645 )
+boss_gate = NodePath("../Boss Gate")
 stinger = ExtResource( 23 )
 
 [connection signal="animation_finished" from="Gate/AnimatedSprite" to="Gate" method="_on_AnimatedSprite_animation_finished"]
