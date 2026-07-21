@@ -11,7 +11,7 @@ func _process(delta):
 	set_offset(get_offset() + speed * delta * direction)
 
 	var isLeft = velocity.x < 0
-	anim.flip_h = isLeft
+a	anim.flip_h = isLeft
 
 
 	if direction == 1:
