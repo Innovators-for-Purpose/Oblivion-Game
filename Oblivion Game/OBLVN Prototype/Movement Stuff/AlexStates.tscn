@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=2]
+[gd_scene load_steps=104 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
@@ -378,7 +378,7 @@ height = 40
 use_hdr = true
 
 [sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 1, 0, 0, 0 )
+bg_color = Color( 1, 0, 0, 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 0, 0, 1 )
@@ -387,24 +387,8 @@ bg_color = Color( 1, 0, 0, 1 )
 ProgressBar/styles/bg = SubResource( 7 )
 ProgressBar/styles/fg = SubResource( 3 )
 
-[sub_resource type="RectangleShape2D" id=91]
-extents = Vector2( 15, 37.5 )
-
-[sub_resource type="Animation" id=92]
-resource_name = "HIT"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("Anim:material:shader_param/flash_value")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
+[sub_resource type="RectangleShape2D" id=96]
+extents = Vector2( 15.5, 34 )
 
 [sub_resource type="Animation" id=93]
 length = 0.001
@@ -459,8 +443,8 @@ material = ExtResource( 29 )
 position = Vector2( 11, 19 )
 scale = Vector2( 0.045, 0.0468333 )
 frames = SubResource( 35 )
-animation = "Final Crouch Walk"
-frame = 1
+animation = "Final Run"
+frame = 3
 playing = true
 
 [node name="Tall" type="CollisionShape2D" parent="."]
@@ -556,13 +540,12 @@ collision_mask = 8
 
 [node name="hurtbox" type="CollisionShape2D" parent="Area2D"]
 modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 11, 19.5 )
-shape = SubResource( 91 )
+position = Vector2( 11.5, 20 )
+shape = SubResource( 96 )
 
 [node name="Inventory" parent="." instance=ExtResource( 28 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/HIT = SubResource( 92 )
 anims/RESET = SubResource( 93 )
 anims/invincible = SubResource( 94 )
 

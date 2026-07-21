@@ -65,6 +65,9 @@ func _on_Area2D_area_entered(area):
 	if "Spikes" in area.get_parent().name:
 		state = States.DAMAGE
 		dp = 10
+	if "Acid" in area.get_parent().name:
+		state = States.DAMAGE
+		dp = 15
 	if "BOBM" in area.get_parent().name:
 		state = States.DAMAGE
 		dp = 100000000000000
@@ -219,9 +222,9 @@ func _physics_process(_delta):
 			
 			if Input.is_action_pressed("left"): #FLOOR code
 				anim.flip_h = true
-				standbox.position.x = 10
-				crouchbox.position.x = 10
-				LadderDetect.position.x = 10
+#				standbox.position.x = 0
+#				crouchbox.position.x = 0
+#				LadderDetect.position.x = 0
 				if Input.is_action_pressed("run"):
 					velocity.x = -RUN_SPEED
 					anim.play("Final Run")
@@ -233,9 +236,9 @@ func _physics_process(_delta):
 					anim.play("Final Run")
 			elif Input.is_action_pressed("right"):
 				anim.flip_h = false
-				standbox.position.x = -10
-				crouchbox.position.x = -10
-				LadderDetect.position.x = -10
+#				standbox.position.x = 0
+#				crouchbox.position.x = 0
+#				LadderDetect.position.x = 0
 				if Input.is_action_pressed("run"):
 					velocity.x = RUN_SPEED
 					anim.play("Final Run")

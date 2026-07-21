@@ -1,4 +1,4 @@
-[gd_scene load_steps=154 format=2]
+[gd_scene load_steps=135 format=2]
 
 [ext_resource path="res://textures/cool tiles/Ladder2.png" type="Texture" id=1]
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -20,7 +20,7 @@
 [ext_resource path="res://Camera.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Music and SFX/Song (1).mp3" type="AudioStream" id=19]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (15).png" type="Texture" id=20]
-[ext_resource path="res://scenes/levels/textures/New Piskel (16).png" type="Texture" id=21]
+[ext_resource path="res://New Assets (Summer 2026)/Factory Platform-Caution tape (1).png" type="Texture" id=21]
 [ext_resource path="res://scenes/Boss1NewScript.tscn" type="PackedScene" id=22]
 [ext_resource path="res://JJS_merge/Stinger.tscn" type="PackedScene" id=23]
 [ext_resource path="res://scenes/levels/PathFollow4D.gd" type="Script" id=26]
@@ -760,9 +760,6 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 5105.92, -753.676, 0, 0, 0, 0, 4891.59, -751.668, 0, 0, 0, 0, 4942.67, -887.149, 0, 0, 0, 0, 5251.15, -887.149, 0, 0, 0, 0, 5254.15, -657.334, 0, 0, 0, 0, 5100.92, -656.33, 0, 0, 0, 0, 5100.92, -866.075, 0, 0, 0, 0, 5102.92, -656.33, 0, 0, 0, 0, 5102.92, -864.067, 0, 0, 0, 0, 5107.93, -753.676 )
 }
 
-[sub_resource type="RectangleShape2D" id=46]
-extents = Vector2( 10144.4, 10978.6 )
-
 [sub_resource type="AtlasTexture" id=134]
 atlas = ExtResource( 21 )
 region = Rect2( 0, 0, 3000, 3000 )
@@ -1103,6 +1100,7 @@ texture = ExtResource( 38 )
 position = Vector2( 779.209, 211.752 )
 scale = Vector2( 0.131428, 0.110116 )
 frames = SubResource( 123 )
+frame = 1
 playing = true
 
 [node name="Checkpoint2" parent="." instance=ExtResource( 53 )]
@@ -1238,6 +1236,7 @@ position = Vector2( -60.2344, 28.4009 )
 rotation = 1.58291
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform"]
@@ -1254,7 +1253,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 35.0527, -61.2186 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 5
 playing = true
 flip_v = true
 
@@ -1424,6 +1422,7 @@ script = ExtResource( 58 )
 position = Vector2( 19.981, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel"]
@@ -1443,6 +1442,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 337.679, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel2"]

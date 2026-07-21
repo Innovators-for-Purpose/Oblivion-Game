@@ -740,68 +740,69 @@ color = Color( 0.243137, 1, 0, 1 )
 position = Vector2( -950, 78 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
+frame = 6
 playing = true
 
 [node name="AnimatedSprite13" type="AnimatedSprite" parent="Acid/AcidDeath"]
 position = Vector2( -132, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
+frame = 6
 playing = true
 
 [node name="AnimatedSprite14" type="AnimatedSprite" parent="Acid/AcidDeath"]
 position = Vector2( 686, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="AnimatedSprite15" type="AnimatedSprite" parent="Acid/AcidDeath"]
 position = Vector2( 1504, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 6
+frame = 4
 playing = true
 
 [node name="AnimatedSprite16" type="AnimatedSprite" parent="Acid/AcidDeath"]
 position = Vector2( 2320, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 6
+frame = 4
 playing = true
 
 [node name="AnimatedSprite17" type="AnimatedSprite" parent="Acid/AcidDeath"]
 position = Vector2( 3138, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 5
+frame = 3
 playing = true
 
 [node name="AnimatedSprite18" type="AnimatedSprite" parent="Acid/AcidDeath"]
 position = Vector2( 3956, 78 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 5
+frame = 3
 playing = true
 
 [node name="AnimatedSprite19" type="AnimatedSprite" parent="Acid/AcidDeath"]
 position = Vector2( 4774, 76 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="AnimatedSprite20" type="AnimatedSprite" parent="Acid/AcidDeath"]
 position = Vector2( 5591, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="AnimatedSprite21" type="AnimatedSprite" parent="Acid/AcidDeath"]
 position = Vector2( 6409, 76 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Acid/AcidDeath"]
@@ -809,22 +810,22 @@ position = Vector2( 2998.38, 171 )
 shape = SubResource( 7 )
 
 [node name="Acid3" parent="Acid" instance=ExtResource( 19 )]
-position = Vector2( -2364, -511 )
+position = Vector2( -2364, -513 )
 
 [node name="Acid2" parent="Acid" instance=ExtResource( 19 )]
 position = Vector2( -2494, 80 )
 
 [node name="Acid" parent="Acid" instance=ExtResource( 19 )]
-position = Vector2( 0, 3 )
+position = Vector2( 0, 0 )
 
 [node name="Acid4" parent="Acid" instance=ExtResource( 19 )]
-position = Vector2( -1543, -399 )
+position = Vector2( -1543, -401 )
 
 [node name="Acid5" parent="Acid" instance=ExtResource( 19 )]
-position = Vector2( -3038, -351 )
+position = Vector2( -3039, -352 )
 
 [node name="Acid6" parent="Acid" instance=ExtResource( 19 )]
-position = Vector2( -2814, -351 )
+position = Vector2( -2814, -352 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Acid"]
 position = Vector2( 2356, 80 )
