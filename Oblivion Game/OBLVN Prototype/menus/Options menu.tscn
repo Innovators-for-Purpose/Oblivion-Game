@@ -166,12 +166,6 @@ visible = false
 position = Vector2( 557.5, 534.5 )
 scale = Vector2( 0.1825, 0.1075 )
 frames = SubResource( 11 )
-frame = 1
-playing = true
-
-[node name="Sonic" type="AnimatedSprite" parent="."]
-position = Vector2( 94, 171 )
-frames = SubResource( 28 )
 frame = 2
 playing = true
 
