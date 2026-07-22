@@ -1,0 +1,132 @@
+{
+	"events": [
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 0.5,
+			"file": "res://Dialogue Assets/monume-cyberpunk-547930.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Look who decided to show up. Took your time, huh?"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm precisely on time, actually."
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Early is on time and on time is late, little bro."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I should have left you in O.B.L.I.V.I.O.N.'s prison..."
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You wouldn't. Who else is gonna tuck you in goodnight and check under your bed for monsters?"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh please. You're the one who still uses a nightlight."
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "At least I-"
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Can you two stop bickering?! You have a mission, Alex."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Speaking of, can you tell me exactly what I'm doing here?"
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We need access to the servers in this building to find out where they're keeping the other agents. But it won't be easy.\nThe building is hard to navigate. It's, how should I put it... structurally unsound."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What does that even mean?"
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Let's just say [b]you'll be using a lot of your grappling hook[/b]."
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There will also be many guards, but they can be easily [b]stunned with your lazer gun[/b].\nIn any case, we believe the server room is guarded by some sort of advanced robot controlled by O.B.L.I.V.I.O.N. itself.\nWhen you enter its room, it'll instantly know you're trespassing, at which point it will begin to attack."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What kind of robot? And what kinds of attacks?"
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We don't know, but we know that [b]it's immune to the stun gun[/b] and that [b]its weakpoint is its head[/b].\nIt's not a lot to go on, but we need you to do it. I need to stay here to get you into that room, and Avery-"
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I gotta stay behind because, somehow, after missing ONE WEEK of work, I'm \"too injured\" to run missions."
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I basically carried you here!"
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...Whatever!\nAnyways, you got this, Alex! Whatever that thing is, I know you can handle it."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thanks, Avery. I'll see you both soon."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1784729438.json",
+		"name": "Game1"
+	}
+}

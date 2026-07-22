@@ -1,0 +1,21 @@
+{
+	"color": "#ff73ff3a",
+	"description": "",
+	"display_name": "[ Alex ]",
+	"display_name_bool": true,
+	"id": "character-1784729102.json",
+	"mirror_portraits": false,
+	"name": "Alex",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1784729804.cfg"
+}

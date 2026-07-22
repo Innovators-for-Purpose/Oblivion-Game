@@ -1,0 +1,21 @@
+{
+	"color": "#ff73ff3a",
+	"description": "",
+	"display_name": "[ Avery ]",
+	"display_name_bool": true,
+	"id": "character-1784729646.json",
+	"mirror_portraits": false,
+	"name": "Avery",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1784730530.cfg"
+}

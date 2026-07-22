@@ -1,8 +1,7 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
-[ext_resource path="res://Fonts/static/SUSEMono-SemiBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Anonymous_Pro/AnonymousPro-Bold.ttf" type="DynamicFontData" id=1]
 
 [resource]
 size = 30
-outline_color = Color( 0, 0, 0, 0.870588 )
 font_data = ExtResource( 1 )

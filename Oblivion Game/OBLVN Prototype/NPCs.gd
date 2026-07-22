@@ -36,12 +36,12 @@ func _input(event):
 			yield(get_tree().create_timer(tween_dur), "timeout") #DO NOT TOUCH THIS UNLESS YOU WANT THE ZOOM TO BREAK
 			get_tree().paused = true
 			if happened:
-				var dialogue = Dialogic.start("Game Dialogue 2")
+				var dialogue = Dialogic.start("Game2")
 				dialogue.pause_mode = Node.PAUSE_MODE_PROCESS
 				dialogue.connect("timeline_end", self, "unpause")
 				add_child(dialogue)
 			else:
-				var dialogue = Dialogic.start("timeline-test.json")
+				var dialogue = Dialogic.start("Game1")
 				dialogue.pause_mode = Node.PAUSE_MODE_PROCESS
 				dialogue.connect("timeline_end", self, "unpause")
 				add_child(dialogue)

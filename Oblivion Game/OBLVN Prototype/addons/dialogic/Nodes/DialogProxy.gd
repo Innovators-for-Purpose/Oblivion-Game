@@ -56,9 +56,3 @@ signal dialogic_signal(value)
 signal letter_displayed(lastLetter)
 signal auto_advance_toggled(toggleValue)
 signal portrait_changed(portrait_path)
-
-
-func _on_Dialog_dialogic_signal(EndDialogue):
-	print("here")
-	if EndDialogue:
-		get_tree().paused = false

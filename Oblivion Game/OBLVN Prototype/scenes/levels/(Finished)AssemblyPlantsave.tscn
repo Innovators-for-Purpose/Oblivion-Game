@@ -961,7 +961,7 @@ scale = Vector2( 0.998448, 0.99645 )
 script = ExtResource( 54 )
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 1138.77, 251.894 )
+position = Vector2( 1050, 350 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1682,7 +1682,7 @@ remote_path = NodePath("../../../Boss Platform")
 [node name="Node2D" parent="." instance=ExtResource( 57 )]
 
 [node name="NPCs" parent="." instance=ExtResource( 67 )]
-position = Vector2( 950.475, 329.169 )
+position = Vector2( 166.258, 185.659 )
 scale = Vector2( 2.6, 2.6 )
 
 [connection signal="animation_finished" from="Gate/AnimatedSprite" to="Gate" method="_on_AnimatedSprite_animation_finished"]

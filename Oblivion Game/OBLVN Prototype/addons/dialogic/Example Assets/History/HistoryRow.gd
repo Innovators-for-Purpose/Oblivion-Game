@@ -9,7 +9,7 @@ var AudioButton
 var TextLabel
 onready var TextContainer = $HBoxContainer
 onready var ColorRectElement = $ColorRect
-onready var TextureRectElement = $ColorRect
+onready var TextureRectElement = $TextureRect
 
 """
 	Example of a HistoryRow. Every time dialog is logged, a new row is created.
@@ -85,7 +85,7 @@ func load_theme(theme: ConfigFile):
 	TextContainer.set('margin_bottom', text_margin.y * -1)
 
 	# Backgrounds
-#	TextureRectElement.texture = DialogicUtil.path_fixer_load(theme.get_value('background','image', "res://addons/dialogic/Example Assets/backgrounds/background-2.png"))
+	TextureRectElement.texture = DialogicUtil.path_fixer_load(theme.get_value('background','image', "res://addons/dialogic/Example Assets/backgrounds/background-2.png"))
 	ColorRectElement.color = Color(theme.get_value('background','color', "#ff000000"))
 
 	if theme.get_value('background', 'modulation', false):

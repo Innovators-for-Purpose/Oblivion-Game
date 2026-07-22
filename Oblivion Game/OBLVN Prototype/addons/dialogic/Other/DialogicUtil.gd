@@ -1,7 +1,6 @@
 tool
 class_name DialogicUtil
 
-
 ## This class is used by the DialogicEditor
 ## For example by the Editors (Timeline, Character, Theme), the MasterTree and the EventParts
 
@@ -59,7 +58,6 @@ static func get_character(character_id):
 
 static func get_timeline_list() -> Array:
 	var timelines: Array = []
-	
 	for file in DialogicResources.listdir(DialogicResources.get_path('TIMELINE_DIR')):
 		if '.json' in file: # TODO check for real .json because if .json is in the middle of the sentence it still thinks it is a timeline
 			var data = DialogicResources.get_timeline_json(file)
@@ -617,8 +615,8 @@ static func path_fixer_load(path):
 			return load('res://addons/dialogic/Example Assets/Fonts/GlossaryFont.tres')
 		'res://addons/dialogic/Images/background/background-1.png':
 			return load('res://addons/dialogic/Example Assets/backgrounds/background-1.png')
-#		'res://addons/dialogic/Images/background/background-2.png':
-#			return load('res://addons/dialogic/Example Assets/backgrounds/background-2.png')
+		'res://addons/dialogic/Images/background/background-2.png':
+			return load('res://addons/dialogic/Example Assets/backgrounds/background-2.png')
 		'res://addons/dialogic/Images/next-indicator.png':
 			return load('res://addons/dialogic/Example Assets/next-indicator/next-indicator.png')
 
@@ -820,22 +818,6 @@ static func get_flat_folders_list(include_folders: bool = true) -> Dictionary:
 	var theme_list = get_theme_list()
 	
 	
-	
-	
-	var timelines_data = get_timeline_dict()
-
-	for file in DialogicResources.listdir(DialogicResources.get_path('TIMELINE_DIR')):
-		if '.json' in file:
-			# Use .get() to avoid crashing if the file is missing from the dictionary
-			var file_metadata = timelines_data.get(file, null)
-			
-			# Only process if valid metadata was found
-			if file_metadata != null:
-				timeline_folder_breakdown[file] = file_metadata
-	
-	
-	
-	
 	# populate the data from the resources
 	for timeline in timeline_list:
 		if timeline['file'] in structure['Timelines']:
@@ -877,18 +859,12 @@ static func get_flat_folders_list(include_folders: bool = true) -> Dictionary:
 	# After that we put them in the order we need to make the folder paths easiest to use
 	for timeline in structure['Timelines'].keys():
 		if ".json" in timeline:
-#			timeline_folder_breakdown[structure['Timelines'][timeline]] = structure['Timelines'][timeline]
-#			timeline_folder_breakdown[structure['Timelines'][timeline]['path']] = structure['Timelines'][timeline]
-#			timeline_folder_breakdown[timeline] = get_timeline_dict()[timeline]
-			if timelines_data.has(timeline):
-				timeline_folder_breakdown[timeline] = timelines_data[timeline]
-
+			timeline_folder_breakdown[structure['Timelines'][timeline]['path']] = structure['Timelines'][timeline]
 		elif include_folders:
 			timeline_folder_breakdown[timeline] = structure['Timelines'][timeline]
 
 	for character in structure['Characters'].keys():
 		if ".json" in character:
-#			character_folder_breakdown[structure['Characters'][character]]= structure['Characters'][character]
 			character_folder_breakdown[structure['Characters'][character]['path']] = structure['Characters'][character]
 		elif include_folders:
 			character_folder_breakdown[character] = structure['Characters'][character]
