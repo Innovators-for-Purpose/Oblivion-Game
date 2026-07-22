@@ -1,7 +1,10 @@
 extends KinematicBody2D
 
-enum States {FLOOR = 1, AIR, GRAPPLE, LADDER}
+enum States {FLOOR = 1, AIR, GRAPPLE, LADDER, DAMAGE}
 var state = States.FLOOR
+
+var hit = false
+var dp
 
 const GRAVITY = 50
 const WALK_SPEED = 250
@@ -13,11 +16,12 @@ const CLIMB_STRENGTH = -350
 const GRAPPLE_RADIUS = 60
 const MAX = 45
 const MIN = 0
+export var HEALTH = 100
 
 onready var anim = $Anim
 onready var crouchbox = $Short
 onready var standbox = $Tall
-onready var hpBar = $Sizing/hpBar
+onready var hpBar = $CanvasLayer/Sizing/hpBar
 onready var LadderDetect = $LadderDetect
 onready var Chain = $Chain
 onready var CoyoteTime = $Coyote
@@ -37,7 +41,7 @@ var graple = 0
 var location = Vector2(0,0)
 var array_grap = [PoolVector2Array()]
 var pool_array = array_grap[0]
-var player = self.global_position
+#var player = self.global_position
 var stop = 1
 
 
@@ -50,12 +54,31 @@ func _ready():
 	
 	grap = get_tree().get_nodes_in_group("grapple")
 	
+	hpBar.value = HEALTH
+	
 	
 func _on_Area2D_area_entered(area):
 
 	if area.is_in_group("grapple"):
 		stop = 1
 
+	if "Spikes" in area.get_parent().name:
+		state = States.DAMAGE
+		dp = 10
+	if "Acid" in area.get_parent().name:
+		state = States.DAMAGE
+		dp = 15
+	if "BOBM" in area.get_parent().name:
+		state = States.DAMAGE
+		dp = 100000000000000
+	if "AttackPlayer" in area.name:
+		state = States.DAMAGE
+		dp = 30
+	if "Heal" in area.get_parent().name:
+		HEALTH += 20
+	if "stinger" in area.get_parent().name:
+		state = States.DAMAGE
+		dp = 30
 #	var target = null
 #	if area.has_method("enable_cross"):
 #		target = area
@@ -68,7 +91,8 @@ func _on_Area2D_area_exited(area):
 		
 		stop = 2
 		can_grapple = false
-		
+	if "Spike" in area.name:
+		state = States.FLOOR
 #	var target = null
 #	if area.has_method("enable_cross"):
 #		target = area
@@ -98,10 +122,11 @@ func get_closest_grappable():#this should be pretty obvious
 	
 
 
+# warning-ignore:unused_argument
 func _input(event: InputEvent):#the commented code ether makes grapple mouse controled 
 	#or makes the grapple need to have the grapple hook out
 #	$GrappleLineDetect.set_cast_to(get_tree().call_group("grapple","location"))
-	if (Input.is_action_just_pressed("grapple") and can_grapple == true):
+	if (Input.is_action_just_pressed("grapple") and can_grapple == true and !get_node("stun_gun")):
 		
 #	and event.pressed
 #	and can_grapple
@@ -121,7 +146,7 @@ func _input(event: InputEvent):#the commented code ether makes grapple mouse con
 		
 		$Chain.shoot(location - self.global_position)
 #		print("location = ",location)
-#		print ("hook position = ", hook_position)
+		print ("hook position = ", hook_position)
 #		print ("mouse position = ", mouse)
 		return true
 #	elif not get_tree().get_nodes_in_group("grapple") and CollisionShape2D:
@@ -189,9 +214,9 @@ func _physics_process(_delta):
 			
 			if Input.is_action_pressed("left"): #FLOOR code
 				anim.flip_h = true
-#				standbox.position.x = 10
-#				crouchbox.position.x = 10
-#				LadderDetect.position.x = 10
+#				standbox.position.x = 0
+#				crouchbox.position.x = 0
+#				LadderDetect.position.x = 0
 				if Input.is_action_pressed("run"):
 					velocity.x = -RUN_SPEED
 					anim.play("Final Run")
@@ -203,9 +228,9 @@ func _physics_process(_delta):
 					anim.play("Final Run")
 			elif Input.is_action_pressed("right"):
 				anim.flip_h = false
-#				standbox.position.x = -10
-#				crouchbox.position.x = -10
-#				LadderDetect.position.x = -10
+#				standbox.position.x = 0
+#				crouchbox.position.x = 0
+#				LadderDetect.position.x = 0
 				if Input.is_action_pressed("run"):
 					velocity.x = RUN_SPEED
 					anim.play("Final Run")
@@ -225,6 +250,7 @@ func _physics_process(_delta):
 				if Input.is_action_just_released("crouch"):
 					$Tall.disabled = false
 					$Short.disabled = true
+# warning-ignore:return_value_discarded
 			move_and_slide(velocity, Vector2.UP)
 		States.AIR:
 			#State switching
@@ -273,6 +299,7 @@ func _physics_process(_delta):
 				can_djump = false
 				velocity.y = JUMP_STRENGTH
 			velocity.x *= .85
+# warning-ignore:return_value_discarded
 			move_and_slide(velocity, Vector2.UP)
 		States.GRAPPLE:
 			if not $Chain.hooked:
@@ -317,8 +344,30 @@ func _physics_process(_delta):
 				velocity.x = CROUCH_SPEED
 			else:
 				velocity.x = lerp(velocity.x,0,0.3)
-			
 			velocity = move_and_slide(velocity, Vector2.UP)
+		States.DAMAGE:
+			if !hit:
+				$AnimationPlayer.play("HIT")
+				HEALTH -= dp
+				velocity.y = -1000
+				state = States.AIR
+				hit = true
+				var timer = get_tree().create_timer(2)
+				timer.connect("timeout", self, "_on_timeout")
+			else: 
+				state = States.FLOOR
+			
+	if HEALTH <= 0:
+# warning-ignore:return_value_discarded
+		get_tree().change_scene("res://JJS_merge/GAMEOVER.tscn")
+	hpBar.value = HEALTH
+	if hit:
+		$AnimationPlayer.play("invincible")
+
+func _on_timeout():
+	print("hit the timeout!")
+	hit = false
+	$AnimationPlayer.play("RESET")
 
 func _on_LadderDetect_body_entered(_body):
 	on_ladder = true

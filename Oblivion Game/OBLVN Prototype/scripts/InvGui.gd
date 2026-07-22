@@ -7,7 +7,7 @@ onready var clrrect = $ColorRect
 export var menu_size = 0.15
 export var lerp_speed = 0.2
 
-onready var player = get_node("../../AlexStates")
+var player
 
 var _popped_up = false
 var up_anchor = Vector2(1-menu_size,1)
@@ -16,6 +16,7 @@ var _target_anchor = down_anchor
 var hb_tggle = false
 
 func _ready():
+	player = get_parent().get_parent()
 	hide()
 	for item_slot in get_tree().get_nodes_in_group("item_slot"):
 		var index = item_slot.get_index()

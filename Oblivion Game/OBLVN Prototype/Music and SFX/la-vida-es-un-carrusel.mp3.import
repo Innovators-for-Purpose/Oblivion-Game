@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/la-vida-es-un-carrusel.mp3-f9a37b65e8b2cba544924f576ddd878e.mp3str"
+
+[deps]
+
+source_file="res://Music and SFX/la-vida-es-un-carrusel.mp3"
+dest_files=[ "res://.import/la-vida-es-un-carrusel.mp3-f9a37b65e8b2cba544924f576ddd878e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
