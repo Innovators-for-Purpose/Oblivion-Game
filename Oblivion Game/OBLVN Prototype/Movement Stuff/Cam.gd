@@ -2,6 +2,7 @@ extends Camera2D
 
 export var zoom_speed: float = 4.0
 var target_zoom: Vector2 = Vector2(1, 1)
+var event_zoom = Vector2(0.5, 0.5)
 
 func _ready():
 	current = true

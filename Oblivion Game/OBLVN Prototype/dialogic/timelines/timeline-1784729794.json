@@ -1,0 +1,87 @@
+{
+	"events": [
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm Alex."
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm Avery."
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "And I'm Theo."
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm Avery."
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "And I'm Theo."
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm Avery."
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "And I'm Theo."
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm Avery."
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "And I'm Theo."
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm Avery."
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "And I'm Theo."
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm Avery."
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "And I'm Theo."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1784729794.json",
+		"name": "Test"
+	}
+}
