@@ -99,7 +99,4 @@ position = Vector2( 0, -0.5 )
 scale = Vector2( 0.0136445, 0.0133216 )
 frames = SubResource( 61 )
 animation = "default2"
-frame = 2
 playing = true
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

@@ -55,7 +55,9 @@ func resume():
 func _on_restart_pressed():
 	get_tree().paused = false
 #	Global.reset_checkpoint()
+# warning-ignore:return_value_discarded
 	get_tree().reload_current_scene()
 func _on_quit_pressed():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene ("res://menus/LevelSelect.tscn")
 	get_tree().paused = false

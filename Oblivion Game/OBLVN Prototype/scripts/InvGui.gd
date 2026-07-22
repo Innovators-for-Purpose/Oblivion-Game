@@ -47,9 +47,13 @@ func select_item(index):
 	Inventory.set_selected(index)
 
 
+# warning-ignore:unused_argument
 func _on_Area2D_area_entered(area):
 	pass # Replace with function body.
 
 
+# warning-ignore:unused_argument
+# warning-ignore:unused_argument
+# warning-ignore:unused_argument
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	pass # Replace with function body.
