@@ -53,9 +53,10 @@ func change_item(index, item: Dictionary, parent: Node):
 
 	if item_key == "magnet":
 		var itemsprite = Sprite.new()
-		var area2d = load("res://scenes/Area2D.tscn").instance()
+		var area2d = load("res://scenes/MagnetArea.tscn").instance()
 #		area2d.set_script(script)
 		itemsprite.name = item_key
+		itemsprite.texture = load("res://textures/"+item.icon)
 		itemsprite.add_child(area2d)
 		parent.add_child(itemsprite)
 		prev_item = itemsprite

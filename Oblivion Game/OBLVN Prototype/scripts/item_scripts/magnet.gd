@@ -19,7 +19,10 @@ func _input(event):
 #
 #
 func _physics_process(delta):
-	global_position = get_global_mouse_position()
+#	var magnetsprite = get_parent()
+#	magnetsprite.position = get_global_mouse_position()
+	get_parent().z_index = 4
+	get_parent().global_position = get_global_mouse_position()
 	if pull:
 		gravity_point = true
 	else:
