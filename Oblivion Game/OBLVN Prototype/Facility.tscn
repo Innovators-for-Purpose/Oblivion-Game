@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=2]
+[gd_scene load_steps=117 format=2]
 
 [ext_resource path="res://scenes/levels/textures/cool tiles/Ladder1.png" type="Texture" id=1]
 [ext_resource path="res://scenes/levels/textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -31,18 +31,18 @@
 [ext_resource path="res://Sprites (Temporary)/New Piskel (47).png" type="Texture" id=29]
 [ext_resource path="res://PathFollow12D.gd" type="Script" id=30]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (39).png" type="Texture" id=31]
-[ext_resource path="res://DeathSpheres.gd" type="Script" id=32]
-[ext_resource path="res://Are2D.gd" type="Script" id=33]
+[ext_resource path="res://Deathzone 2.gd" type="Script" id=32]
+[ext_resource path="res://deathtrap3.gd" type="Script" id=33]
 [ext_resource path="res://Lazer.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Camera.tscn" type="PackedScene" id=35]
 [ext_resource path="res://DeathSpheres.tscn" type="PackedScene" id=36]
-[ext_resource path="res://death.gd" type="Script" id=37]
+[ext_resource path="res://Deathzone 4.gd" type="Script" id=37]
 [ext_resource path="res://scenes/Finish.tscn" type="PackedScene" id=38]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (46).png" type="Texture" id=39]
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=40]
 [ext_resource path="res://Short Yellow Spring.tscn" type="PackedScene" id=41]
 [ext_resource path="res://Music and SFX/SCD_FM_09.wav" type="AudioStream" id=42]
-[ext_resource path="res://Music and SFX/1-22. Wacky Workbench.mp3" type="AudioStream" id=43]
+[ext_resource path="res://Music and SFX/20. Wacky Workbench Act 2.mp3" type="AudioStream" id=43]
 [ext_resource path="res://Facility.gd" type="Script" id=44]
 [ext_resource path="res://Checkpoint Statue.tscn" type="PackedScene" id=45]
 [ext_resource path="res://Short Yellow Spring(opp).tscn" type="PackedScene" id=46]
@@ -55,6 +55,13 @@
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0004.png" type="Texture" id=53]
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0006.png" type="Texture" id=54]
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0003.png" type="Texture" id=55]
+[ext_resource path="res://JJS_merge/HealingItem.tscn" type="PackedScene" id=56]
+[ext_resource path="res://deathtrap5.gd" type="Script" id=57]
+[ext_resource path="res://Deathzone 5.gd" type="Script" id=58]
+[ext_resource path="res://Deathzone 3.gd" type="Script" id=59]
+[ext_resource path="res://deathtrap4.gd" type="Script" id=60]
+[ext_resource path="res://New Assets (Summer 2026)/tiles1.png" type="Texture" id=61]
+[ext_resource path="res://New Assets (Summer 2026)/tiles2.png" type="Texture" id=62]
 
 [sub_resource type="TileSet" id=31]
 0/name = "New Piskel (38).png 0"
@@ -422,6 +429,34 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 4/shape_one_way_margin = 0.0
 4/shapes = [  ]
 4/z_index = 0
+5/name = "tiles1.png 5"
+5/texture = ExtResource( 61 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 288, 256, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "tiles2.png 6"
+6/texture = ExtResource( 62 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 256, 256, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 767, 20.25 )
@@ -511,7 +546,7 @@ extents = Vector2( 16.75, 17.25 )
 extents = Vector2( 444, 53.375 )
 
 [sub_resource type="RectangleShape2D" id=70]
-extents = Vector2( 283.5, 35 )
+extents = Vector2( 776.75, 35 )
 
 [node name="level" type="Node2D"]
 position = Vector2( -6, 0 )
@@ -773,7 +808,6 @@ playing = true
 position = Vector2( 645, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="background effects"]
@@ -782,6 +816,7 @@ playing = true
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D40" type="StaticBody2D" parent="background effects"]
@@ -792,6 +827,7 @@ rotation = -1.57079
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D41" type="StaticBody2D" parent="background effects"]
@@ -802,7 +838,6 @@ rotation = -1.57079
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D37" type="StaticBody2D" parent="background effects"]
@@ -812,7 +847,6 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D38" type="StaticBody2D" parent="background effects"]
@@ -823,7 +857,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D39" type="StaticBody2D" parent="background effects"]
@@ -834,7 +868,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D22" type="StaticBody2D" parent="background effects"]
@@ -843,6 +877,7 @@ playing = true
 position = Vector2( 2029, -1363 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D23" type="StaticBody2D" parent="background effects"]
@@ -851,7 +886,6 @@ playing = true
 position = Vector2( 1898, -1364 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D24" type="StaticBody2D" parent="background effects"]
@@ -860,7 +894,7 @@ playing = true
 position = Vector2( 1757, -1363 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="background effects"]
@@ -871,7 +905,6 @@ rotation = -1.57079
 position = Vector2( 975.422, 579.364 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="background effects"]
@@ -882,7 +915,7 @@ rotation = -1.57079
 position = Vector2( 974.031, 784.798 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="StaticBody2D19" type="StaticBody2D" parent="background effects"]
@@ -893,6 +926,7 @@ rotation = -1.57079
 position = Vector2( 940.019, 710.948 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D20" type="StaticBody2D" parent="background effects"]
@@ -903,7 +937,6 @@ rotation = -3.14159
 position = Vector2( -582.996, 932.002 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D21" type="StaticBody2D" parent="background effects"]
@@ -914,7 +947,6 @@ rotation = -3.14159
 position = Vector2( -674.996, 931.004 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="background effects"]
@@ -923,6 +955,7 @@ playing = true
 position = Vector2( -328, -1103 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="background effects"]
@@ -931,7 +964,6 @@ playing = true
 position = Vector2( -222, -1103 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="background effects"]
@@ -941,6 +973,7 @@ position = Vector2( -369, -633 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 1
 playing = true
 
 [node name="Gate" type="StaticBody2D" parent="."]
@@ -1313,125 +1346,146 @@ script = ExtResource( 30 )
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D"]
 remote_path = NodePath("../../../Elevator")
 
-[node name="DeathSphere" type="Node2D" parent="."]
+[node name="DeathSpheres" type="Node2D" parent="."]
 
-[node name="DeathSpheres" parent="DeathSphere" instance=ExtResource( 36 )]
+[node name="DeathSpheres" parent="DeathSpheres" instance=ExtResource( 36 )]
 position = Vector2( 1232, 416 )
 
-[node name="DeathSpheres6" parent="DeathSphere" instance=ExtResource( 36 )]
+[node name="DeathSpheres6" parent="DeathSpheres" instance=ExtResource( 36 )]
 position = Vector2( 1423, 416 )
 
-[node name="DeathSpheres7" parent="DeathSphere" instance=ExtResource( 36 )]
+[node name="DeathSpheres7" parent="DeathSpheres" instance=ExtResource( 36 )]
 position = Vector2( 1503, 416 )
 
-[node name="DeathSpheres8" parent="DeathSphere" instance=ExtResource( 36 )]
+[node name="DeathSpheres8" parent="DeathSpheres" instance=ExtResource( 36 )]
 position = Vector2( 1929, 416 )
 
-[node name="DeathSpheres2" type="Area2D" parent="DeathSphere"]
-script = ExtResource( 32 )
+[node name="DeathSpheres2" type="Area2D" parent="DeathSpheres"]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="DeathSphere/DeathSpheres2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="DeathSpheres/DeathSpheres2"]
 position = Vector2( 759, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSpheres/DeathSpheres2"]
 position = Vector2( 771, -1229 )
 shape = SubResource( 68 )
 
-[node name="DeathSpheres3" type="Area2D" parent="DeathSphere"]
-script = ExtResource( 32 )
+[node name="DeathSpheres3" type="Area2D" parent="DeathSpheres"]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="DeathSphere/DeathSpheres3"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="DeathSpheres/DeathSpheres3"]
 position = Vector2( 1211, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSpheres/DeathSpheres3"]
 position = Vector2( 1222, -1229 )
 shape = SubResource( 68 )
 
-[node name="DeathSpheres4" type="Area2D" parent="DeathSphere"]
-script = ExtResource( 32 )
+[node name="DeathSpheres4" type="Area2D" parent="DeathSpheres"]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="DeathSphere/DeathSpheres4"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="DeathSpheres/DeathSpheres4"]
 position = Vector2( 1387, -1205 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSpheres/DeathSpheres4"]
 position = Vector2( 1398, -1232 )
 shape = SubResource( 68 )
 
-[node name="DeathSpheres5" type="Area2D" parent="DeathSphere"]
-script = ExtResource( 32 )
+[node name="DeathSpheres5" type="Area2D" parent="DeathSpheres"]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="DeathSphere/DeathSpheres5"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="DeathSpheres/DeathSpheres5"]
 position = Vector2( 1853, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
 frame = 1
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSpheres/DeathSpheres5"]
 position = Vector2( 1864, -1232 )
 shape = SubResource( 68 )
 
-[node name="DeathSpheres9" parent="DeathSphere" instance=ExtResource( 36 )]
+[node name="DeathSpheres9" parent="DeathSpheres" instance=ExtResource( 36 )]
 position = Vector2( 3584, 208 )
 
-[node name="DeathSpheres10" parent="DeathSphere" instance=ExtResource( 36 )]
+[node name="DeathSpheres10" parent="DeathSpheres" instance=ExtResource( 36 )]
 position = Vector2( 4097, 208 )
 
-[node name="Deathzone 2" type="Area2D" parent="."]
-script = ExtResource( 33 )
+[node name="FallAreas" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone 2"]
+[node name="Deathzone 2" type="Area2D" parent="FallAreas"]
+script = ExtResource( 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallAreas/Deathzone 2"]
 position = Vector2( 1114, -369 )
 shape = SubResource( 69 )
 
-[node name="Deathzone 4" type="Area2D" parent="."]
-script = ExtResource( 33 )
+[node name="Deathzone 4" type="Area2D" parent="FallAreas"]
+script = ExtResource( 37 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone 4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallAreas/Deathzone 4"]
 position = Vector2( 3989, -723 )
 shape = SubResource( 69 )
 
-[node name="Deathzone 5" type="Area2D" parent="."]
-script = ExtResource( 33 )
+[node name="Deathzone 5" type="Area2D" parent="FallAreas"]
+script = ExtResource( 58 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone 5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallAreas/Deathzone 5"]
 position = Vector2( 4427, -726 )
 shape = SubResource( 69 )
 
-[node name="Deathzone 3" type="Area2D" parent="."]
-script = ExtResource( 33 )
+[node name="Deathzone 3" type="Area2D" parent="FallAreas"]
+script = ExtResource( 59 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone 3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallAreas/Deathzone 3"]
 position = Vector2( 5419, -388 )
 shape = SubResource( 69 )
 
-[node name="deathtrap3" type="Area2D" parent="."]
-script = ExtResource( 37 )
+[node name="Deathzone 6" type="Area2D" parent="FallAreas"]
+script = ExtResource( 59 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="deathtrap3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallAreas/Deathzone 6"]
+position = Vector2( 6304, -388 )
+shape = SubResource( 69 )
+
+[node name="Deathzone 7" type="Area2D" parent="FallAreas"]
+position = Vector2( -1775, -2 )
+script = ExtResource( 59 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallAreas/Deathzone 7"]
+position = Vector2( 6304, -388 )
+shape = SubResource( 69 )
+
+[node name="Deathzone 8" type="Area2D" parent="FallAreas"]
+position = Vector2( 875, 0 )
+script = ExtResource( 59 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallAreas/Deathzone 8"]
+position = Vector2( 6304, -388 )
+shape = SubResource( 69 )
+
+[node name="deathtrap3" type="Area2D" parent="FallAreas"]
+script = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallAreas/deathtrap3"]
 position = Vector2( 1802.5, -369 )
 shape = SubResource( 70 )
 
-[node name="deathtrap4" type="Area2D" parent="."]
-script = ExtResource( 37 )
+[node name="deathtrap4" type="Area2D" parent="FallAreas"]
+script = ExtResource( 60 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="deathtrap4"]
-position = Vector2( 2771, 165 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallAreas/deathtrap4"]
+position = Vector2( 3264.25, 165 )
 shape = SubResource( 70 )
 
-[node name="deathtrap5" type="Area2D" parent="."]
-script = ExtResource( 37 )
+[node name="deathtrap5" type="Area2D" parent="FallAreas"]
+script = ExtResource( 57 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="deathtrap5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallAreas/deathtrap5"]
 position = Vector2( 2320, 165 )
 shape = SubResource( 70 )
 
@@ -1440,26 +1494,41 @@ stream = ExtResource( 42 )
 volume_db = 8.0
 pitch_scale = 0.9
 
-[node name="LevelMusic" type="AudioStreamPlayer2D" parent="."]
+[node name="LevelMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 43 )
+volume_db = 3.0
 pitch_scale = 1.01
 autoplay = true
-max_distance = 10000.0
 
 [node name="Node2D" parent="." instance=ExtResource( 48 )]
+
+[node name="HealingItem" parent="." instance=ExtResource( 56 )]
+position = Vector2( -620, -1272 )
+
+[node name="HealingItem2" parent="." instance=ExtResource( 56 )]
+position = Vector2( 2219, -1258 )
+
+[node name="HealingItem3" parent="." instance=ExtResource( 56 )]
+position = Vector2( 3456, -975 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( -402, -59 )
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_DeathZone_body_entered"]
 [connection signal="body_entered" from="Switch" to="Gate" method="_on_Switch_body_entered"]
 [connection signal="body_exited" from="Switch" to="Gate" method="_on_Switch_body_exited"]
 [connection signal="animation_finished" from="Switch/AnimatedSprite" to="Gate" method="_on_AnimatedSprite_animation_finished"]
-[connection signal="body_entered" from="DeathSphere/DeathSpheres2" to="DeathSphere/DeathSpheres2" method="_on_DeathSpheres_body_entered"]
-[connection signal="body_entered" from="DeathSphere/DeathSpheres3" to="DeathSphere/DeathSpheres3" method="_on_DeathSpheres_body_entered"]
-[connection signal="body_entered" from="DeathSphere/DeathSpheres4" to="DeathSphere/DeathSpheres4" method="_on_DeathSpheres_body_entered"]
-[connection signal="body_entered" from="DeathSphere/DeathSpheres5" to="DeathSphere/DeathSpheres5" method="_on_DeathSpheres_body_entered"]
-[connection signal="body_entered" from="Deathzone 2" to="Deathzone 2" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Deathzone 4" to="Deathzone 4" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Deathzone 5" to="Deathzone 5" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Deathzone 3" to="Deathzone 3" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="deathtrap3" to="deathtrap3" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="deathtrap4" to="deathtrap4" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="deathtrap5" to="deathtrap5" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="DeathSpheres/DeathSpheres2" to="DeathSpheres/DeathSpheres2" method="_on_DeathSpheres_body_entered"]
+[connection signal="body_entered" from="DeathSpheres/DeathSpheres3" to="DeathSpheres/DeathSpheres3" method="_on_DeathSpheres_body_entered"]
+[connection signal="body_entered" from="DeathSpheres/DeathSpheres4" to="DeathSpheres/DeathSpheres4" method="_on_DeathSpheres_body_entered"]
+[connection signal="body_entered" from="DeathSpheres/DeathSpheres5" to="DeathSpheres/DeathSpheres5" method="_on_DeathSpheres_body_entered"]
+[connection signal="body_entered" from="FallAreas/Deathzone 2" to="FallAreas/Deathzone 2" method="_on_Deathzone_2_body_entered"]
+[connection signal="body_entered" from="FallAreas/Deathzone 4" to="FallAreas/Deathzone 4" method="_on_Deathzone_4_body_entered"]
+[connection signal="body_entered" from="FallAreas/Deathzone 5" to="FallAreas/Deathzone 5" method="_on_Deathzone_5_body_entered"]
+[connection signal="body_entered" from="FallAreas/Deathzone 3" to="FallAreas/Deathzone 3" method="_on_Deathzone_3_body_entered"]
+[connection signal="body_entered" from="FallAreas/Deathzone 6" to="FallAreas/Deathzone 6" method="_on_Deathzone_3_body_entered"]
+[connection signal="body_entered" from="FallAreas/Deathzone 7" to="FallAreas/Deathzone 7" method="_on_Deathzone_3_body_entered"]
+[connection signal="body_entered" from="FallAreas/Deathzone 8" to="FallAreas/Deathzone 8" method="_on_Deathzone_3_body_entered"]
+[connection signal="body_entered" from="FallAreas/deathtrap3" to="FallAreas/deathtrap3" method="_on_deathtrap3_body_entered"]
+[connection signal="body_entered" from="FallAreas/deathtrap4" to="FallAreas/deathtrap4" method="_on_deathtrap4_body_entered"]
+[connection signal="body_entered" from="FallAreas/deathtrap5" to="FallAreas/deathtrap5" method="_on_deathtrap5_body_entered"]

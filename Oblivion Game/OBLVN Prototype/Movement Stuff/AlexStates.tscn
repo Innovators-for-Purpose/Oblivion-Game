@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=2]
+[gd_scene load_steps=103 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
@@ -377,14 +377,11 @@ width = 210
 height = 40
 use_hdr = true
 
-[sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 1, 0, 0, 1 )
-
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 0, 0, 1 )
 
 [sub_resource type="Theme" id=95]
-ProgressBar/styles/bg = SubResource( 7 )
+ProgressBar/styles/bg = null
 ProgressBar/styles/fg = SubResource( 3 )
 
 [sub_resource type="RectangleShape2D" id=96]

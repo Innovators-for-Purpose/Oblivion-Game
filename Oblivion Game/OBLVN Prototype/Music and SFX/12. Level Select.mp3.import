@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/12. Level Select.mp3-9f8a77ee4829d9fdddf7121e93cff405.mp3str"
+
+[deps]
+
+source_file="res://Music and SFX/12. Level Select.mp3"
+dest_files=[ "res://.import/12. Level Select.mp3-9f8a77ee4829d9fdddf7121e93cff405.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

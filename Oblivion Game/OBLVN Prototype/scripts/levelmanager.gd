@@ -13,7 +13,10 @@ var levels = [
 	"res://Level 7.tscn",
 	"res://Demo End Screen.tscn",
 ]
-var current_level_index = 0
+
+
+
+var current_level_index = 1
 
 func get_current_level():
 	return levels[current_level_index]
@@ -24,4 +27,10 @@ func load_next_level():
 		current_level_index = 0  # or end-game scene
 	get_tree().change_scene(levels[current_level_index])
 	
+func reset_global_position():
+	# Resets the current node's global position to the world center (0,0)
+	$AlexStates.global_position = Vector2(0, 0)
+#	$Position2D.global_position = $AlexStates.global_position
+	
 
+		 
