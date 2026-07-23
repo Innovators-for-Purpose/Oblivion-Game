@@ -4,12 +4,10 @@
 [ext_resource path="res://Sprites (Temporary)/New Piskel (39).png" type="Texture" id=2]
 
 [sub_resource type="AtlasTexture" id=64]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=65]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 2000, 2000, 2000 )
 
@@ -31,6 +29,7 @@ script = ExtResource( 1 )
 position = Vector2( 596, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

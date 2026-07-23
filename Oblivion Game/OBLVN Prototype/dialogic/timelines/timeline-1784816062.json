@@ -1,0 +1,81 @@
+{
+	"events": [
+		{
+			"character": "character-1784816069.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Aleex! You finally found me. Its been a while since your prototype's development"
+		},
+		{
+			"character": "character-1784816069.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm [NodePath:Sprite], but you can call me ICON2."
+		},
+		{
+			"character": "character-1784816069.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This world's getting bigger, but strange things starting showing up."
+		},
+		{
+			"character": "character-1784816069.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Theyre not common bugs either..."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What did you see?"
+		},
+		{
+			"character": "character-1784816069.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I saw some portal that looked weird. I thought it was one of your gimicks til it started spewing things..."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wait... I dont remember creating a portal."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Something's wrong. That portal belongs to a different world"
+		},
+		{
+			"character": "character-1784816069.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No kidding Enstien."
+		},
+		{
+			"character": "character-1784816069.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Be careful not to go in it. Seems like a point of no return"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tell me something I don't know."
+		},
+		{
+			"character": "character-1784816069.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "May God be with you, kid."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1784816062.json",
+		"name": "Secret1"
+	}
+}

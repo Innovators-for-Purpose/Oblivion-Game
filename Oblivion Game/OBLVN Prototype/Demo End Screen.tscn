@@ -7,47 +7,38 @@
 [ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 2000, 0, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 4000, 0, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 2000, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=5]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 2000, 2000, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=6]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 4000, 2000, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=7]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 4000, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=8]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 2000, 4000, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=9]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 4000, 4000, 2000, 2000 )
 
@@ -111,7 +102,7 @@ max_distance = 10000.0
 position = Vector2( 440, 521 )
 scale = Vector2( 0.1805, 0.110125 )
 frames = SubResource( 10 )
-frame = 8
+frame = 1
 playing = true
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

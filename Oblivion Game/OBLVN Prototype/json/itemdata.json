@@ -17,6 +17,12 @@
         "icon": "pixil-frame-0.png",
         "script": "Heal.gd"
     },
+    "magnet": {
+        "name": "Magnet",
+        "type": "tool",
+        "icon": "Magnet Colored Transparent.png",
+        "script":"magnet.gd"
+    },
     "hacking_device": {
         "name": "Hacking Device",
         "type": "tool",

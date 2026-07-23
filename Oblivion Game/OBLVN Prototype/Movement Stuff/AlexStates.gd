@@ -17,6 +17,7 @@ const GRAPPLE_RADIUS = 60
 const MAX = 45
 const MIN = 0
 export var MAX_HEALTH = 100
+export var inertia = 100
 var HP
 
 onready var AudioMng = AudioStreamPlayer.new()
@@ -275,7 +276,13 @@ func _physics_process(_delta):
 					$Tall.disabled = false
 					$Short.disabled = true
 # warning-ignore:return_value_discarded
-			move_and_slide(velocity, Vector2.UP)
+			move_and_slide(velocity, Vector2.UP,false,4,PI/4,false)
+			for index in get_slide_count():
+				var collision = get_slide_collision(index)
+#				print(collision.collider)
+				if collision.collider.is_in_group("bodies"):
+					collision.collider.apply_central_impulse(-collision.normal *
+					inertia)
 		States.AIR:
 			#State switching
 			if is_on_floor():
@@ -324,7 +331,12 @@ func _physics_process(_delta):
 				velocity.y = JUMP_STRENGTH
 			velocity.x *= .85
 # warning-ignore:return_value_discarded
-			move_and_slide(velocity, Vector2.UP)
+			move_and_slide(velocity, Vector2.UP,false,4,PI/4,false)
+			for index in get_slide_count():
+				var collision = get_slide_collision(index)
+				if collision.collider.is_in_group("bodies"):
+					collision.collider.apply_central_impulse(-collision.normal *
+					inertia)
 		States.GRAPPLE:
 			if not $Chain.hooked:
 				state = States.AIR

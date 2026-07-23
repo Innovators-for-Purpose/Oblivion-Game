@@ -21,6 +21,7 @@ shape = SubResource( 1 )
 [node name="Steel bar" type="RigidBody2D" parent="." groups=["metal"]]
 position = Vector2( 847, 448 )
 rotation = 0.513127
+collision_layer = 64
 
 [node name="Sprite" type="Sprite" parent="Steel bar"]
 scale = Vector2( 3.97, 0.938 )

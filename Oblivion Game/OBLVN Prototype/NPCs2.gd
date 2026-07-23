@@ -1,7 +1,7 @@
 extends Area2D
 
-var tween_dur = 0.7
-var transmode = Tween.TRANS_QUINT
+var tween_dur = 1
+var transmode = Tween.TRANS_ELASTIC
 var easemode = Tween.EASE_IN_OUT
 
 var active = false
@@ -36,21 +36,15 @@ func _input(event):
 			t2.start()
 			yield(get_tree().create_timer(tween_dur), "timeout") #DO NOT TOUCH THIS UNLESS YOU WANT THE ZOOM TO BREAK
 			get_tree().paused = true
-			if happened:
-				var dialogue = Dialogic.start("Game2")
-				dialogue.pause_mode = Node.PAUSE_MODE_PROCESS
-				dialogue.connect("timeline_end", self, "unpause")
-				add_child(dialogue)
-			else:
-				var dialogue = Dialogic.start("Game1")
-				dialogue.pause_mode = Node.PAUSE_MODE_PROCESS
-				dialogue.connect("timeline_end", self, "unpause")
-				add_child(dialogue)
-				
+
+			var dialogue = Dialogic.start("Secret1")
+			dialogue.pause_mode = Node.PAUSE_MODE_PROCESS
+			dialogue.connect("timeline_end", self, "unpause")
+			add_child(dialogue)
 				
 			var anim = alex.get_node("Anim")
 			anim.play("Final Idle")
-			face_Alex()
+#			face_Alex()
 	pass
 
 func face_Alex():
@@ -70,8 +64,8 @@ func unpause(EndDialogue):
 #		alex.move_and_collide(Vector2(0,0))
 #		cam.set_pause_mode(false)
 		happened = true
-		$Avery.set_flip_h(false)
-		$Theo.set_flip_h(false)
+#		$Avery.set_flip_h(false)
+#		$Theo.set_flip_h(false)
 		t1.interpolate_property(cam, "zoom",
 			cam.event_zoom, cam.target_zoom, tween_dur,
 			transmode, easemode, 0)

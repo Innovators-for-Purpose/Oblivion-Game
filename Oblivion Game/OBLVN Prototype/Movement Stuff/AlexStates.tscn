@@ -417,7 +417,7 @@ tracks/1/keys = {
 }
 
 [node name="AlexStates" type="KinematicBody2D" groups=["player"]]
-collision_mask = 2
+collision_mask = 330
 script = ExtResource( 2 )
 
 [node name="Anim" type="AnimatedSprite" parent="."]
@@ -426,6 +426,7 @@ position = Vector2( 11, 19 )
 scale = Vector2( 0.045, 0.0468333 )
 frames = SubResource( 35 )
 animation = "Final Idle"
+frame = 1
 playing = true
 
 [node name="Tall" type="CollisionShape2D" parent="."]
