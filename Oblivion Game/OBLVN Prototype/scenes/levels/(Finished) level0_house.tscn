@@ -1230,7 +1230,11 @@ modulate = Color( 0.752941, 0.752941, 0.752941, 1 )
 position = Vector2( 708, 523 )
 scale = Vector2( 1.086, 1.042 )
 frames = SubResource( 37 )
+<<<<<<< HEAD
 frame = 5
+=======
+frame = 6
+>>>>>>> 740b94257144808d56a4ee53e2d48620960a4a92
 playing = true
 
 [node name="Kitchen Table" type="StaticBody2D" parent="."]
@@ -1273,6 +1277,10 @@ texture = ExtResource( 20 )
 position = Vector2( -172, 501 )
 scale = Vector2( 0.10049, 0.109681 )
 frames = SubResource( 67 )
+<<<<<<< HEAD
+=======
+frame = 4
+>>>>>>> 740b94257144808d56a4ee53e2d48620960a4a92
 playing = true
 
 [node name="Ladders" type="TileMap" parent="."]

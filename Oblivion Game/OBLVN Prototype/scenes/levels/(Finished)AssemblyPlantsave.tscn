@@ -1148,6 +1148,10 @@ position = Vector2( 2418.75, -1421.04 )
 
 [node name="Tileswithoutcollision" type="TileMap" parent="."]
 self_modulate = Color( 1, 1, 1, 0.411765 )
+<<<<<<< HEAD
+=======
+scale = Vector2( 1, 1 )
+>>>>>>> 740b94257144808d56a4ee53e2d48620960a4a92
 tile_set = SubResource( 136 )
 cell_size = Vector2( 16, 16 )
 format = 1

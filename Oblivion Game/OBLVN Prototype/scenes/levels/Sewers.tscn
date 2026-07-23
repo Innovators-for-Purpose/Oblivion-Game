@@ -2124,6 +2124,10 @@ remote_path = NodePath("../../../Rusted Platform")
 [node name="Rusted Platform2" type="RigidBody2D" parent="."]
 position = Vector2( 4519, -732 )
 rotation = -0.343053
+<<<<<<< HEAD
+=======
+scale = Vector2( 1, 1 )
+>>>>>>> 740b94257144808d56a4ee53e2d48620960a4a92
 mode = 3
 
 [node name="Sprite" type="Sprite" parent="Rusted Platform2"]

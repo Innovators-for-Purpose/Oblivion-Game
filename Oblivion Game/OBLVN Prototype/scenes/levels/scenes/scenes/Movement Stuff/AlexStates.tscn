@@ -201,9 +201,13 @@ scale = Vector2( 2, 2 )
 frames = SubResource( 35 )
 animation = "run"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 frame = 8
 >>>>>>> 740b942 (More Assets)
+=======
+frame = 8
+>>>>>>> 740b94257144808d56a4ee53e2d48620960a4a92
 playing = true
 flip_h = true
 
