@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TheRoaringKnightDeltarune.webp-4e74473122df8f3e7ebc4b06302b554c.stex"
+path="res://.import/tiles2.png-f4d701368b2a2336fd1700145af3f1c0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://New Assets (Summer 2026)/TheRoaringKnightDeltarune.webp"
-dest_files=[ "res://.import/TheRoaringKnightDeltarune.webp-4e74473122df8f3e7ebc4b06302b554c.stex" ]
+source_file="res://New Assets (Summer 2026)/tiles2.png"
+dest_files=[ "res://.import/tiles2.png-f4d701368b2a2336fd1700145af3f1c0.stex" ]
 
 [params]
 

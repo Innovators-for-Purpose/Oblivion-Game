@@ -44,6 +44,7 @@ position = Vector2( -3150, 187 )
 position = Vector2( 3160, -178 )
 scale = Vector2( 0.108578, 0.0676471 )
 frames = SubResource( 27 )
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

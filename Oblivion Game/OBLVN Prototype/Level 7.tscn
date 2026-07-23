@@ -290,7 +290,7 @@ cell_size = Vector2( 16, 16 )
 collision_layer = 4
 collision_mask = 4
 format = 1
-tile_data = PoolIntArray( -2162648, 1, 0, -2097112, 1, 0, -2031576, 1, 0, -1966040, 1, 0, -1966031, 1, 0, -1900504, 1, 0, -1900495, 1, 0, -1834968, 1, 0, -1834959, 1, 0, -1769432, 1, 0, -1769423, 1, 0, -1703887, 1, 0, -1638351, 1, 0, -1572815, 1, 0, -851914, 0, 0, -786378, 0, 0, -720842, 0, 0, -720722, 2, 0, -655306, 0, 0, -589770, 0, 0, -589650, 1, 0, -524114, 1, 0, -458578, 1, 0, -393042, 1, 0, -327506, 1, 0, -261970, 1, 0, -196434, 1, 0, -130898, 1, 0, -65362, 1, 0, 174, 1, 0, 65710, 1, 0, 131246, 1, 0, 196782, 1, 0, 262185, 2, 0, 262199, 536870914, 0, 262318, 1, 0, 393257, 1, 0, 393271, 536870913, 0, 393390, 1, 0, 458793, 1, 0, 524329, 1, 0, 524343, 536870913, 0, 589865, 1, 0, 655401, 1, 0, 655415, 536870913, 0, 720937, 1, 0, 786473, 1, 0, 786487, 536870913, 0, 852009, 1, 0 )
+tile_data = PoolIntArray( -2162648, 1, 0, -2097112, 1, 0, -2031576, 1, 0, -1966040, 1, 0, -1966031, 1, 0, -1900504, 1, 0, -1900495, 1, 0, -1834968, 1, 0, -1834959, 1, 0, -1769432, 1, 0, -1769423, 1, 0, -1703887, 1, 0, -1638351, 1, 0, -1572815, 1, 0, -982987, 536870914, 0, -851915, 536870913, 0, -720843, 536870913, 0, -720722, 2, 0, -589771, 536870913, 0, -589650, 1, 0, -524114, 1, 0, -458699, 1610612738, 0, -458578, 1, 0, -393042, 1, 0, -327506, 1, 0, -261970, 1, 0, -196434, 1, 0, -130898, 1, 0, -65362, 1, 0, 174, 1, 0, 65710, 1, 0, 131246, 1, 0, 196782, 1, 0, 262185, 2, 0, 262199, 536870914, 0, 262318, 1, 0, 393257, 1, 0, 393271, 536870913, 0, 393390, 1, 0, 458793, 1, 0, 458807, 536870913, 0, 524329, 1, 0, 524343, 536870913, 0, 589865, 1, 0, 589879, 536870913, 0, 655401, 1, 0, 655415, 536870913, 0, 720937, 1, 0, 720951, 536870913, 0, 786473, 1, 0, 786487, 536870913, 0, 852009, 0, 0, 852023, 536870912, 0 )
 
 [node name="AlexStates" parent="." instance=ExtResource( 3 )]
 position = Vector2( 128, 531 )
@@ -304,7 +304,6 @@ script = ExtResource( 5 )
 position = Vector2( 584.5, 494 )
 scale = Vector2( 1.10938, 1 )
 frames = SubResource( 14 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer"]
@@ -323,7 +322,6 @@ position = Vector2( 74, -35 )
 rotation = -1.57079
 scale = Vector2( 1.10938, 1 )
 frames = SubResource( 14 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer5"]
@@ -343,6 +341,7 @@ position = Vector2( 341, -298 )
 rotation = -0.785397
 scale = Vector2( 1.10938, 1 )
 frames = SubResource( 14 )
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer8"]
@@ -362,6 +361,7 @@ position = Vector2( 353, -246 )
 rotation = -0.785397
 scale = Vector2( 1.10938, 1 )
 frames = SubResource( 14 )
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer9"]
@@ -381,6 +381,7 @@ position = Vector2( 280, 9 )
 rotation = -3.14159
 scale = Vector2( 1.10938, 1 )
 frames = SubResource( 14 )
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer7"]
@@ -400,6 +401,7 @@ position = Vector2( 434, 71 )
 rotation = -4.71238
 scale = Vector2( 1.10938, 1 )
 frames = SubResource( 14 )
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer10"]
@@ -419,7 +421,7 @@ position = Vector2( 434, 189 )
 rotation = -4.71238
 scale = Vector2( 1.10938, 1 )
 frames = SubResource( 14 )
-frame = 9
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer11"]
@@ -439,6 +441,7 @@ position = Vector2( 74, 25 )
 rotation = -1.57079
 scale = Vector2( 1.10938, 1 )
 frames = SubResource( 14 )
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer6"]
@@ -457,7 +460,6 @@ script = ExtResource( 5 )
 position = Vector2( 296, 283 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer4"]
@@ -475,7 +477,6 @@ script = ExtResource( 5 )
 [node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer2"]
 position = Vector2( 223, 320 )
 frames = SubResource( 14 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer2"]
@@ -492,6 +493,7 @@ script = ExtResource( 5 )
 [node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer3"]
 position = Vector2( 302, 320 )
 frames = SubResource( 14 )
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer3"]
@@ -508,6 +510,7 @@ script = ExtResource( 5 )
 [node name="Anim_19" type="AnimatedSprite" parent="Lazers/Lazer19"]
 position = Vector2( 709, 494 )
 frames = SubResource( 14 )
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer19"]
@@ -524,6 +527,7 @@ script = ExtResource( 5 )
 [node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer42"]
 position = Vector2( 1046, 563 )
 frames = SubResource( 14 )
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer42"]
@@ -540,6 +544,7 @@ script = ExtResource( 5 )
 [node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer43"]
 position = Vector2( 863, 564 )
 frames = SubResource( 14 )
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer43"]
@@ -556,7 +561,7 @@ script = ExtResource( 5 )
 [node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer44"]
 position = Vector2( 905, 564 )
 frames = SubResource( 14 )
-frame = 9
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer44"]
@@ -573,6 +578,7 @@ script = ExtResource( 5 )
 [node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer20"]
 position = Vector2( 1318, 496 )
 frames = SubResource( 14 )
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer20"]
@@ -590,6 +596,7 @@ script = ExtResource( 5 )
 position = Vector2( 1195.5, 496 )
 scale = Vector2( 1.16146, 1 )
 frames = SubResource( 14 )
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer21"]
@@ -606,7 +613,7 @@ script = ExtResource( 5 )
 [node name="Anim" type="AnimatedSprite" parent="Lazers/Lazer22"]
 position = Vector2( 1477, 447 )
 frames = SubResource( 14 )
-frame = 9
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer22"]
@@ -624,7 +631,7 @@ script = ExtResource( 5 )
 position = Vector2( 1400, 351 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 8
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer23"]
@@ -643,7 +650,7 @@ script = ExtResource( 5 )
 position = Vector2( 1400, 311 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 8
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer24"]
@@ -662,7 +669,7 @@ script = ExtResource( 5 )
 position = Vector2( 1476, -153 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 7
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer25"]
@@ -681,7 +688,7 @@ script = ExtResource( 5 )
 position = Vector2( 905, -434 )
 rotation = -3.14159
 frames = SubResource( 14 )
-frame = 7
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer33"]
@@ -700,7 +707,7 @@ script = ExtResource( 5 )
 position = Vector2( 918, -619 )
 rotation = -2.09439
 frames = SubResource( 14 )
-frame = 7
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer36"]
@@ -719,7 +726,7 @@ script = ExtResource( 5 )
 position = Vector2( 957, -552 )
 rotation = -2.09439
 frames = SubResource( 14 )
-frame = 6
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer37"]
@@ -738,7 +745,7 @@ script = ExtResource( 5 )
 position = Vector2( 1003, -619 )
 rotation = -2.09439
 frames = SubResource( 14 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer38"]
@@ -757,7 +764,7 @@ script = ExtResource( 5 )
 position = Vector2( 1045, -545 )
 rotation = -2.09439
 frames = SubResource( 14 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer39"]
@@ -776,7 +783,7 @@ script = ExtResource( 5 )
 position = Vector2( 1098, -622 )
 rotation = -2.09439
 frames = SubResource( 14 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer40"]
@@ -795,7 +802,7 @@ script = ExtResource( 5 )
 position = Vector2( 1143, -544 )
 rotation = -2.09439
 frames = SubResource( 14 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer41"]
@@ -814,7 +821,7 @@ script = ExtResource( 5 )
 position = Vector2( 1434, -525 )
 rotation = -1.0472
 frames = SubResource( 14 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer45"]
@@ -833,7 +840,7 @@ script = ExtResource( 5 )
 position = Vector2( 1480, -605 )
 rotation = -1.0472
 frames = SubResource( 14 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer46"]
@@ -852,7 +859,7 @@ script = ExtResource( 5 )
 position = Vector2( 1524, -592 )
 rotation = -1.0472
 frames = SubResource( 14 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer47"]
@@ -871,7 +878,7 @@ script = ExtResource( 5 )
 position = Vector2( 1578, -591 )
 rotation = -1.0472
 frames = SubResource( 14 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer49"]
@@ -890,7 +897,6 @@ script = ExtResource( 5 )
 position = Vector2( 1540, -523 )
 rotation = -1.0472
 frames = SubResource( 14 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer50"]
@@ -909,7 +915,7 @@ script = ExtResource( 5 )
 position = Vector2( 1483, -520 )
 rotation = -1.0472
 frames = SubResource( 14 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer48"]
@@ -928,7 +934,7 @@ script = ExtResource( 5 )
 position = Vector2( 758, -434 )
 rotation = -3.14159
 frames = SubResource( 14 )
-frame = 7
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer35"]
@@ -947,7 +953,7 @@ script = ExtResource( 5 )
 position = Vector2( 977, -434 )
 rotation = -3.14159
 frames = SubResource( 14 )
-frame = 7
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer34"]
@@ -966,7 +972,7 @@ script = ExtResource( 5 )
 position = Vector2( 1533, -156 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 7
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer29"]
@@ -985,7 +991,7 @@ script = ExtResource( 5 )
 position = Vector2( 1533, -41 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 6
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer30"]
@@ -1004,7 +1010,7 @@ script = ExtResource( 5 )
 position = Vector2( 1533, 53 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 6
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer31"]
@@ -1023,7 +1029,7 @@ script = ExtResource( 5 )
 position = Vector2( 1533, 160 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 6
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer32"]
@@ -1042,7 +1048,7 @@ script = ExtResource( 5 )
 position = Vector2( 1476, -48 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 7
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer26"]
@@ -1061,7 +1067,7 @@ script = ExtResource( 5 )
 position = Vector2( 1476, 49 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 7
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer27"]
@@ -1080,7 +1086,7 @@ script = ExtResource( 5 )
 position = Vector2( 1476, 158 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 6
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer28"]
@@ -1099,7 +1105,7 @@ script = ExtResource( 5 )
 position = Vector2( 1476, 158 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer51"]
@@ -1118,7 +1124,7 @@ script = ExtResource( 5 )
 position = Vector2( 1845, 159 )
 rotation = -2.09439
 frames = SubResource( 14 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer52"]
@@ -1137,7 +1143,7 @@ script = ExtResource( 5 )
 position = Vector2( 1924, 156 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer53"]
@@ -1156,7 +1162,7 @@ script = ExtResource( 5 )
 position = Vector2( 2153, -291 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer56"]
@@ -1175,7 +1181,7 @@ script = ExtResource( 5 )
 position = Vector2( 2650, -453 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer63"]
@@ -1194,7 +1200,7 @@ script = ExtResource( 5 )
 position = Vector2( 2499, -66 )
 rotation = -0.785397
 frames = SubResource( 14 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer67"]
@@ -1213,7 +1219,7 @@ script = ExtResource( 5 )
 position = Vector2( 2535, -63 )
 rotation = -0.785397
 frames = SubResource( 14 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer68"]
@@ -1232,7 +1238,7 @@ script = ExtResource( 5 )
 position = Vector2( 2555, -452 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer64"]
@@ -1251,7 +1257,6 @@ script = ExtResource( 5 )
 position = Vector2( 2555, -601 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer65"]
@@ -1270,7 +1275,6 @@ script = ExtResource( 5 )
 position = Vector2( 2650, -601 )
 rotation = -1.57079
 frames = SubResource( 14 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer66"]
@@ -1289,7 +1293,7 @@ script = ExtResource( 5 )
 position = Vector2( 2267, 84 )
 rotation = -3.14159
 frames = SubResource( 14 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer57"]
@@ -1308,7 +1312,7 @@ script = ExtResource( 5 )
 position = Vector2( 2381, 84 )
 rotation = -3.14159
 frames = SubResource( 14 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer58"]
@@ -1327,7 +1331,7 @@ script = ExtResource( 5 )
 position = Vector2( 2488, 84 )
 rotation = -3.14159
 frames = SubResource( 14 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer59"]
@@ -1346,7 +1350,7 @@ script = ExtResource( 5 )
 position = Vector2( 2597, 84 )
 rotation = -3.14159
 frames = SubResource( 14 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer60"]
@@ -1365,7 +1369,6 @@ script = ExtResource( 5 )
 position = Vector2( 2677, 84 )
 rotation = -3.14159
 frames = SubResource( 14 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer61"]
@@ -1384,7 +1387,6 @@ script = ExtResource( 5 )
 position = Vector2( 2717, 84 )
 rotation = -3.14159
 frames = SubResource( 14 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer62"]
@@ -1403,7 +1405,7 @@ script = ExtResource( 5 )
 position = Vector2( 2014, 84.0001 )
 rotation = -2.35619
 frames = SubResource( 14 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer54"]
@@ -1422,7 +1424,7 @@ script = ExtResource( 5 )
 position = Vector2( 2087, 155 )
 rotation = -2.35619
 frames = SubResource( 14 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lazers/Lazer55"]
@@ -1514,8 +1516,8 @@ max_distance = 100000.0
 
 [node name="Node2D" parent="." instance=ExtResource( 19 )]
 
-[connection signal="body_entered" from="HackPanel" to="HackPanel" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="HackPanel" to="HackPanel" method="_on_HackPanel_body_entered"]
+[connection signal="body_entered" from="HackPanel" to="HackPanel" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Lazers/Lazer" to="Lazers/Lazer" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Lazers/Lazer/Timer" to="Lazers/Lazer" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Lazers/Lazer5" to="Lazers/Lazer5" method="_on_Area2D_body_entered"]

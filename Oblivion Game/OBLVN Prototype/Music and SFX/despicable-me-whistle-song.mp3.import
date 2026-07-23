@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/despicable-me-whistle-song.mp3-271b114f091d3cd0788cfeceb4cfb6c1.mp3str"
+
+[deps]
+
+source_file="res://Music and SFX/despicable-me-whistle-song.mp3"
+dest_files=[ "res://.import/despicable-me-whistle-song.mp3-271b114f091d3cd0788cfeceb4cfb6c1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

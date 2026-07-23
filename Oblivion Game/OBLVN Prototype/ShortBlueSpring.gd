@@ -37,3 +37,7 @@ func _ready():
 
 func _on_reset_timer_timeout():
 	current_multiplier = 1.0
+
+
+func _on_Timer_timeout():
+	current_multiplier = 1.0
