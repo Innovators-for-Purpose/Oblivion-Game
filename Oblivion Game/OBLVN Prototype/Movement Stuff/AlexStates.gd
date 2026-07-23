@@ -16,7 +16,13 @@ const CLIMB_STRENGTH = -350
 const GRAPPLE_RADIUS = 60
 const MAX = 45
 const MIN = 0
-export var HEALTH = 100
+export var MAX_HEALTH = 100
+var HP
+
+onready var AudioMng = AudioStreamPlayer.new()
+
+onready var hurtSound = load("res://Music and SFX/plyrHurt.wav")
+onready var lowHP = AudioStreamPlayer.new()
 
 onready var anim = $Anim
 onready var crouchbox = $Short
@@ -54,7 +60,15 @@ func _ready():
 	
 	grap = get_tree().get_nodes_in_group("grapple")
 	
-	hpBar.value = HEALTH
+	HP = MAX_HEALTH
+	
+	hpBar.value = HP
+	lowHP.stream = load("res://Music and SFX/lowHp.wav")
+	lowHP.name = "LowHP"
+	lowHP.autoplay = true
+	lowHP.connect("finished",self,"remove_lowHP")
+	
+	add_child(AudioMng)
 	
 	
 func _on_Area2D_area_entered(area):
@@ -75,7 +89,10 @@ func _on_Area2D_area_entered(area):
 		state = States.DAMAGE
 		dp = 30
 	if "Heal" in area.get_parent().name:
-		HEALTH += 20
+		if HP < MAX_HEALTH:
+			HP += 20
+		else:
+			pass
 	if "stinger" in area.get_parent().name:
 		state = States.DAMAGE
 		dp = 30
@@ -121,12 +138,19 @@ func get_closest_grappable():#this should be pretty obvious
 	
 	
 
+func remove_lowHP():
+	get_node("LowHP").queue_free()
+	lowHP = AudioStreamPlayer.new()
+	lowHP.stream = load("res://Music and SFX/lowHp.wav")
+	lowHP.name = "LowHP"
+	lowHP.autoplay = true
+	lowHP.connect("finished",self,"remove_lowHP")
 
 # warning-ignore:unused_argument
 func _input(event: InputEvent):#the commented code ether makes grapple mouse controled 
 	#or makes the grapple need to have the grapple hook out
 #	$GrappleLineDetect.set_cast_to(get_tree().call_group("grapple","location"))
-	if (Input.is_action_just_pressed("grapple") and can_grapple == true and !get_node("stun_gun")):
+	if (Input.is_action_just_pressed("grapple") and can_grapple == true and !get_node_or_null("stun_gun")):
 		
 #	and event.pressed
 #	and can_grapple
@@ -347,20 +371,27 @@ func _physics_process(_delta):
 			velocity = move_and_slide(velocity, Vector2.UP)
 		States.DAMAGE:
 			if !hit:
-				$AnimationPlayer.play("HIT")
-				HEALTH -= dp
+				AudioMng.stream = hurtSound
+				AudioMng.play()
+				$AnimationPlayer.play("HURT")
+				HP -= dp
 				velocity.y = -1000
 				state = States.AIR
+				yield($AnimationPlayer,"animation_finished")
 				hit = true
 				var timer = get_tree().create_timer(2)
 				timer.connect("timeout", self, "_on_timeout")
+
+				if HP < (MAX_HEALTH * 0.25):
+					add_child(lowHP)
+					print("CRITICAL CONDITION")
 			else: 
 				state = States.FLOOR
 			
-	if HEALTH <= 0:
+	if HP <= 0:
 # warning-ignore:return_value_discarded
 		get_tree().change_scene("res://JJS_merge/GAMEOVER.tscn")
-	hpBar.value = HEALTH
+	hpBar.value = HP
 	if hit:
 		$AnimationPlayer.play("invincible")
 

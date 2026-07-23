@@ -78,3 +78,8 @@ func _on_Hurtbox_area_entered(area):
 #		$AttackPlayer/CollisionShape2D2.set_deferred("disabled",false)
 		$ShaderAnimate.play("RESET")
 		$Anim.play("Walk")
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	print("I'm outta here!")
+	queue_free()

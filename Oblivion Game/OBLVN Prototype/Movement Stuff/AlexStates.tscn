@@ -29,6 +29,8 @@
 [ext_resource path="res://New Assets (Summer 2026)/Run 10000.png" type="Texture" id=27]
 [ext_resource path="res://scenes/levels/scenes/scenes/scenes/InventoryGUI.tscn" type="PackedScene" id=28]
 [ext_resource path="res://JJS_merge/Flash.tres" type="Material" id=29]
+[ext_resource path="res://invincible.tres" type="Animation" id=30]
+[ext_resource path="res://HURT.tres" type="Animation" id=31]
 
 [sub_resource type="AtlasTexture" id=74]
 atlas = ExtResource( 18 )
@@ -377,14 +379,11 @@ width = 210
 height = 40
 use_hdr = true
 
-[sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 1, 0, 0, 1 )
-
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 0, 0, 1 )
 
 [sub_resource type="Theme" id=95]
-ProgressBar/styles/bg = SubResource( 7 )
+ProgressBar/styles/bg = null
 ProgressBar/styles/fg = SubResource( 3 )
 
 [sub_resource type="RectangleShape2D" id=96]
@@ -417,23 +416,6 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=94]
-resource_name = "invincible"
-length = 0.6
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Anim:modulate")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.282353 ), Color( 1, 1, 1, 1 ) ]
-}
-
 [node name="AlexStates" type="KinematicBody2D" groups=["player"]]
 collision_mask = 2
 script = ExtResource( 2 )
@@ -443,16 +425,17 @@ material = ExtResource( 29 )
 position = Vector2( 11, 19 )
 scale = Vector2( 0.045, 0.0468333 )
 frames = SubResource( 35 )
-animation = "Final Run"
-frame = 3
+animation = "Final Idle"
 playing = true
 
 [node name="Tall" type="CollisionShape2D" parent="."]
 position = Vector2( 11, 19.5 )
+scale = Vector2( 0.549, 1 )
 shape = SubResource( 72 )
 
 [node name="Short" type="CollisionShape2D" parent="."]
 position = Vector2( 11, 30.5 )
+scale = Vector2( 0.549, 1 )
 shape = SubResource( 73 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -531,12 +514,10 @@ collision_mask = 10
 
 [node name="Crouching" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-autoplay = true
 
 [node name="Crawling" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = 1.238
-autoplay = true
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( -1, 0 )
@@ -550,8 +531,9 @@ shape = SubResource( 96 )
 [node name="Inventory" parent="." instance=ExtResource( 28 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/HURT = ExtResource( 31 )
 anims/RESET = SubResource( 93 )
-anims/invincible = SubResource( 94 )
+anims/invincible = ExtResource( 30 )
 
 [connection signal="body_entered" from="LadderDetect" to="." method="_on_LadderDetect_body_entered"]
 [connection signal="body_exited" from="LadderDetect" to="." method="_on_LadderDetect_body_exited"]

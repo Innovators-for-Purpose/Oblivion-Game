@@ -49,5 +49,5 @@ shader_param/lineas = 255
 shader_param/velocidad = 2.548
 shader_param/ondulacion = -0.889
 shader_param/frecuencia = 5.917
-shader_param/color_a = Color( 0, 0.568627, 0.0156863, 1 )
-shader_param/color_b = Color( 0.0980392, 0.2, 0.0901961, 1 )
+shader_param/color_a = Color( 0.568627, 0.545098, 0, 1 )
+shader_param/color_b = Color( 0.392157, 0.117647, 0.117647, 1 )

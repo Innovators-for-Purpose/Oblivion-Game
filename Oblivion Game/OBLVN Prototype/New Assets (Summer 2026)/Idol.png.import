@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Idol.png-0a195f07e18fe27438e0945aad3d7c2d.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

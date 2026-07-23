@@ -31,22 +31,18 @@ shader_param/flash_color = Color( 0.0156863, 0.784314, 0.654902, 1 )
 shader_param/flash_value = 0.0
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 1000, 1000 )
 
@@ -111,6 +107,7 @@ tracks/0/keys = {
 
 [node name="Guard" type="KinematicBody2D"]
 collision_layer = 8
+collision_mask = 3
 script = ExtResource( 5 )
 
 [node name="Anim" type="AnimatedSprite" parent="."]
@@ -188,6 +185,11 @@ rotation = -0.288721
 scale = Vector2( 0.44186, 0.44186 )
 texture = ExtResource( 9 )
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 0, 0.5 )
+scale = Vector2( 2.6, 5.65 )
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_PlayerDetector_body_entered"]
 [connection signal="timeout" from="AttackTime" to="." method="_on_AttackTime_timeout"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

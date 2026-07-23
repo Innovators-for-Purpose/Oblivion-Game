@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://New Assets (Summer 2026)/BEE_BOSS_FRM1.png" type="Texture" id=1]
 [ext_resource path="res://New Assets (Summer 2026)/BOSS_BEE_FRM2.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/levels/scenes/scenes/scripts/Bee Enemee.gd" type="Script" id=5]
 [ext_resource path="res://JJS_merge/sfk/Speech Boss Destroy.wav" type="AudioStream" id=6]
 [ext_resource path="res://JJS_merge/sfk/Boss Death.wav" type="AudioStream" id=7]
+[ext_resource path="res://Music and SFX/shield.wav" type="AudioStream" id=8]
 [ext_resource path="res://JJS_merge/sfk/impact.wav" type="AudioStream" id=9]
 [ext_resource path="res://JJS_merge/forcefield.tres" type="Material" id=12]
 
@@ -148,7 +149,6 @@ polygon = PoolVector2Array( -37, -63, -32, -59, -36, -53, -42, -57 )
 material = SubResource( 20 )
 scale = Vector2( 0.139286, 0.163667 )
 frames = SubResource( 10 )
-frame = 3
 playing = true
 
 [node name="forcefield" type="AnimatedSprite" parent="."]
@@ -156,12 +156,12 @@ modulate = Color( 1, 1, 1, 0.545098 )
 material = ExtResource( 12 )
 scale = Vector2( 0.139286, 0.163667 )
 frames = SubResource( 10 )
-frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -14, 36 )
 shape = SubResource( 11 )
+disabled = true
 
 [node name="HurtMe" type="Area2D" parent="."]
 collision_layer = 128
@@ -226,6 +226,9 @@ material = ExtResource( 12 )
 position = Vector2( -5, -6 )
 polygon = PoolVector2Array( -68, -48, -37, -71, 19, -70, 46, -53, 71, 27, 56, 90, 24, 124, -46, 123, -77, 91, -84, 27 )
 uv = PoolVector2Array( -68, -48, -38, -62, 22, -63, 46, -53, 71, 27, 56, 90, 24, 124, -53, 125, -77, 91, -84, 27 )
+
+[node name="Shield" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="body_entered" from="HurtMe" to="." method="_on_HurtMe_body_entered"]
 [connection signal="body_entered" from="TargetRange" to="." method="_on_Target_Range_body_entered"]
