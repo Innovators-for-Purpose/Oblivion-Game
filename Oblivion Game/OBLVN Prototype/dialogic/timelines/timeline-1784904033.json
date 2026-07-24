@@ -1,0 +1,30 @@
+{
+	"events": [
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://Music and SFX/11. Labyrinth Zone Act 2.mp3",
+			"volume": 0
+		},
+		{
+			"character": "character-1784903970.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi, i'm Sonic! Sonic The Hedgehog!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Umm who are you  and WHY ARE YOU IN MY HOUSE"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1784904033.json",
+		"name": "Game 3"
+	}
+}

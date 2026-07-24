@@ -64,10 +64,13 @@ func _on_Area2D_area_entered(area):
 
 	if "Spikes" in area.get_parent().name:
 		state = States.DAMAGE
-		dp = 10
-	if "Acid" in area.get_parent().name:
+		dp = 15
+	if "DeathSphere" in area.get_parent().name:
 		state = States.DAMAGE
 		dp = 15
+	if "Acid" in area.get_parent().name:
+		state = States.DAMAGE
+		dp = 35
 	if "BOBM" in area.get_parent().name:
 		state = States.DAMAGE
 		dp = 100000000000000

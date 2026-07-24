@@ -4,7 +4,7 @@
 [ext_resource path="res://New Assets (Summer 2026)/BOSS_BEE_FRM2.png" type="Texture" id=2]
 [ext_resource path="res://New Assets (Summer 2026)/BOSS_BEE_FRM3.png" type="Texture" id=3]
 [ext_resource path="res://New Assets (Summer 2026)/BOSS_BEE_FRM4.png" type="Texture" id=4]
-[ext_resource path="res://New Assets (Summer 2026)/Bee Enemee.gd" type="Script" id=5]
+[ext_resource path="res://Boss_transfer/Bee Enemee.gd" type="Script" id=5]
 [ext_resource path="res://JJS_merge/sfk/Speech Boss Destroy.wav" type="AudioStream" id=6]
 [ext_resource path="res://JJS_merge/sfk/Boss Death.wav" type="AudioStream" id=7]
 [ext_resource path="res://Music and SFX/shield.wav" type="AudioStream" id=8]
@@ -149,7 +149,7 @@ polygon = PoolVector2Array( -37, -63, -32, -59, -36, -53, -42, -57 )
 material = SubResource( 20 )
 scale = Vector2( 0.139286, 0.163667 )
 frames = SubResource( 10 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="forcefield" type="AnimatedSprite" parent="."]
@@ -157,7 +157,7 @@ modulate = Color( 1, 1, 1, 0.545098 )
 material = ExtResource( 12 )
 scale = Vector2( 0.139286, 0.163667 )
 frames = SubResource( 10 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

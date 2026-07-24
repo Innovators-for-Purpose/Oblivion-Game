@@ -37,12 +37,12 @@ func _input(event):
 			yield(get_tree().create_timer(tween_dur), "timeout") #DO NOT TOUCH THIS UNLESS YOU WANT THE ZOOM TO BREAK
 			get_tree().paused = true
 			if happened:
-				var dialogue = Dialogic.start("Game2")
+				var dialogue = Dialogic.start("Game 3")
 				dialogue.pause_mode = Node.PAUSE_MODE_PROCESS
 				dialogue.connect("timeline_end", self, "unpause")
 				add_child(dialogue)
 			else:
-				var dialogue = Dialogic.start("Game1")
+				var dialogue = Dialogic.start("Game 3")
 				dialogue.pause_mode = Node.PAUSE_MODE_PROCESS
 				dialogue.connect("timeline_end", self, "unpause")
 				add_child(dialogue)
@@ -50,19 +50,19 @@ func _input(event):
 				
 			var anim = alex.get_node("Anim")
 			anim.play("Final Idle")
-			face_Alex()
+#			face_Alex()
 	pass
 
-func face_Alex():
-#	print("Alex pos x = " + String(alex.position.x))
-#	print("Avery pos x = " + String($Avery.global_position.x))
-#	print("Theo pos x = " + String($Theo.global_position.x))
-	if alex.position.x < $Avery.global_position.x:
-#		print("huh")
-		$Avery.set_flip_h(false)
-	if alex.position.x < $Theo.global_position.x:
-		$Theo.set_flip_h(true)
-#		print("TURN ALREADY!!!")
+#func face_Alex():
+##	print("Alex pos x = " + String(alex.position.x))
+##	print("Avery pos x = " + String($Avery.global_position.x))
+##	print("Theo pos x = " + String($Theo.global_position.x))
+#	if alex.position.x < $Avery.global_position.x:
+##		print("huh")
+#		$Avery.set_flip_h(false)
+#	if alex.position.x < $Theo.global_position.x:
+#		$Theo.set_flip_h(true)
+##		print("TURN ALREADY!!!")
 
 func unpause(EndDialogue):
 	if EndDialogue:
@@ -70,8 +70,8 @@ func unpause(EndDialogue):
 #		alex.move_and_collide(Vector2(0,0))
 #		cam.set_pause_mode(false)
 		happened = true
-		$Avery.set_flip_h(false)
-		$Theo.set_flip_h(false)
+#		$Avery.set_flip_h(false)
+#		$Theo.set_flip_h(false)
 		t1.interpolate_property(cam, "zoom",
 			cam.event_zoom, cam.target_zoom, tween_dur,
 			transmode, easemode, 0)

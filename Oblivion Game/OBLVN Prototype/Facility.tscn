@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=2]
+[gd_scene load_steps=111 format=2]
 
 [ext_resource path="res://scenes/levels/textures/cool tiles/Ladder1.png" type="Texture" id=1]
 [ext_resource path="res://scenes/levels/textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -55,6 +55,7 @@
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0004.png" type="Texture" id=53]
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0006.png" type="Texture" id=54]
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0003.png" type="Texture" id=55]
+[ext_resource path="res://JJS_merge/HealingItem.tscn" type="PackedScene" id=56]
 
 [sub_resource type="TileSet" id=31]
 0/name = "New Piskel (38).png 0"
@@ -517,6 +518,9 @@ extents = Vector2( 283.5, 35 )
 position = Vector2( -6, 0 )
 script = ExtResource( 44 )
 
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( -852, -174 )
+
 [node name="Black Tiles" type="TileMap" parent="."]
 tile_set = SubResource( 31 )
 format = 1
@@ -558,6 +562,7 @@ shape = SubResource( 62 )
 position = Vector2( -375, -659 )
 scale = Vector2( 0.0542501, 0.0545001 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="background effects"]
@@ -566,6 +571,7 @@ playing = true
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="background effects"]
@@ -575,6 +581,7 @@ position = Vector2( -535, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D15" type="StaticBody2D" parent="background effects"]
@@ -584,7 +591,6 @@ position = Vector2( -447, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D26" type="StaticBody2D" parent="background effects"]
@@ -594,7 +600,6 @@ position = Vector2( -312, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D27" type="StaticBody2D" parent="background effects"]
@@ -604,7 +609,6 @@ position = Vector2( -187, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D28" type="StaticBody2D" parent="background effects"]
@@ -614,7 +618,6 @@ position = Vector2( -64, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D29" type="StaticBody2D" parent="background effects"]
@@ -624,6 +627,7 @@ position = Vector2( 66, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D30" type="StaticBody2D" parent="background effects"]
@@ -633,6 +637,7 @@ position = Vector2( 201, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D31" type="StaticBody2D" parent="background effects"]
@@ -642,7 +647,6 @@ position = Vector2( 337, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D32" type="StaticBody2D" parent="background effects"]
@@ -652,6 +656,7 @@ position = Vector2( 477, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D33" type="StaticBody2D" parent="background effects"]
@@ -661,6 +666,7 @@ position = Vector2( 736, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D34" type="StaticBody2D" parent="background effects"]
@@ -670,7 +676,6 @@ position = Vector2( 919, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D35" type="StaticBody2D" parent="background effects"]
@@ -680,6 +685,7 @@ position = Vector2( 1096, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D36" type="StaticBody2D" parent="background effects"]
@@ -689,6 +695,7 @@ position = Vector2( 1272, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D25" type="StaticBody2D" parent="background effects"]
@@ -698,6 +705,7 @@ position = Vector2( -447, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D16" type="StaticBody2D" parent="background effects"]
@@ -707,7 +715,6 @@ position = Vector2( -626, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D17" type="StaticBody2D" parent="background effects"]
@@ -717,7 +724,6 @@ position = Vector2( -361, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D18" type="StaticBody2D" parent="background effects"]
@@ -727,7 +733,6 @@ position = Vector2( -1350, 213 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="background effects"]
@@ -737,6 +742,7 @@ position = Vector2( -685, 282 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="background effects"]
@@ -746,7 +752,6 @@ position = Vector2( -578, 282 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="background effects"]
@@ -756,7 +761,6 @@ position = Vector2( -477, 282 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="background effects"]
@@ -765,6 +769,7 @@ playing = true
 position = Vector2( -482, -660 )
 scale = Vector2( 0.0542501, 0.0545001 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="background effects"]
@@ -1334,6 +1339,7 @@ script = ExtResource( 32 )
 position = Vector2( 759, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres2"]
@@ -1347,6 +1353,7 @@ script = ExtResource( 32 )
 position = Vector2( 1211, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres3"]
@@ -1360,6 +1367,7 @@ script = ExtResource( 32 )
 position = Vector2( 1387, -1205 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres4"]
@@ -1373,7 +1381,6 @@ script = ExtResource( 32 )
 position = Vector2( 1853, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres5"]
@@ -1447,6 +1454,18 @@ autoplay = true
 max_distance = 10000.0
 
 [node name="Node2D" parent="." instance=ExtResource( 48 )]
+
+[node name="Grappleables3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3435, -1056 )
+
+[node name="HealingItem" parent="." instance=ExtResource( 56 )]
+position = Vector2( 2218, -1279 )
+
+[node name="HealingItem3" parent="." instance=ExtResource( 56 )]
+position = Vector2( 3071, -863 )
+
+[node name="HealingItem2" parent="." instance=ExtResource( 56 )]
+position = Vector2( -634, -1273 )
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_DeathZone_body_entered"]
 [connection signal="body_entered" from="Switch" to="Gate" method="_on_Switch_body_entered"]

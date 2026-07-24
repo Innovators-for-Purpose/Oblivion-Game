@@ -378,7 +378,7 @@ height = 40
 use_hdr = true
 
 [sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 1, 0, 0, 1 )
+bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 0, 0, 1 )

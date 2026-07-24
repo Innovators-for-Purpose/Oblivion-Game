@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Dialogue Assets/Sonion.png" type="Texture" id=1]
+[ext_resource path="res://Icon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sonic.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 402.5, 214.5 )
+
+[node name="Sonic" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 133, 100 )
+scale = Vector2( 0.261233, 0.263246 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -73.5, 105.5 )
+shape = SubResource( 1 )
+
+[node name="Icon" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0, 0.552941, 1, 1 )
+self_modulate = Color( 0.0313726, 0, 1, 1 )
+position = Vector2( 124.173, -166.276 )
+scale = Vector2( 0.718265, 0.697235 )

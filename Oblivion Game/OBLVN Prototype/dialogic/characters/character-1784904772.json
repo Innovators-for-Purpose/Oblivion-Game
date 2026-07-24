@@ -1,11 +1,11 @@
 {
-	"color": "#ff34b101",
+	"color": "#ffffffff",
 	"description": "",
-	"display_name": "[ Theo ]",
+	"display_name": "[ Sonic ]",
 	"display_name_bool": true,
-	"id": "character-1784729720.json",
+	"id": "character-1784904772.json",
 	"mirror_portraits": false,
-	"name": "Theo",
+	"name": "Sonic",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
@@ -17,5 +17,5 @@
 		}
 	],
 	"scale": 100,
-	"theme": "theme-1784730536.cfg"
+	"theme": "theme-1784904693.cfg"
 }

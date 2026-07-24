@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://scenes/levels/textures/OBLIVION Sewers.png" type="Texture" id=1]
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://Checkpoint Statue.tscn" type="PackedScene" id=26]
 [ext_resource path="res://BlueSpring.tscn" type="PackedScene" id=27]
 [ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=28]
+[ext_resource path="res://JJS_merge/HealingItem.tscn" type="PackedScene" id=29]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -673,6 +674,9 @@ extents = Vector2( 20.5, 5 )
 
 [node name="Sewers" type="Node2D"]
 script = ExtResource( 25 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 185, 669 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1978,6 +1982,7 @@ position = Vector2( -205, 14 )
 rotation = -3.14159
 scale = Vector2( 0.105375, 0.126 )
 frames = SubResource( 29 )
+frame = 2
 playing = true
 flip_h = true
 
@@ -2058,6 +2063,9 @@ position = Vector2( 497, -777 )
 stream = ExtResource( 24 )
 pitch_scale = 0.99
 autoplay = true
+
+[node name="HealingItem" parent="." instance=ExtResource( 29 )]
+position = Vector2( 4432, 352 )
 
 [connection signal="body_entered" from="Fall" to="Fall" method="_on_Fall_body_entered"]
 [connection signal="body_entered" from="Moving Enemies/StaticBody2D/Area2D" to="Moving Enemies/StaticBody2D" method="_on_Area2D_body_entered"]
