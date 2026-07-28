@@ -10,7 +10,7 @@
 			"volume": 0
 		},
 		{
-			"character": "character-1784903970.json",
+			"character": "character-1784904772.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Hi, i'm Sonic! Sonic The Hedgehog!"
@@ -19,7 +19,129 @@
 			"character": "character-1784729102.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Umm who are you  and WHY ARE YOU IN MY HOUSE"
+			"text": "Umm who are you and WHY ARE YOU IN MY HOUSE!"
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Just hear me out, I don't know how I ended up here either!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "WHY IS THERE A BLUE RAT IN MY HOUSE THAT CAN SPEAK!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Am I hallucinating..."
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Look I somehow teleported into this house, I must have used Chaos Control somehow, do you think you can help me find my way back home."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm quite busy in the moment."
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Please, you have to help me!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No I don't, this conversation isn't even canon"
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Please, it's life or death."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Is it really though?"
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "You know what fine! Do you guys have Chaos Emeralds in this Universe"
+		},
+		{
+			"choice": "Yes (Lie)",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah we have the Chaos Emeralds."
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Really?!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No I was joking, get lost i've got somewhere to be!"
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well your no good, guess i'll just have to find my own way out."
+		},
+		{
+			"choice": "No ",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, but we have Mask Pieces, legend says that if you collect all 7 you can transform into a powerful being."
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sounds just like the Chaos Emeralds! Better get going, thanks for the help!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ok bye, and PLEASE LEAVE MY HOUSE!!!"
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {

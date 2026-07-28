@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://MicroChip.gd" type="Script" id=1]
+[ext_resource path="res://New Assets (Summer 2026)/Microchip-Magenta-Collectable-Flat.png" type="Texture" id=2]
+[ext_resource path="res://New Assets (Summer 2026)/Microchip-Blue-Collectable-Flat.png" type="Texture" id=3]
+[ext_resource path="res://New Assets (Summer 2026)/Microchip-Gold-Collectable-Flat.png" type="Texture" id=4]
+[ext_resource path="res://New Assets (Summer 2026)/Microchip-Green-Collectable-Flat.png" type="Texture" id=5]
+[ext_resource path="res://Music and SFX/yodguard-item-pickup-3-540193.mp3" type="AudioStream" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 300, 300 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 19.5, 19 )
+
+[node name="MicroChip" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 4.76837e-07 )
+scale = Vector2( 0.113333, 0.111667 )
+frames = SubResource( 5 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -1 )
+shape = SubResource( 6 )
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = 6.0
+
+[node name="Particles" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 150
+lifetime = 0.6
+one_shot = true
+speed_scale = 1.28
+explosiveness = 0.29
+randomness = 0.41
+lifetime_randomness = 0.55
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 160.54
+gravity = Vector2( 0, -100 )
+initial_velocity = 121.95
+initial_velocity_random = 1.0
+angular_velocity = 720.0
+angular_velocity_random = 1.0
+scale_amount = 1.3
+scale_amount_random = 0.52
+color = Color( 1, 0, 0, 1 )
+hue_variation = 1.0
+hue_variation_random = 1.0
+anim_speed = 2.24
+
+[connection signal="body_entered" from="." to="." method="_on_MicroChip_body_entered"]

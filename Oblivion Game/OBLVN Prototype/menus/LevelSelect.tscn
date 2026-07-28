@@ -73,7 +73,7 @@ texture = ExtResource( 2 )
 position = Vector2( 445, 110 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 1
+frame = 5
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -81,7 +81,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 779, 109 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 1
+frame = 5
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -89,6 +89,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1112, 112 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
+frame = 4
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -96,6 +97,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 448, 321 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
+frame = 4
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -103,7 +105,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 782, 325 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 8
+frame = 3
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -111,7 +113,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1116, 325 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 8
+frame = 3
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -119,7 +121,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 447, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 8
+frame = 3
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -127,7 +129,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 784, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 8
+frame = 3
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -135,7 +137,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1114, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 7
+frame = 2
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 

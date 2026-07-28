@@ -48,12 +48,15 @@ colors = PoolColorArray( 0.902832, 0.902832, 0.902832, 1, 1, 1, 1, 1 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0.768627, 1, 0.580392, 1 )
 position = Vector2( -7.5, 6.75 )
 scale = Vector2( 0.138, 0.147 )
 frames = SubResource( 10 )
+frame = 4
 playing = true
 
 [node name="Sprite2" type="Sprite" parent="Sprite"]
+modulate = Color( 0.572549, 1, 0.470588, 1 )
 self_modulate = Color( 1, 1, 1, 0.529412 )
 position = Vector2( 3.6232, -25.5102 )
 scale = Vector2( 0.978261, 0.885273 )
@@ -67,7 +70,7 @@ shape = SubResource( 3 )
 
 [node name="Particles" type="CPUParticles2D" parent="."]
 emitting = false
-amount = 170
+amount = 200
 one_shot = true
 explosiveness = 1.0
 randomness = 0.41
@@ -83,8 +86,10 @@ angular_velocity = 720.0
 angular_velocity_random = 1.0
 scale_amount = 2.6
 scale_amount_random = 0.52
-color = Color( 0.054902, 0.666667, 0, 1 )
+color = Color( 0.215686, 1, 0, 1 )
 color_ramp = SubResource( 4 )
+hue_variation = 0.06
+hue_variation_random = 1.0
 
 [node name="Despawn" type="Timer" parent="."]
 one_shot = true

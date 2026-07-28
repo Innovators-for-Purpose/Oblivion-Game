@@ -1230,7 +1230,7 @@ modulate = Color( 0.752941, 0.752941, 0.752941, 1 )
 position = Vector2( 708, 523 )
 scale = Vector2( 1.086, 1.042 )
 frames = SubResource( 37 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="Kitchen Table" type="StaticBody2D" parent="."]
@@ -1322,7 +1322,6 @@ shadow_buffer_size = 32
 position = Vector2( -172, 501 )
 scale = Vector2( 0.10049, 0.109681 )
 frames = SubResource( 67 )
-frame = 3
 playing = true
 
 [node name="Sonic" parent="." instance=ExtResource( 46 )]

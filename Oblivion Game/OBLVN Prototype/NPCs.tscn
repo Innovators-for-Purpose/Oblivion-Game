@@ -1,12 +1,50 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Dialogue Assets/Theo Sprites(transparent).png" type="Texture" id=1]
-[ext_resource path="res://Dialogue Assets/Avery Sprite(transparent).png" type="Texture" id=2]
+[ext_resource path="res://New Assets (Summer 2026)/Theo-Radcliff-1 (1).png" type="Texture" id=1]
+[ext_resource path="res://New Assets (Summer 2026)/Avery Idol-frame-2 (1).png" type="Texture" id=2]
 [ext_resource path="res://NPCs.gd" type="Script" id=3]
 [ext_resource path="res://Icon.tscn" type="PackedScene" id=4]
+[ext_resource path="res://New Assets (Summer 2026)/Avery Idol-Frame-1 (1).png" type="Texture" id=5]
+[ext_resource path="res://New Assets (Summer 2026)/Theo-Radcliff-2 (1).png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40, 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 4000, 3000 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 4000, 3000 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 640, 480 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 640, 480 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
 
 [node name="NPCs" type="Area2D"]
 collision_layer = 64
@@ -22,16 +60,19 @@ margin_bottom = 32.0
 position = Vector2( 0, 16 )
 shape = SubResource( 1 )
 
-[node name="Avery" type="Sprite" parent="."]
-position = Vector2( 16, 13 )
-scale = Vector2( 0.036, 0.036 )
-texture = ExtResource( 2 )
+[node name="Avery" type="AnimatedSprite" parent="."]
+position = Vector2( 19.75, 17.125 )
+scale = Vector2( 0.015125, 0.0160833 )
+frames = SubResource( 4 )
+frame = 1
+playing = true
 
-[node name="Theo" type="Sprite" parent="."]
-position = Vector2( -15, 17 )
-scale = Vector2( 0.027, 0.027 )
-texture = ExtResource( 1 )
-hframes = 7
-region_rect = Rect2( 200, 2500, 5000, 2500 )
+[node name="Theo" type="AnimatedSprite" parent="."]
+position = Vector2( -16, 16.75 )
+scale = Vector2( 0.0625, 0.0697917 )
+frames = SubResource( 7 )
+frame = 1
+playing = true
+flip_h = true
 
 [node name="Icon" parent="." instance=ExtResource( 4 )]

@@ -67,7 +67,7 @@ func _on_Area2D_area_entered(area):
 		dp = 15
 	if "DeathSphere" in area.get_parent().name:
 		state = States.DAMAGE
-		dp = 15
+		dp = 40
 	if "Acid" in area.get_parent().name:
 		state = States.DAMAGE
 		dp = 35

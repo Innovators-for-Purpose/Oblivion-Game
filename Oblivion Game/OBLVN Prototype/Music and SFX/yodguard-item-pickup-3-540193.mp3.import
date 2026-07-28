@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/yodguard-item-pickup-3-540193.mp3-88005f2e15d51b9a97bf209d739bc51b.mp3str"
+
+[deps]
+
+source_file="res://Music and SFX/yodguard-item-pickup-3-540193.mp3"
+dest_files=[ "res://.import/yodguard-item-pickup-3-540193.mp3-88005f2e15d51b9a97bf209d739bc51b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

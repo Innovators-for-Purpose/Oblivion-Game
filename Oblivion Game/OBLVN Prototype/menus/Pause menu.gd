@@ -49,9 +49,10 @@ func pause():
 	show() 
 func _on_resume_pressed():
 	get_tree().paused = false
+	hide()
 func resume():
 	get_tree().paused = false
-	hide()
+#	hide()
 func _on_restart_pressed():
 	get_tree().paused = false
 #	Global.reset_checkpoint()

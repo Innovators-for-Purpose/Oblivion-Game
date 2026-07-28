@@ -1,0 +1,186 @@
+{
+	"events": [
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://Music and SFX/11. Labyrinth Zone Act 2.mp3",
+			"volume": 0
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You again, I don't have time to deal with whoever you are..."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Look my sister Avery got kidnapped and I don't know where to look where should I go."
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "How would I know, I'm still stuck in this house!"
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Do you have any idea who took her?"
+		},
+		{
+			"choice": "A Guard",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I've dealt with guards before, maybe there might be a factory or somewhere guards work at."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There is only 4 places I know that have guards securing an area..."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Assembly Plant, Facility, The Sewers, or Sewer Base!!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "But where should I go first?"
+		},
+		{
+			"choice": "Facility",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I think you should go to Facility first!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ok catch you later!"
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm outta here!"
+		},
+		{
+			"choice": "Assembly Plant",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I think you should go to Assembly Plant first!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ok then, see you later!"
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm outta here!"
+		},
+		{
+			"choice": "Sewers",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I think you should go to the Sewers first!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ok then, see you later and PLEASE LEAVE MY HOUSE!!!"
+		},
+		{
+			"choice": "Sewer Base",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I think Sewer Base could be a good start."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ok thanks, catch you later and PLEASE LEAVE MY HOME!!!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"choice": "I'm not sure (Lie)",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1784904772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well I can't really help you, guess i'll just keep trying to find a way out of here."
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1785163690.json",
+		"name": "Game 4"
+	}
+}
