@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Level 4 (loop after intro) (2).mp3-d7f48451cb97eb9bc1cfca193fc2c3e9.mp3str"
+
+[deps]
+
+source_file="res://Music and SFX/Level 4 (loop after intro) (2).mp3"
+dest_files=[ "res://.import/Level 4 (loop after intro) (2).mp3-d7f48451cb97eb9bc1cfca193fc2c3e9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

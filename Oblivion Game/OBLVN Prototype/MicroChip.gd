@@ -4,6 +4,7 @@ onready var sfx = $sfx
 onready var collision = $CollisionShape2D
 onready var sprite = $Sprite
 onready var particles = $Particles
+onready var collectablemanager = $"%collectablemanager"
 
 func _ready():
 	randomize() 
@@ -14,6 +15,7 @@ func _on_MicroChip_body_entered(body):
 		collision.set_deferred("disabled", true)
 		particles.emitting = true
 		sfx.pitch_scale = rand_range(0.8, 1.2)
+		collectablemanager.add_point()
 		sfx.play()
 		yield(sfx, "finished")
 		queue_free()

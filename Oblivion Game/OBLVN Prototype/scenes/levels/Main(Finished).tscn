@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://textures/simple tiles.png" type="Texture" id=1]
 [ext_resource path="res://textures/background _).png" type="Texture" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=14]
 [ext_resource path="res://JJS_merge/HealingItem.tscn" type="PackedScene" id=15]
 [ext_resource path="res://New Assets (Summer 2026)/basic-tile (1).png" type="Texture" id=16]
+[ext_resource path="res://collectablemanager.tscn" type="PackedScene" id=17]
+[ext_resource path="res://MicroChip.tscn" type="PackedScene" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -247,6 +249,13 @@ animations = [ {
 "speed": 10.0
 } ]
 
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.156863, 0.776471, 0.486275, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="Main" type="Node2D"]
 position = Vector2( 1, 17 )
 
@@ -349,7 +358,7 @@ visible = false
 position = Vector2( 881, 16 )
 
 [node name="Finish2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 230, 188 )
+position = Vector2( 223, 189 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = 345.0
@@ -404,21 +413,20 @@ valign = 1
 position = Vector2( 421, 871 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 5
 playing = true
 
 [node name="PanelLight2" type="AnimatedSprite" parent="."]
 position = Vector2( 1355, 618 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 4
+frame = 8
 playing = true
 
 [node name="PanelLight3" type="AnimatedSprite" parent="."]
 position = Vector2( 1271, 71 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="AlexStates" parent="." instance=ExtResource( 5 )]
@@ -438,3 +446,47 @@ autoplay = true
 
 [node name="HealingItem" parent="." instance=ExtResource( 15 )]
 position = Vector2( 766, 484 )
+
+[node name="collectablemanager" parent="." instance=ExtResource( 17 )]
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer3"]
+margin_left = 20.0
+margin_top = 64.0
+margin_right = 151.0
+margin_bottom = 104.0
+custom_styles/panel = SubResource( 20 )
+
+[node name="Label" type="Label" parent="CanvasLayer3/Panel"]
+unique_name_in_owner = true
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 98.0
+margin_bottom = 28.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Microchips:"
+uppercase = true
+
+[node name="Microchips" type="Node2D" parent="."]
+
+[node name="MicroChip" parent="Microchips" instance=ExtResource( 18 )]
+position = Vector2( 300, 1008 )
+
+[node name="MicroChip2" parent="Microchips" instance=ExtResource( 18 )]
+position = Vector2( 735, 711 )
+
+[node name="MicroChip3" parent="Microchips" instance=ExtResource( 18 )]
+position = Vector2( 1455, 191 )
+
+[node name="MicroChip4" parent="Microchips" instance=ExtResource( 18 )]
+position = Vector2( 879, 199 )
+
+[node name="MicroChip5" parent="Microchips" instance=ExtResource( 18 )]
+position = Vector2( 519, 191 )
+
+[node name="MicroChip6" parent="Microchips" instance=ExtResource( 18 )]
+position = Vector2( 599, 191 )
+
+[node name="MicroChip7" parent="Microchips" instance=ExtResource( 18 )]
+position = Vector2( 559, 127 )

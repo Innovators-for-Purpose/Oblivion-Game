@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://scenes/levels/textures/Second floor railings layer (on top).png" type="Texture" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=2]
@@ -27,6 +27,8 @@
 [ext_resource path="res://New Assets (Summer 2026)/tile 2.png" type="Texture" id=25]
 [ext_resource path="res://New Assets (Summer 2026)/tile 3.png" type="Texture" id=26]
 [ext_resource path="res://New Assets (Summer 2026)/tile 5.png" type="Texture" id=27]
+[ext_resource path="res://collectablemanager.tscn" type="PackedScene" id=28]
+[ext_resource path="res://MicroChip.tscn" type="PackedScene" id=29]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 1280, 64, 0, 64, 0, 0, 1280, 0 )
@@ -765,6 +767,13 @@ b = Vector2( -32.9914, 2.5722 )
 [sub_resource type="SegmentShape2D" id=10]
 b = Vector2( 1019, 1 )
 
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 0.156863, 0.776471, 0.486275, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="Outer City" type="Node2D"]
 position = Vector2( 1, 0 )
 
@@ -983,5 +992,37 @@ volume_db = 5.0
 autoplay = true
 
 [node name="Node2D" parent="." instance=ExtResource( 19 )]
+
+[node name="collectablemanager" parent="." instance=ExtResource( 28 )]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer2"]
+margin_left = 20.0
+margin_top = 64.0
+margin_right = 151.0
+margin_bottom = 104.0
+custom_styles/panel = SubResource( 36 )
+
+[node name="Label" type="Label" parent="CanvasLayer2/Panel"]
+unique_name_in_owner = true
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 98.0
+margin_bottom = 28.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MICROCHIPS:"
+uppercase = true
+
+[node name="Microchips" type="Node2D" parent="."]
+
+[node name="MicroChip" parent="Microchips" instance=ExtResource( 29 )]
+position = Vector2( 2359, -80 )
+
+[node name="MicroChip2" parent="Microchips" instance=ExtResource( 29 )]
+position = Vector2( 2279, -80 )
+
+[node name="MicroChip3" parent="Microchips" instance=ExtResource( 29 )]
+position = Vector2( 2199, -80 )
 
 [connection signal="body_entered" from="DeathPits" to="DeathPits" method="_on_DeathPits_body_entered"]

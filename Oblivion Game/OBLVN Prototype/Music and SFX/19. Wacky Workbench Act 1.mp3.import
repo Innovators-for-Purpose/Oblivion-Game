@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/19. Wacky Workbench Act 1.mp3-72439e0de8c7fc31861ad8e1b85e7843.mp3str"
+
+[deps]
+
+source_file="res://Music and SFX/19. Wacky Workbench Act 1.mp3"
+dest_files=[ "res://.import/19. Wacky Workbench Act 1.mp3-72439e0de8c7fc31861ad8e1b85e7843.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
