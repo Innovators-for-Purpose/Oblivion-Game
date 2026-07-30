@@ -1512,6 +1512,28 @@ position = Vector2( 2296, -879 )
 [node name="Checkpoint" parent="." instance=ExtResource( 45 )]
 position = Vector2( 555, -1295 )
 
+[node name="Shortsprings" type="Node2D" parent="."]
+
+[node name="Short Yellow Spring6" parent="Shortsprings" instance=ExtResource( 41 )]
+position = Vector2( -4795, 165 )
+
+[node name="ShortRedSpring" parent="Shortsprings" instance=ExtResource( 47 )]
+
+[node name="Short Yellow Spring" parent="Shortsprings" instance=ExtResource( 41 )]
+position = Vector2( -1636, 460 )
+
+[node name="Short Yellow Spring2" parent="Shortsprings" instance=ExtResource( 41 )]
+position = Vector2( -3856, 193 )
+
+[node name="Short Yellow Spring3" parent="Shortsprings" instance=ExtResource( 46 )]
+position = Vector2( -3841, 48 )
+
+[node name="Short Yellow Spring4" parent="Shortsprings" instance=ExtResource( 46 )]
+position = Vector2( -1650, 627 )
+
+[node name="Short Yellow Spring5" parent="Shortsprings" instance=ExtResource( 41 )]
+position = Vector2( 31, -235 )
+
 [node name="AlexStates" parent="." instance=ExtResource( 3 )]
 position = Vector2( -861, -172 )
 
@@ -1519,26 +1541,6 @@ position = Vector2( -861, -172 )
 position = Vector2( -896, -882 )
 scale = Vector2( 0.126838, 0.206368 )
 texture = ExtResource( 39 )
-
-[node name="Short Yellow Spring6" parent="." instance=ExtResource( 41 )]
-position = Vector2( -4795, 165 )
-
-[node name="ShortRedSpring" parent="." instance=ExtResource( 47 )]
-
-[node name="Short Yellow Spring" parent="." instance=ExtResource( 41 )]
-position = Vector2( -1636, 460 )
-
-[node name="Short Yellow Spring2" parent="." instance=ExtResource( 41 )]
-position = Vector2( -3856, 193 )
-
-[node name="Short Yellow Spring3" parent="." instance=ExtResource( 46 )]
-position = Vector2( -3841, 48 )
-
-[node name="Short Yellow Spring4" parent="." instance=ExtResource( 46 )]
-position = Vector2( -1650, 627 )
-
-[node name="Short Yellow Spring5" parent="." instance=ExtResource( 41 )]
-position = Vector2( 31, -235 )
 
 [node name="Facility" type="TileMap" parent="."]
 modulate = Color( 1, 0.952941, 0.592157, 1 )
@@ -1752,6 +1754,7 @@ position = Vector2( 1929, 416 )
 position = Vector2( 759, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres2"]
@@ -1764,6 +1767,7 @@ shape = SubResource( 68 )
 position = Vector2( 1211, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres3"]
@@ -1776,6 +1780,7 @@ shape = SubResource( 68 )
 position = Vector2( 1387, -1205 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres4"]
@@ -1788,7 +1793,6 @@ shape = SubResource( 68 )
 position = Vector2( 1853, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres5"]

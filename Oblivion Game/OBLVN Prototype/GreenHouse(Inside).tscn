@@ -1,0 +1,128 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://GreenHouse(Inside).gd" type="Script" id=1]
+[ext_resource path="res://collectablemanager.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Music and SFX/1-11. Marble Garden Zone - Act 2.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Movement Stuff/Grappleables.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=5]
+[ext_resource path="res://New Assets (Summer 2026)/basic-tile (1).png" type="Texture" id=6]
+[ext_resource path="res://scenes/Finish.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MicroChip.tscn" type="PackedScene" id=8]
+[ext_resource path="res://New Assets (Summer 2026)/Green House-1st Floor.png" type="Texture" id=9]
+[ext_resource path="res://New Assets (Summer 2026)/Green_House-1st_Floor_1_99_1_99_1_99_2_100x100.png" type="Texture" id=10]
+
+[sub_resource type="TileSet" id=4]
+0/name = "Green_House-1st_Floor_1_99_1_99_1_99_2_100x100.png 0"
+0/texture = ExtResource( 10 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 96, 96 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.156863, 0.776471, 0.486275, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "basic-tile (1).png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[node name="GreenHouse(Inside)" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -1069.0
+margin_top = -1517.0
+margin_right = 1930.0
+margin_bottom = 22.0
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 2
+
+[node name="Windows" type="TileMap" parent="."]
+visible = false
+tile_set = SubResource( 4 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -3145761, 536870912, 0, -3145758, 536870912, 0, -3145755, 536870912, 0, -3145752, 536870912, 0, -3145749, 536870912, 0, -3145746, 536870912, 0, -3145743, 536870912, 0, -3145740, 536870912, 0, -3145737, 536870912, 0, -3145734, 536870912, 0, -3145731, 536870912, 0, -2949153, 536870912, 0, -2949150, 536870912, 0, -2949147, 536870912, 0, -2949144, 536870912, 0, -2949141, 536870912, 0, -2949138, 536870912, 0, -2949135, 536870912, 0, -2949132, 536870912, 0, -2949129, 536870912, 0, -2949126, 536870912, 0, -2949123, 536870912, 0, -2752545, 536870912, 0, -2752542, 536870912, 0, -2752539, 536870912, 0, -2752536, 536870912, 0, -2752533, 536870912, 0, -2752530, 536870912, 0, -2752527, 536870912, 0, -2752524, 536870912, 0, -2752521, 536870912, 0, -2752518, 536870912, 0, -2752515, 536870912, 0, -2555937, 536870912, 0, -2555934, 536870912, 0, -2555931, 536870912, 0, -2555928, 536870912, 0, -2555925, 536870912, 0, -2555922, 536870912, 0, -2555919, 536870912, 0, -2555916, 536870912, 0, -2555913, 536870912, 0, -2555910, 536870912, 0, -2555907, 536870912, 0 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( -888, -1288 )
+
+[node name="AlexStates" parent="." instance=ExtResource( 5 )]
+position = Vector2( -931, -1258 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+margin_left = 20.0
+margin_top = 64.0
+margin_right = 151.0
+margin_bottom = 104.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+unique_name_in_owner = true
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 94.0
+margin_bottom = 28.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MicroCHIPS:"
+uppercase = true
+
+[node name="collectablemanager" parent="." instance=ExtResource( 2 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Blocks" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -2424864, 536870912, 0, -2359328, 536870912, 0, -2359327, 536870912, 0, -2359326, 536870912, 0, -2359325, 536870912, 0, -2359324, 536870912, 0, -2359323, 536870912, 0, -2359322, 536870912, 0, -2359321, 536870912, 0, -2359320, 536870912, 0, -2359319, 536870912, 0, -2359318, 536870912, 0, -2359317, 536870912, 0, -2359316, 536870912, 0, -2359315, 536870912, 0, -2359314, 536870912, 0, -2359313, 536870912, 0, -2359312, 536870912, 0, -2359311, 536870912, 0, -2359310, 536870912, 0, -2359309, 536870912, 0, -2359308, 536870912, 0, -2359307, 536870912, 0, -2359306, 536870912, 0, -2359305, 536870912, 0, -2359304, 536870912, 0, -2359303, 536870912, 0, -2359302, 536870912, 0, -2359301, 536870912, 0, -2359300, 536870912, 0, -2359299, 536870912, 0, -2359298, 536870912, 0, -2359297, 536870912, 0 )
+
+[node name="Finish" parent="." instance=ExtResource( 7 )]
+position = Vector2( -387, -1217 )
+
+[node name="Grapples" type="Node2D" parent="."]
+
+[node name="Grappleables" parent="Grapples" instance=ExtResource( 4 )]
+
+[node name="MicroChips" type="Node2D" parent="."]
+
+[node name="MicroChip" parent="MicroChips" instance=ExtResource( 8 )]
+position = Vector2( -808, -1216 )

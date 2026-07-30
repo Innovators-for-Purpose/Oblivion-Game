@@ -1,0 +1,163 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Music and SFX/1-10. Marble Garden Zone - Act 1.mp3" type="AudioStream" id=1]
+[ext_resource path="res://New Assets (Summer 2026)/Greenhouse background-Extended (1).png" type="Texture" id=2]
+[ext_resource path="res://Movement Stuff/Grappleables.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=4]
+[ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Finish.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MicroChip.tscn" type="PackedScene" id=7]
+[ext_resource path="res://New Assets (Summer 2026)/basic-tile (1).png" type="Texture" id=8]
+[ext_resource path="res://collectablemanager.tscn" type="PackedScene" id=9]
+[ext_resource path="res://GreenHouse.gd" type="Script" id=10]
+[ext_resource path="res://New Assets (Summer 2026)/Outhouse Garden-Full Object.png" type="Texture" id=11]
+[ext_resource path="res://scenes/levels/scenes/scenes/scenes/GUI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Area34432D.gd" type="Script" id=13]
+[ext_resource path="res://Camera.tscn" type="PackedScene" id=14]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 543.5, 9 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.156863, 0.776471, 0.486275, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "basic-tile (1).png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 4444, 201 )
+
+[node name="GreenHouse(Outside)" type="Node2D"]
+position = Vector2( -36, 7 )
+z_index = -1
+z_as_relative = false
+script = ExtResource( 10 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 12 )]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1.1, 0.5 )
+motion_mirroring = Vector2( 1495, 0 )
+
+[node name="Background" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = -1058.0
+margin_top = -616.0
+margin_right = 768.0
+margin_bottom = 310.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( -947, -32 )
+
+[node name="Node2D" parent="." instance=ExtResource( 5 )]
+
+[node name="Greenhouse building" type="StaticBody2D" parent="."]
+
+[node name="sprite" type="Sprite" parent="Greenhouse building"]
+position = Vector2( 156, -250 )
+scale = Vector2( 0.578581, 0.713542 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Greenhouse building"]
+position = Vector2( 229.5, 6 )
+shape = SubResource( 4 )
+
+[node name="AlexStates" parent="." instance=ExtResource( 4 )]
+position = Vector2( -946, -40 )
+
+[node name="Grappleables" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2665, 2126 )
+
+[node name="collectablemanager" parent="." instance=ExtResource( 9 )]
+
+[node name="Microchips UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="Microchips UI"]
+margin_left = 20.0
+margin_top = 64.0
+margin_right = 151.0
+margin_bottom = 104.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Microchips UI/Panel"]
+unique_name_in_owner = true
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 98.0
+margin_bottom = 28.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MICROCHIPS:"
+uppercase = true
+
+[node name="Main" type="TileMap" parent="."]
+modulate = Color( 0.639216, 1, 0.203922, 1 )
+tile_set = SubResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -2490431, -2147483648, 0, -2359359, -2147483648, 0, -2228287, -2147483648, 0, -2097215, -2147483648, 0, -1966143, -2147483648, 0, -1835071, -2147483648, 0, -1703999, -2147483648, 0, -1572927, -2147483648, 0, -1441855, -2147483648, 0, -1310783, -2147483648, 0, -1179711, -2147483648, 0, -1048639, -2147483648, 0, -917567, -2147483648, 0, -786495, -2147483648, 0, -655423, -2147483648, 0, -524351, -2147483648, 0, -393279, -2147483648, 0, -262207, -2147483648, 0, -131135, -2147483648, 0, -63, -2147483648, 0, 131009, -2147483648, 0, 131011, -2147483648, 0, 131013, -2147483648, 0, 131015, -2147483648, 0, 131017, -2147483648, 0, 131019, -2147483648, 0, 131021, -2147483648, 0, 131023, -2147483648, 0, 131025, -2147483648, 0, 131027, -2147483648, 0, 131029, -2147483648, 0, 131031, -2147483648, 0, 131033, -2147483648, 0, 131035, -2147483648, 0, 131037, -2147483648, 0, 131039, -2147483648, 0, 131041, -2147483648, 0, 131043, -2147483648, 0, 131045, -2147483648, 0, 131047, -2147483648, 0, 131049, -2147483648, 0, 131051, -2147483648, 0, 131053, -2147483648, 0, 131055, -2147483648, 0, 131057, -2147483648, 0, 131059, -2147483648, 0, 131061, -2147483648, 0, 131063, -2147483648, 0, 131065, -2147483648, 0, 131067, -2147483648, 0, 131069, -2147483648, 0, 131071, -2147483648, 0, 65537, -2147483648, 0, 65539, -2147483648, 0, 65541, -2147483648, 0, 65543, -2147483648, 0, 65545, -2147483648, 0, 65547, -2147483648, 0, 65549, -2147483648, 0, 65551, -2147483648, 0, 65553, -2147483648, 0, 65555, -2147483648, 0, 65557, -2147483648, 0, 65559, -2147483648, 0, 65561, -2147483648, 0, 65563, -2147483648, 0, 65565, -2147483648, 0, 65567, -2147483648, 0 )
+
+[node name="Microchips" type="Node2D" parent="."]
+
+[node name="MicroChip" parent="Microchips" instance=ExtResource( 7 )]
+position = Vector2( -552, -17 )
+
+[node name="MicroChip2" parent="Microchips" instance=ExtResource( 7 )]
+position = Vector2( -488, -16 )
+
+[node name="MicroChip3" parent="Microchips" instance=ExtResource( 7 )]
+position = Vector2( -424, -16 )
+
+[node name="Finish" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( -107, -51 )
+scale = Vector2( 0.239312, 43.8018 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="Death" type="Area2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death"]
+position = Vector2( 1584, 704 )
+shape = SubResource( 6 )
+
+[node name="Camera" parent="." instance=ExtResource( 14 )]
+position = Vector2( -2346, -652 )
+scale = Vector2( 1.98163, 2.01149 )
+
+[connection signal="body_entered" from="Death" to="Death" method="_on_Area2D_body_entered"]

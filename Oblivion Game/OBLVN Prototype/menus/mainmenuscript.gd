@@ -23,8 +23,8 @@ func _on_Button6_pressed():
 	get_tree().change_scene("res://Level 7.tscn")
 
 
-func _on_Button7_pressed():
-	get_tree().change_scene("res://scenes/Main(GrappleTest).tscn")
+#func _on_Button7_pressed():
+#	get_tree().change_scene("res://scenes/Main(GrappleTest).tscn")
 
 
 func _on_Button8_pressed():
@@ -33,3 +33,11 @@ func _on_Button8_pressed():
 
 func _on_Button9_pressed():
 	get_tree().change_scene("res://SewerBase.tscn")
+
+
+func _on_Button10_pressed():
+	get_tree().change_scene("res://GreenHouse(Outside).tscn")
+
+
+func _on_Button11_pressed():
+	get_tree().change_scene("res://scenes/Main(GrappleTest).tscn")

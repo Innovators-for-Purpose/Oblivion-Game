@@ -11,6 +11,8 @@ var levels = [
 	"res://SewerBase.tscn",
 	"res://Facility.tscn",
 	"res://Level 7.tscn",
+	"res://GreenHouse(Outside).tscn",
+	"res://GreenHouse(Inside).tscn",
 	"res://Demo End Screen.tscn",
 ]
 var current_level_index = 1

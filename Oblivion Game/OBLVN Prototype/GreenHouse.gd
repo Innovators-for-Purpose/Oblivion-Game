@@ -32,3 +32,4 @@ func spawn_object():
 	var new_object = object_to_spawn.instantiate()
 	new_object.global_position = spawn_point.global_position
 	add_child(new_object)
+
