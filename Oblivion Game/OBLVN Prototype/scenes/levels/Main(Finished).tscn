@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://textures/simple tiles.png" type="Texture" id=1]
 [ext_resource path="res://textures/background _).png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Music and SFX/Level 1 by Gianluca.wav" type="AudioStream" id=12]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (49).png" type="Texture" id=13]
 [ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/hack-able door.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -178,47 +179,38 @@ points = PoolVector2Array( 24, 32, 0, 32, 0, 16, 24, 16 )
 4/z_index = 0
 
 [sub_resource type="AtlasTexture" id=9]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 0, 0, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=10]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 2000, 0, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=11]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 4000, 0, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=12]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 0, 2000, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=13]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 2000, 2000, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=14]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 4000, 2000, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=15]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 0, 4000, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=16]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 2000, 4000, 2000, 2000 )
 
 [sub_resource type="AtlasTexture" id=17]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 4000, 4000, 2000, 2000 )
 
@@ -229,6 +221,8 @@ animations = [ {
 "name": "default",
 "speed": 10.0
 } ]
+
+[sub_resource type="CircleShape2D" id=19]
 
 [node name="Main" type="Node2D"]
 position = Vector2( 1, 17 )
@@ -387,7 +381,6 @@ valign = 1
 position = Vector2( 421, 871 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 1
 playing = true
 
 [node name="PanelLight2" type="AnimatedSprite" parent="."]
@@ -400,11 +393,19 @@ playing = true
 position = Vector2( 1271, 71 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 8
 playing = true
 
 [node name="AlexStates" parent="." instance=ExtResource( 5 )]
 position = Vector2( 86, 975 )
+
+[node name="grap_area" type="Area2D" parent="AlexStates"]
+collision_layer = 32
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AlexStates/grap_area"]
+position = Vector2( 5, 13 )
+scale = Vector2( 30, 30 )
+shape = SubResource( 19 )
 
 [node name="Spikes2" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1582, 731 )
@@ -414,6 +415,8 @@ position = Vector2( 1161, 411 )
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
-autoplay = true
 
 [node name="Node2D" parent="." instance=ExtResource( 14 )]
+
+[node name="hack-able" parent="." instance=ExtResource( 15 )]
+position = Vector2( 289, 964 )

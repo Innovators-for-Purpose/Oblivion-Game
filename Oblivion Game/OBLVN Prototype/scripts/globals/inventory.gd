@@ -4,7 +4,7 @@ extends Node
 signal items_changed(indexes)
 signal selected_changed()
 
-var cols = 4
+var cols = 5
 var rows = 1
 var slots = cols * rows
 var items = []
@@ -16,8 +16,9 @@ func _ready():
 		items.append({})
 	items[0] = Global.get_item_by_key("heal")
 	items[1] = Global.get_item_by_key("stun_gun")
-	items[2] = Global.get_item_by_key("magnet")
+	items[2] = Global.get_item_by_key("hacktool")
 	items[3] = Global.get_item_by_key("grapple")
+	items[4] = Global.get_item_by_key("magnet")
 
 
 func set_item(index, item):
@@ -60,7 +61,16 @@ func change_item(index, item: Dictionary, parent: Node):
 		parent.add_child(itemsprite)
 		prev_item = itemsprite
 		return
-
+	
+	if item_key == "hacking":
+		var itemsprite = Sprite.new()
+		var hacktool = load("res://scenes/hacktool.tscn").instance()
+#		area2d.set_script(script)
+#		itemsprite.name = item_key
+		itemsprite.add_child(hacktool)
+		parent.add_child(itemsprite)
+		prev_item = itemsprite
+		return
 	
 	if item.empty() or not item.has("icon"):
 		return
