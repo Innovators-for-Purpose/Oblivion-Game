@@ -444,7 +444,7 @@ position = Vector2( 11, 19 )
 scale = Vector2( 0.045, 0.0468333 )
 frames = SubResource( 35 )
 animation = "Final Run"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Tall" type="CollisionShape2D" parent="."]

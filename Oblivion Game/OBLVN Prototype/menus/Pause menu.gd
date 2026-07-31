@@ -52,7 +52,7 @@ func _on_resume_pressed():
 	hide()
 func resume():
 	get_tree().paused = false
-#	hide()
+	hide()
 func _on_restart_pressed():
 	get_tree().paused = false
 #	Global.reset_checkpoint()
@@ -60,3 +60,7 @@ func _on_restart_pressed():
 func _on_quit_pressed():
 	get_tree().change_scene ("res://menus/LevelSelect.tscn")
 	get_tree().paused = false
+
+
+func _on_quit2_pressed():
+	get_tree().quit()

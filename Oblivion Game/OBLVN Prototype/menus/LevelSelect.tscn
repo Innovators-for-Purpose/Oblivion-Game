@@ -694,7 +694,7 @@ visible = false
 position = Vector2( 445, 110 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 7
+frame = 4
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -702,7 +702,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 779, 109 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 7
+frame = 4
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -710,7 +710,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1112, 112 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 6
+frame = 3
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -718,7 +718,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 448, 321 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 6
+frame = 3
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -726,7 +726,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 782, 325 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 5
+frame = 2
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -734,7 +734,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1116, 325 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 5
+frame = 2
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -742,7 +742,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 447, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 5
+frame = 2
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -750,7 +750,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 784, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 5
+frame = 2
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -758,7 +758,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1114, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 4
+frame = 1
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -840,7 +840,6 @@ text = "     Facility"
 position = Vector2( 75, 99 )
 scale = Vector2( 0.127441, 0.134521 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="Button4" type="Button" parent="Buttons"]
@@ -915,7 +914,7 @@ position = Vector2( 56, 68.9999 )
 rotation = -0.785397
 scale = Vector2( 0.556548, 0.507888 )
 frames = SubResource( 62 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="Button8" type="Button" parent="Buttons"]

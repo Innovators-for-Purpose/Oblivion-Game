@@ -24,13 +24,24 @@ shader_param/lod = 1.416
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.0980392, 0.784314, 0.333333, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
+shadow_color = Color( 0, 0.52549, 0.521569, 0.6 )
+shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.27451, 0.580392, 0.52549, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -38,6 +49,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -45,6 +60,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -52,6 +71,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -59,6 +82,11 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -66,6 +94,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=14]
 bg_color = Color( 0.27451, 0.580392, 0.52549, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -73,6 +105,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=15]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -80,6 +116,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=16]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -87,6 +127,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -94,6 +138,11 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -103,6 +152,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=21]
 bg_color = Color( 0.27451, 0.580392, 0.52549, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -110,6 +163,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=20]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -117,6 +174,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=17]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -124,6 +185,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=18]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -131,6 +196,11 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=19]
 bg_color = Color( 0.0470588, 0.356863, 0.0666667, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -162,14 +232,16 @@ margin_bottom = 398.0
 custom_styles/panel = SubResource( 6 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
-margin_right = 459.0
-margin_bottom = 205.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 454.0
+margin_bottom = 200.0
 alignment = 1
 
 [node name="restart" type="Button" parent="PanelContainer/VBoxContainer"]
-margin_top = 77.0
-margin_right = 459.0
-margin_bottom = 91.0
+margin_top = 59.0
+margin_right = 449.0
+margin_bottom = 75.0
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 8 )
 custom_styles/focus = SubResource( 9 )
@@ -178,9 +250,9 @@ custom_styles/normal = SubResource( 11 )
 text = "Restart"
 
 [node name="resume" type="Button" parent="PanelContainer/VBoxContainer"]
-margin_top = 95.0
-margin_right = 459.0
-margin_bottom = 109.0
+margin_top = 79.0
+margin_right = 449.0
+margin_bottom = 95.0
 custom_styles/hover = SubResource( 14 )
 custom_styles/pressed = SubResource( 15 )
 custom_styles/focus = SubResource( 16 )
@@ -190,15 +262,27 @@ text = "Resume"
 icon = SubResource( 1 )
 
 [node name="quit" type="Button" parent="PanelContainer/VBoxContainer"]
-margin_top = 113.0
-margin_right = 459.0
-margin_bottom = 127.0
+margin_top = 99.0
+margin_right = 449.0
+margin_bottom = 115.0
 custom_styles/hover = SubResource( 21 )
 custom_styles/pressed = SubResource( 20 )
 custom_styles/focus = SubResource( 17 )
 custom_styles/disabled = SubResource( 18 )
 custom_styles/normal = SubResource( 19 )
 text = "Level Select"
+icon_align = 2
+
+[node name="quit2" type="Button" parent="PanelContainer/VBoxContainer"]
+margin_top = 119.0
+margin_right = 449.0
+margin_bottom = 135.0
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/focus = SubResource( 17 )
+custom_styles/disabled = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+text = "Quit"
 icon_align = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/VBoxContainer"]
@@ -208,3 +292,4 @@ anims/blur = SubResource( 4 )
 [connection signal="pressed" from="PanelContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/quit2" to="." method="_on_quit2_pressed"]
