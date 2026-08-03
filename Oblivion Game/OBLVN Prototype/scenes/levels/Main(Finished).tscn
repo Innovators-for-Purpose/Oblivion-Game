@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://textures/simple tiles.png" type="Texture" id=1]
 [ext_resource path="res://textures/background _).png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Sprites (Temporary)/New Piskel (49).png" type="Texture" id=13]
 [ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/hack-able door.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Rat.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -420,3 +421,6 @@ stream = ExtResource( 12 )
 
 [node name="hack-able" parent="." instance=ExtResource( 15 )]
 position = Vector2( 289, 964 )
+
+[node name="Rat" parent="." instance=ExtResource( 16 )]
+position = Vector2( 772, 521 )

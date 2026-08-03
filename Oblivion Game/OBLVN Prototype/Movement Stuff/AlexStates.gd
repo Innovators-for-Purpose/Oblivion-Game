@@ -79,6 +79,9 @@ func _on_Area2D_area_entered(area):
 	if "stinger" in area.get_parent().name:
 		state = States.DAMAGE
 		dp = 30
+	if "Rat" in area.get_parent().name:
+		state = States.DAMAGE
+		dp = 5
 #	var target = null
 #	if area.has_method("enable_cross"):
 #		target = area
@@ -352,7 +355,7 @@ func _physics_process(_delta):
 				velocity.y = -1000
 				state = States.AIR
 				hit = true
-				var timer = get_tree().create_timer(2)
+				var timer = get_tree().create_timer(1)
 				timer.connect("timeout", self, "_on_timeout")
 			else: 
 				state = States.FLOOR
@@ -365,7 +368,7 @@ func _physics_process(_delta):
 		$AnimationPlayer.play("invincible")
 
 func _on_timeout():
-	print("hit the timeout!")
+#	print("hit the timeout!")
 	hit = false
 	$AnimationPlayer.play("RESET")
 

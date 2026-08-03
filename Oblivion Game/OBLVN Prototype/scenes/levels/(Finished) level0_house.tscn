@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=2]
+[gd_scene load_steps=109 format=2]
 
 [ext_resource path="res://scripts/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://textures/simple tiles.png" type="Texture" id=2]
@@ -46,6 +46,7 @@
 [ext_resource path="res://scenes/levels/sink.gd" type="Script" id=44]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (83).png" type="Texture" id=45]
 [ext_resource path="res://scenes/hack-able door.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Rat.tscn" type="PackedScene" id=47]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tileset_16x16_interior_preview2_0.png 0"
@@ -1325,6 +1326,9 @@ playing = true
 
 [node name="hack-able" parent="." instance=ExtResource( 46 )]
 position = Vector2( 1191, 476 )
+
+[node name="Rat" parent="." instance=ExtResource( 47 )]
+position = Vector2( 1371, 550 )
 
 [connection signal="body_entered" from="sink" to="sink" method="_on_sink_body_entered"]
 [connection signal="body_exited" from="sink" to="sink" method="_on_sink_body_exited"]

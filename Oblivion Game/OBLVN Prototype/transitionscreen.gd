@@ -31,7 +31,7 @@
 extends CanvasLayer
 onready var Anim = $AnimationPlayer
 
-func change_scene(target: String) -> void:
+func change_scene(_target: String) -> void:
 	$AnimationPlayer.play('fade back to white')
 	yield($AnimationPlayer,'fade to black')
 	get_tree().change_scene("res://scenes/levels/(Finished)AssemblyPlantsave.tscn")

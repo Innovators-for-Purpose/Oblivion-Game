@@ -7,22 +7,18 @@
 [ext_resource path="res://scenes/levels/Guard.gd" type="Script" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 1000, 1000 )
 
@@ -51,7 +47,6 @@ position = Vector2( -504.12, -461.597 )
 rotation = 3.14159
 scale = Vector2( 0.118693, 0.128768 )
 frames = SubResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 flip_v = true
