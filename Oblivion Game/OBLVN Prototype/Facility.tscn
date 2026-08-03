@@ -148,7 +148,7 @@
 3/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=102]
-extents = Vector2( 3, 231 )
+extents = Vector2( 1, 231.5 )
 
 [sub_resource type="AtlasTexture" id=71]
 atlas = ExtResource( 29 )
@@ -924,6 +924,11 @@ extents = Vector2( 283.5, 35 )
 
 [sub_resource type="StyleBoxFlat" id=100]
 bg_color = Color( 0.156863, 0.776471, 0.486275, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.101961, 0.415686, 0.360784, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -955,7 +960,7 @@ visible = false
 [node name="Elevators collison" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevators collison"]
-position = Vector2( -768, -775 )
+position = Vector2( -766, -775.5 )
 shape = SubResource( 102 )
 
 [node name="Elevator" type="RigidBody2D" parent="."]
@@ -1509,6 +1514,7 @@ position = Vector2( 1150, -1573 )
 position = Vector2( 5494, -1395 )
 
 [node name="Ladders" type="TileMap" parent="."]
+modulate = Color( 0.560784, 1, 0.94902, 1 )
 tile_set = SubResource( 4 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 4
@@ -1751,6 +1757,7 @@ position = Vector2( -951, -509 )
 rotation = -1.5708
 rotate = false
 script = ExtResource( 30 )
+speed = 150
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D"]
 remote_path = NodePath("../../../Elevator")

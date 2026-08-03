@@ -282,13 +282,15 @@ custom_styles/pressed = SubResource( 20 )
 custom_styles/focus = SubResource( 17 )
 custom_styles/disabled = SubResource( 18 )
 custom_styles/normal = SubResource( 19 )
-text = "Quit"
+text = "Quit Game"
 icon_align = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/VBoxContainer"]
 root_node = NodePath("../../..")
 anims/blur = SubResource( 4 )
 
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/restart" to="PanelContainer/VBoxContainer/restart" method="_on_restart_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer/VBoxContainer/restart" to="PanelContainer/VBoxContainer/restart" method="_on_restart_mouse_exited"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

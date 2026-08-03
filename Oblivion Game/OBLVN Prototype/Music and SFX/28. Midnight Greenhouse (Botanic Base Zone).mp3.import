@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/28. Midnight Greenhouse (Botanic Base Zone).mp3-09f2e26deea583a99f52a039d4668ee1.mp3str"
+
+[deps]
+
+source_file="res://Music and SFX/28. Midnight Greenhouse (Botanic Base Zone).mp3"
+dest_files=[ "res://.import/28. Midnight Greenhouse (Botanic Base Zone).mp3-09f2e26deea583a99f52a039d4668ee1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

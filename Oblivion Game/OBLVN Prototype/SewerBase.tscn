@@ -699,6 +699,11 @@ _data = {
 
 [sub_resource type="StyleBoxFlat" id=77]
 bg_color = Color( 0.156863, 0.776471, 0.486275, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.101961, 0.415686, 0.360784, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -875,6 +880,7 @@ tile_data = PoolIntArray( -4587338, -1073741821, 0, -4587336, -1073741821, 0, -4
 position = Vector2( 2895, -847 )
 
 [node name="Ladders" type="TileMap" parent="."]
+modulate = Color( 0.85098, 0.596078, 0.411765, 1 )
 tile_set = SubResource( 6 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 4
@@ -947,69 +953,69 @@ color = Color( 0.243137, 1, 0, 1 )
 position = Vector2( -950, 78 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 6
+frame = 1
 playing = true
 
 [node name="AnimatedSprite13" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( -132, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 6
+frame = 1
 playing = true
 
 [node name="AnimatedSprite14" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 686, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 5
 playing = true
 
 [node name="AnimatedSprite15" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 1504, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite16" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 2320, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite17" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 3138, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 3
+frame = 6
 playing = true
 
 [node name="AnimatedSprite18" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 3956, 78 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 3
+frame = 6
 playing = true
 
 [node name="AnimatedSprite19" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 4774, 76 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite20" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 5591, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite21" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 6409, 76 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Acidddss/AcidDeath"]

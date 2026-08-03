@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=2]
+[gd_scene load_steps=109 format=2]
 
 [ext_resource path="res://scripts/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://textures/simple tiles.png" type="Texture" id=2]
@@ -22,7 +22,7 @@
 [ext_resource path="res://New Assets (Summer 2026)/BarrelAssettbarrell OBJ.png" type="Texture" id=20]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (8).png" type="Texture" id=21]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (9).png" type="Texture" id=22]
-[ext_resource path="res://Sprites (Temporary)/pngtree-blue-sofa-in-pixel-art-style-png-image_12528469.png" type="Texture" id=23]
+[ext_resource path="res://New Assets (Summer 2026)/Couch-Furniture.png" type="Texture" id=23]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (10).png" type="Texture" id=24]
 [ext_resource path="res://textures/cool tiles/Ladder2.png" type="Texture" id=25]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (70).png" type="Texture" id=26]
@@ -278,8 +278,13 @@
 [sub_resource type="RectangleShape2D" id=39]
 extents = Vector2( 145.626, 44.3478 )
 
-[sub_resource type="RectangleShape2D" id=43]
-extents = Vector2( 13, 37.125 )
+[sub_resource type="CapsuleShape2D" id=68]
+radius = 18.0
+height = 42.0
+
+[sub_resource type="CapsuleShape2D" id=69]
+radius = 17.0
+height = 54.0
 
 [sub_resource type="AtlasTexture" id=30]
 atlas = ExtResource( 21 )
@@ -1199,22 +1204,22 @@ tile_data = PoolIntArray( -458744, 1073741830, 0, -458738, 536870918, 0, -458737
 
 [node name="Sprite" type="Sprite" parent="Couch"]
 modulate = Color( 0.45098, 0.356863, 0.356863, 1 )
-position = Vector2( 923, 523 )
-scale = Vector2( 0.676389, 0.575 )
+position = Vector2( 924, 507 )
+scale = Vector2( 0.103313, 0.128756 )
 texture = ExtResource( 23 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Couch"]
-position = Vector2( 922.5, 549.5 )
+position = Vector2( 922.5, 557 )
 scale = Vector2( 0.676389, 0.575 )
 shape = SubResource( 39 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Couch"]
-position = Vector2( 1012, 534.125 )
-shape = SubResource( 43 )
+position = Vector2( 1019, 541 )
+shape = SubResource( 68 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Couch"]
-position = Vector2( 835, 534 )
-shape = SubResource( 43 )
+position = Vector2( 830, 544 )
+shape = SubResource( 69 )
 
 [node name="Door" type="Sprite" parent="."]
 modulate = Color( 0.27451, 0.247059, 0.247059, 1 )
@@ -1230,7 +1235,7 @@ modulate = Color( 0.752941, 0.752941, 0.752941, 1 )
 position = Vector2( 708, 523 )
 scale = Vector2( 1.086, 1.042 )
 frames = SubResource( 37 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="Kitchen Table" type="StaticBody2D" parent="."]
@@ -1322,7 +1327,7 @@ shadow_buffer_size = 32
 position = Vector2( -172, 501 )
 scale = Vector2( 0.10049, 0.109681 )
 frames = SubResource( 67 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="Sonic" parent="." instance=ExtResource( 46 )]

@@ -36,7 +36,7 @@ func _on_Button9_pressed():
 
 
 func _on_Button10_pressed():
-	get_tree().change_scene("res://GreenHouse(Outside).tscn")
+	get_tree().change_scene("res://GreenHouse(Inside).tscn")
 
 
 func _on_Button11_pressed():

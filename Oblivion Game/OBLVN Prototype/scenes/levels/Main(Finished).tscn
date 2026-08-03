@@ -251,6 +251,11 @@ animations = [ {
 
 [sub_resource type="StyleBoxFlat" id=20]
 bg_color = Color( 0.156863, 0.776471, 0.486275, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.101961, 0.415686, 0.360784, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -413,20 +418,21 @@ valign = 1
 position = Vector2( 421, 871 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
+frame = 5
 playing = true
 
 [node name="PanelLight2" type="AnimatedSprite" parent="."]
 position = Vector2( 1355, 618 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 8
+frame = 4
 playing = true
 
 [node name="PanelLight3" type="AnimatedSprite" parent="."]
 position = Vector2( 1271, 71 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="AlexStates" parent="." instance=ExtResource( 5 )]

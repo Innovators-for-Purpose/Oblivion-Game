@@ -65,6 +65,12 @@ func _on_Area2D_area_entered(area):
 	if "Spikes" in area.get_parent().name:
 		state = States.DAMAGE
 		dp = 15
+	if "Mini Bee enemy" in area.get_parent().name:
+		state = States.DAMAGE
+		dp = 5
+	if "ministinger" in area.get_parent().name:
+		state = States.DAMAGE
+		dp = 10
 	if "DeathSphere" in area.get_parent().name:
 		state = States.DAMAGE
 		dp = 40

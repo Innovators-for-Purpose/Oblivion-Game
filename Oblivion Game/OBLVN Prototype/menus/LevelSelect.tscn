@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=2]
+[gd_scene load_steps=96 format=2]
 
 [ext_resource path="res://menus/mainmenuscript.gd" type="Script" id=1]
 [ext_resource path="res://menus/Background outer city (2).png" type="Texture" id=2]
@@ -14,6 +14,16 @@
 [ext_resource path="res://Sprites (Temporary)/LazerSpriteAnim.png" type="Texture" id=12]
 [ext_resource path="res://scenes/levels/textures/background _).png" type="Texture" id=13]
 [ext_resource path="res://New Assets (Summer 2026)/Green House-2nd Floor.png" type="Texture" id=14]
+[ext_resource path="res://menus/ButtonL.gd" type="Script" id=15]
+[ext_resource path="res://menus/Button2L.gd" type="Script" id=16]
+[ext_resource path="res://menus/Button3.gd" type="Script" id=17]
+[ext_resource path="res://menus/Button4.gd" type="Script" id=18]
+[ext_resource path="res://menus/Button5.gd" type="Script" id=19]
+[ext_resource path="res://menus/Button6.gd" type="Script" id=20]
+[ext_resource path="res://menus/Button8.gd" type="Script" id=21]
+[ext_resource path="res://menus/Button11.gd" type="Script" id=22]
+[ext_resource path="res://menus/Button9.gd" type="Script" id=23]
+[ext_resource path="res://menus/Button10.gd" type="Script" id=24]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 4 )
@@ -694,7 +704,7 @@ visible = false
 position = Vector2( 445, 110 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 4
+frame = 7
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -702,7 +712,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 779, 109 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 4
+frame = 7
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -710,7 +720,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1112, 112 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 3
+frame = 6
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -718,7 +728,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 448, 321 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 3
+frame = 6
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -726,7 +736,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 782, 325 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 2
+frame = 5
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -734,7 +744,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1116, 325 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 2
+frame = 5
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -742,7 +752,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 447, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 2
+frame = 5
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -750,7 +760,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 784, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 2
+frame = 5
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -758,7 +768,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1114, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 1
+frame = 4
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -782,6 +792,7 @@ custom_styles/focus = SubResource( 15 )
 custom_styles/disabled = SubResource( 16 )
 custom_styles/normal = SubResource( 12 )
 text = "                   Assembly Plant"
+script = ExtResource( 15 )
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/Button"]
 margin_left = 9.0
@@ -809,6 +820,7 @@ custom_styles/focus = SubResource( 20 )
 custom_styles/disabled = SubResource( 21 )
 custom_styles/normal = SubResource( 18 )
 text = "              House"
+script = ExtResource( 16 )
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/Button2"]
 margin_left = 8.0
@@ -835,6 +847,7 @@ custom_styles/focus = SubResource( 25 )
 custom_styles/disabled = SubResource( 23 )
 custom_styles/normal = SubResource( 22 )
 text = "     Facility"
+script = ExtResource( 17 )
 
 [node name="TextureRect" type="AnimatedSprite" parent="Buttons/Button3"]
 position = Vector2( 75, 99 )
@@ -858,6 +871,7 @@ custom_styles/focus = SubResource( 33 )
 custom_styles/disabled = SubResource( 31 )
 custom_styles/normal = SubResource( 32 )
 text = "                  Outer City"
+script = ExtResource( 18 )
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/Button4"]
 margin_left = 8.0
@@ -883,6 +897,7 @@ custom_styles/focus = SubResource( 37 )
 custom_styles/disabled = SubResource( 38 )
 custom_styles/normal = SubResource( 36 )
 text = "                 Sewers"
+script = ExtResource( 19 )
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/Button5"]
 margin_left = 9.0
@@ -908,6 +923,7 @@ custom_styles/focus = SubResource( 49 )
 custom_styles/disabled = SubResource( 50 )
 custom_styles/normal = SubResource( 46 )
 text = "                Laser Room"
+script = ExtResource( 20 )
 
 [node name="TextureRect" type="AnimatedSprite" parent="Buttons/Button6"]
 position = Vector2( 56, 68.9999 )
@@ -931,6 +947,7 @@ custom_styles/focus = SubResource( 65 )
 custom_styles/disabled = SubResource( 66 )
 custom_styles/normal = SubResource( 51 )
 text = "                Main"
+script = ExtResource( 21 )
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/Button8"]
 margin_left = 8.0
@@ -954,6 +971,7 @@ custom_styles/focus = SubResource( 65 )
 custom_styles/disabled = SubResource( 66 )
 custom_styles/normal = SubResource( 51 )
 text = "                Main(Test)"
+script = ExtResource( 22 )
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/Button11"]
 margin_left = 8.0
@@ -977,6 +995,7 @@ custom_styles/focus = SubResource( 43 )
 custom_styles/disabled = SubResource( 41 )
 custom_styles/normal = SubResource( 42 )
 text = "                   SewerBase"
+script = ExtResource( 23 )
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/Button9"]
 margin_left = 8.0
@@ -1000,6 +1019,7 @@ custom_styles/focus = SubResource( 69 )
 custom_styles/disabled = SubResource( 70 )
 custom_styles/normal = SubResource( 71 )
 text = "                   GreenHouse"
+script = ExtResource( 24 )
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/Button10"]
 margin_left = 8.0
@@ -1018,13 +1038,33 @@ stream = ExtResource( 5 )
 autoplay = true
 max_distance = 3000.0
 
+[connection signal="mouse_entered" from="Buttons/Button" to="Buttons/Button" method="_on_Button_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Button" to="Buttons/Button" method="_on_Button_mouse_exited"]
 [connection signal="pressed" from="Buttons/Button" to="." method="_on_Button_pressed"]
+[connection signal="mouse_entered" from="Buttons/Button2" to="Buttons/Button2" method="_on_Button2_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Button2" to="Buttons/Button2" method="_on_Button2_mouse_exited"]
 [connection signal="pressed" from="Buttons/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="mouse_entered" from="Buttons/Button3" to="Buttons/Button3" method="_on_Button3_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Button3" to="Buttons/Button3" method="_on_Button3_mouse_exited"]
 [connection signal="pressed" from="Buttons/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="mouse_entered" from="Buttons/Button4" to="Buttons/Button4" method="_on_Button4_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Button4" to="Buttons/Button4" method="_on_Button4_mouse_exited"]
 [connection signal="pressed" from="Buttons/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="mouse_entered" from="Buttons/Button5" to="Buttons/Button5" method="_on_Button5_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Button5" to="Buttons/Button5" method="_on_Button5_mouse_exited"]
 [connection signal="pressed" from="Buttons/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="mouse_entered" from="Buttons/Button6" to="Buttons/Button6" method="_on_Button6_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Button6" to="Buttons/Button6" method="_on_Button6_mouse_exited"]
 [connection signal="pressed" from="Buttons/Button6" to="." method="_on_Button6_pressed"]
+[connection signal="mouse_entered" from="Buttons/Button8" to="Buttons/Button8" method="_on_Button8_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Button8" to="Buttons/Button8" method="_on_Button8_mouse_exited"]
 [connection signal="pressed" from="Buttons/Button8" to="." method="_on_Button8_pressed"]
+[connection signal="mouse_entered" from="Buttons/Button11" to="Buttons/Button11" method="_on_Button11_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Button11" to="Buttons/Button11" method="_on_Button11_mouse_exited"]
 [connection signal="pressed" from="Buttons/Button11" to="." method="_on_Button11_pressed"]
+[connection signal="mouse_entered" from="Buttons/Button9" to="Buttons/Button9" method="_on_Button9_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Button9" to="Buttons/Button9" method="_on_Button9_mouse_exited"]
 [connection signal="pressed" from="Buttons/Button9" to="." method="_on_Button9_pressed"]
+[connection signal="mouse_entered" from="Buttons/Button10" to="Buttons/Button10" method="_on_Button10_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Button10" to="Buttons/Button10" method="_on_Button10_mouse_exited"]
 [connection signal="pressed" from="Buttons/Button10" to="." method="_on_Button10_pressed"]

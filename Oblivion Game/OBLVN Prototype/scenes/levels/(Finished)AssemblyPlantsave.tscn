@@ -1139,6 +1139,11 @@ _data = {
 
 [sub_resource type="StyleBoxFlat" id=148]
 bg_color = Color( 0.156863, 0.776471, 0.486275, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.101961, 0.415686, 0.360784, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -1370,7 +1375,7 @@ texture = ExtResource( 38 )
 position = Vector2( 779.209, 211.752 )
 scale = Vector2( 0.131428, 0.110116 )
 frames = SubResource( 123 )
-frame = 6
+frame = 3
 playing = true
 
 [node name="Tiles without collision" type="TileMap" parent="."]
@@ -1382,7 +1387,6 @@ tile_data = PoolIntArray( -5504851, 536870913, 0, -5504849, 536870913, 0, -31455
 
 [node name="Spikes" type="Node2D" parent="."]
 position = Vector2( -3.00468, 0 )
-scale = Vector2( 1, 1 )
 
 [node name="Spikes10" parent="Spikes" instance=ExtResource( 11 )]
 position = Vector2( 4417.8, -630 )
@@ -1448,7 +1452,6 @@ tile_data = PoolIntArray( -6225826, 0, 0, -6225824, 0, 0, -6225822, 0, 0, -62258
 
 [node name="New blocks" type="TileMap" parent="."]
 modulate = Color( 0.592157, 0.768627, 1, 1 )
-scale = Vector2( 1, 1 )
 tile_set = SubResource( 139 )
 cell_size = Vector2( 16, 16 )
 format = 1
@@ -1705,7 +1708,7 @@ script = ExtResource( 58 )
 position = Vector2( 19.981, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel"]
@@ -1725,7 +1728,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 337.679, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel2"]
@@ -1865,95 +1868,72 @@ scale = Vector2( 0.998448, 0.99645 )
 
 [node name="MicroChip5" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 591.919, -335.19 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip6" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 591.919, -422.5 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip7" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 592.92, -508.806 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip8" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 1300.02, -464.65 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip9" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 1588.47, -555.974 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip10" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 2353.65, -234.834 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip11" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 2484.86, -800.843 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip12" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 4146.44, -439.56 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip13" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 5525.58, -474.685 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip14" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 5523.57, -621.205 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip15" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 4644.21, -473.682 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip16" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 4643.21, -616.188 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip17" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 4643.21, -541.924 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip18" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 5524.57, -548.949 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip19" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 2876.47, -42.1496 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip20" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 1390.16, -279.994 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip21" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 1388.15, -70.2494 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip22" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 1537.39, 105.374 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip23" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 1905.96, 311.104 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip24" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 1830.84, 312.108 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip25" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( -622.967, -7.02494 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip26" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 98.1523, 228.812 )
-scale = Vector2( 1, 1 )
 
 [node name="MicroChip27" parent="Microchips" instance=ExtResource( 69 )]
 position = Vector2( 219.34, 229.816 )
-scale = Vector2( 1, 1 )
 
 [node name="collectablemanager" parent="." instance=ExtResource( 71 )]
 
