@@ -17,11 +17,11 @@
         "icon": "pixil-frame-0.png",
         "script": "Heal.gd"
     },
-    "hacking_device": {
+    "hacktool": {
         "name": "Hacking Device",
         "type": "tool",
-        "icon": "",
-        "script": ".gd"
+        "icon": "Untitled design (6) (2).png",
+        "script": "hacktool.gd"
     },
     "flame_thrower": {
         "name": "FlameThrower",
