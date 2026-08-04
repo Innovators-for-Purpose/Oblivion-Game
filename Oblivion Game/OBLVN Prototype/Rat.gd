@@ -5,7 +5,9 @@ const KNOCKBACK = -1000
 const ATTENTION = 15
 const STUNNED = 5
 const GRAVITY = 500
+const HEALTH = 2
 
+var health = HEALTH
 var target = null
 var velocity := Vector2()
 
@@ -59,13 +61,17 @@ func fall():
 func animate():
 	if velocity.x > 0:
 		anim.set_flip_h(true)
+		$Sightline.set_position(Vector2(30, 0))
 	elif velocity.x < 0:
 		anim.set_flip_h(false)
+		$Sightline.set_position(Vector2(-30, 0))
 
 
 #	**PROCESSES**
 func _process(_delta):
 #	print("velocity: ", velocity.x)
+	if health == 0:
+		queue_free()
 	pass
 
 func _physics_process(_delta): #state machine here!
@@ -100,8 +106,9 @@ func _physics_process(_delta): #state machine here!
 
 #	**SIGNALS**
 func _on_Hurtbox_body_entered(body): #the one that stuns the rat
-	if body.name == "AlexStates":
+	if body.name == "AlexStates" or body.get_parent().name == "zapzap":
 		if body.velocity.x > 0:
+			health -= 1
 			print("got stunned...")
 			stunTime.set_wait_time(STUNNED)
 			stunTime.start()
@@ -144,7 +151,7 @@ func _on_stunned_timeout():
 
 
 func _on_hitbox_area_entered(area): #the one that hurts Alex
-	if area.name == "Area2D":
+	if area.name == "Hurtbox":
 		if area.get_parent().velocity.y <= 0:
 			print("hit him!!!!")
 			$Hurtbox/CollisionShape2D.set_deferred("disabled", true)
