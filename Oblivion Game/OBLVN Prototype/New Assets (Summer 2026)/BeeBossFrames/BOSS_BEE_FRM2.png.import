@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BEE_BOSS_FRM1.png-91db443fb0b6fec6ceec001282c2a05d.stex"
+path="res://.import/BOSS_BEE_FRM2.png-9c258cc60f3117cba51e9ae3e3372518.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://New Assets (Summer 2026)/BEE_BOSS_FRM1.png"
-dest_files=[ "res://.import/BEE_BOSS_FRM1.png-91db443fb0b6fec6ceec001282c2a05d.stex" ]
+source_file="res://New Assets (Summer 2026)/BeeBossFrames/BOSS_BEE_FRM2.png"
+dest_files=[ "res://.import/BOSS_BEE_FRM2.png-9c258cc60f3117cba51e9ae3e3372518.stex" ]
 
 [params]
 

@@ -115,7 +115,7 @@ material = SubResource( 18 )
 scale = Vector2( 0.118693, 0.128768 )
 frames = SubResource( 5 )
 animation = "Walk"
-frame = 1
+frame = 2
 playing = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=2]
+[gd_scene load_steps=105 format=2]
 
 [ext_resource path="res://Movement Stuff/collisionShapes/ladderShape.tres" type="Shape2D" id=1]
 [ext_resource path="res://Movement Stuff/AlexStates.gd" type="Script" id=2]
@@ -28,9 +28,27 @@
 [ext_resource path="res://New Assets (Summer 2026)/Run 10001.png" type="Texture" id=26]
 [ext_resource path="res://New Assets (Summer 2026)/Run 10000.png" type="Texture" id=27]
 [ext_resource path="res://scenes/levels/scenes/scenes/scenes/InventoryGUI.tscn" type="PackedScene" id=28]
-[ext_resource path="res://JJS_merge/Flash.tres" type="Material" id=29]
 [ext_resource path="res://invincible.tres" type="Animation" id=30]
 [ext_resource path="res://HURT.tres" type="Animation" id=31]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform vec4 flash_color : hint_color;
+uniform float flash_value : hint_range(0.0, 1.0, 0.1);
+
+void fragment() {
+	vec4 texture_color = texture(TEXTURE, UV);
+	COLOR = mix(texture_color, flash_color, flash_value);
+	COLOR.a = texture_color.a;
+}
+
+"
+
+[sub_resource type="ShaderMaterial" id=97]
+shader = SubResource( 1 )
+shader_param/flash_color = Color( 0.858824, 0, 0, 1 )
+shader_param/flash_value = 0.0
 
 [sub_resource type="AtlasTexture" id=74]
 atlas = ExtResource( 18 )
@@ -421,7 +439,7 @@ collision_mask = 330
 script = ExtResource( 2 )
 
 [node name="Anim" type="AnimatedSprite" parent="."]
-material = ExtResource( 29 )
+material = SubResource( 97 )
 position = Vector2( 11, 19 )
 scale = Vector2( 0.045, 0.0468333 )
 frames = SubResource( 35 )

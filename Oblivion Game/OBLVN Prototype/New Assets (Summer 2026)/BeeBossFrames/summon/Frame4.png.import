@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BOSS_BEE_FRM2.png-4c1879c7227ac9483396810a576229b3.stex"
+path="res://.import/Frame4.png-f2ab6e5310c961f9d091b99145973133.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://New Assets (Summer 2026)/BOSS_BEE_FRM2.png"
-dest_files=[ "res://.import/BOSS_BEE_FRM2.png-4c1879c7227ac9483396810a576229b3.stex" ]
+source_file="res://New Assets (Summer 2026)/BeeBossFrames/summon/Frame4.png"
+dest_files=[ "res://.import/Frame4.png-f2ab6e5310c961f9d091b99145973133.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

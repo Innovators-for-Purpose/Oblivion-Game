@@ -1,3 +1,4 @@
+tool
 extends KinematicBody2D
 
 
@@ -8,8 +9,8 @@ export var boss_trigger : NodePath
 var hurt_finished
 var dead = false
 var shieldOn = false
-export var stinger : PackedScene
-var invincible = false
+var stinger = load("res://JJS_merge/Stinger.tscn")
+var invincible = true
 onready var target = get_parent().get_node("AlexStates")
 var FIRE = false
 export var HEALTH = 6
@@ -19,6 +20,7 @@ var grunts = ["res://JJS_merge/sfk/Speech Boss Big Argg.wav","res://JJS_merge/sf
 func _ready():
 # warning-ignore:return_value_discarded
 	# Check if NodePath for Boss Gate Exist
+	hide()
 	get_parent().get_node("Bee Boss Path/PathFollow2D/RemoteTransform2D").update_position = false
 	if boss_gate:
 		connect("boss_dead",get_node(boss_gate), "_on_boss_dead")
@@ -28,10 +30,18 @@ func _ready():
 
 func init_Boss(body):
 	if "AlexStates" in body.name:
-		get_parent().get_node("Bee Boss Path/PathFollow2D/RemoteTransform2D").update_position = true
-		print("play cutscene")
+		$Sprite.material = load("res://JJS_merge/fade.tres")
+		show()
 		$Destory.play()
+		$AnimationPlayer.play("Spawn")
+		$Sprite.play("summon")
+		yield($Sprite,"animation_finished")
+		yield(get_tree().create_timer(1),"timeout")
+		$Sprite.material = load("res://JJS_merge/Flash.tres")
+		$Sprite.material
 		Turn_Shield_On()
+		get_parent().get_node("Bee Boss Path/PathFollow2D/RemoteTransform2D").update_position = true
+		$Sprite.play("idle")
 
 func fire_sting():
 	if FIRE:
@@ -110,6 +120,14 @@ func _on_Die_finished():
 	queue_free()
 
 func _physics_process(_delta):
+	
+	if $Sprite.animation == "summon":
+		$Sprite.scale = Vector2(0.318,0.375)
+		$Sprite.position = Vector2(8,13)
+	elif $Sprite.animation == "idle":
+		$Sprite.scale = Vector2(0.139,0.164)
+		$Sprite.position = Vector2.ZERO
+		$forcefield.frame = $Sprite.frame
 	if target:
 		if target.position.x >= self.position.x:
 			self.scale.x = -1
