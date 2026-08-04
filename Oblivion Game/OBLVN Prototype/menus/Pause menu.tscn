@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://menus/Pause menu.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Anonymous_Pro/AnonymousPro-Regular.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="GDScript" id=5]
 
@@ -35,6 +36,10 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 shadow_color = Color( 0, 0.52549, 0.521569, 0.6 )
 shadow_size = 5
+
+[sub_resource type="DynamicFont" id=22]
+size = 15
+font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.27451, 0.580392, 0.52549, 1 )
@@ -91,6 +96,10 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=23]
+size = 15
+font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=14]
 bg_color = Color( 0.27451, 0.580392, 0.52549, 1 )
@@ -150,6 +159,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="AnimatedTexture" id=1]
 
+[sub_resource type="DynamicFont" id=24]
+size = 15
+font_data = ExtResource( 2 )
+
 [sub_resource type="StyleBoxFlat" id=21]
 bg_color = Color( 0.27451, 0.580392, 0.52549, 1 )
 border_width_left = 1
@@ -206,6 +219,10 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="DynamicFont" id=25]
+size = 15
+font_data = ExtResource( 2 )
+
 [sub_resource type="Animation" id=4]
 resource_name = "blur"
 
@@ -239,9 +256,10 @@ margin_bottom = 200.0
 alignment = 1
 
 [node name="restart" type="Button" parent="PanelContainer/VBoxContainer"]
-margin_top = 59.0
+margin_top = 55.0
 margin_right = 449.0
-margin_bottom = 75.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 22 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 8 )
 custom_styles/focus = SubResource( 9 )
@@ -250,9 +268,10 @@ custom_styles/normal = SubResource( 11 )
 text = "Restart"
 
 [node name="resume" type="Button" parent="PanelContainer/VBoxContainer"]
-margin_top = 79.0
+margin_top = 77.0
 margin_right = 449.0
 margin_bottom = 95.0
+custom_fonts/font = SubResource( 23 )
 custom_styles/hover = SubResource( 14 )
 custom_styles/pressed = SubResource( 15 )
 custom_styles/focus = SubResource( 16 )
@@ -264,7 +283,8 @@ icon = SubResource( 1 )
 [node name="quit" type="Button" parent="PanelContainer/VBoxContainer"]
 margin_top = 99.0
 margin_right = 449.0
-margin_bottom = 115.0
+margin_bottom = 117.0
+custom_fonts/font = SubResource( 24 )
 custom_styles/hover = SubResource( 21 )
 custom_styles/pressed = SubResource( 20 )
 custom_styles/focus = SubResource( 17 )
@@ -274,9 +294,10 @@ text = "Level Select"
 icon_align = 2
 
 [node name="quit2" type="Button" parent="PanelContainer/VBoxContainer"]
-margin_top = 119.0
+margin_top = 121.0
 margin_right = 449.0
-margin_bottom = 135.0
+margin_bottom = 139.0
+custom_fonts/font = SubResource( 25 )
 custom_styles/hover = SubResource( 21 )
 custom_styles/pressed = SubResource( 20 )
 custom_styles/focus = SubResource( 17 )

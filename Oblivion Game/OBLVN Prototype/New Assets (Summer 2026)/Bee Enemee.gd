@@ -1,11 +1,14 @@
 extends KinematicBody2D
 
 
+
 signal boss_dead
 signal init_invincible
 export var boss_gate : NodePath
 export var boss_trigger : NodePath
 var hurt_finished
+var dead = false
+var shieldOn = false
 export var stinger : PackedScene
 var invincible = false
 onready var target = get_parent().get_node("AlexStates")
@@ -29,6 +32,7 @@ func init_Boss(body):
 		get_parent().get_node("Bee Boss Path/PathFollow2D/RemoteTransform2D").update_position = true
 		print("play cutscene")
 		$Destory.play()
+		Turn_Shield_On()
 
 func fire_sting():
 	if FIRE:
@@ -55,12 +59,22 @@ func Hurt():
 	hurt_finished = true
 	emit_signal("init_invincible")
 
+func Turn_Shield_On():
+	$Shield.play()
+	invincible = true
+	$forcefield.show()
+	$HurtMe.monitoring = false
+func Turn_Shield_Off():
+	invincible = false
+	$forcefield.hide()
+	$HurtMe.monitoring = true
 
 func check_death():
 	if HEALTH <= 0:
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_CUBIC)
 		tween.set_ease(Tween.EASE_OUT)
+		dead = true
 		get_parent().get_node("Bee Boss Path/PathFollow2D/RemoteTransform2D").update_position = false
 		$TargetRange.monitoring = false
 		$Cooldown.stop()
@@ -73,9 +87,9 @@ func check_death():
 		$Sprite.hide()
 		$BOOM.emitting = true
 		$Die.play()
-		return true
+		
 	else:
-		return false
+		dead = false
 
 func _on_HurtMe_body_entered(body):
 	if "AlexStates" in body.name:
@@ -84,8 +98,9 @@ func _on_HurtMe_body_entered(body):
 				Hurt()
 				check_death()
 				yield(self,"init_invincible")
-				$Shield.play()
-				$Invincible.start()
+				if !dead:
+					Turn_Shield_On()
+#				$Invincible.start()
 #		$AnimationPlayer.play("IDLE")
 
 func _on_Cooldown_timeout():
@@ -96,19 +111,13 @@ func _on_Die_finished():
 	queue_free()
 
 func _physics_process(_delta):
-	if invincible and !(HEALTH <= 0) and hurt_finished and !check_death():
-		$forcefield.show()
-		$HurtMe.monitoring = false
-	else:
-		$forcefield.hide()
-		$HurtMe.monitoring = true
-
-
 	if target:
 		if target.position.x >= self.position.x:
 			self.scale.x = -1
 		else:
 			scale.x = 1
+
+
 
 
 

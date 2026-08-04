@@ -1375,7 +1375,7 @@ texture = ExtResource( 38 )
 position = Vector2( 779.209, 211.752 )
 scale = Vector2( 0.131428, 0.110116 )
 frames = SubResource( 123 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="Tiles without collision" type="TileMap" parent="."]
@@ -1799,8 +1799,8 @@ shape = SubResource( 83 )
 script = ExtResource( 40 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Switch"]
-position = Vector2( -149.858, -342 )
-scale = Vector2( 0.181931, 0.209436 )
+position = Vector2( -149.858, -340.167 )
+scale = Vector2( 0.181931, 0.207639 )
 frames = SubResource( 91 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Switch"]

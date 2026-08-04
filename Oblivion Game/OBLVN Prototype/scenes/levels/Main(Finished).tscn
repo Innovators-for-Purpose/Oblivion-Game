@@ -418,21 +418,20 @@ valign = 1
 position = Vector2( 421, 871 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 5
+frame = 2
 playing = true
 
 [node name="PanelLight2" type="AnimatedSprite" parent="."]
 position = Vector2( 1355, 618 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="PanelLight3" type="AnimatedSprite" parent="."]
 position = Vector2( 1271, 71 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 3
 playing = true
 
 [node name="AlexStates" parent="." instance=ExtResource( 5 )]
