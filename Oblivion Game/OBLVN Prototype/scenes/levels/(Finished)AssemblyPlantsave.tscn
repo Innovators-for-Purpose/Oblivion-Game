@@ -52,7 +52,7 @@
 [ext_resource path="res://Music and SFX/roblox-death-sound_1.mp3" type="AudioStream" id=50]
 [ext_resource path="res://New Assets (Summer 2026)/tile 7.png" type="Texture" id=51]
 [ext_resource path="res://Music and SFX/SCD_FM_09.wav" type="AudioStream" id=52]
-[ext_resource path="res://Checkpoint Statue.tscn" type="PackedScene" id=53]
+[ext_resource path="res://suffocate.tscn" type="PackedScene" id=53]
 [ext_resource path="res://scenes/levels/(Finished)AssemblyPlantsave.gd" type="Script" id=54]
 [ext_resource path="res://scenes/levels/PathFollow19D.gd" type="Script" id=55]
 [ext_resource path="res://scenes/levels/PathFollow132D.gd" type="Script" id=56]
@@ -1048,7 +1048,7 @@ _data = {
 extents = Vector2( 48.9533, 4 )
 
 [sub_resource type="RectangleShape2D" id=99]
-extents = Vector2( 25.3521, 8.75 )
+extents = Vector2( 27.5427, 8.75 )
 
 [sub_resource type="AtlasTexture" id=75]
 atlas = ExtResource( 34 )
@@ -1447,6 +1447,10 @@ position = Vector2( 2702.19, -1094.89 )
 position = Vector2( -287.446, -435.546 )
 scale = Vector2( 0.998448, 0.99645 )
 
+[node name="hack-able2" parent="." instance=ExtResource( 70 )]
+position = Vector2( 2419.76, -1443.12 )
+scale = Vector2( 0.998448, 0.99645 )
+
 [node name="Assembly Plant" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
@@ -1694,7 +1698,8 @@ shape = SubResource( 67 )
 [node name="Switch Collison body" type="StaticBody2D" parent="."]
 
 [node name="Switch Collision" type="CollisionShape2D" parent="Switch Collison body"]
-position = Vector2( -198.188, -343.25 )
+position = Vector2( -197.807, -343.25 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 99 )
 
 [node name="Switch Sfx" type="AudioStreamPlayer" parent="."]
@@ -1713,7 +1718,6 @@ script = ExtResource( 58 )
 position = Vector2( 19.981, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel"]
@@ -1733,7 +1737,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 337.679, 57 )
 scale = Vector2( 0.217281, 0.24625 )
 frames = SubResource( 80 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Barrels/MovingBarrel2"]
@@ -1837,14 +1840,6 @@ script = ExtResource( 56 )
 remote_path = NodePath("../../../Boss Platform")
 
 [node name="Node2D" parent="." instance=ExtResource( 57 )]
-
-[node name="Checkpoint" parent="." instance=ExtResource( 53 )]
-position = Vector2( 2417.76, -1423.04 )
-scale = Vector2( 0.998448, 0.99645 )
-
-[node name="Checkpoint2" parent="." instance=ExtResource( 53 )]
-position = Vector2( 3261.06, -494.756 )
-scale = Vector2( 0.998448, 0.99645 )
 
 [node name="BOSS" parent="." instance=ExtResource( 22 )]
 position = Vector2( 5105.74, -753.674 )
@@ -1960,6 +1955,12 @@ margin_bottom = 28.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "MICROCHIPS:"
 uppercase = true
+
+[node name="suffocate" parent="." instance=ExtResource( 53 )]
+position = Vector2( -5397.38, 212.755 )
+
+[node name="suffocate2" parent="." instance=ExtResource( 53 )]
+position = Vector2( -2692.18, -794.822 )
 
 [connection signal="animation_finished" from="Gate/AnimatedSprite" to="Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="animation_finished" from="Boss Gate/Anim5" to="Boss Gate" method="_on_AnimatedSprite_animation_finished"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=149 format=2]
+[gd_scene load_steps=148 format=2]
 
 [ext_resource path="res://scenes/levels/textures/cool tiles/Ladder1.png" type="Texture" id=1]
 [ext_resource path="res://scenes/levels/textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -44,7 +44,6 @@
 [ext_resource path="res://Music and SFX/SCD_FM_09.wav" type="AudioStream" id=42]
 [ext_resource path="res://Music and SFX/20. Wacky Workbench Act 2 (1).mp3" type="AudioStream" id=43]
 [ext_resource path="res://Facility.gd" type="Script" id=44]
-[ext_resource path="res://Checkpoint Statue.tscn" type="PackedScene" id=45]
 [ext_resource path="res://Short Yellow Spring(opp).tscn" type="PackedScene" id=46]
 [ext_resource path="res://ShortRedSpring.tscn" type="PackedScene" id=47]
 [ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=48]
@@ -1211,6 +1210,7 @@ playing = true
 position = Vector2( 645, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="background effects"]
@@ -1219,7 +1219,6 @@ playing = true
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D40" type="StaticBody2D" parent="background effects"]
@@ -1230,7 +1229,6 @@ rotation = -1.57079
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D41" type="StaticBody2D" parent="background effects"]
@@ -1241,6 +1239,7 @@ rotation = -1.57079
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D37" type="StaticBody2D" parent="background effects"]
@@ -1250,6 +1249,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D38" type="StaticBody2D" parent="background effects"]
@@ -1260,7 +1260,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D39" type="StaticBody2D" parent="background effects"]
@@ -1271,7 +1271,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D22" type="StaticBody2D" parent="background effects"]
@@ -1280,7 +1280,6 @@ playing = true
 position = Vector2( 2029, -1363 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D23" type="StaticBody2D" parent="background effects"]
@@ -1289,6 +1288,7 @@ playing = true
 position = Vector2( 1898, -1364 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D24" type="StaticBody2D" parent="background effects"]
@@ -1297,7 +1297,7 @@ playing = true
 position = Vector2( 1757, -1363 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="background effects"]
@@ -1308,6 +1308,7 @@ rotation = -1.57079
 position = Vector2( 975.422, 579.364 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="background effects"]
@@ -1318,7 +1319,7 @@ rotation = -1.57079
 position = Vector2( 974.031, 784.798 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D19" type="StaticBody2D" parent="background effects"]
@@ -1329,7 +1330,6 @@ rotation = -1.57079
 position = Vector2( 940.019, 710.948 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D20" type="StaticBody2D" parent="background effects"]
@@ -1340,6 +1340,7 @@ rotation = -3.14159
 position = Vector2( -582.996, 932.002 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D21" type="StaticBody2D" parent="background effects"]
@@ -1350,6 +1351,7 @@ rotation = -3.14159
 position = Vector2( -674.996, 931.004 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="background effects"]
@@ -1358,7 +1360,6 @@ playing = true
 position = Vector2( -328, -1103 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="background effects"]
@@ -1367,6 +1368,7 @@ playing = true
 position = Vector2( -222, -1103 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="background effects"]
@@ -1376,7 +1378,6 @@ position = Vector2( -369, -633 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="Gate" type="StaticBody2D" parent="."]
@@ -1531,12 +1532,6 @@ tile_data = PoolIntArray( -5701484, 0, 0, -5635948, 0, 0, -5504876, 0, 0, -54393
 
 [node name="Camera" parent="." instance=ExtResource( 35 )]
 position = Vector2( 1299, -1119 )
-
-[node name="Checkpoint2" parent="." instance=ExtResource( 45 )]
-position = Vector2( 2296, -879 )
-
-[node name="Checkpoint" parent="." instance=ExtResource( 45 )]
-position = Vector2( 555, -1295 )
 
 [node name="Shortsprings" type="Node2D" parent="."]
 

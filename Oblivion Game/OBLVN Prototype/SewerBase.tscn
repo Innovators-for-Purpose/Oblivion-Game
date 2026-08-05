@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=2]
+[gd_scene load_steps=108 format=2]
 
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0000.png" type="Texture" id=1]
 [ext_resource path="res://scenes/levels/scenes/scenes/scenes/GUI.tscn" type="PackedScene" id=2]
@@ -16,7 +16,6 @@
 [ext_resource path="res://scenes/Finish.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/levels/Midground pipes.png" type="Texture" id=15]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (64).png" type="Texture" id=16]
-[ext_resource path="res://scenes/levels/textures/icon2.png" type="Texture" id=17]
 [ext_resource path="res://Red Spring.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Acid.tscn" type="PackedScene" id=19]
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0005.png" type="Texture" id=20]
@@ -600,13 +599,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 2/z_index = 0
 
-[sub_resource type="PhysicsMaterial" id=27]
-friction = 6.0
-rough = true
-
-[sub_resource type="RectangleShape2D" id=26]
-extents = Vector2( 32, 31.5 )
-
 [sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 16 )
 region = Rect2( 0, 0, 2040, 2040 )
@@ -690,7 +682,7 @@ animations = [ {
 extents = Vector2( 25, 13 )
 
 [sub_resource type="RectangleShape2D" id=50]
-extents = Vector2( 23.5, 10 )
+extents = Vector2( 26, 10 )
 
 [sub_resource type="RectangleShape2D" id=75]
 extents = Vector2( 49, 18 )
@@ -911,26 +903,6 @@ position = Vector2( 4929, -1024 )
 [node name="Lazer5" parent="Lazers" instance=ExtResource( 24 )]
 position = Vector2( 4929, -1134 )
 
-[node name="MovingBlock" type="RigidBody2D" parent="."]
-position = Vector2( 258, 209 )
-input_pickable = true
-mass = 10.1878
-physics_material_override = SubResource( 27 )
-gravity_scale = 40.0
-can_sleep = false
-linear_velocity = Vector2( 1, 1 )
-linear_damp = 15.0
-applied_force = Vector2( -5, 0 )
-applied_torque = 5.0
-
-[node name="Sprite" type="Sprite" parent="MovingBlock"]
-position = Vector2( 4191, -542 )
-texture = ExtResource( 17 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingBlock"]
-position = Vector2( 4191, -542.5 )
-shape = SubResource( 26 )
-
 [node name="AlexStates" parent="." instance=ExtResource( 3 )]
 position = Vector2( 89, -184 )
 
@@ -947,7 +919,7 @@ position = Vector2( -663, 322 )
 position = Vector2( 1043, -67 )
 
 [node name="Rat2" parent="." instance=ExtResource( 45 )]
-position = Vector2( 922, -67 )
+position = Vector2( 724, -131 )
 
 [node name="Rat3" parent="." instance=ExtResource( 45 )]
 position = Vector2( 2018, -291 )
@@ -998,69 +970,69 @@ color = Color( 0.243137, 1, 0, 1 )
 position = Vector2( -950, 78 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="AnimatedSprite13" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( -132, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="AnimatedSprite14" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 686, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
+frame = 4
 playing = true
 
 [node name="AnimatedSprite15" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 1504, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="AnimatedSprite16" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 2320, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="AnimatedSprite17" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 3138, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 6
+frame = 2
 playing = true
 
 [node name="AnimatedSprite18" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 3956, 78 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 6
+frame = 2
 playing = true
 
 [node name="AnimatedSprite19" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 4774, 76 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="AnimatedSprite20" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 5591, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 4
 playing = true
 
 [node name="AnimatedSprite21" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 6409, 76 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Acidddss/AcidDeath"]

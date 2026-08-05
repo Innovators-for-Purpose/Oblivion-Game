@@ -187,6 +187,7 @@ visible = false
 position = Vector2( 557.5, 534.5 )
 scale = Vector2( 0.1825, 0.1075 )
 frames = SubResource( 11 )
+frame = 2
 playing = true
 
 [connection signal="mouse_entered" from="Button" to="Button" method="_on_Button_mouse_entered"]
