@@ -31,8 +31,9 @@ func _on_VisibilityNotifier2D_screen_entered():
 func spawnEnemy():
 	Enemy_InstanceActive = true
 	var ene = EnemyInstance.instance()
+	ene.global_position = global_position
 	ene.connect("tree_exited",self,"OnEnemyLeave")
-	add_child(ene)
+	get_parent().add_child(ene)
 	emit_signal("EnemySpawned")
 
 func _on_VisibilityNotifier2D_screen_exited():

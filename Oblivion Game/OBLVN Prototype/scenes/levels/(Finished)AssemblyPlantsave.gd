@@ -26,7 +26,7 @@ var object_to_spawn = preload("res://Movement Stuff/AlexStates.tscn")
 
 func _ready():
 	$AlexStates.global_position = spawn_point.position
-	$AlexStates/Anim.set_flip_h(true)
+#	$AlexStates/Anim.set_flip_h(true)
 
 func spawn_object():
 	var new_object = object_to_spawn.instantiate()

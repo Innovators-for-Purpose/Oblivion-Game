@@ -1094,7 +1094,7 @@ texture = ExtResource( 38 )
 position = Vector2( 779.209, 211.752 )
 scale = Vector2( 0.131428, 0.110116 )
 frames = SubResource( 123 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="Checkpoint2" parent="." instance=ExtResource( 53 )]
@@ -1230,7 +1230,6 @@ position = Vector2( -60.2344, 28.4009 )
 rotation = 1.58291
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Platform"]
@@ -1247,6 +1246,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 35.0527, -61.2186 )
 scale = Vector2( 0.296161, 0.271814 )
 frames = SubResource( 33 )
+frame = 5
 playing = true
 flip_v = true
 
