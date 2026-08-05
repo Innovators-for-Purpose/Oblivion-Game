@@ -1,4 +1,4 @@
-# Put this file in "res/scripts", then delete this line.
+# Put this file in "res/scenes/projectiles", then delete this line.
 extends Sprite
 
 var speed = 520

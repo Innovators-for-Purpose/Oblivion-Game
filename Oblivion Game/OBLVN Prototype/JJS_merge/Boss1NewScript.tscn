@@ -149,6 +149,54 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "idle" ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 8 ]
+}
 
 [sub_resource type="Animation" id=26]
 resource_name = "Spawn"
@@ -176,8 +224,33 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 0, 1, 0.133333, 1 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.79397e-07 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "summon" ]
+}
 
 [node name="BOSS" type="KinematicBody2D"]
+visible = false
 collision_layer = 8
 collision_mask = 128
 script = ExtResource( 5 )
@@ -194,18 +267,20 @@ polygon = PoolVector2Array( -37, -63, -32, -59, -36, -53, -42, -57 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 material = ExtResource( 19 )
+position = Vector2( 8, 13 )
 scale = Vector2( 0.139286, 0.163667 )
 frames = SubResource( 10 )
 animation = "idle"
+frame = 3
 playing = true
 
 [node name="forcefield" type="AnimatedSprite" parent="."]
-visible = false
 modulate = Color( 1, 1, 1, 0.545098 )
 material = ExtResource( 12 )
 scale = Vector2( 0.139286, 0.163667 )
 frames = SubResource( 10 )
 animation = "idle"
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -14, 36 )

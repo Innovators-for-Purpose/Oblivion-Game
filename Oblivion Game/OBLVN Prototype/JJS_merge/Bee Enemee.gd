@@ -31,7 +31,7 @@ func _ready():
 func init_Boss(body):
 	if "AlexStates" in body.name:
 		$Sprite.material = load("res://JJS_merge/fade.tres")
-		show()
+#		show()
 		$Destory.play()
 		$AnimationPlayer.play("Spawn")
 		$Sprite.play("summon")
