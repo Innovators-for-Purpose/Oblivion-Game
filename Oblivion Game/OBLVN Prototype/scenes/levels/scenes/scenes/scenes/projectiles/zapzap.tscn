@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://textures/zap.png" type="Texture" id=1]
-[ext_resource path="res://scripts/bullet.gd" type="Script" id=2]
+[ext_resource path="res://JJS_merge/bullet.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.95224

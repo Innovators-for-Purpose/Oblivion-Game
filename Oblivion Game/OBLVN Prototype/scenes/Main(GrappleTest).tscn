@@ -19,7 +19,7 @@
 [ext_resource path="res://Yellow Spring.tscn" type="PackedScene" id=17]
 [ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=18]
 [ext_resource path="res://JJS_merge/NewGuardAI.tscn" type="PackedScene" id=19]
-[ext_resource path="res://scenes/EnemySpawner.tscn" type="PackedScene" id=20]
+[ext_resource path="res://JJS_merge/EnemySpawner.tscn" type="PackedScene" id=20]
 [ext_resource path="res://JJS_merge/HealingItem.tscn" type="PackedScene" id=22]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
