@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Alert.wav-5a3e5977c2d88be8d31ac81a467ead26.sample"
+path="res://.import/Alert.wav-8145217d2eddfede29dd2c72be32435e.sample"
 
 [deps]
 
-source_file="res://JJS_merge/sfk/Alert.wav"
-dest_files=[ "res://.import/Alert.wav-5a3e5977c2d88be8d31ac81a467ead26.sample" ]
+source_file="res://JJS_merge/JJS_merge2/sfk/Alert.wav"
+dest_files=[ "res://.import/Alert.wav-8145217d2eddfede29dd2c72be32435e.sample" ]
 
 [params]
 

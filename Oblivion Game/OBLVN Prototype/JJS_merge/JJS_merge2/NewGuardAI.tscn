@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://textures/Left leg forward.png" type="Texture" id=1]
 [ext_resource path="res://textures/Left leg up.png" type="Texture" id=2]
@@ -30,6 +30,11 @@ shader = SubResource( 14 )
 shader_param/flash_color = Color( 0.0156863, 0.784314, 0.654902, 1 )
 shader_param/flash_value = 0.0
 
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 1000, 1000 )
+
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 1000, 1000 )
@@ -48,7 +53,7 @@ region = Rect2( 0, 0, 1000, 1000 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ SubResource( 20 ) ],
 "loop": true,
 "name": "STUNNED",
 "speed": 5.0
@@ -115,7 +120,7 @@ material = SubResource( 18 )
 scale = Vector2( 0.118693, 0.128768 )
 frames = SubResource( 5 )
 animation = "Walk"
-frame = 2
+frame = 1
 playing = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

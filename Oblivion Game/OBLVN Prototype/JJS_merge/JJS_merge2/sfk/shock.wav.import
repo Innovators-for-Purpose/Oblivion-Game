@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/shock.wav-8bba7c545aa0ae28f0003bd98d6935e0.sample"
+path="res://.import/shock.wav-f0c559e3fb94713394c34e1ce7df4a9c.sample"
 
 [deps]
 
-source_file="res://JJS_merge/sfk/shock.wav"
-dest_files=[ "res://.import/shock.wav-8bba7c545aa0ae28f0003bd98d6935e0.sample" ]
+source_file="res://JJS_merge/JJS_merge2/sfk/shock.wav"
+dest_files=[ "res://.import/shock.wav-f0c559e3fb94713394c34e1ce7df4a9c.sample" ]
 
 [params]
 

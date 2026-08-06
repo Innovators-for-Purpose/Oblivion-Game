@@ -14,11 +14,10 @@ var prev_item
 func _ready():
 	for _i in range(slots):
 		items.append({})
-	items[0] = Global.get_item_by_key("heal")
+	items[0] = Global.get_item_by_key("magnet")
 	items[1] = Global.get_item_by_key("stun_gun")
 	items[2] = Global.get_item_by_key("hacktool")
 	items[3] = Global.get_item_by_key("grapple")
-	items[4] = Global.get_item_by_key("magnet")
 
 
 func set_item(index, item):
@@ -54,7 +53,8 @@ func change_item(index, item: Dictionary, parent: Node):
 
 	if item_key == "magnet":
 		var itemsprite = Sprite.new()
-		var area2d = load("res://scenes/Area2D.tscn").instance()
+		var area2d = load("res://scenes/MagnetArea.tscn").instance()
+		print(area2d.collision_layer)
 #		area2d.set_script(script)
 		itemsprite.name = item_key
 		itemsprite.add_child(area2d)

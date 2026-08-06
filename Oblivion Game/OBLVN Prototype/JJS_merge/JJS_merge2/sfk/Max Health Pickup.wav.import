@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Max Health Pickup.wav-e46c0f42a18318b6af9a0d8a2d2f380f.sample"
+path="res://.import/Max Health Pickup.wav-0df1f3a346ab9b29bc0d526bb76c085a.sample"
 
 [deps]
 
-source_file="res://JJS_merge/sfk/Max Health Pickup.wav"
-dest_files=[ "res://.import/Max Health Pickup.wav-e46c0f42a18318b6af9a0d8a2d2f380f.sample" ]
+source_file="res://JJS_merge/JJS_merge2/sfk/Max Health Pickup.wav"
+dest_files=[ "res://.import/Max Health Pickup.wav-0df1f3a346ab9b29bc0d526bb76c085a.sample" ]
 
 [params]
 

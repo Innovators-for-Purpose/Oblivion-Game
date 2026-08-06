@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Boss Death.wav-6a6c634031147d600a7dcd838a9bab6e.sample"
+path="res://.import/Boss Death.wav-5b8fa8ad896f07777775b84562a20afb.sample"
 
 [deps]
 
-source_file="res://JJS_merge/sfk/Boss Death.wav"
-dest_files=[ "res://.import/Boss Death.wav-6a6c634031147d600a7dcd838a9bab6e.sample" ]
+source_file="res://JJS_merge/JJS_merge2/sfk/Boss Death.wav"
+dest_files=[ "res://.import/Boss Death.wav-5b8fa8ad896f07777775b84562a20afb.sample" ]
 
 [params]
 

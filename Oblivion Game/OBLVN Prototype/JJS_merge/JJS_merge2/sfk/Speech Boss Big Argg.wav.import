@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Speech Boss Big Argg.wav-b49a3b8d9359b7d3b188e9c402800699.sample"
+path="res://.import/Speech Boss Big Argg.wav-15f8861643f4abfb7d5f94d6f73eb5e2.sample"
 
 [deps]
 
-source_file="res://JJS_merge/sfk/Speech Boss Big Argg.wav"
-dest_files=[ "res://.import/Speech Boss Big Argg.wav-b49a3b8d9359b7d3b188e9c402800699.sample" ]
+source_file="res://JJS_merge/JJS_merge2/sfk/Speech Boss Big Argg.wav"
+dest_files=[ "res://.import/Speech Boss Big Argg.wav-15f8861643f4abfb7d5f94d6f73eb5e2.sample" ]
 
 [params]
 

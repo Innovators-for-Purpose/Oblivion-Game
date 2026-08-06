@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BOBM.png-0507c2178f0213b694cb51d512f1031c.stex"
+path="res://.import/BOBM.png-c0889601912e2b5121e078becbf92342.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JJS_merge/BOBM.png"
-dest_files=[ "res://.import/BOBM.png-0507c2178f0213b694cb51d512f1031c.stex" ]
+source_file="res://JJS_merge/JJS_merge2/BOBM.png"
+dest_files=[ "res://.import/BOBM.png-c0889601912e2b5121e078becbf92342.stex" ]
 
 [params]
 

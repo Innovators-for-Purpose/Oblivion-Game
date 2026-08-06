@@ -1,4 +1,4 @@
-tool
+#tool
 extends KinematicBody2D
 
 
@@ -6,6 +6,8 @@ signal boss_dead
 signal init_invincible
 export var boss_gate : NodePath
 export var boss_trigger : NodePath
+onready var flash_shader = preload("res://JJS_merge/JJS_merge2/Flash.tres")
+onready var fade_shader = preload("res://JJS_merge/JJS_merge2/fade.tres")
 var hurt_finished
 var dead = false
 var shieldOn = false
@@ -30,15 +32,19 @@ func _ready():
 
 func init_Boss(body):
 	if "AlexStates" in body.name:
-		$Sprite.material = load("res://JJS_merge/fade.tres")
+		$Sprite.material = fade_shader
+		$Sprite.scale = Vector2(0.318,0.375)
+		$Sprite.position = Vector2(8,13)
 		show()
+		get_node(boss_trigger).queue_free()
 		$Destory.play()
 		$AnimationPlayer.play("Spawn")
 		$Sprite.play("summon")
 		yield($Sprite,"animation_finished")
 		yield(get_tree().create_timer(1),"timeout")
-		$Sprite.material = load("res://JJS_merge/Flash.tres")
-		$Sprite.material
+		$Sprite.scale = Vector2(0.139,0.164)
+		$Sprite.position = Vector2.ZERO
+		$Sprite.material = flash_shader
 		Turn_Shield_On()
 		get_parent().get_node("Bee Boss Path/PathFollow2D/RemoteTransform2D").update_position = true
 		$Sprite.play("idle")
@@ -121,13 +127,13 @@ func _on_Die_finished():
 
 func _physics_process(_delta):
 	
-	if $Sprite.animation == "summon":
-		$Sprite.scale = Vector2(0.318,0.375)
-		$Sprite.position = Vector2(8,13)
-	elif $Sprite.animation == "idle":
-		$Sprite.scale = Vector2(0.139,0.164)
-		$Sprite.position = Vector2.ZERO
-		$forcefield.frame = $Sprite.frame
+#	if $Sprite.animation == "summon":
+#		$Sprite.scale = Vector2(0.318,0.375)
+#		$Sprite.position = Vector2(8,13)
+#	elif $Sprite.animation == "idle":
+#		$Sprite.scale = Vector2(0.139,0.164)
+#		$Sprite.position = Vector2.ZERO
+	$forcefield.frame = $Sprite.frame
 	if target:
 		if target.position.x >= self.position.x:
 			self.scale.x = -1

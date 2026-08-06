@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Health Point Pickup.wav-b7c633280400ecb928545c5461f040d5.sample"
+path="res://.import/Health Point Pickup.wav-e2d2a201958c9c93b1359f8b33809774.sample"
 
 [deps]
 
-source_file="res://JJS_merge/sfk/Health Point Pickup.wav"
-dest_files=[ "res://.import/Health Point Pickup.wav-b7c633280400ecb928545c5461f040d5.sample" ]
+source_file="res://JJS_merge/JJS_merge2/sfk/Health Point Pickup.wav"
+dest_files=[ "res://.import/Health Point Pickup.wav-e2d2a201958c9c93b1359f8b33809774.sample" ]
 
 [params]
 

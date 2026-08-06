@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Speech Boss Destroy.wav-e2beb8f5c1077a0b6d9db3cda832c870.sample"
+path="res://.import/Speech Boss Destroy.wav-9a540461a46c1cd4d9958d24b28fc1df.sample"
 
 [deps]
 
-source_file="res://JJS_merge/sfk/Speech Boss Destroy.wav"
-dest_files=[ "res://.import/Speech Boss Destroy.wav-e2beb8f5c1077a0b6d9db3cda832c870.sample" ]
+source_file="res://JJS_merge/JJS_merge2/sfk/Speech Boss Destroy.wav"
+dest_files=[ "res://.import/Speech Boss Destroy.wav-9a540461a46c1cd4d9958d24b28fc1df.sample" ]
 
 [params]
 

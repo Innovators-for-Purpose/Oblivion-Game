@@ -64,15 +64,13 @@ shape = SubResource( 1 )
 position = Vector2( 19.75, 17.125 )
 scale = Vector2( 0.015125, 0.0160833 )
 frames = SubResource( 4 )
-frame = 1
 playing = true
 
 [node name="Theo" type="AnimatedSprite" parent="."]
 position = Vector2( -16, 16.75 )
 scale = Vector2( 0.0625, 0.0697917 )
 frames = SubResource( 7 )
-frame = 1
 playing = true
-flip_h = true
 
 [node name="Icon" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3.8147e-06, -22 )

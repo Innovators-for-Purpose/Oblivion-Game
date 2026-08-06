@@ -138,7 +138,7 @@ func get_closest_grappable():#this should be pretty obvious
 func _input(event: InputEvent):#the commented code ether makes grapple mouse controled 
 	#or makes the grapple need to have the grapple hook out
 #	$GrappleLineDetect.set_cast_to(get_tree().call_group("grapple","location"))
-	if (Input.is_action_just_pressed("grapple") and can_grapple == true and !get_node("stun_gun")):
+	if (Input.is_action_just_pressed("grapple") and can_grapple == true and !get_node_or_null("stun_gun")):
 		
 #	and event.pressed
 #	and can_grapple
@@ -363,6 +363,7 @@ func _physics_process(_delta):
 				HEALTH -= dp
 				velocity.y = -1000
 				state = States.AIR
+				yield($AnimationPlayer,"animation_finished")
 				hit = true
 				var timer = get_tree().create_timer(2)
 				timer.connect("timeout", self, "_on_timeout")

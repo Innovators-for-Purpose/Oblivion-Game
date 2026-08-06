@@ -1,0 +1,54 @@
+{
+	"events": [
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://Dialogue Assets/monume-cyberpunk-547930.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Back so soon, Alex?!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Would you mind telling me what I'm doing here again?"
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We need to defeat the Robot Bee guarding the exit door."
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Use your Stun Gun to weaken it's shield, and then hit the top of its head to damage it."
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There is also many locked gate doors in this Assembly plant, you can open them by pressing a switch or using your hacking device."
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your Hacking device can also be equipped via your inventory!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1786028280.json",
+		"name": "Assembly Plant2"
+	}
+}

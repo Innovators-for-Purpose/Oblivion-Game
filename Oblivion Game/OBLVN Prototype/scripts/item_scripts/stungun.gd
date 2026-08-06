@@ -1,6 +1,6 @@
 extends Node2D
 
-var ammo = 10
+var ammo = 100000
 
 var gun_item
 

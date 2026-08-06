@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DED.png-3dcb28efda63c1390fc4876eeac138e0.stex"
+path="res://.import/DED.png-2b25a96c927b93f3e927e62e573ff51b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JJS_merge/DED.png"
-dest_files=[ "res://.import/DED.png-3dcb28efda63c1390fc4876eeac138e0.stex" ]
+source_file="res://JJS_merge/JJS_merge2/DED.png"
+dest_files=[ "res://.import/DED.png-2b25a96c927b93f3e927e62e573ff51b.stex" ]
 
 [params]
 

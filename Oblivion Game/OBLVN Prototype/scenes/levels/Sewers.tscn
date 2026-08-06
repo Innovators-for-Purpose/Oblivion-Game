@@ -2514,7 +2514,7 @@ uppercase = true
 [node name="collectablemanager" parent="." instance=ExtResource( 38 )]
 
 [node name="Rat" parent="." instance=ExtResource( 16 )]
-position = Vector2( -151, 776 )
+position = Vector2( 68, 570 )
 
 [node name="Rat2" parent="." instance=ExtResource( 16 )]
 position = Vector2( -29, 56 )

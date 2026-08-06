@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=2]
+[gd_scene load_steps=109 format=2]
 
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0000.png" type="Texture" id=1]
 [ext_resource path="res://scenes/levels/scenes/scenes/scenes/GUI.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://scenes/Finish.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/levels/Midground pipes.png" type="Texture" id=15]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (64).png" type="Texture" id=16]
+[ext_resource path="res://New Assets (Summer 2026)/FloorSign.png" type="Texture" id=17]
 [ext_resource path="res://Red Spring.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Acid.tscn" type="PackedScene" id=19]
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0005.png" type="Texture" id=20]
@@ -778,6 +779,24 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -4456242, 1, 0, -4325170, 1, 0, -4194098, 1, 0, -4063249, 1, 0, -4128646, 1, 0, -3997729, 1, 0, -3997727, 1, 0, -4063026, 1, 0, -3932177, 1, 0, -3997574, 1, 0, -3866657, 1, 0, -3866655, 1, 0, -3931954, 1, 0, -3931837, 1, 0, -3931829, 1, 0, -3801105, 1, 0, -3866502, 1, 0, -3735585, 1, 0, -3735583, 1, 0, -3800882, 1, 0, -3800765, 1, 0, -3800757, 1, 0, -3670033, 1, 0, -3735430, 1, 0, -3604513, 1, 0, -3604511, 1, 0, -3669794, -2147483644, 0, -3669792, -2147483644, 0, -3669693, 1, 0, -3669685, 1, 0, -3538961, 1, 0, -3604358, 1, 0, -3473441, 1, 0, -3473439, 1, 0, -3538934, -1073741823, 0, -3538932, -1073741823, 0, -3538930, -1073741823, 0, -3538928, -1073741823, 0, -3538738, 1, 0, -3538621, 1, 0, -3538613, 1, 0, -3407889, 1, 0, -3473286, 1, 0, -3342369, 1, 0, -3342367, 1, 0, -3407666, 1, 0, -3407549, 1, 0, -3407541, 1, 0, -3276817, 1, 0, -3342214, 1, 0, -3211297, 1, 0, -3211295, 1, 0, -3276770, -2147483644, 0, -3276594, 1, 0, -3276460, -2147483644, 0, -3276458, -2147483644, 0, -3276456, -2147483644, 0, -3276454, -2147483644, 0, -3145745, 1, 0, -3080225, 1, 0, -3080223, 1, 0, -3145698, -2147483644, 0, -3145522, 1, 0, -3145401, 1, 0, -3145399, 1, 0, -3014673, 1, 0, -2949153, 1, 0, -2949151, 1, 0, -3014626, -2147483644, 0, -3014468, -2147483644, 0, -3014466, -2147483644, 0, -3014464, -2147483644, 0, -3014446, -2147483644, 0, -3014444, -2147483644, 0, -3014442, -2147483644, 0, -3014329, 1, 0, -3014327, 1, 0, -2883601, 1, 0, -2948998, -2147483644, 0, -2818081, 1, 0, -2818079, 1, 0, -2883549, -2147483644, 0, -2883547, -2147483644, 0, -2883545, -2147483644, 0, -2883386, 1, 0, -2883257, 1, 0, -2883255, 1, 0, -2752529, 1, 0, -2817926, -2147483644, 0, -2687009, 1, 0, -2687007, 1, 0, -2752314, 1, 0, -2752185, 1, 0, -2752183, 1, 0, -2686854, -2147483644, 0, -2555937, 1, 0, -2555935, 1, 0, -2621242, 1, 0, -2621113, 1, 0, -2621111, 1, 0, -2555782, -2147483644, 0, -2424865, 1, 0, -2424863, 1, 0, -2490170, 1, 0, -2490041, 1, 0, -2490039, 1, 0, -2424710, -2147483644, 0, -2293793, 1, 0, -2293791, 1, 0, -2359295, -536870911, 0, -2359293, -536870911, 0, -2359291, -536870911, 0, -2359289, -536870911, 0, -2359287, -536870911, 0, -2359285, -536870911, 0, -2359283, -536870911, 0, -2359281, -536870911, 0, -2359279, -536870911, 0, -2359277, -536870911, 0, -2359275, -536870911, 0, -2359273, -536870911, 0, -2359271, -536870911, 0, -2359269, -536870911, 0, -2359267, -536870911, 0, -2359265, -536870911, 0, -2359263, -536870911, 0, -2359261, -536870911, 0, -2359259, -536870911, 0, -2359257, -536870911, 0, -2359255, -536870911, 0, -2359253, -536870911, 0, -2359251, -536870911, 0, -2359249, -536870911, 0, -2359247, -536870911, 0, -2359245, -536870911, 0, -2359243, -536870911, 0, -2359241, -536870911, 0, -2359239, -536870911, 0, -2359237, -536870911, 0, -2359233, -536870911, 0, -2359231, -536870911, 0, -2359229, -536870911, 0, -2359227, -536870911, 0, -2359225, -536870911, 0, -2359223, -536870911, 0, -2359221, -536870911, 0, -2359219, -536870911, 0, -2359217, -536870911, 0, -2359215, -536870911, 0, -2359213, -536870911, 0, -2359116, -2147483644, 0, -2359114, -2147483644, 0, -2359112, -2147483644, 0, -2358969, 1, 0, -2358967, 1, 0, -2293638, -2147483644, 0, -2227957, -2147483644, 0, -2227955, -2147483644, 0, -2227953, -2147483644, 0, -2227914, -2147483644, 0, -2227912, -2147483644, 0, -2227897, 1, 0, -2227895, 1, 0, -2096825, 1, 0, -2096823, 1, 0, -2031488, 1, 0, -1966074, 1, 0, -1966072, 1, 0, -1965753, 1, 0, -1965751, 1, 0, -1900416, 1, 0, -1835002, 1, 0, -1835000, 1, 0, -1834939, -2147483644, 0, -1834937, -2147483644, 0, -1834935, -2147483644, 0, -1834681, 1, 0, -1834679, 1, 0, -1769344, 1, 0, -1703930, 1, 0, -1703928, 1, 0, -1703609, 1, 0, -1703607, 1, 0, -1638272, 1, 0, -1572858, 1, 0, -1572856, 1, 0, -1507200, 1, 0, -1507031, -2147483644, 0, -1507029, -2147483644, 0, -1441786, 1, 0, -1441784, 1, 0, -1441465, 1, 0, -1441463, 1, 0, -1376128, 1, 0, -1310393, 1, 0, -1310391, 1, 0, -1245140, -1610612735, 0, -1245138, -1610612735, 0, -1245056, 1, 0, -1179642, 1, 0, -1179640, 1, 0, -1179321, 1, 0, -1179319, 1, 0, -1113999, 1, 0, -1048570, 1, 0, -1048568, 1, 0, -1048249, 1, 0, -1048247, 1, 0, -982927, 1, 0, -917498, 1, 0, -917496, 1, 0, -917177, 1, 0, -917175, 1, 0, -851855, 1, 0, -786426, 1, 0, -786424, 1, 0, -786232, -2147483644, 0, -786230, -2147483644, 0, -786228, -2147483644, 0, -786105, 1, 0, -786103, 1, 0, -655354, 1, 0, -655352, 1, 0, -655163, 1, 0, -655033, 1, 0, -655031, 1, 0, -524282, 1, 0, -524280, 1, 0, -524091, 1, 0, -393210, 1, 0, -393208, 1, 0, -393019, 1, 0, -262138, 1, 0, -262136, 1, 0, -261947, 1, 0, -196538, -2147483644, 0, -196536, -2147483644, 0, -131066, 1, 0, -131064, 1, 0, -130875, 1, 0, -65466, -2147483644, 0, -65464, -2147483644, 0, 65606, -2147483644, 0, 65608, -2147483644, 0, 196678, -2147483644, 0, 196680, -2147483644, 0, 327750, -2147483644, 0, 327752, -2147483644, 0 )
 
+[node name="cautions signs" type="Node2D" parent="."]
+
+[node name="caution signs" type="Sprite" parent="cautions signs"]
+position = Vector2( 803, -141 )
+texture = ExtResource( 17 )
+
+[node name="caution signs2" type="Sprite" parent="cautions signs"]
+position = Vector2( 863, -732 )
+texture = ExtResource( 17 )
+
+[node name="caution signs3" type="Sprite" parent="cautions signs"]
+position = Vector2( 1506, -620 )
+texture = ExtResource( 17 )
+
+[node name="caution signs4" type="Sprite" parent="cautions signs"]
+position = Vector2( 3327, -221 )
+texture = ExtResource( 17 )
+
 [node name="Gate(SewerBase)" type="StaticBody2D" parent="."]
 position = Vector2( 6178, 278 )
 script = ExtResource( 23 )
@@ -970,69 +989,69 @@ color = Color( 0.243137, 1, 0, 1 )
 position = Vector2( -950, 78 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="AnimatedSprite13" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( -132, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="AnimatedSprite14" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 686, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 4
 playing = true
 
 [node name="AnimatedSprite15" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 1504, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="AnimatedSprite16" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 2320, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="AnimatedSprite17" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 3138, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 2
+frame = 6
 playing = true
 
 [node name="AnimatedSprite18" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 3956, 78 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 2
+frame = 6
 playing = true
 
 [node name="AnimatedSprite19" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 4774, 76 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="AnimatedSprite20" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 5591, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
+frame = 4
 playing = true
 
 [node name="AnimatedSprite21" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 6409, 76 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Acidddss/AcidDeath"]

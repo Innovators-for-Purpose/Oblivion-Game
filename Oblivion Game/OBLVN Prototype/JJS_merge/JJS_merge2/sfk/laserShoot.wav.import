@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/laserShoot.wav-30063659be59c3eb7b8457ba237aaabe.sample"
+path="res://.import/laserShoot.wav-f87cc6fa1f96cffb1d99f95c32af324d.sample"
 
 [deps]
 
-source_file="res://JJS_merge/sfk/laserShoot.wav"
-dest_files=[ "res://.import/laserShoot.wav-30063659be59c3eb7b8457ba237aaabe.sample" ]
+source_file="res://JJS_merge/JJS_merge2/sfk/laserShoot.wav"
+dest_files=[ "res://.import/laserShoot.wav-f87cc6fa1f96cffb1d99f95c32af324d.sample" ]
 
 [params]
 

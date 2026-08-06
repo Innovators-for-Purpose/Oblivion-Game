@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/healing.png-90e0189313eb25808f322f6a7c639e20.stex"
+path="res://.import/healing.png-75d245789d7027876150f1cf12301c1f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JJS_merge/healing.png"
-dest_files=[ "res://.import/healing.png-90e0189313eb25808f322f6a7c639e20.stex" ]
+source_file="res://JJS_merge/JJS_merge2/healing.png"
+dest_files=[ "res://.import/healing.png-75d245789d7027876150f1cf12301c1f.stex" ]
 
 [params]
 

@@ -150,7 +150,7 @@ material = SubResource( 20 )
 position = Vector2( -1, 0.539135 )
 scale = Vector2( 0.139286, 0.163667 )
 frames = SubResource( 10 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="forcefield" type="AnimatedSprite" parent="."]
@@ -159,7 +159,7 @@ material = ExtResource( 12 )
 position = Vector2( -1, 0 )
 scale = Vector2( 0.139286, 0.163667 )
 frames = SubResource( 10 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

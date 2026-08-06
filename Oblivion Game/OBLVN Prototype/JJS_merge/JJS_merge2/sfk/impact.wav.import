@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/impact.wav-f0118e5e57b4792a8ef2853bb92dff3e.sample"
+path="res://.import/impact.wav-26bfb0b9d2e7993d92ecd4d8817ec84e.sample"
 
 [deps]
 
-source_file="res://JJS_merge/sfk/impact.wav"
-dest_files=[ "res://.import/impact.wav-f0118e5e57b4792a8ef2853bb92dff3e.sample" ]
+source_file="res://JJS_merge/JJS_merge2/sfk/impact.wav"
+dest_files=[ "res://.import/impact.wav-26bfb0b9d2e7993d92ecd4d8817ec84e.sample" ]
 
 [params]
 
