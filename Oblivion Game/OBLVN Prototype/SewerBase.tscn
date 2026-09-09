@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=2]
+[gd_scene load_steps=108 format=2]
 
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0000.png" type="Texture" id=1]
 [ext_resource path="res://scenes/levels/scenes/scenes/scenes/GUI.tscn" type="PackedScene" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://scenes/levels/textures/cool tiles/Ladder3.png" type="Texture" id=7]
 [ext_resource path="res://scenes/levels/textures/cool tiles/Ladder2.png" type="Texture" id=8]
 [ext_resource path="res://Camera.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Music and SFX/US Past Themes - 4 Tidal Tempest 'P Mix' (US).mp3" type="AudioStream" id=10]
 [ext_resource path="res://Untitled 1 (1).png" type="Texture" id=11]
 [ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=12]
 [ext_resource path="res://AcidDeath.gd" type="Script" id=13]
@@ -989,69 +988,70 @@ color = Color( 0.243137, 1, 0, 1 )
 position = Vector2( -950, 78 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="AnimatedSprite13" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( -132, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="AnimatedSprite14" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 686, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
+frame = 6
 playing = true
 
 [node name="AnimatedSprite15" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 1504, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="AnimatedSprite16" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 2320, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="AnimatedSprite17" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 3138, 79 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 6
+frame = 4
 playing = true
 
 [node name="AnimatedSprite18" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 3956, 78 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 6
+frame = 4
 playing = true
 
 [node name="AnimatedSprite19" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 4774, 76 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 5
+frame = 3
 playing = true
 
 [node name="AnimatedSprite20" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 5591, 77 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="AnimatedSprite21" type="AnimatedSprite" parent="Acidddss/AcidDeath"]
 position = Vector2( 6409, 76 )
 scale = Vector2( 0.407843, 0.305392 )
 frames = SubResource( 17 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Acidddss/AcidDeath"]
@@ -1121,12 +1121,6 @@ position = Vector2( 4166, -529 )
 
 [node name="Camera5" parent="Security Cameras" instance=ExtResource( 9 )]
 position = Vector2( 4329, -529 )
-
-[node name="LevelMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
-volume_db = 2.0
-pitch_scale = 0.99
-autoplay = true
 
 [node name="Switch(SewerBase)" type="Area2D" parent="."]
 position = Vector2( -1092, -751 )

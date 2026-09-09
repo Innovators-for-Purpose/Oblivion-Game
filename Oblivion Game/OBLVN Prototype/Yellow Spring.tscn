@@ -1,8 +1,7 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scenes/levels/Yellow Spring.gd" type="Script" id=1]
 [ext_resource path="res://New Assets (Summer 2026)/2DSpring-Yellow0001.png" type="Texture" id=2]
-[ext_resource path="res://Music and SFX/sonic-spring.mp3" type="AudioStream" id=3]
 [ext_resource path="res://New Assets (Summer 2026)/2DSpring-Yellow0008.png" type="Texture" id=4]
 [ext_resource path="res://New Assets (Summer 2026)/2DSpring-Yellow0011.png" type="Texture" id=5]
 [ext_resource path="res://New Assets (Summer 2026)/2DSpring-Yellow0015.png" type="Texture" id=6]
@@ -89,11 +88,6 @@ frame = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1775.19, -337.625 )
 shape = SubResource( 98 )
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-volume_db = 5.0
-pitch_scale = 1.09
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

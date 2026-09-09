@@ -1,7 +1,7 @@
 extends Area2D
 
 onready var anim = $AnimatedSprite
-onready var sfx = $sfx
+#onready var sfx = $sfx
 export var base_bounce_force := -400.0  
 export var multiplier_increment := 3   
 export var max_multiplier := 12.0       
@@ -14,7 +14,7 @@ var reset_timer: Timer
 func _on_ShortBlueSpring_body_entered(body):
 	if (body.name == "AlexStates"):
 		anim.play("default")
-		sfx.play()
+#		sfx.play()
 	if "velocity" in body and body.velocity.y > 0:
 		body.velocity.y = base_bounce_force * current_multiplier
 		current_multiplier = min(current_multiplier + multiplier_increment, max_multiplier)

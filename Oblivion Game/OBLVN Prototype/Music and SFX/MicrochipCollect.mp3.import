@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MicrochipCollect.mp3-5e635f2d6f90cb3bf7b62548bda5e359.mp3str"
+
+[deps]
+
+source_file="res://Music and SFX/MicrochipCollect.mp3"
+dest_files=[ "res://.import/MicrochipCollect.mp3-5e635f2d6f90cb3bf7b62548bda5e359.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

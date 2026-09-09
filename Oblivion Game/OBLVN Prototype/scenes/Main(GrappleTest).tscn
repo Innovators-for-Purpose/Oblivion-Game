@@ -13,7 +13,7 @@
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=11]
 [ext_resource path="res://textures/simple tiles.png" type="Texture" id=12]
 [ext_resource path="res://textures/background _).png" type="Texture" id=13]
-[ext_resource path="res://Music and SFX/Level 1 by Gianluca.wav" type="AudioStream" id=14]
+[ext_resource path="res://Music and SFX/Level 1 by Gianluca (1).ogg" type="AudioStream" id=14]
 [ext_resource path="res://Spikes2.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Red Spring.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Yellow Spring.tscn" type="PackedScene" id=17]

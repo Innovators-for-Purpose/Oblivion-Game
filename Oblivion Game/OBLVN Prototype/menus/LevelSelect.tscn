@@ -1,10 +1,9 @@
-[gd_scene load_steps=107 format=2]
+[gd_scene load_steps=106 format=2]
 
 [ext_resource path="res://menus/mainmenuscript.gd" type="Script" id=1]
 [ext_resource path="res://menus/Background outer city (2).png" type="Texture" id=2]
 [ext_resource path="res://menus/ParallaxBackground.gd" type="Script" id=3]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (49).png" type="Texture" id=4]
-[ext_resource path="res://Music and SFX/1.02 Main Menu.mp3" type="AudioStream" id=5]
 [ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=6]
 [ext_resource path="res://New Assets (Summer 2026)/house (1).png" type="Texture" id=7]
 [ext_resource path="res://scenes/levels/textures/Assembly plant BG layer.png" type="Texture" id=8]
@@ -746,7 +745,7 @@ visible = false
 position = Vector2( 445, 110 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 2
+frame = 6
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -754,7 +753,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 779, 109 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 2
+frame = 6
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -762,7 +761,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1112, 112 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 1
+frame = 5
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -770,7 +769,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 448, 321 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 1
+frame = 5
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -778,6 +777,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 782, 325 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
+frame = 4
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -785,6 +785,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1116, 325 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
+frame = 4
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -792,6 +793,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 447, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
+frame = 4
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -799,6 +801,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 784, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
+frame = 4
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -806,7 +809,7 @@ offset = Vector2( -1113.92, -67.4394 )
 position = Vector2( 1114, 532 )
 scale = Vector2( 0.21725, 0.23725 )
 frames = SubResource( 11 )
-frame = 8
+frame = 3
 playing = true
 offset = Vector2( -1113.92, -67.4394 )
 
@@ -894,7 +897,6 @@ script = ExtResource( 17 )
 position = Vector2( 75, 99 )
 scale = Vector2( 0.127441, 0.134521 )
 frames = SubResource( 30 )
-frame = 2
 playing = true
 
 [node name="Button4" type="Button" parent="Buttons"]
@@ -975,7 +977,7 @@ position = Vector2( 56, 68.9999 )
 rotation = -0.785397
 scale = Vector2( 0.556548, 0.507888 )
 frames = SubResource( 62 )
-frame = 6
+frame = 3
 playing = true
 
 [node name="Button8" type="Button" parent="Buttons"]
@@ -1080,12 +1082,6 @@ expand = true
 
 [node name="Node2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( -1608, 208 )
-
-[node name="Background Music" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 509, 298 )
-stream = ExtResource( 5 )
-autoplay = true
-max_distance = 3000.0
 
 [connection signal="mouse_entered" from="Buttons/Button" to="Buttons/Button" method="_on_Button_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Button" to="Buttons/Button" method="_on_Button_mouse_exited"]

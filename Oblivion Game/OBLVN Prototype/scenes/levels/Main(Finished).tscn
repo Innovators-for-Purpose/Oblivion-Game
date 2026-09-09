@@ -11,7 +11,7 @@
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=9]
 [ext_resource path="res://textures/cool tiles/IndustrialTile_73.png" type="Texture" id=10]
 [ext_resource path="res://Spikes2.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Music and SFX/Level 1 by Gianluca.wav" type="AudioStream" id=12]
+[ext_resource path="res://Music and SFX/Level 1 by Gianluca (1).ogg" type="AudioStream" id=12]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (49).png" type="Texture" id=13]
 [ext_resource path="res://LevelTransition.tscn" type="PackedScene" id=14]
 [ext_resource path="res://JJS_merge/HealingItem.tscn" type="PackedScene" id=15]
@@ -418,21 +418,21 @@ valign = 1
 position = Vector2( 421, 871 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 4
+frame = 8
 playing = true
 
 [node name="PanelLight2" type="AnimatedSprite" parent="."]
 position = Vector2( 1355, 618 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="PanelLight3" type="AnimatedSprite" parent="."]
 position = Vector2( 1271, 71 )
 scale = Vector2( 0.132, 0.113 )
 frames = SubResource( 18 )
-frame = 2
+frame = 6
 playing = true
 
 [node name="AlexStates" parent="." instance=ExtResource( 5 )]

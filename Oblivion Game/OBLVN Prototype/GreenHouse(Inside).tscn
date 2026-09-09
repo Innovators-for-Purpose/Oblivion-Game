@@ -1,7 +1,6 @@
-[gd_scene load_steps=185 format=2]
+[gd_scene load_steps=183 format=2]
 
 [ext_resource path="res://collectablemanager.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Music and SFX/28. Midnight Greenhouse (Botanic Base Zone).mp3" type="AudioStream" id=3]
 [ext_resource path="res://Movement Stuff/Grappleables.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=5]
 [ext_resource path="res://New Assets (Summer 2026)/basic-tile (1).png" type="Texture" id=6]
@@ -38,7 +37,6 @@
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0002.png" type="Texture" id=37]
 [ext_resource path="res://Gate(GreenHouse).gd" type="Script" id=38]
 [ext_resource path="res://Switch(Greenhouse).gd" type="Script" id=39]
-[ext_resource path="res://Music and SFX/SCD_FM_09.wav" type="AudioStream" id=40]
 [ext_resource path="res://BlueSpring.tscn" type="PackedScene" id=41]
 [ext_resource path="res://ShortRedSpring.tscn" type="PackedScene" id=42]
 [ext_resource path="res://Mini Yellow Bee.gd" type="Script" id=43]
@@ -887,10 +885,6 @@ uppercase = true
 
 [node name="collectablemanager" parent="." instance=ExtResource( 2 )]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-autoplay = true
-
 [node name="springs" type="Node" parent="."]
 
 [node name="Red Spring" parent="springs" instance=ExtResource( 24 )]
@@ -1361,7 +1355,6 @@ script = ExtResource( 20 )
 position = Vector2( 0, 66 )
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy"]
@@ -1402,6 +1395,7 @@ position = Vector2( 0.111328, -0.00488281 )
 rotation = 1.57079
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy2"]
@@ -1446,7 +1440,7 @@ position = Vector2( -13.7207, -28.7388 )
 rotation = -3.14159
 scale = Vector2( 0.152664, 0.172917 )
 frames = SubResource( 48 )
-frame = 16
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Yellow Bee"]
@@ -1482,6 +1476,7 @@ position = Vector2( -6.00781, -1.13086 )
 rotation = 3.14159
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy3"]
@@ -1524,7 +1519,7 @@ position = Vector2( -0.0195312, -0.0170898 )
 rotation = 3.14159
 scale = Vector2( 0.152664, 0.172917 )
 frames = SubResource( 48 )
-frame = 15
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Yellow Bee2"]
@@ -1562,6 +1557,7 @@ position = Vector2( -19.5709, 5.75188 )
 rotation = 3.14159
 scale = Vector2( 0.132203, 0.134677 )
 frames = SubResource( 13 )
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy4"]
@@ -1605,6 +1601,7 @@ position = Vector2( 3.84375, -0.870117 )
 rotation = 1.57079
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
+frame = 4
 playing = true
 flip_h = true
 
@@ -1650,7 +1647,7 @@ position = Vector2( 3.84375, -0.870117 )
 rotation = 1.83259
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
-frame = 5
+frame = 3
 playing = true
 flip_h = true
 
@@ -1729,9 +1726,6 @@ position = Vector2( 83, -35 )
 
 [node name="Grappleables" parent="Grapples" instance=ExtResource( 4 )]
 position = Vector2( -784, 497 )
-
-[node name="switch sfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 40 )
 
 [node name="HealingItem" parent="." instance=ExtResource( 60 )]
 position = Vector2( 3448, 968 )

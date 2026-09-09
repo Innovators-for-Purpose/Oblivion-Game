@@ -1,13 +1,13 @@
 extends Area2D
 
 onready var anim = $Sprite
-onready var sfx = $AudioStreamPlayer2D
+#onready var sfx = $AudioStreamPlayer2D
 
 func _on_Spring_body_entered(body):
 	if (body.name == "AlexStates"):
 		body.velocity.y = -2100 
 		anim.play("default")
-		sfx.play()
+#		sfx.play()
 
 
 		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=148 format=2]
+[gd_scene load_steps=146 format=2]
 
 [ext_resource path="res://scenes/levels/textures/cool tiles/Ladder1.png" type="Texture" id=1]
 [ext_resource path="res://scenes/levels/textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -41,8 +41,6 @@
 [ext_resource path="res://Sprites (Temporary)/New Piskel (46).png" type="Texture" id=39]
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=40]
 [ext_resource path="res://Short Yellow Spring.tscn" type="PackedScene" id=41]
-[ext_resource path="res://Music and SFX/SCD_FM_09.wav" type="AudioStream" id=42]
-[ext_resource path="res://Music and SFX/20. Wacky Workbench Act 2 (1).mp3" type="AudioStream" id=43]
 [ext_resource path="res://Facility.gd" type="Script" id=44]
 [ext_resource path="res://Short Yellow Spring(opp).tscn" type="PackedScene" id=46]
 [ext_resource path="res://ShortRedSpring.tscn" type="PackedScene" id=47]
@@ -1783,7 +1781,6 @@ position = Vector2( 1929, 416 )
 position = Vector2( 759, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres2"]
@@ -1796,7 +1793,6 @@ shape = SubResource( 68 )
 position = Vector2( 1211, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres3"]
@@ -1809,7 +1805,6 @@ shape = SubResource( 68 )
 position = Vector2( 1387, -1205 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres4"]
@@ -1822,6 +1817,7 @@ shape = SubResource( 68 )
 position = Vector2( 1853, -1206 )
 scale = Vector2( 0.1155, 0.109 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathSphere/DeathSpheres5"]
@@ -1917,16 +1913,6 @@ script = ExtResource( 37 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deathtrap5"]
 position = Vector2( 2320, 165 )
 shape = SubResource( 70 )
-
-[node name="SwitchSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 42 )
-volume_db = 8.0
-pitch_scale = 0.9
-
-[node name="LevelMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 43 )
-pitch_scale = 1.01
-autoplay = true
 
 [node name="Node2D" parent="." instance=ExtResource( 48 )]
 

@@ -1135,13 +1135,6 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=8]
 radius = 39.1152
 
-[sub_resource type="SegmentShape2D" id=44]
-a = Vector2( 69, 46 )
-b = Vector2( -15, 131 )
-
-[sub_resource type="OccluderPolygon2D" id=51]
-polygon = PoolVector2Array( -15, 15, 186, 61, 208, 29 )
-
 [sub_resource type="AtlasTexture" id=62]
 atlas = ExtResource( 45 )
 region = Rect2( 0, 0, 2040, 2040 )
@@ -1169,6 +1162,13 @@ animations = [ {
 "name": "default",
 "speed": 10.0
 } ]
+
+[sub_resource type="SegmentShape2D" id=44]
+a = Vector2( 69, 46 )
+b = Vector2( -15, 131 )
+
+[sub_resource type="OccluderPolygon2D" id=51]
+polygon = PoolVector2Array( -15, 15, 186, 61, 208, 29 )
 
 [node name="Main" type="Node2D"]
 
@@ -1235,7 +1235,7 @@ modulate = Color( 0.752941, 0.752941, 0.752941, 1 )
 position = Vector2( 708, 523 )
 scale = Vector2( 1.086, 1.042 )
 frames = SubResource( 37 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="Kitchen Table" type="StaticBody2D" parent="."]
@@ -1299,6 +1299,14 @@ shape = SubResource( 8 )
 
 [node name="AlexStates" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1478, 511 )
+z_index = 1
+
+[node name="Pot" type="AnimatedSprite" parent="."]
+position = Vector2( -172, 501 )
+scale = Vector2( 0.10049, 0.109681 )
+frames = SubResource( 67 )
+frame = 2
+playing = true
 
 [node name="Finish3" parent="." instance=ExtResource( 5 )]
 visible = false
@@ -1322,12 +1330,6 @@ color = Color( 0.294118, 0.109804, 0.109804, 1 )
 energy = 1000.0
 shadow_color = Color( 0.847059, 0.235294, 0.235294, 0 )
 shadow_buffer_size = 32
-
-[node name="Pot" type="AnimatedSprite" parent="."]
-position = Vector2( -172, 501 )
-scale = Vector2( 0.10049, 0.109681 )
-frames = SubResource( 67 )
-playing = true
 
 [node name="Sonic" parent="." instance=ExtResource( 46 )]
 position = Vector2( 1766, 830 )

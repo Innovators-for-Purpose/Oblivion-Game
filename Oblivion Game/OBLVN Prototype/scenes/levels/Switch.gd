@@ -2,13 +2,14 @@ extends Area2D
 
 
 onready var anim = $Sprite
-onready var switch__sfx = $"../Switch Sfx"
+onready var collision_shape_2d = $CollisionShape2D
 
 
 func _on_Switch_body_entered(body):
 	if (body.name == "AlexStates"):
 		anim.play("default")
-		switch__sfx.play()
+		$CollisionShape2D.disabled
+		queue_free()
 
 
 func _on_Switch_body_exited(body):

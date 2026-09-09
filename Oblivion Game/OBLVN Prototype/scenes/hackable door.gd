@@ -1,6 +1,6 @@
 extends Area2D
 onready var sprite = $"../Sprite"
-onready var sfx = $"../AudioStreamPlayer"
+#onready var sfx = $"../AudioStreamPlayer"
 
 var dur = 3
 var patience = false
@@ -11,7 +11,7 @@ func _ready():
 	sprite.play("red")
 
 func activate():
-	sfx.play()
+#	sfx.play()
 	anim.play("door slide up")
 	sprite.play("green")
 	patience = true

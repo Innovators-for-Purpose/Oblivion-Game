@@ -34,6 +34,6 @@ func on_level_loaded():
 	var player = current_scene.find_node("AlexStates", true, false)
 	if spawn_point and player:
 		player.global_position = spawn_point.global_position
-	
-	
+
+
 

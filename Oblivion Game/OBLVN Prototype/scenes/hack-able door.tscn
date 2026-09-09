@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://New Assets (Summer 2026)/Door Orignalhacked-V2.png" type="Texture" id=1]
 [ext_resource path="res://scenes/hackable door.gd" type="Script" id=2]
 [ext_resource path="res://anims/scenesdoor slide up.tres" type="Animation" id=3]
 [ext_resource path="res://anims/scenesdoor slide down.tres" type="Animation" id=4]
 [ext_resource path="res://New Assets (Summer 2026)/Door OrignalUnhacked-V2.png" type="Texture" id=5]
-[ext_resource path="res://Music and SFX/SCD_FM_34.wav" type="AudioStream" id=6]
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
@@ -94,7 +93,3 @@ shape = SubResource( 2 )
 anims/default = SubResource( 3 )
 "anims/door slide down" = ExtResource( 4 )
 "anims/door slide up" = ExtResource( 3 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-volume_db = 4.0
