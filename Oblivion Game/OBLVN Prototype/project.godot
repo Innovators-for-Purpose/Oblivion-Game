@@ -97,7 +97,7 @@ Inventory="*res://scripts/globals/inventory.gd"
 Levelmanager="*res://scripts/levelmanager.gd"
 Transitionscreen="*res://transitionscreen.gd"
 LevelTransition="*res://LevelTransition.tscn"
-Checkpoint="*res://Checkpoint.gd"
+Checkpoint="res://Checkpoint.gd"
 
 [display]
 

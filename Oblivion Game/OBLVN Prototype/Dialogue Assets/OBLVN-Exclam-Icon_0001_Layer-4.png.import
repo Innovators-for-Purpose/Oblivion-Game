@@ -14,7 +14,7 @@ dest_files=[ "res://.import/OBLVN-Exclam-Icon_0001_Layer-4.png-775784866f56201b5
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

@@ -8,9 +8,9 @@ onready var anim2 = $AnimatedSprite
 func _on_Switch2_body_entered(body):
 	if (body.name == "AlexStates"):
 		anim2.play("default")
-		switch__sfx.play()
-	else:
-		switch__sfx.stop()
+#		switch__sfx.play()
+#	else:
+#		switch__sfx.stop()
 
 
 

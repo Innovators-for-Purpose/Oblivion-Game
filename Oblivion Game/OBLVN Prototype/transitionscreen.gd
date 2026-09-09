@@ -34,7 +34,7 @@ onready var Anim = $AnimationPlayer
 func change_scene(target: String) -> void:
 	$AnimationPlayer.play('fade back to white')
 	yield($AnimationPlayer,'fade to black')
-	get_tree().change_scene("res://scenes/levels/(Finished)AssemblyPlantsave.tscn")
+#	get_tree().change_scene("res://scenes/levels/(Finished)AssemblyPlantsave.tscn")
 	$AnimationPlayer.play_backwards('fade back to white')
 
 #extends CanvasLayer

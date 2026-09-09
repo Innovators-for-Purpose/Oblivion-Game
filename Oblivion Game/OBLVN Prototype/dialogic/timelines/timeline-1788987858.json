@@ -1,0 +1,78 @@
+{
+	"events": [
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://Dialogue Assets/monume-cyberpunk-547930.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey lil' bro, you finally caught up!"
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thanks to you for distracting that big bee robot Alex! "
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thanks, it sure was a tough one, but my stun gun really came in handy!"
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I wonder what other things might be affected by it?"
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "How much longer are we going to keep going until we make it to the Facility guys?"
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Shouldn't be much farther, Me and Avery just have to get through the Sewers, but we need to find the exit. "
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What about me?"
+		},
+		{
+			"character": "character-1784729720.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Alex, you should go find more medkits for us, there should be some farther down in the sewerbase!"
+		},
+		{
+			"character": "character-1784729646.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Me and Theo will distract the guards at the Facility enterance so you can go in, we'll catch up."
+		},
+		{
+			"character": "character-1784729102.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ok, see ya!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1788987858.json",
+		"name": "Sewers"
+	}
+}

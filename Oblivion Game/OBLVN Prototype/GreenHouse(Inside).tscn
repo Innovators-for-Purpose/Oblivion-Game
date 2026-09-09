@@ -1355,6 +1355,7 @@ script = ExtResource( 20 )
 position = Vector2( 0, 66 )
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy"]
@@ -1395,7 +1396,7 @@ position = Vector2( 0.111328, -0.00488281 )
 rotation = 1.57079
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy2"]
@@ -1440,7 +1441,7 @@ position = Vector2( -13.7207, -28.7388 )
 rotation = -3.14159
 scale = Vector2( 0.152664, 0.172917 )
 frames = SubResource( 48 )
-frame = 9
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Yellow Bee"]
@@ -1476,7 +1477,7 @@ position = Vector2( -6.00781, -1.13086 )
 rotation = 3.14159
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy3"]
@@ -1519,7 +1520,7 @@ position = Vector2( -0.0195312, -0.0170898 )
 rotation = 3.14159
 scale = Vector2( 0.152664, 0.172917 )
 frames = SubResource( 48 )
-frame = 8
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Yellow Bee2"]
@@ -1557,7 +1558,7 @@ position = Vector2( -19.5709, 5.75188 )
 rotation = 3.14159
 scale = Vector2( 0.132203, 0.134677 )
 frames = SubResource( 13 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy4"]
@@ -1601,7 +1602,7 @@ position = Vector2( 3.84375, -0.870117 )
 rotation = 1.57079
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
-frame = 4
+frame = 3
 playing = true
 flip_h = true
 
@@ -1647,7 +1648,7 @@ position = Vector2( 3.84375, -0.870117 )
 rotation = 1.83259
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
-frame = 3
+frame = 2
 playing = true
 flip_h = true
 

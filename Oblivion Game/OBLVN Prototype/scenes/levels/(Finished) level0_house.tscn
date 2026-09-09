@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=2]
+[gd_scene load_steps=108 format=2]
 
 [ext_resource path="res://scripts/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://textures/simple tiles.png" type="Texture" id=2]
@@ -45,7 +45,6 @@
 [ext_resource path="res://Sprites (Temporary)/New Piskel (82).png" type="Texture" id=43]
 [ext_resource path="res://scenes/levels/sink.gd" type="Script" id=44]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (83).png" type="Texture" id=45]
-[ext_resource path="res://Sonic.tscn" type="PackedScene" id=46]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tileset_16x16_interior_preview2_0.png 0"
@@ -1235,7 +1234,7 @@ modulate = Color( 0.752941, 0.752941, 0.752941, 1 )
 position = Vector2( 708, 523 )
 scale = Vector2( 1.086, 1.042 )
 frames = SubResource( 37 )
-frame = 4
+frame = 6
 playing = true
 
 [node name="Kitchen Table" type="StaticBody2D" parent="."]
@@ -1305,7 +1304,7 @@ z_index = 1
 position = Vector2( -172, 501 )
 scale = Vector2( 0.10049, 0.109681 )
 frames = SubResource( 67 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="Finish3" parent="." instance=ExtResource( 5 )]
@@ -1330,11 +1329,6 @@ color = Color( 0.294118, 0.109804, 0.109804, 1 )
 energy = 1000.0
 shadow_color = Color( 0.847059, 0.235294, 0.235294, 0 )
 shadow_buffer_size = 32
-
-[node name="Sonic" parent="." instance=ExtResource( 46 )]
-position = Vector2( 1766, 830 )
-scale = Vector2( 0.276355, 0.267809 )
-player = NodePath("../AlexStates")
 
 [connection signal="body_entered" from="sink" to="sink" method="_on_sink_body_entered"]
 [connection signal="body_exited" from="sink" to="sink" method="_on_sink_body_exited"]
