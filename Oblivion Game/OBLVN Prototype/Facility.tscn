@@ -991,7 +991,6 @@ shape = SubResource( 62 )
 position = Vector2( -375, -659 )
 scale = Vector2( 0.0542501, 0.0545001 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="background effects"]
@@ -1000,7 +999,6 @@ playing = true
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="background effects"]
@@ -1010,7 +1008,6 @@ position = Vector2( -535, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D15" type="StaticBody2D" parent="background effects"]
@@ -1020,6 +1017,7 @@ position = Vector2( -447, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D26" type="StaticBody2D" parent="background effects"]
@@ -1029,6 +1027,7 @@ position = Vector2( -312, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D27" type="StaticBody2D" parent="background effects"]
@@ -1038,6 +1037,7 @@ position = Vector2( -187, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D28" type="StaticBody2D" parent="background effects"]
@@ -1047,6 +1047,7 @@ position = Vector2( -64, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D29" type="StaticBody2D" parent="background effects"]
@@ -1056,7 +1057,6 @@ position = Vector2( 66, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D30" type="StaticBody2D" parent="background effects"]
@@ -1066,7 +1066,6 @@ position = Vector2( 201, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D31" type="StaticBody2D" parent="background effects"]
@@ -1076,6 +1075,7 @@ position = Vector2( 337, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D32" type="StaticBody2D" parent="background effects"]
@@ -1085,7 +1085,6 @@ position = Vector2( 477, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D33" type="StaticBody2D" parent="background effects"]
@@ -1095,7 +1094,6 @@ position = Vector2( 736, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D34" type="StaticBody2D" parent="background effects"]
@@ -1105,6 +1103,7 @@ position = Vector2( 919, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D35" type="StaticBody2D" parent="background effects"]
@@ -1114,7 +1113,6 @@ position = Vector2( 1096, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D36" type="StaticBody2D" parent="background effects"]
@@ -1124,7 +1122,6 @@ position = Vector2( 1272, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D25" type="StaticBody2D" parent="background effects"]
@@ -1134,7 +1131,6 @@ position = Vector2( -447, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D16" type="StaticBody2D" parent="background effects"]
@@ -1144,6 +1140,7 @@ position = Vector2( -626, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D17" type="StaticBody2D" parent="background effects"]
@@ -1153,6 +1150,7 @@ position = Vector2( -361, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D18" type="StaticBody2D" parent="background effects"]
@@ -1162,6 +1160,7 @@ position = Vector2( -1350, 213 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="background effects"]
@@ -1171,7 +1170,6 @@ position = Vector2( -685, 282 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="background effects"]
@@ -1181,6 +1179,7 @@ position = Vector2( -578, 282 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="background effects"]
@@ -1190,6 +1189,7 @@ position = Vector2( -477, 282 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="background effects"]
@@ -1198,7 +1198,6 @@ playing = true
 position = Vector2( -482, -660 )
 scale = Vector2( 0.0542501, 0.0545001 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="background effects"]
@@ -1207,7 +1206,6 @@ playing = true
 position = Vector2( 645, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="background effects"]
@@ -1216,7 +1214,7 @@ playing = true
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D40" type="StaticBody2D" parent="background effects"]
@@ -1227,7 +1225,7 @@ rotation = -1.57079
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D41" type="StaticBody2D" parent="background effects"]
@@ -1238,7 +1236,6 @@ rotation = -1.57079
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D37" type="StaticBody2D" parent="background effects"]
@@ -1248,7 +1245,6 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D38" type="StaticBody2D" parent="background effects"]
@@ -1259,6 +1255,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D39" type="StaticBody2D" parent="background effects"]
@@ -1269,6 +1266,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D22" type="StaticBody2D" parent="background effects"]
@@ -1277,7 +1275,7 @@ playing = true
 position = Vector2( 2029, -1363 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D23" type="StaticBody2D" parent="background effects"]
@@ -1286,7 +1284,6 @@ playing = true
 position = Vector2( 1898, -1364 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D24" type="StaticBody2D" parent="background effects"]
@@ -1295,6 +1292,7 @@ playing = true
 position = Vector2( 1757, -1363 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="background effects"]
@@ -1305,7 +1303,6 @@ rotation = -1.57079
 position = Vector2( 975.422, 579.364 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="background effects"]
@@ -1316,6 +1313,7 @@ rotation = -1.57079
 position = Vector2( 974.031, 784.798 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D19" type="StaticBody2D" parent="background effects"]
@@ -1326,7 +1324,7 @@ rotation = -1.57079
 position = Vector2( 940.019, 710.948 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D20" type="StaticBody2D" parent="background effects"]
@@ -1337,7 +1335,6 @@ rotation = -3.14159
 position = Vector2( -582.996, 932.002 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D21" type="StaticBody2D" parent="background effects"]
@@ -1348,7 +1345,6 @@ rotation = -3.14159
 position = Vector2( -674.996, 931.004 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="background effects"]
@@ -1357,7 +1353,7 @@ playing = true
 position = Vector2( -328, -1103 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="background effects"]
@@ -1366,7 +1362,6 @@ playing = true
 position = Vector2( -222, -1103 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="background effects"]
@@ -1376,7 +1371,7 @@ position = Vector2( -369, -633 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="Gate" type="StaticBody2D" parent="."]

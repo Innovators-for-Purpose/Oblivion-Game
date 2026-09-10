@@ -1441,7 +1441,7 @@ position = Vector2( -13.7207, -28.7388 )
 rotation = -3.14159
 scale = Vector2( 0.152664, 0.172917 )
 frames = SubResource( 48 )
-frame = 7
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Yellow Bee"]
@@ -1520,7 +1520,7 @@ position = Vector2( -0.0195312, -0.0170898 )
 rotation = 3.14159
 scale = Vector2( 0.152664, 0.172917 )
 frames = SubResource( 48 )
-frame = 6
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Yellow Bee2"]
