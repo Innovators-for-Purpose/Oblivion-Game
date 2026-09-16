@@ -1284,7 +1284,7 @@ position = Vector2( 2944, -639 )
 script = ExtResource( 39 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Switch"]
-position = Vector2( -225, 28 )
+position = Vector2( -225, 26 )
 scale = Vector2( 0.155392, 0.164093 )
 frames = SubResource( 28 )
 frame = 6
@@ -1355,7 +1355,7 @@ script = ExtResource( 20 )
 position = Vector2( 0, 66 )
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy"]
@@ -1396,7 +1396,7 @@ position = Vector2( 0.111328, -0.00488281 )
 rotation = 1.57079
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy2"]
@@ -1441,7 +1441,7 @@ position = Vector2( -13.7207, -28.7388 )
 rotation = -3.14159
 scale = Vector2( 0.152664, 0.172917 )
 frames = SubResource( 48 )
-frame = 9
+frame = 15
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Yellow Bee"]
@@ -1477,7 +1477,7 @@ position = Vector2( -6.00781, -1.13086 )
 rotation = 3.14159
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy3"]
@@ -1520,7 +1520,7 @@ position = Vector2( -0.0195312, -0.0170898 )
 rotation = 3.14159
 scale = Vector2( 0.152664, 0.172917 )
 frames = SubResource( 48 )
-frame = 8
+frame = 14
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Yellow Bee2"]
@@ -1558,7 +1558,7 @@ position = Vector2( -19.5709, 5.75188 )
 rotation = 3.14159
 scale = Vector2( 0.132203, 0.134677 )
 frames = SubResource( 13 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemey/Mini Bee enemy4"]
@@ -1602,7 +1602,7 @@ position = Vector2( 3.84375, -0.870117 )
 rotation = 1.57079
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
-frame = 3
+frame = 5
 playing = true
 flip_h = true
 
@@ -1648,7 +1648,7 @@ position = Vector2( 3.84375, -0.870117 )
 rotation = 1.83259
 scale = Vector2( 0.119286, 0.1255 )
 frames = SubResource( 13 )
-frame = 2
+frame = 4
 playing = true
 flip_h = true
 
@@ -1952,6 +1952,7 @@ EnemyInstance = ExtResource( 77 )
 [connection signal="body_entered" from="Switch" to="Switch" method="_on_Switch_body_entered"]
 [connection signal="body_entered" from="Switch" to="Gate" method="_on_Switch_body_entered"]
 [connection signal="body_exited" from="Switch" to="Switch" method="_on_Switch_body_exited"]
+[connection signal="animation_finished" from="Switch/Sprite" to="Switch" method="_on_Sprite_animation_finished"]
 [connection signal="animation_finished" from="Switch/Sprite" to="Gate" method="_on_Sprite_animation_finished"]
 [connection signal="animation_finished" from="Gate2/AnimatedSprite" to="Gate2" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="Switch2" to="Gate2" method="_on_Switch2_body_entered"]

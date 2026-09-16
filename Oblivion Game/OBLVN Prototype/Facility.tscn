@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=2]
+[gd_scene load_steps=140 format=2]
 
 [ext_resource path="res://scenes/levels/textures/cool tiles/Ladder1.png" type="Texture" id=1]
 [ext_resource path="res://scenes/levels/textures/cool tiles/IndustrialTile_73.png" type="Texture" id=2]
@@ -24,10 +24,10 @@
 [ext_resource path="res://PathFollow11D.gd" type="Script" id=22]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (37).png" type="Texture" id=23]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (38).png" type="Texture" id=24]
-[ext_resource path="res://scenes/levels/textures/unnamed (3).png" type="Texture" id=25]
+[ext_resource path="res://New Assets (Summer 2026)/red glow.png" type="Texture" id=25]
 [ext_resource path="res://New Assets (Summer 2026)/Door-Animation0000.png" type="Texture" id=26]
 [ext_resource path="res://Gate.gd" type="Script" id=27]
-[ext_resource path="res://Switch.gd" type="Script" id=28]
+[ext_resource path="res://CameraScan.gd" type="Script" id=28]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (47).png" type="Texture" id=29]
 [ext_resource path="res://PathFollow12D.gd" type="Script" id=30]
 [ext_resource path="res://Sprites (Temporary)/New Piskel (39).png" type="Texture" id=31]
@@ -199,6 +199,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=54]
+extents = Vector2( 24, 64 )
+
 [sub_resource type="AtlasTexture" id=74]
 atlas = ExtResource( 26 )
 region = Rect2( 0, 0, 3000, 3000 )
@@ -246,8 +249,8 @@ animations = [ {
 "speed": 20.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=54]
-extents = Vector2( 24, 64 )
+[sub_resource type="RectangleShape2D" id=106]
+extents = Vector2( 22, 67.5 )
 
 [sub_resource type="Curve2D" id=8]
 _data = {
@@ -830,6 +833,22 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 9/z_index = 0
 
+[sub_resource type="AtlasTexture" id=103]
+flags = 4
+atlas = ExtResource( 25 )
+region = Rect2( 0, 0, 120, 120 )
+
+[sub_resource type="SpriteFrames" id=104]
+animations = [ {
+"frames": [ SubResource( 103 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=105]
+extents = Vector2( 109.5, 84 )
+
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 767, 20.25 )
 
@@ -852,43 +871,6 @@ extents = Vector2( 46.125, 13.6875 )
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -221, -1024, 0, 0, 0, 0, -378, -1024, 0, 0, 0, 0, -221, -1024 )
 }
-
-[sub_resource type="RectangleShape2D" id=72]
-extents = Vector2( 20.25, 7.21876 )
-
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 25 )
-region = Rect2( 0, 0, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=33]
-atlas = ExtResource( 25 )
-region = Rect2( 2040, 0, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 25 )
-region = Rect2( 4080, 0, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 25 )
-region = Rect2( 0, 2040, 2040, 2040 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 25 )
-region = Rect2( 2040, 2040, 2040, 2040 )
-
-[sub_resource type="SpriteFrames" id=39]
-animations = [ {
-"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
-"loop": false,
-"name": "default",
-"speed": 30.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=40]
-extents = Vector2( 21, 20.375 )
-
-[sub_resource type="RectangleShape2D" id=73]
-extents = Vector2( 0.25, 21.75 )
 
 [sub_resource type="Curve2D" id=63]
 _data = {
@@ -991,6 +973,7 @@ shape = SubResource( 62 )
 position = Vector2( -375, -659 )
 scale = Vector2( 0.0542501, 0.0545001 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="background effects"]
@@ -999,6 +982,7 @@ playing = true
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="background effects"]
@@ -1008,6 +992,7 @@ position = Vector2( -535, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D15" type="StaticBody2D" parent="background effects"]
@@ -1017,7 +1002,6 @@ position = Vector2( -447, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D26" type="StaticBody2D" parent="background effects"]
@@ -1027,7 +1011,6 @@ position = Vector2( -312, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D27" type="StaticBody2D" parent="background effects"]
@@ -1037,7 +1020,6 @@ position = Vector2( -187, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D28" type="StaticBody2D" parent="background effects"]
@@ -1047,7 +1029,6 @@ position = Vector2( -64, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D29" type="StaticBody2D" parent="background effects"]
@@ -1057,6 +1038,7 @@ position = Vector2( 66, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D30" type="StaticBody2D" parent="background effects"]
@@ -1066,6 +1048,7 @@ position = Vector2( 201, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D31" type="StaticBody2D" parent="background effects"]
@@ -1075,7 +1058,6 @@ position = Vector2( 337, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D32" type="StaticBody2D" parent="background effects"]
@@ -1085,6 +1067,7 @@ position = Vector2( 477, -188 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D33" type="StaticBody2D" parent="background effects"]
@@ -1094,6 +1077,7 @@ position = Vector2( 736, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D34" type="StaticBody2D" parent="background effects"]
@@ -1103,7 +1087,6 @@ position = Vector2( 919, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D35" type="StaticBody2D" parent="background effects"]
@@ -1113,6 +1096,7 @@ position = Vector2( 1096, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D36" type="StaticBody2D" parent="background effects"]
@@ -1122,6 +1106,7 @@ position = Vector2( 1272, 305 )
 position = Vector2( 1021, -1233 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D25" type="StaticBody2D" parent="background effects"]
@@ -1131,6 +1116,7 @@ position = Vector2( -447, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D16" type="StaticBody2D" parent="background effects"]
@@ -1140,7 +1126,6 @@ position = Vector2( -626, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D17" type="StaticBody2D" parent="background effects"]
@@ -1150,7 +1135,6 @@ position = Vector2( -361, -188 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D18" type="StaticBody2D" parent="background effects"]
@@ -1160,7 +1144,6 @@ position = Vector2( -1350, 213 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="background effects"]
@@ -1170,6 +1153,7 @@ position = Vector2( -685, 282 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="background effects"]
@@ -1179,7 +1163,6 @@ position = Vector2( -578, 282 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="background effects"]
@@ -1189,7 +1172,6 @@ position = Vector2( -477, 282 )
 position = Vector2( 556, -1112 )
 scale = Vector2( 0.054125, 0.0542502 )
 frames = SubResource( 25 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="background effects"]
@@ -1198,6 +1180,7 @@ playing = true
 position = Vector2( -482, -660 )
 scale = Vector2( 0.0542501, 0.0545001 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="background effects"]
@@ -1206,6 +1189,7 @@ playing = true
 position = Vector2( 645, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="background effects"]
@@ -1214,7 +1198,6 @@ playing = true
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D40" type="StaticBody2D" parent="background effects"]
@@ -1225,7 +1208,6 @@ rotation = -1.57079
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D41" type="StaticBody2D" parent="background effects"]
@@ -1236,6 +1218,7 @@ rotation = -1.57079
 position = Vector2( 571, -811 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D37" type="StaticBody2D" parent="background effects"]
@@ -1245,6 +1228,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D38" type="StaticBody2D" parent="background effects"]
@@ -1255,7 +1239,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D39" type="StaticBody2D" parent="background effects"]
@@ -1266,7 +1250,7 @@ position = Vector2( 1005, -1348 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D22" type="StaticBody2D" parent="background effects"]
@@ -1275,7 +1259,6 @@ playing = true
 position = Vector2( 2029, -1363 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D23" type="StaticBody2D" parent="background effects"]
@@ -1284,6 +1267,7 @@ playing = true
 position = Vector2( 1898, -1364 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D24" type="StaticBody2D" parent="background effects"]
@@ -1292,7 +1276,7 @@ playing = true
 position = Vector2( 1757, -1363 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="background effects"]
@@ -1303,6 +1287,7 @@ rotation = -1.57079
 position = Vector2( 975.422, 579.364 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="background effects"]
@@ -1313,7 +1298,7 @@ rotation = -1.57079
 position = Vector2( 974.031, 784.798 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="StaticBody2D19" type="StaticBody2D" parent="background effects"]
@@ -1324,7 +1309,6 @@ rotation = -1.57079
 position = Vector2( 940.019, 710.948 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D20" type="StaticBody2D" parent="background effects"]
@@ -1335,6 +1319,7 @@ rotation = -3.14159
 position = Vector2( -582.996, 932.002 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D21" type="StaticBody2D" parent="background effects"]
@@ -1345,6 +1330,7 @@ rotation = -3.14159
 position = Vector2( -674.996, 931.004 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="background effects"]
@@ -1353,7 +1339,6 @@ playing = true
 position = Vector2( -328, -1103 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="background effects"]
@@ -1362,6 +1347,7 @@ playing = true
 position = Vector2( -222, -1103 )
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="background effects"]
@@ -1371,8 +1357,11 @@ position = Vector2( -369, -633 )
 rotation = -1.57079
 scale = Vector2( 0.195557, 0.203613 )
 frames = SubResource( 30 )
-frame = 1
 playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background effects"]
+position = Vector2( -543, -832 )
+shape = SubResource( 54 )
 
 [node name="Gate" type="StaticBody2D" parent="."]
 script = ExtResource( 27 )
@@ -1383,8 +1372,8 @@ scale = Vector2( 0.0366667, 0.0486666 )
 frames = SubResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gate"]
-position = Vector2( -543, -832 )
-shape = SubResource( 54 )
+position = Vector2( -543, -830.5 )
+shape = SubResource( 106 )
 
 [node name="Ledges" type="Node2D" parent="."]
 
@@ -1578,6 +1567,28 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -3145761, 0, 0, -3080225, 0, 0, -3080224, 0, 0, -3080223, 0, 0, -3080222, 0, 0, -3080221, 0, 0, -3080220, 0, 0, -3080219, 0, 0, -3080218, 0, 0, -3080217, 0, 0, -3080216, 0, 0, -3080215, 0, 0, -3080214, 0, 0, -3080213, 0, 0, -3080212, 0, 0, -3080211, 0, 0, -3080210, 0, 0, -3080209, 0, 0, -3080208, 0, 0, -3080207, 0, 0, -3080206, 0, 0, -3080205, 0, 0, -3080204, 0, 0, -3080203, 0, 0, -3080202, 0, 0, -3080201, 0, 0, -3080200, 0, 0, -3080199, 0, 0, -3080198, 0, 0, -3080197, 0, 0, -3080196, 0, 0, -3080195, 0, 0, -3080194, 0, 0, -3080193, 0, 0, -3145728, 0, 0, -3145727, 0, 0, -3145726, 0, 0, -3145725, 0, 0, -3145724, 0, 0, -3145723, 0, 0, -3145722, 0, 0, -3145721, 0, 0, -3145720, 0, 0, -3145719, 0, 0, -3145718, 0, 0, -3145717, 0, 0, -3145716, 0, 0, -3145715, 0, 0, -3145714, 0, 0, -3145713, 0, 0, -3145712, 0, 0, -3145711, 0, 0, -3145710, 0, 0, -3145709, 0, 0, -3145708, 0, 0, -3145707, 0, 0, -3145706, 0, 0, -3145705, 0, 0, -3145704, 0, 0, -3145703, 0, 0, -3145702, 0, 0, -3145701, 0, 0, -3145700, 0, 0, -3145699, 0, 0, -3145698, 0, 0, -3145697, 0, 0, -3145696, 0, 0, -3145695, 0, 0, -3145694, 0, 0, -3145693, 0, 0, -3145692, 0, 0, -3145691, 0, 0, -3145690, 0, 0, -3145689, 0, 0, -3145688, 0, 0, -3145687, 0, 0, -3145686, 0, 0, -3145685, 0, 0, -3145684, 0, 0, -3145683, 0, 0, -3145682, 0, 0, -3145681, 0, 0, -3145680, 0, 0, -3145679, 0, 0, -3145678, 0, 0, -3145677, 0, 0, -3145676, 0, 0, -3145675, 0, 0, -3145674, 0, 0, -3145673, 0, 0, -3145672, 0, 0, -3145671, 0, 0, -3145670, 0, 0, -3145669, 0, 0, -3145668, 0, 0, -3145667, 0, 0, -3145666, 0, 0, -3145665, 0, 0, -3145664, 0, 0, -3145663, 0, 0, -3145662, 0, 0, -3145661, 0, 0, -3014689, 0, 0, -3014671, 0, 0, -3014670, 0, 0, -3014669, 0, 0, -2949153, 0, 0, -2883617, 0, 0, -2818081, 0, 0, -2752545, 0, 0, -2752517, 0, 0, -2752516, 0, 0, -2752515, 0, 0, -2752514, 0, 0, -2752513, 0, 0, -2818048, 0, 0, -2818047, 0, 0, -2818046, 0, 0, -2818045, 0, 0, -2818044, 0, 0, -2818043, 0, 0, -2818042, 0, 0, -2818041, 0, 0, -2818040, 0, 0, -2687009, 0, 0, -2686981, 0, 0, -2752503, 0, 0, -2621473, 0, 0, -2621445, 0, 0, -2686966, 0, 0, -2555937, 0, 0, -2555920, 0, 0, -2555919, 0, 0, -2555918, 0, 0, -2555917, 0, 0, -2555916, 0, 0, -2555915, 0, 0, -2555914, 0, 0, -2555913, 0, 0, -2555912, 0, 0, -2555911, 0, 0, -2555910, 0, 0, -2555909, 0, 0, -2621429, 0, 0, -2490401, 0, 0, -2490384, 0, 0, -2424865, 0, 0, -2424856, 0, 0, -2424855, 0, 0, -2424854, 0, 0, -2424853, 0, 0, -2424852, 0, 0, -2424851, 0, 0, -2424850, 0, 0, -2424849, 0, 0, -2424848, 0, 0, -2359329, 0, 0, -2359320, 0, 0, -2424812, 0, 0, -2293793, 0, 0, -2293784, 0, 0, -2359276, 0, 0, -2228257, 0, 0, -2228248, 0, 0, -2293740, 0, 0, -2162721, 0, 0, -2162712, 0, 0, -2228204, 0, 0, -2097185, 0, 0, -2097176, 0, 0, -2162668, 0, 0, -2031649, 0, 0, -2031640, 0, 0, -2031639, 0, 0, -2031638, 0, 0, -2031637, 0, 0, -2031636, 0, 0, -2031635, 0, 0, -2031634, 1, 0, -2031633, 3, 0, -2097132, 0, 0, -1966113, 0, 0, -1966098, 4, 0, -1966097, 6, 0, -2031596, 0, 0, -1900577, 0, 0, -1900562, 4, 0, -1900561, 6, 0, -1966060, 0, 0, -1835041, 0, 0, -1835026, 7, 0, -1835025, 9, 0, -1900524, 0, 0, -1900392, 0, 0, -1900391, 0, 0, -1900390, 0, 0, -1900389, 0, 0, -1900388, 0, 0, -1900387, 0, 0, -1900386, 0, 0, -1900385, 0, 0, -1900384, 0, 0, -1900383, 0, 0, -1900382, 0, 0, -1769505, 0, 0, -1834988, 0, 0, -1834856, 0, 0, -1834846, 0, 0, -1703969, 0, 0, -1769452, 0, 0, -1769320, 0, 0, -1769310, 0, 0, -1638433, 0, 0, -1703916, 0, 0, -1703784, 0, 0, -1703774, 0, 0, -1572897, 0, 0, -1638393, 0, 0, -1638380, 0, 0, -1638248, 0, 0, -1507361, 0, 0, -1507346, 0, 0, -1507345, 0, 0, -1507344, 0, 0, -1507343, 0, 0, -1507339, 0, 0, -1572857, 0, 0, -1572844, 0, 0, -1572712, 0, 0, -1441825, 0, 0, -1441810, 0, 0, -1441802, 0, 0, -1507321, 0, 0, -1507308, 0, 0, -1376289, 0, 0, -1376274, 0, 0, -1376265, 0, 0, -1441785, 0, 0, -1441772, 0, 0, -1310753, 0, 0, -1310738, 0, 0, -1310728, 0, 0, -1376249, 0, 0, -1376245, 0, 0, -1376242, 0, 0, -1376236, 0, 0, -1245217, 0, 0, -1245202, 0, 0, -1245191, 0, 0, -1310713, 0, 0, -1310709, 0, 0, -1310706, 0, 0, -1310700, 0, 0, -1179681, 0, 0, -1179666, 0, 0, -1179665, 0, 0, -1179664, 0, 0, -1179663, 0, 0, -1179654, 0, 0, -1179653, 0, 0, -1179652, 0, 0, -1179651, 0, 0, -1179650, 0, 0, -1179649, 0, 0, -1245184, 0, 0, -1245183, 0, 0, -1245182, 0, 0, -1245181, 0, 0, -1245180, 0, 0, -1245179, 0, 0, -1245178, 0, 0, -1245177, 0, 0, -1245173, 0, 0, -1245170, 0, 0, -1245164, 0, 0, -1114145, 0, 0, -1114130, 0, 0, -1179637, 0, 0, -1179634, 0, 0, -1179628, 0, 0, -1048609, 0, 0, -1048594, 0, 0, -1114101, 0, 0, -1114098, 0, 0, -1114092, 0, 0, -983073, 0, 0, -983058, 0, 0, -1048565, 0, 0, -1048562, 0, 0, -1048556, 0, 0, -917537, 0, 0, -917522, 0, 0, -983029, 0, 0, -983026, 0, 0, -983020, 0, 0, -852001, 0, 0, -851997, 0, 0, -851996, 0, 0, -851995, 0, 0, -851994, 0, 0, -851993, 0, 0, -851992, 0, 0, -851991, 0, 0, -851990, 0, 0, -851989, 0, 0, -851988, 0, 0, -851987, 0, 0, -851986, 0, 0, -851985, 0, 0, -851984, 0, 0, -851983, 0, 0, -851982, 0, 0, -851981, 0, 0, -851980, 0, 0, -851979, 0, 0, -851978, 0, 0, -851977, 0, 0, -851976, 0, 0, -851975, 0, 0, -851970, 0, 0, -851969, 0, 0, -917504, 0, 0, -917503, 0, 0, -917502, 0, 0, -917501, 0, 0, -917500, 0, 0, -917499, 0, 0, -917498, 0, 0, -917497, 0, 0, -917496, 0, 0, -917495, 0, 0, -917494, 0, 0, -917493, 0, 0, -917490, 0, 0, -917484, 0, 0, -851948, 0, 0, -786412, 0, 0, -720876, 0, 0, -655340, 0, 0, -524318, 0, 0, -524317, 0, 0, -524316, 0, 0, -524315, 0, 0, -524314, 0, 0, -524313, 0, 0, -524312, 0, 0, -524311, 0, 0, -524310, 0, 0, -524309, 0, 0, -524308, 0, 0, -524307, 0, 0, -524306, 0, 0, -524305, 0, 0, -524304, 0, 0, -524303, 0, 0, -524302, 0, 0, -524301, 0, 0, -524300, 0, 0, -524299, 0, 0, -524298, 0, 0, -524297, 0, 0, -524296, 0, 0, -524295, 0, 0, -524294, 0, 0, -524293, 0, 0, -524292, 0, 0, -524291, 0, 0, -524290, 0, 0, -524289, 0, 0, -589824, 0, 0, -589823, 0, 0, -589822, 0, 0, -589821, 0, 0, -589820, 0, 0, -589819, 0, 0, -589818, 0, 0, -589817, 0, 0, -589816, 0, 0, -589815, 0, 0, -589814, 0, 0, -589813, 0, 0, -589810, 0, 0, -589809, 0, 0, -589808, 0, 0, -589807, 0, 0, -589806, 0, 0, -589805, 0, 0, -589804, 0, 0, -524274, 0, 0, -458738, 0, 0, -393202, 0, 0, -327666, 0, 0, -262130, 0, 0, -131105, 0, 0, -196594, 0, 0, -65569, 0, 0, -131058, 0, 0, -33, 0, 0, -65522, 0, 0, 65503, 0, 0, 65504, 0, 0, 65505, 0, 0, 65506, 0, 0, 65507, 0, 0, 65508, 0, 0, 65509, 0, 0, 65510, 0, 0, 65511, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 9, 1, 0, 10, 2, 0, 11, 2, 0, 12, 2, 0, 13, 2, 0, 14, 3, 0, 65545, 4, 0, 65546, 5, 0, 65547, 5, 0, 65548, 5, 0, 65549, 5, 0, 65550, 6, 0, 131081, 4, 0, 131082, 5, 0, 131083, 5, 0, 131084, 5, 0, 131085, 5, 0, 131086, 6, 0, 196617, 4, 0, 196618, 5, 0, 196619, 5, 0, 196620, 5, 0, 196621, 5, 0, 196622, 6, 0, 262153, 4, 0, 262154, 5, 0, 262155, 5, 0, 262156, 5, 0, 262157, 5, 0, 262158, 6, 0, 327689, 4, 0, 327690, 5, 0, 327691, 5, 0, 327692, 5, 0, 327693, 5, 0, 327694, 6, 0, 393225, 4, 0, 393226, 5, 0, 393227, 5, 0, 393228, 5, 0, 393229, 5, 0, 393230, 6, 0, 458761, 4, 0, 458762, 5, 0, 458763, 5, 0, 458764, 5, 0, 458765, 5, 0, 458766, 6, 0, 524297, 4, 0, 524298, 5, 0, 524299, 5, 0, 524300, 5, 0, 524301, 5, 0, 524302, 6, 0, 589833, 4, 0, 589834, 5, 0, 589835, 5, 0, 589836, 5, 0, 589837, 5, 0, 589838, 6, 0, 655369, 4, 0, 655370, 5, 0, 655371, 5, 0, 655372, 5, 0, 655373, 5, 0, 655374, 6, 0, 720905, 4, 0, 720906, 5, 0, 720907, 5, 0, 720908, 5, 0, 720909, 5, 0, 720910, 6, 0, 786441, 4, 0, 786442, 5, 0, 786443, 5, 0, 786444, 5, 0, 786445, 5, 0, 786446, 6, 0, 851977, 4, 0, 851978, 5, 0, 851979, 5, 0, 851980, 5, 0, 851981, 5, 0, 851982, 6, 0, 917513, 4, 0, 917514, 5, 0, 917515, 5, 0, 917516, 5, 0, 917517, 5, 0, 917518, 6, 0, 983049, 4, 0, 983050, 5, 0, 983051, 5, 0, 983052, 5, 0, 983053, 5, 0, 983054, 6, 0, 1048582, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 7, 0, 1048586, 8, 0, 1048587, 8, 0, 1048588, 8, 0, 1048589, 8, 0, 1048590, 9, 0, 1114118, 0, 0, 1179654, 0, 0, 1245190, 0, 0, 1310726, 0, 0, 1376260, 0, 0, 1376261, 0, 0, 1376262, 0, 0 )
 
+[node name="Camera2" parent="." instance=ExtResource( 35 )]
+position = Vector2( -1826, -1346 )
+
+[node name="CameraScan" type="Area2D" parent="."]
+self_modulate = Color( 1, 1, 1, 0.00392157 )
+script = ExtResource( 28 )
+
+[node name="Sprite" type="Sprite" parent="CameraScan"]
+position = Vector2( -568, -644 )
+texture = ExtResource( 25 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CameraScan"]
+self_modulate = Color( 1, 1, 1, 0.45098 )
+position = Vector2( -539, -1078 )
+scale = Vector2( 7.75521, 10.8646 )
+frames = SubResource( 104 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraScan"]
+position = Vector2( -626.5, -1101 )
+shape = SubResource( 105 )
+
 [node name="Grappleables" parent="." instance=ExtResource( 4 )]
 position = Vector2( 114, -576 )
 
@@ -1719,30 +1730,6 @@ position = Vector2( 1690, -1544 )
 
 [node name="Spikes14" parent="Spikes" instance=ExtResource( 18 )]
 position = Vector2( 2111, -1543 )
-
-[node name="Switch Collison" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch Collison"]
-position = Vector2( -664, -1038 )
-shape = SubResource( 72 )
-
-[node name="Switch" type="Area2D" parent="."]
-script = ExtResource( 28 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Switch"]
-position = Vector2( -623, -1030 )
-scale = Vector2( 0.160049, 0.178431 )
-frames = SubResource( 39 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch"]
-position = Vector2( -664, -1045 )
-shape = SubResource( 40 )
-
-[node name="Switch Collision stop" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch Collision stop"]
-position = Vector2( -642.25, -1042.25 )
-shape = SubResource( 73 )
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource( 63 )
@@ -2022,12 +2009,12 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "MICROCHIPS:"
 uppercase = true
 
+[connection signal="animation_finished" from="Gate/AnimatedSprite" to="Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="Elevator2" to="Elevator2" method="_on_Elevator2_body_entered"]
 [connection signal="body_exited" from="Elevator2" to="Elevator2" method="_on_Elevator2_body_exited"]
+[connection signal="body_entered" from="CameraScan" to="Gate" method="_on_CameraScan_body_entered"]
+[connection signal="body_entered" from="CameraScan" to="CameraScan" method="_on_CameraScan_body_entered"]
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_DeathZone_body_entered"]
-[connection signal="body_entered" from="Switch" to="Gate" method="_on_Switch_body_entered"]
-[connection signal="body_exited" from="Switch" to="Gate" method="_on_Switch_body_exited"]
-[connection signal="animation_finished" from="Switch/AnimatedSprite" to="Gate" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="DeathSphere/DeathSpheres2" to="DeathSphere/DeathSpheres2" method="_on_DeathSpheres_body_entered"]
 [connection signal="body_entered" from="DeathSphere/DeathSpheres3" to="DeathSphere/DeathSpheres3" method="_on_DeathSpheres_body_entered"]
 [connection signal="body_entered" from="DeathSphere/DeathSpheres4" to="DeathSphere/DeathSpheres4" method="_on_DeathSpheres_body_entered"]

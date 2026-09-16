@@ -1,6 +1,5 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://Music and SFX/1-10. Marble Garden Zone - Act 1.mp3" type="AudioStream" id=1]
 [ext_resource path="res://New Assets (Summer 2026)/Greenhouse background-Extended (1).png" type="Texture" id=2]
 [ext_resource path="res://Movement Stuff/Grappleables.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Movement Stuff/AlexStates.tscn" type="PackedScene" id=4]
@@ -231,10 +230,6 @@ position = Vector2( -424, -16 )
 visible = false
 position = Vector2( -107, -51 )
 scale = Vector2( 0.239312, 43.8018 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 1 )
-autoplay = true
 
 [node name="Death" type="Area2D" parent="."]
 script = ExtResource( 13 )
